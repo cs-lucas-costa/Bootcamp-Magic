@@ -11,8 +11,6 @@
 		9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F00325DB0D7100EC3BBA /* Coordinatable.swift */; };
 		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
 		BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */; };
-		BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAD25DAB8970016B1BE /* ViewController.swift */; };
-		BD80ADB125DAB8970016B1BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADAF25DAB8970016B1BE /* Main.storyboard */; };
 		BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */; };
 		BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB525DAB8980016B1BE /* Assets.xcassets */; };
 		BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */; };
@@ -58,8 +56,6 @@
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADA925DAB8970016B1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD80ADAD25DAB8970016B1BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD80ADB025DAB8970016B1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD80ADB325DAB8970016B1BE /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
 		BD80ADB525DAB8980016B1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD80ADB825DAB8980016B1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,6 +117,26 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9978F00825DB0D9900EC3BBA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9978F00F25DB0DC200EC3BBA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
+				BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */,
+				BD80ADB525DAB8980016B1BE /* Assets.xcassets */,
+				BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */,
+				BD80ADBA25DAB8980016B1BE /* Info.plist */,
+				BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		BD80AD9D25DAB8970016B1BE = {
 			isa = PBXGroup;
 			children = (
@@ -144,18 +160,12 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				9978F00F25DB0DC200EC3BBA /* Core */,
+				9978F00825DB0D9900EC3BBA /* Coordinator */,
 				9978EFFA25DB0C9400EC3BBA /* Protocols */,
 				BDEE378525DB0589003B2F5A /* Network */,
 				E6537A8B25DAF05800ECD9D9 /* ViewModel */,
 				E6537A1125DAC12B00ECD9D9 /* Model */,
-				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
-				BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */,
-				BD80ADAD25DAB8970016B1BE /* ViewController.swift */,
-				BD80ADAF25DAB8970016B1BE /* Main.storyboard */,
-				BD80ADB525DAB8980016B1BE /* Assets.xcassets */,
-				BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */,
-				BD80ADBA25DAB8980016B1BE /* Info.plist */,
-				BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */,
 			);
 			path = "Bootcamp-Magic";
 			sourceTree = "<group>";
@@ -383,7 +393,6 @@
 			files = (
 				BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */,
 				BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */,
-				BD80ADB125DAB8970016B1BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +428,6 @@
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
-				BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */,
@@ -464,14 +472,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD80ADAF25DAB8970016B1BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD80ADB025DAB8970016B1BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -605,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-Magic/Info.plist";
+				INFOPLIST_FILE = "Bootcamp-Magic/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -623,7 +623,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-Magic/Info.plist";
+				INFOPLIST_FILE = "Bootcamp-Magic/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
