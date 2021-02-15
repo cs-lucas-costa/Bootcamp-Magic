@@ -305,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD80AE0425DAE5840016B1BE /* RequestError.swift in Sources */,
 				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
@@ -312,6 +313,7 @@
 				BD80ADE525DAC1F60016B1BE /* NetworkManager.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
 				BD80ADEA25DAC5110016B1BE /* NetworkService.swift in Sources */,
+				BD80AE0A25DAE5D00016B1BE /* NetworkError.swift in Sources */,
 				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
 				BD80ADF425DAC6520016B1BE /* URLSession + Extension.swift in Sources */,
 			);

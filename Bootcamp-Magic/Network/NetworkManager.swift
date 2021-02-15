@@ -11,38 +11,6 @@ enum HttpMethods: String {
     case get = "Get"
 }
 
-private protocol RequestError: LocalizedError {
-    var title: String? { get }
-}
-
-struct NotURLError: RequestError {
-
-    var title: String?
-    var errorDescription: String? { return description }
-    var failureReason: String? { return description }
-
-    private var description: String
-
-    init(title: String?, description: String) {
-        self.title = title ?? "Invalid URL"
-        self.description = description
-    }
-}
-
-struct RequestFailedError: RequestError {
-
-    var title: String?
-    var errorDescription: String? { return description }
-    var failureReason: String? { return description }
-
-    private var description: String
-
-    init(title: String?, description: String) {
-        self.title = title ?? "Unable to complete the Request"
-        self.description = description
-    }
-}
-
 final class NetworkManager {
 
     private let service: NetworkService
@@ -70,25 +38,26 @@ final class NetworkManager {
             }
 
             guard let httpResponse = response as? HTTPURLResponse else {
-                completion(.failure(NotURLError(title: nil, description: "Could not use URL as Response")))
+                completion(.failure(NetworkError.notUrl(networkErrorDescription: "Could not use URL as Response")))
                 return
             }
 
             if httpResponse.statusCode == 200 {
 
                 guard let data = data else {
-                    completion(.failure(RequestFailedError(title: nil, description: "Could not retrive data from URL")))
+                    completion(.failure(NetworkError.requestFailed(networkErrorDescription: "Could not retrive data from URL")))
                     return
                 }
 
                 guard let decodedData = self.decode(decodableType: decodableType, data: data) else {
+                    completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Failed to decode Object from data")))
                     return
                 }
 
                 completion(.success(decodedData))
             } else {
-                completion(.failure(RequestFailedError(title: nil, description:
-                                                        "Network request failed due to unexpected HTTP status code")))
+                completion(.failure(NetworkError.requestFailed(networkErrorDescription:
+                                                                "Network request failed due to unexpected HTTP status code")))
             }
         }.resume()
     }
