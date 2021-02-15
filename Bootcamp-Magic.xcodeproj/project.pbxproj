@@ -149,6 +149,7 @@
 		BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE379125DB0C6D003B2F5A /* Network */,
 				E6537A9D25DAF93B00ECD9D9 /* ViewModel */,
 				E6537A2D25DAC3EF00ECD9D9 /* Helpers */,
 				E6537A2325DAC3A200ECD9D9 /* Model */,
@@ -193,6 +194,13 @@
 				BDEE376E25DB0504003B2F5A /* RequestError.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BDEE379125DB0C6D003B2F5A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E6537A1125DAC12B00ECD9D9 /* Model */ = {
