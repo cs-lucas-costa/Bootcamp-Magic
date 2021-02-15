@@ -1,0 +1,12 @@
+{
+    "sets": [
+        {
+            "code": "10E",
+            "name": "Tenth Edition",
+        },
+        {
+            "code": "2ED",
+            "name": "Unlimited Edition",
+        }
+    ]
+}
