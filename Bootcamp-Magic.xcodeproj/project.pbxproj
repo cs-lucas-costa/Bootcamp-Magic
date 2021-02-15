@@ -16,6 +16,10 @@
 		BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */; };
 		BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */; };
 		BD80ADCF25DAB8990016B1BE /* Bootcamp_MagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */; };
+		E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1525DAC14D00ECD9D9 /* Expansion.swift */; };
+		E6537A1F25DAC20200ECD9D9 /* ExpansionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1E25DAC20200ECD9D9 /* ExpansionList.swift */; };
+		E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */; };
+		E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */ = {isa = PBXBuildFile; fileRef = E6537A2E25DAC40400ECD9D9 /* expansions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicUITests.swift; sourceTree = "<group>"; };
 		BD80ADD025DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6537A1525DAC14D00ECD9D9 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
+		E6537A1E25DAC20200ECD9D9 /* ExpansionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionList.swift; sourceTree = "<group>"; };
+		E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListTestCase.swift; sourceTree = "<group>"; };
+		E6537A2E25DAC40400ECD9D9 /* expansions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = expansions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				E6537A1125DAC12B00ECD9D9 /* Model */,
 				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
 				BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */,
 				BD80ADAD25DAB8970016B1BE /* ViewController.swift */,
@@ -116,6 +125,8 @@
 		BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				E6537A2D25DAC3EF00ECD9D9 /* Helpers */,
+				E6537A2325DAC3A200ECD9D9 /* Model */,
 				BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */,
 				BD80ADC525DAB8990016B1BE /* Info.plist */,
 			);
@@ -129,6 +140,31 @@
 				BD80ADD025DAB8990016B1BE /* Info.plist */,
 			);
 			path = "Bootcamp-MagicUITests";
+			sourceTree = "<group>";
+		};
+		E6537A1125DAC12B00ECD9D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6537A1525DAC14D00ECD9D9 /* Expansion.swift */,
+				E6537A1E25DAC20200ECD9D9 /* ExpansionList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6537A2325DAC3A200ECD9D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6537A2D25DAC3EF00ECD9D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E6537A2E25DAC40400ECD9D9 /* expansions.json */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				E6537A1F25DAC20200ECD9D9 /* ExpansionList.swift in Sources */,
+				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
 				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
@@ -294,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */,
+				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
