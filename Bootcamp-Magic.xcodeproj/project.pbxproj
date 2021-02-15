@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */; };
 		9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F00325DB0D7100EC3BBA /* Coordinatable.swift */; };
+		9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */; };
+		9978F01A25DB0E9400EC3BBA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F01925DB0E9400EC3BBA /* MainCoordinator.swift */; };
 		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
-		BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */; };
 		BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */; };
 		BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB525DAB8980016B1BE /* Assets.xcassets */; };
 		BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */; };
@@ -53,9 +54,10 @@
 /* Begin PBXFileReference section */
 		9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		9978F00325DB0D7100EC3BBA /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
+		9978F01925DB0E9400EC3BBA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADA925DAB8970016B1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BD80ADB325DAB8970016B1BE /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
 		BD80ADB525DAB8980016B1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD80ADB825DAB8980016B1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		9978F00825DB0D9900EC3BBA /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				9978F01925DB0E9400EC3BBA /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -128,13 +131,20 @@
 			isa = PBXGroup;
 			children = (
 				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
-				BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */,
 				BD80ADB525DAB8980016B1BE /* Assets.xcassets */,
 				BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */,
 				BD80ADBA25DAB8980016B1BE /* Info.plist */,
 				BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9978F01325DB0E4100EC3BBA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		BD80AD9D25DAB8970016B1BE = {
@@ -160,6 +170,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				9978F01325DB0E4100EC3BBA /* ViewController */,
 				9978F00F25DB0DC200EC3BBA /* Core */,
 				9978F00825DB0D9900EC3BBA /* Coordinator */,
 				9978EFFA25DB0C9400EC3BBA /* Protocols */,
@@ -427,12 +438,13 @@
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
+				9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */,
+				9978F01A25DB0E9400EC3BBA /* MainCoordinator.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
-				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
