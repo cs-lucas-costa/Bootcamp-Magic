@@ -21,6 +21,7 @@
 		BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377325DB052F003B2F5A /* NetworkError.swift */; };
 		BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377825DB0547003B2F5A /* URLSession + Extension.swift */; };
 		BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377D25DB0562003B2F5A /* NetworkService.swift */; };
+		BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE379225DB0E1C003B2F5A /* CardsService.swift */; };
 		E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1525DAC14D00ECD9D9 /* Expansion.swift */; };
 		E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */; };
 		E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */ = {isa = PBXBuildFile; fileRef = E6537A2E25DAC40400ECD9D9 /* expansions.json */; };
@@ -71,6 +72,7 @@
 		BDEE377325DB052F003B2F5A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BDEE377825DB0547003B2F5A /* URLSession + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession + Extension.swift"; sourceTree = "<group>"; };
 		BDEE377D25DB0562003B2F5A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BDEE379225DB0E1C003B2F5A /* CardsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsService.swift; sourceTree = "<group>"; };
 		E6537A1525DAC14D00ECD9D9 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListTestCase.swift; sourceTree = "<group>"; };
 		E6537A2E25DAC40400ECD9D9 /* expansions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = expansions.json; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				BDEE376925DB04EB003B2F5A /* NetworkManager.swift */,
 				BDEE378725DB0596003B2F5A /* Protocols */,
 				BDEE378625DB0590003B2F5A /* Helpers */,
+				BDEE379225DB0E1C003B2F5A /* CardsService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
