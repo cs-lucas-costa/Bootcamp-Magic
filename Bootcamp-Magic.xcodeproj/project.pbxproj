@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */; };
 		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
 		BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */; };
 		BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAD25DAB8970016B1BE /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADA925DAB8970016B1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9978EFFA25DB0C9400EC3BBA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		BD80AD9D25DAB8970016B1BE = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				9978EFFA25DB0C9400EC3BBA /* Protocols */,
 				BDEE378525DB0589003B2F5A /* Network */,
 				E6537A8B25DAF05800ECD9D9 /* ViewModel */,
 				E6537A1125DAC12B00ECD9D9 /* Model */,
@@ -407,6 +418,7 @@
 				BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
+				9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
 			);
