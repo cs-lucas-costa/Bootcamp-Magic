@@ -9,13 +9,30 @@ import Foundation
 
 class ExpansionListViewModel {
     
+    private let networkManager: NetworkManager
     private(set) var dictExpansions: [String: [ExpansionViewModel]] = [:]
     
-    init(list: ExpansionList) {
-        createDictExpansions(from: list)
+    init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
     }
     
-    //MARK: Methods
+    /// Fetch expansions from API.
+    /// - Parameter completion: error or not when fetch.
+    func fetchExpansions(completion: @escaping (Error?) -> Void) {
+        networkManager.getRequest(cardsService: .setList, decodableType: ExpansionList.self) { [weak self] (result) in
+            switch result {
+            case .success(let list):
+                self?.createDictExpansions(from: list)
+            case .failure(let error):
+                completion(error)
+            }
+        }
+    }
+}
+
+//MARK:- Private methods
+extension ExpansionListViewModel {
+    
     private func createDictExpansions(from list: ExpansionList) {
         list.expansions
             .sorted(by: { $0.name < $1.name })
@@ -31,5 +48,4 @@ class ExpansionListViewModel {
                 self.dictExpansions[key]?.append(ExpansionViewModel(expansion: expansion))
             }
     }
-    
 }
