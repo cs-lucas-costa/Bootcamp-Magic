@@ -10,7 +10,7 @@ import Foundation
 final class CardListViewModel {
     
     private let networkManager: NetworkManager
-    private(set) var dictCards: [String: [CardViewModel]] = [:]
+    private(set) var dictCards: [Dict<String, [CardViewModel]>] = []
     
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
@@ -40,13 +40,15 @@ private extension CardListViewModel {
                 
                 guard let self = self else { return }
                 let key = card.type
+                let viewModel = CardViewModel(card: card)
                 
-                if !self.dictCards.keys.contains(key) {
-                    self.dictCards[key] = []
+                if let dict = self.dictCards.first(where: { $0.key == key }) {
+                    dict.value.append(viewModel)
+                } else {
+                    self.dictCards.append(Dict(key: key, value: [viewModel]))
                 }
-                
-                self.dictCards[key]?.append(CardViewModel(card: card))
             }
+        
     }
     
 }
