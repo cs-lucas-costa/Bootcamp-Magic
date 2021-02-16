@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9910285125DBF1A300EC1A35 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9910285025DBF1A300EC1A35 /* SnapKit */; };
+		9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */; };
+		9910285D25DBF32300EC1A35 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910285C25DBF32300EC1A35 /* TabItem.swift */; };
+		9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */; };
 		9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */; };
 		9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F00325DB0D7100EC3BBA /* Coordinatable.swift */; };
 		9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */; };
@@ -53,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
+		9910285C25DBF32300EC1A35 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
 		9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		9978F00325DB0D7100EC3BBA /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9910285125DBF1A300EC1A35 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +120,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9910285525DBF24D00EC1A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9910285B25DBF31500EC1A35 /* TabBar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9910285B25DBF31500EC1A35 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */,
+				9910285C25DBF32300EC1A35 /* TabItem.swift */,
+				9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		9978EFFA25DB0C9400EC3BBA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +198,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				9910285525DBF24D00EC1A35 /* View */,
 				9978F01325DB0E4100EC3BBA /* ViewController */,
 				9978F00F25DB0DC200EC3BBA /* Core */,
 				9978F00825DB0D9900EC3BBA /* Coordinator */,
@@ -326,6 +353,9 @@
 			dependencies = (
 			);
 			name = "Bootcamp-Magic";
+			packageProductDependencies = (
+				9910285025DBF1A300EC1A35 /* SnapKit */,
+			);
 			productName = "Bootcamp-Magic";
 			productReference = BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */;
 			productType = "com.apple.product-type.application";
@@ -397,6 +427,9 @@
 				Base,
 			);
 			mainGroup = BD80AD9D25DAB8970016B1BE;
+			packageReferences = (
+				9910284F25DBF1A300EC1A35 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BD80ADA725DAB8970016B1BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -448,8 +481,11 @@
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
+				9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
+				9910285D25DBF32300EC1A35 /* TabItem.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
+				9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */,
 				9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */,
 				9978F01A25DB0E9400EC3BBA /* MainCoordinator.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
@@ -779,6 +815,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9910284F25DBF1A300EC1A35 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9910285025DBF1A300EC1A35 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9910284F25DBF1A300EC1A35 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */ = {
