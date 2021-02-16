@@ -23,6 +23,7 @@ class ExpansionListViewModel {
             switch result {
             case .success(let list):
                 self?.createDictExpansions(from: list)
+                completion(nil)
             case .failure(let error):
                 completion(error)
             }
