@@ -10,7 +10,8 @@ import Foundation
 final class ExpansionListViewModel {
     
     private let networkManager: NetworkManager
-    private(set) var dictExpansions: [String: [ExpansionViewModel]] = [:]
+    private(set) var expansions: [ExpansionViewModel] = []
+    private(set) var dictExpansions: [Dict<String, [ExpansionViewModel]>] = []
     
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
@@ -41,12 +42,13 @@ private extension ExpansionListViewModel {
                 
                 guard let self = self else { return }
                 guard let key = expansion.name.first?.uppercased() else { return }
+                let viewModel = ExpansionViewModel(expansion: expansion)
                 
-                if !self.dictExpansions.keys.contains(key) {
-                    self.dictExpansions[key] = []
+                if let dict = self.dictExpansions.first(where: { $0.key == key }) {
+                    dict.value.append(viewModel)
+                } else {
+                    self.dictExpansions.append(Dict(key: key, value: [viewModel]))
                 }
-                
-                self.dictExpansions[key]?.append(ExpansionViewModel(expansion: expansion))
             }
     }
 }
