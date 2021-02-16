@@ -25,8 +25,6 @@
 		BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */; };
 		BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */; };
 		BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */; };
-		BDEE382525DC286A003B2F5A /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = BDEE382325DC286A003B2F5A /* sets-response.json */; };
-		BDEE382625DC286A003B2F5A /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = BDEE382425DC286A003B2F5A /* cards-response.json */; };
 		BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE383625DC3833003B2F5A /* AutoLayout.swift */; };
 		E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1525DAC14D00ECD9D9 /* Expansion.swift */; };
 		E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */; };
@@ -76,8 +74,6 @@
 		BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceStub.swift; sourceTree = "<group>"; };
 		BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFakeDataTask.swift; sourceTree = "<group>"; };
 		BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
-		BDEE382325DC286A003B2F5A /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "sets-response.json"; path = "../../../../../Desktop/sets-response.json"; sourceTree = "<group>"; };
-		BDEE382425DC286A003B2F5A /* cards-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "cards-response.json"; path = "../../../../../Desktop/cards-response.json"; sourceTree = "<group>"; };
 		BDEE383625DC3833003B2F5A /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		E6537A1525DAC14D00ECD9D9 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListTestCase.swift; sourceTree = "<group>"; };
@@ -196,7 +192,6 @@
 		BDEE379125DB0C6D003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BDEE382225DC2848003B2F5A /* JSONFiles */,
 				BDEE37AA25DBEDCD003B2F5A /* Fakes */,
 				BDEE37A925DBED9E003B2F5A /* Stubs */,
 				BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */,
@@ -218,15 +213,6 @@
 				BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */,
 			);
 			path = Fakes;
-			sourceTree = "<group>";
-		};
-		BDEE382225DC2848003B2F5A /* JSONFiles */ = {
-			isa = PBXGroup;
-			children = (
-				BDEE382425DC286A003B2F5A /* cards-response.json */,
-				BDEE382325DC286A003B2F5A /* sets-response.json */,
-			);
-			path = JSONFiles;
 			sourceTree = "<group>";
 		};
 		E6537A1125DAC12B00ECD9D9 /* Model */ = {
@@ -396,6 +382,7 @@
 			mainGroup = BD80AD9D25DAB8970016B1BE;
 			packageReferences = (
 				9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9992F27925DC546A0079AD1D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = BD80ADA725DAB8970016B1BE /* Products */;
 			projectDirPath = "";
@@ -422,8 +409,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDEE382625DC286A003B2F5A /* cards-response.json in Resources */,
-				BDEE382525DC286A003B2F5A /* sets-response.json in Resources */,
 				E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */,
 				E6537A5925DAE3E400ECD9D9 /* cards.json in Resources */,
 			);
@@ -736,6 +721,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
+			};
+		};
+		9992F27925DC546A0079AD1D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
