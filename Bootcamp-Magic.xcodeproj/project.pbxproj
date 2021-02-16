@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9992F27125DC3D070079AD1D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9992F27025DC3D070079AD1D /* SnapKit */; };
 		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
 		BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */; };
 		BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAD25DAB8970016B1BE /* ViewController.swift */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9992F27125DC3D070079AD1D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +371,9 @@
 			dependencies = (
 			);
 			name = "Bootcamp-Magic";
+			packageProductDependencies = (
+				9992F27025DC3D070079AD1D /* SnapKit */,
+			);
 			productName = "Bootcamp-Magic";
 			productReference = BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */;
 			productType = "com.apple.product-type.application";
@@ -440,6 +445,9 @@
 				Base,
 			);
 			mainGroup = BD80AD9D25DAB8970016B1BE;
+			packageReferences = (
+				9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BD80ADA725DAB8970016B1BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -839,6 +847,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9992F27025DC3D070079AD1D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */ = {
