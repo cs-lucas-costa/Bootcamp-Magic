@@ -24,13 +24,13 @@ enum CardsService {
 extension CardsService: ServiceProtocol {
     
     var basePath: String {
-        return "https://api.magicthegathering.io/v1/"
+        return "https://api.magicthegathering.io/v1"
     }
     
     var path: String {
         switch self {
-        case .cardsList(let setName):
-            return (self.basePath + "/cards?sets=" + "\"\(setName)\"")
+        case .cardsList(let code):
+            return (self.basePath + "/cards?set=" + code)
         case .setList:
             return (self.basePath + "/sets")
         }
