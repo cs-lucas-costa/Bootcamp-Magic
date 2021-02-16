@@ -16,7 +16,6 @@
 		BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB525DAB8980016B1BE /* Assets.xcassets */; };
 		BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */; };
 		BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */; };
-		BD80ADCF25DAB8990016B1BE /* Bootcamp_MagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */; };
 		BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376925DB04EB003B2F5A /* NetworkManager.swift */; };
 		BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376E25DB0504003B2F5A /* RequestError.swift */; };
 		BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377325DB052F003B2F5A /* NetworkError.swift */; };
@@ -53,13 +52,6 @@
 			remoteGlobalIDString = BD80ADA525DAB8970016B1BE;
 			remoteInfo = "Bootcamp-Magic";
 		};
-		BD80ADCB25DAB8990016B1BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD80AD9E25DAB8970016B1BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD80ADA525DAB8970016B1BE;
-			remoteInfo = "Bootcamp-Magic";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -75,9 +67,6 @@
 		BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicTests.swift; sourceTree = "<group>"; };
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicUITests.swift; sourceTree = "<group>"; };
-		BD80ADD025DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDEE376925DB04EB003B2F5A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BDEE376E25DB0504003B2F5A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		BDEE377325DB052F003B2F5A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -122,13 +111,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD80ADC725DAB8990016B1BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -137,7 +119,6 @@
 			children = (
 				BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */,
 				BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */,
-				BD80ADCD25DAB8990016B1BE /* Bootcamp-MagicUITests */,
 				BD80ADA725DAB8970016B1BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,7 +128,6 @@
 			children = (
 				BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */,
 				BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */,
-				BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,15 +162,6 @@
 				BD80ADC525DAB8990016B1BE /* Info.plist */,
 			);
 			path = "Bootcamp-MagicTests";
-			sourceTree = "<group>";
-		};
-		BD80ADCD25DAB8990016B1BE /* Bootcamp-MagicUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */,
-				BD80ADD025DAB8990016B1BE /* Info.plist */,
-			);
-			path = "Bootcamp-MagicUITests";
 			sourceTree = "<group>";
 		};
 		BDEE378525DB0589003B2F5A /* Network */ = {
@@ -396,24 +367,6 @@
 			productReference = BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD80ADC925DAB8990016B1BE /* Bootcamp-MagicUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD80ADD925DAB8990016B1BE /* Build configuration list for PBXNativeTarget "Bootcamp-MagicUITests" */;
-			buildPhases = (
-				BD80ADC625DAB8990016B1BE /* Sources */,
-				BD80ADC725DAB8990016B1BE /* Frameworks */,
-				BD80ADC825DAB8990016B1BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD80ADCC25DAB8990016B1BE /* PBXTargetDependency */,
-			);
-			name = "Bootcamp-MagicUITests";
-			productName = "Bootcamp-MagicUITests";
-			productReference = BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,10 +380,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					BD80ADBE25DAB8990016B1BE = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = BD80ADA525DAB8970016B1BE;
-					};
-					BD80ADC925DAB8990016B1BE = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = BD80ADA525DAB8970016B1BE;
 					};
@@ -454,7 +403,6 @@
 			targets = (
 				BD80ADA525DAB8970016B1BE /* Bootcamp-Magic */,
 				BD80ADBE25DAB8990016B1BE /* Bootcamp-MagicTests */,
-				BD80ADC925DAB8990016B1BE /* Bootcamp-MagicUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -478,13 +426,6 @@
 				BDEE382525DC286A003B2F5A /* sets-response.json in Resources */,
 				E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */,
 				E6537A5925DAE3E400ECD9D9 /* cards.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD80ADC825DAB8990016B1BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,14 +473,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD80ADC625DAB8990016B1BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD80ADCF25DAB8990016B1BE /* Bootcamp_MagicUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -547,11 +480,6 @@
 			isa = PBXTargetDependency;
 			target = BD80ADA525DAB8970016B1BE /* Bootcamp-Magic */;
 			targetProxy = BD80ADC025DAB8990016B1BE /* PBXContainerItemProxy */;
-		};
-		BD80ADCC25DAB8990016B1BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD80ADA525DAB8970016B1BE /* Bootcamp-Magic */;
-			targetProxy = BD80ADCB25DAB8990016B1BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -705,7 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-Magic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -723,7 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-Magic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -769,44 +697,6 @@
 			};
 			name = Release;
 		};
-		BD80ADDA25DAB8990016B1BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-MagicUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-MagicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bootcamp-Magic";
-			};
-			name = Debug;
-		};
-		BD80ADDB25DAB8990016B1BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-MagicUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-MagicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bootcamp-Magic";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -833,15 +723,6 @@
 			buildConfigurations = (
 				BD80ADD725DAB8990016B1BE /* Debug */,
 				BD80ADD825DAB8990016B1BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD80ADD925DAB8990016B1BE /* Build configuration list for PBXNativeTarget "Bootcamp-MagicUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD80ADDA25DAB8990016B1BE /* Debug */,
-				BD80ADDB25DAB8990016B1BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
