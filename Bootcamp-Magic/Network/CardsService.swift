@@ -29,15 +29,10 @@ extension CardsService: ServiceProtocol {
     
     var path: String {
         switch self {
-<<<<<<< HEAD
         case .cardsList(let code):
             return (self.basePath + "/cards?set=" + code)
-=======
-        case .cardsList(let setName):
-            return (self.basePath + "/cards?sets=" + #"\#(setName)"#)
->>>>>>> Network Manager Tests
         case .setList:
-            return (self.basePath + "/sets?page=1&pageSize=40")
+            return (self.basePath + "/sets")
         }
     }
     
@@ -64,7 +59,7 @@ extension CardsService: ServiceProtocol {
         case .cardsList:
             return nil
         case .setList:
-            return nil
+            return ["Count": "40"]
         }
     }
 }
