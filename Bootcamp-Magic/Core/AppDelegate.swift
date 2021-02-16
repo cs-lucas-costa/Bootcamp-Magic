@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // Setup Window
       self.window = UIWindow(frame: UIScreen.main.bounds)
       self.window?.makeKeyAndVisible()
-      self.window?.rootViewController = coordinator!.navigationMenuTabBarController
+      self.window?.rootViewController = coordinator?.navigationMenuTabBarController
       
         return true
     }

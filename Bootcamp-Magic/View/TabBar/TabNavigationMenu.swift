@@ -65,11 +65,11 @@ extension TabNavigationMenu: ViewCodable {
   
   func setupAdditionalConfiguration() {
     #warning("remover números mágicos")
-    expansionButton.setTitle("Expansion", for: .normal)
+    expansionButton.setTitle(TabItem.expansion.title, for: .normal)
     expansionButton.setTitleColor(.white, for: .normal)
     expansionButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     
-    favoritesButton.setTitle("Favorites", for: .normal)
+    favoritesButton.setTitle(TabItem.favorites.title, for: .normal)
     favoritesButton.setTitleColor(.white, for: .normal)
     favoritesButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     
