@@ -4,14 +4,20 @@
             "name": "Abundance",
             "type": "Enchantment",
             "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130483&type=card",
-            "id": "1669af17-d287-5094-b005-4b143441442f"
+            "id": "1669af17-d287-5094-b005-4b143441442f",
         },
         {
-            "name": "Abundance",
-            "type": "Enchantment",
-            "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130483&type=card",
-            "id": "1669af17-d287-5094-b005-4b143441442f"
+            "name": "Abomination of Gudul",
+            "type": "Creature — Horror",
+            "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=386463&type=card",
+            "id": "cfd0d0a1-b65a-5cd7-8f6f-bed075c85c39"
         },
+        {
+            "name": "Abomination of Gudul",
+            "type": "Creature — Horror",
+            "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=386463&type=card",
+            "id": "cfd0d0a1-b65a-5cd7-8f6f-bed075c85c39"
+        }
     ]
 }
 
