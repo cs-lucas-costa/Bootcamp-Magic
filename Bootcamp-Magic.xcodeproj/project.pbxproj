@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9992F27125DC3D070079AD1D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9992F27025DC3D070079AD1D /* SnapKit */; };
+		9992F28925DC5D620079AD1D /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28725DC5D620079AD1D /* cards-response.json */; };
+		9992F28A25DC5D620079AD1D /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28825DC5D620079AD1D /* sets-response.json */; };
 		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
 		BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */; };
 		BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAD25DAB8970016B1BE /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9992F28725DC5D620079AD1D /* cards-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cards-response.json"; sourceTree = "<group>"; };
+		9992F28825DC5D620079AD1D /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sets-response.json"; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADA925DAB8970016B1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9992F28625DC5D410079AD1D /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9992F28725DC5D620079AD1D /* cards-response.json */,
+				9992F28825DC5D620079AD1D /* sets-response.json */,
+			);
+			path = JSONFiles;
+			sourceTree = "<group>";
+		};
 		BD80AD9D25DAB8970016B1BE = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 		BDEE379125DB0C6D003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9992F28625DC5D410079AD1D /* JSONFiles */,
 				BDEE37AA25DBEDCD003B2F5A /* Fakes */,
 				BDEE37A925DBED9E003B2F5A /* Stubs */,
 				BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */,
@@ -409,6 +423,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9992F28925DC5D620079AD1D /* cards-response.json in Resources */,
+				9992F28A25DC5D620079AD1D /* sets-response.json in Resources */,
 				E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */,
 				E6537A5925DAE3E400ECD9D9 /* cards.json in Resources */,
 			);
