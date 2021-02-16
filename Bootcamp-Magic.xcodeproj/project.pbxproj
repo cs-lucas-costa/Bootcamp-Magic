@@ -11,6 +11,10 @@
 		9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */; };
 		9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */; };
 		9910286D25DC04EE00EC1A35 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910286C25DC04EE00EC1A35 /* TabItem.swift */; };
+		9910287725DC238E00EC1A35 /* ExpansionViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910287625DC238E00EC1A35 /* ExpansionViewControllerScreen.swift */; };
+		9949EC8125DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949EC8025DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift */; };
+		9949EC8625DC36B400B8FB8C /* ExpansionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949EC8525DC36B400B8FB8C /* ExpansionTableViewCell.swift */; };
+		9949EC8C25DC39F300B8FB8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949EC8B25DC39F300B8FB8C /* Constants.swift */; };
 		9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */; };
 		9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F00325DB0D7100EC3BBA /* Coordinatable.swift */; };
 		9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */; };
@@ -60,6 +64,10 @@
 		9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
 		9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
 		9910286C25DC04EE00EC1A35 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		9910287625DC238E00EC1A35 /* ExpansionViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerScreen.swift; sourceTree = "<group>"; };
+		9949EC8025DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
+		9949EC8525DC36B400B8FB8C /* ExpansionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTableViewCell.swift; sourceTree = "<group>"; };
+		9949EC8B25DC39F300B8FB8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		9978F00325DB0D7100EC3BBA /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
@@ -120,12 +128,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9910285525DBF24D00EC1A35 /* View */ = {
+		9910285525DBF24D00EC1A35 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				9910285B25DBF31500EC1A35 /* TabBar */,
 			);
-			path = View;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9910285B25DBF31500EC1A35 /* TabBar */ = {
@@ -136,6 +144,25 @@
 				9910286C25DC04EE00EC1A35 /* TabItem.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		9910287525DC237A00EC1A35 /* Expansion */ = {
+			isa = PBXGroup;
+			children = (
+				9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */,
+				9910287625DC238E00EC1A35 /* ExpansionViewControllerScreen.swift */,
+				9949EC8025DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift */,
+				9949EC8525DC36B400B8FB8C /* ExpansionTableViewCell.swift */,
+			);
+			path = Expansion;
+			sourceTree = "<group>";
+		};
+		9949EC8A25DC39EB00B8FB8C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9949EC8B25DC39F300B8FB8C /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9978EFFA25DB0C9400EC3BBA /* Protocols */ = {
@@ -170,7 +197,7 @@
 		9978F01325DB0E4100EC3BBA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */,
+				9910287525DC237A00EC1A35 /* Expansion */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -198,7 +225,8 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
-				9910285525DBF24D00EC1A35 /* View */,
+				9949EC8A25DC39EB00B8FB8C /* Utils */,
+				9910285525DBF24D00EC1A35 /* Components */,
 				9978F01325DB0E4100EC3BBA /* ViewController */,
 				9978F00F25DB0DC200EC3BBA /* Core */,
 				9978F00825DB0D9900EC3BBA /* Coordinator */,
@@ -480,9 +508,12 @@
 				9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
+				9949EC8C25DC39F300B8FB8C /* Constants.swift in Sources */,
+				9910287725DC238E00EC1A35 /* ExpansionViewControllerScreen.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
+				9949EC8125DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */,
 				9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */,
@@ -493,6 +524,7 @@
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
+				9949EC8625DC36B400B8FB8C /* ExpansionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
