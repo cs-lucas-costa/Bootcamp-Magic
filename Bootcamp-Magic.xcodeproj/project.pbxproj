@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9910285125DBF1A300EC1A35 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9910285025DBF1A300EC1A35 /* SnapKit */; };
 		9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */; };
-		9910285D25DBF32300EC1A35 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910285C25DBF32300EC1A35 /* TabItem.swift */; };
 		9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */; };
 		9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */; };
 		9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F00325DB0D7100EC3BBA /* Coordinatable.swift */; };
@@ -58,7 +57,6 @@
 
 /* Begin PBXFileReference section */
 		9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
-		9910285C25DBF32300EC1A35 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
 		9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		9978F00325DB0D7100EC3BBA /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */,
-				9910285C25DBF32300EC1A35 /* TabItem.swift */,
 				9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */,
 			);
 			path = TabBar;
@@ -483,7 +480,6 @@
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
-				9910285D25DBF32300EC1A35 /* TabItem.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */,
 				9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */,

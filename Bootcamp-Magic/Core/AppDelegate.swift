@@ -18,14 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
       print(#function)
       // Setup Coordinator
-      let navigationController = UINavigationController()
-      coordinator = MainCoordinator(navigationController: navigationController)
+//      let navigationController = UINavigationController()
+      coordinator = MainCoordinator() //MainCoordinator(navigationController: navigationController)
       coordinator?.start()
       
       // Setup Window
       self.window = UIWindow(frame: UIScreen.main.bounds)
       self.window?.makeKeyAndVisible()
-      self.window?.rootViewController = navigationController
+      self.window?.rootViewController = coordinator!.navigationMenuTabBarController
       
         return true
     }

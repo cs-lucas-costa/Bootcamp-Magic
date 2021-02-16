@@ -10,17 +10,18 @@ import UIKit
 final class MainCoordinator: Coordinatable {
   
   // MARK: - Properties
-  let navigationController: UINavigationController
+//  let navigationController: UINavigationController
+  let navigationMenuTabBarController = NavigationMenuTabBarController(frame: UIScreen.main.bounds)
   
   // MARK: - Init
-  init(navigationController: UINavigationController) {
-    print(#function)
-    self.navigationController = navigationController
-  }
+//  init(navigationController: UINavigationController) {
+//    print(#function)
+//    self.navigationController = navigationController
+//  }
 
   func start() {
     print(#function)
-    let expansionViewController = ExpansionViewController()
-    navigationController.pushViewController(expansionViewController, animated: true)
+//    let expansionViewController = ExpansionViewController()
+//    navigationController.pushViewController(expansionViewController, animated: true)
   }
 }
