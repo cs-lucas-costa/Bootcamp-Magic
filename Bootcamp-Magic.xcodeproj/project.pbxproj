@@ -202,8 +202,24 @@
 		BDEE379125DB0C6D003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE37AA25DBEDCD003B2F5A /* Fakes */,
+				BDEE37A925DBED9E003B2F5A /* Stubs */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BDEE37A925DBED9E003B2F5A /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		BDEE37AA25DBEDCD003B2F5A /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		E6537A1125DAC12B00ECD9D9 /* Model */ = {
