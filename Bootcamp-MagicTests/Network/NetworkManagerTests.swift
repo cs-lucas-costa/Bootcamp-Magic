@@ -27,24 +27,6 @@ final class NetworkManagerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testDecode() {
-        
-        do {
-            
-            let fakeJSONURL = try XCTUnwrap(service.bundle.url(forResource: "set-response", withExtension: "json"))
-            let fakeJSONData = try Data(contentsOf: fakeJSONURL)
-            let fakeJSON = try JSONDecoder().decode(ExpansionList.self, from: fakeJSONData)
-            
-            self.sut.decode(decodableType: ExpansionList.self, data: fakeJSONData)
-            
-            
-            
-        } catch {
-            XCTFail()
-        }
-        
-    }
-    
     func testSetGetBehavior() {
         
         let expectation = XCTestExpectation()
@@ -53,7 +35,7 @@ final class NetworkManagerTests: XCTestCase {
         
         do {
 
-            let fakeJSONURL = try XCTUnwrap(service.bundle.url(forResource: "set-response", withExtension: "json"))
+            let fakeJSONURL = try XCTUnwrap(service.bundle.url(forResource: "sets-response", withExtension: "json"))
             let fakeJSONData = try Data(contentsOf: fakeJSONURL)
             let fakeJSON = try JSONDecoder().decode(ExpansionList.self, from: fakeJSONData)
             service.json = fakeJSONURL
@@ -80,7 +62,7 @@ final class NetworkManagerTests: XCTestCase {
         
         let expectation = XCTestExpectation()
         
-        let cardService = CardsService.cardsList(setName: "AetherRevolt")
+        let cardService = CardsService.cardsList(setCode: "AetherRevolt")
         
         do {
             
