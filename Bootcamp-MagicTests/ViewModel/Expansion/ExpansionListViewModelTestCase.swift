@@ -10,14 +10,6 @@ import XCTest
 
 class ExpansionListViewModelTestCase: XCTestCase {
 
-
-    func testCreateDictExpansion() throws {
-        
-        let list = try ExpansionList.fixture()
-        let sut = ExpansionListViewModel(list: list)
-        
-        XCTAssertEqual(sut.dictExpansions.keys.count, 2)
-        XCTAssertEqual(sut.dictExpansions["U"]?.count, 2)
-    }
     
+
 }
