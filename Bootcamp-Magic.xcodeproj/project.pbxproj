@@ -36,6 +36,8 @@
 		E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */; };
 		E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579725DBE97900EAC7E8 /* CardViewModel.swift */; };
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
+		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
+		E67957C625DC064600EAC7E8 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957C525DC064600EAC7E8 /* Dict.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expansion+Fixture.swift"; sourceTree = "<group>"; };
 		E679579725DBE97900EAC7E8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
+		E67957C525DC064600EAC7E8 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				E67957C425DC063900EAC7E8 /* Utils */,
 				BDEE378525DB0589003B2F5A /* Network */,
 				E6537A8B25DAF05800ECD9D9 /* ViewModel */,
 				E6537A1125DAC12B00ECD9D9 /* Model */,
@@ -281,6 +286,7 @@
 		E6537A9D25DAF93B00ECD9D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E67957BB25DBF89B00EAC7E8 /* Card */,
 				E6537A9E25DAF94000ECD9D9 /* Expansion */,
 			);
 			path = ViewModel;
@@ -309,6 +315,22 @@
 				E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		E67957BB25DBF89B00EAC7E8 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		E67957C425DC063900EAC7E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E67957C525DC064600EAC7E8 /* Dict.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +468,7 @@
 				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
+				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
@@ -466,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */,
 				E6537AA025DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift in Sources */,
 				E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */,
 				BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */,
