@@ -17,7 +17,7 @@ protocol ServiceProtocol {
 
 
 enum CardsService {
-    case cardsList(setName: String)
+    case cardsList(setCode: String)
     case setList
 }
 

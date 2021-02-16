@@ -34,6 +34,8 @@
 		E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A9125DAF14500ECD9D9 /* ExpansionViewModel.swift */; };
 		E6537AA025DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A9F25DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift */; };
 		E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */; };
+		E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579725DBE97900EAC7E8 /* CardViewModel.swift */; };
+		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		E6537A9125DAF14500ECD9D9 /* ExpansionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewModel.swift; sourceTree = "<group>"; };
 		E6537A9F25DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListViewModelTestCase.swift; sourceTree = "<group>"; };
 		E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expansion+Fixture.swift"; sourceTree = "<group>"; };
+		E679579725DBE97900EAC7E8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,7 @@
 		E6537A8B25DAF05800ECD9D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E679579625DBE96B00EAC7E8 /* Card */,
 				E6537A9625DAF1B200ECD9D9 /* Expansion */,
 			);
 			path = ViewModel;
@@ -295,6 +300,15 @@
 				E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		E679579625DBE96B00EAC7E8 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				E679579725DBE97900EAC7E8 /* CardViewModel.swift */,
+				E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +447,7 @@
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
+				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
@@ -443,6 +458,7 @@
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
+				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
