@@ -27,6 +27,7 @@
 		BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */; };
 		BDEE382525DC286A003B2F5A /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = BDEE382325DC286A003B2F5A /* sets-response.json */; };
 		BDEE382625DC286A003B2F5A /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = BDEE382425DC286A003B2F5A /* cards-response.json */; };
+		BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE383625DC3833003B2F5A /* AutoLayout.swift */; };
 		E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1525DAC14D00ECD9D9 /* Expansion.swift */; };
 		E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */; };
 		E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */ = {isa = PBXBuildFile; fileRef = E6537A2E25DAC40400ECD9D9 /* expansions.json */; };
@@ -87,6 +88,7 @@
 		BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		BDEE382325DC286A003B2F5A /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "sets-response.json"; path = "../../../../../Desktop/sets-response.json"; sourceTree = "<group>"; };
 		BDEE382425DC286A003B2F5A /* cards-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "cards-response.json"; path = "../../../../../Desktop/cards-response.json"; sourceTree = "<group>"; };
+		BDEE383625DC3833003B2F5A /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		E6537A1525DAC14D00ECD9D9 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListTestCase.swift; sourceTree = "<group>"; };
 		E6537A2E25DAC40400ECD9D9 /* expansions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = expansions.json; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				E67957C525DC064600EAC7E8 /* Dict.swift */,
+				BDEE383625DC3833003B2F5A /* AutoLayout.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
 				BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */,
+				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
