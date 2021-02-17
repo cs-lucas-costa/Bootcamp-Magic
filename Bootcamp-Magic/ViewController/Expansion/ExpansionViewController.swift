@@ -10,16 +10,10 @@ import UIKit
 final class ExpansionViewController: UIViewController {
   
   // MARK: - Properties
-  lazy var dataSource = ExpansionViewControllerDataSource(expansions: expansion)
+  lazy var dataSource = ExpansionViewControllerDataSource(expansions: expansions)
   lazy var screen = ExpansionViewControllerScreen(frame: view.bounds)
-  let expansion = [Expansion(code: "", name: "Alpha"),
-                  Expansion(code: "", name: "Alliances"),
-                  Expansion(code: "", name: "Beta"),
-                  Expansion(code: "", name: "Betrayers of Kamigawa"),
-                  Expansion(code: "", name: "Champions of Kamigawa"),
-                  Expansion(code: "", name: "Coldsnap"),
-                  Expansion(code: "", name: "Darksteel")]
-  
+  var expansions = [Expansion]()
+  let viewModel = ExpansionListViewModel()
   
   // MARK: - LoadView
   override func loadView() {
@@ -32,9 +26,36 @@ final class ExpansionViewController: UIViewController {
     super.viewDidLoad()
     setupTableView()
     setupNavigationTitle()
+    fetchExpansions()
   }
   
   // MARK: - Methods
+  func fetchExpansions() {
+    viewModel.fetchExpansions { [weak self] error in
+      
+      guard let self = self else { return }
+      if error == nil {
+        
+        for viewModels in self.viewModel.dictExpansions.map({ $0.value.map({ $0 }) }) {
+          for viewModel in viewModels {
+            self.expansions.append(Expansion(code: viewModel.code, name: viewModel.name))
+          }
+        }
+        
+        self.dataSource = ExpansionViewControllerDataSource(expansions: self.expansions)
+        
+        DispatchQueue.main.async { [weak self] in
+          guard let self = self else { return }
+          self.screen.tableView.delegate = self.dataSource
+          self.screen.tableView.dataSource = self.dataSource
+          self.screen.tableView.reloadData()
+        }
+      } else {
+        print(error?.localizedDescription ?? "Error")
+      }
+    }
+  }
+  
   func setupNavigationTitle() {
     #warning("remover string hardcoded")
     navigationController?.navigationBar.prefersLargeTitles = true

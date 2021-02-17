@@ -31,12 +31,44 @@ final class ExpansionTableViewCell: UITableViewCell {
   }
   
   // MARK: - Extensions
-  func setupCell(with expansion: Expansion) {
+  func setupCell(with expansion: Expansion, image: UIImage? = nil) {
     expasionName.text = expansion.name
+    
+    if image != nil {
+      addExpansionImageOnView()
+    } else {
+      removeExpansionImageFromView()
+    }
+  }
+  
+  private func removeExpansionImageFromView() {
+    expansionImage.isHidden = true
+    expasionName.snp.removeConstraints()
+    expasionName.snp.makeConstraints { make in
+      make.left.equalToSuperview().offset(horizontalMargin)
+      make.right.equalTo(rightChevronImage.snp.left)
+      make.top.equalToSuperview().offset(verticalMargin)
+      make.bottom.equalToSuperview().inset(verticalMargin)
+    }
+  }
+  
+  private func addExpansionImageOnView() {
+    expansionImage.isHidden = false
+    expasionName.snp.removeConstraints()
+    expasionName.snp.makeConstraints { make in
+      make.left.equalTo(expansionImage.snp.right).offset(horizontalMargin)
+      make.right.equalTo(rightChevronImage.snp.left)
+      make.top.equalToSuperview().offset(verticalMargin)
+      make.bottom.equalToSuperview().inset(verticalMargin)
+    }
   }
   
   func hideDivisor() {
     horizontalDivisor.isHidden = true
+  }
+  
+  func showDivisor() {
+    horizontalDivisor.isHidden = false
   }
   
 }

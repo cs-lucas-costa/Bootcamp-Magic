@@ -49,10 +49,7 @@ extension ExpansionViewControllerDataSource: UITableViewDataSource {
 extension ExpansionViewControllerDataSource: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    #warning("remover número mágico")
-    
-    let height = UIScreen.main.bounds.size.height * 0.0615
-    let header = ExpansionHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: tableView.frame.size.width, height: height)), character: initials[section])
+    let header = ExpansionHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: tableView.frame.size.width, height: 0)), character: initials[section])
     
     return header
   }
@@ -60,14 +57,14 @@ extension ExpansionViewControllerDataSource: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     #warning("remover número mágico")
     
-    let height = UIScreen.main.bounds.size.height * 0.0615
+    let height = UIScreen.main.bounds.size.height * 0.08
     return height
   }
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     #warning("remover número mágico")
     
-    let height = UIScreen.main.bounds.size.height * 0.0615
+    let height = UIScreen.main.bounds.size.height * 0.08
     return height
   }
   
@@ -85,9 +82,12 @@ extension ExpansionViewControllerDataSource: UITableViewDelegate {
       // If it's the last section it should have a divisor
       let sectionsAmount = tableView.numberOfSections
       guard section != sectionsAmount - 1 else {
+        cell.showDivisor()
         return
       }
       cell.hideDivisor()
+    } else {
+      cell.showDivisor()
     }
   }
 }
