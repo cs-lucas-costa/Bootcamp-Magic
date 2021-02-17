@@ -82,11 +82,17 @@ extension ExpansionTableViewCell: ViewCodable {
   }
   
   func setupAdditionalConfiguration() {
+    #warning("Remover números mágicos")
+    expasionName.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     expasionName.textAlignment = .left
     expasionName.textColor = .white
+    
     horizontalDivisor.backgroundColor = .white
-    backgroundColor = .clear
+    
     expansionImage.contentMode = .scaleAspectFit
+    
     rightChevronImage.contentMode = .scaleAspectFit
+    
+    backgroundColor = .clear
   }
 }

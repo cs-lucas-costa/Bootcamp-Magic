@@ -47,7 +47,9 @@ extension ExpansionHeaderView: ViewCodable {
   }
   
   func setupAdditionalConfiguration() {
+    #warning("Remover números mágicos")
     initialCharacterLabel.textColor = .black
+    initialCharacterLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     backgroundColor = .white
   }
   
