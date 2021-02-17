@@ -73,9 +73,9 @@ final class NetworkManager {
     }
 
     func getRequest<T: Decodable>(cardsService: CardsService,
-        decodableType: T.Type,
-        completion: @escaping (Result<T, Error>) -> Void) {
-        
+                                  decodableType: T.Type,
+                                  completion: @escaping (Result<T, Error>) -> Void) {
+
         guard let url = URL(string: cardsService.path) else {
             completion(.failure(NetworkError.notUrl(networkErrorDescription: "Could not Create URL")))
             return

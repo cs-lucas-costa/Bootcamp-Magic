@@ -9,9 +9,9 @@ import Foundation
 @testable import Bootcamp_Magic
 
 final class ServiceFakeDataTask: URLSessionDataTask {
-    
+
     override init() { }
-    
+
     override func resume() {
         return
     }
