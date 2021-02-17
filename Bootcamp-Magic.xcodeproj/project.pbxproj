@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		994ECBBD25DD364F00F0257F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBBC25DD364F00F0257F /* Constants.swift */; };
+		994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC625DD367700F0257F /* ExpansionViewController.swift */; };
+		994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */; };
+		994ECBCC25DD367700F0257F /* ExpansionViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC825DD367700F0257F /* ExpansionViewControllerScreen.swift */; };
+		994ECBCD25DD367700F0257F /* ExpansionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC925DD367700F0257F /* ExpansionTableViewCell.swift */; };
+		994ECBE125DD369500F0257F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD625DD369500F0257F /* TabItem.swift */; };
+		994ECBE225DD369500F0257F /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD725DD369500F0257F /* TabNavigationMenu.swift */; };
+		994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */; };
+		994ECBE425DD369500F0257F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBDA25DD369500F0257F /* Assets.xcassets */; };
+		994ECBE525DD369500F0257F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */; };
+		994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */; };
+		994ECBE725DD369500F0257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBDF25DD369500F0257F /* AppDelegate.swift */; };
+		994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF025DD376100F0257F /* MainCoordinator.swift */; };
+		994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF725DD376E00F0257F /* ViewCodable.swift */; };
+		994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF825DD376E00F0257F /* Coordinatable.swift */; };
+		994ECC0A25DD50C000F0257F /* ExpansionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC0925DD50C000F0257F /* ExpansionHeaderView.swift */; };
+		994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC0E25DD57A800F0257F /* String+Extensions.swift */; };
+		994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */; };
+		994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */; };
 		9992F27125DC3D070079AD1D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9992F27025DC3D070079AD1D /* SnapKit */; };
 		9992F28925DC5D620079AD1D /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28725DC5D620079AD1D /* cards-response.json */; };
 		9992F28A25DC5D620079AD1D /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28825DC5D620079AD1D /* sets-response.json */; };
-		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
-		BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */; };
-		BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADAD25DAB8970016B1BE /* ViewController.swift */; };
-		BD80ADB125DAB8970016B1BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADAF25DAB8970016B1BE /* Main.storyboard */; };
-		BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */; };
-		BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB525DAB8980016B1BE /* Assets.xcassets */; };
-		BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */; };
 		BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */; };
 		BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376925DB04EB003B2F5A /* NetworkManager.swift */; };
 		BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376E25DB0504003B2F5A /* RequestError.swift */; };
@@ -56,17 +68,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		994ECBBC25DD364F00F0257F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		994ECBC625DD367700F0257F /* ExpansionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
+		994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
+		994ECBC825DD367700F0257F /* ExpansionViewControllerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerScreen.swift; sourceTree = "<group>"; };
+		994ECBC925DD367700F0257F /* ExpansionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionTableViewCell.swift; sourceTree = "<group>"; };
+		994ECBD625DD369500F0257F /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		994ECBD725DD369500F0257F /* TabNavigationMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
+		994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
+		994ECBDA25DD369500F0257F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		994ECBDC25DD369500F0257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
+		994ECBDF25DD369500F0257F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		994ECBE025DD369500F0257F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994ECBF025DD376100F0257F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		994ECBF725DD376E00F0257F /* ViewCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		994ECBF825DD376E00F0257F /* Coordinatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		994ECC0925DD50C000F0257F /* ExpansionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionHeaderView.swift; sourceTree = "<group>"; };
+		994ECC0E25DD57A800F0257F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
+		994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionCoordinator.swift; sourceTree = "<group>"; };
 		9992F28725DC5D620079AD1D /* cards-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cards-response.json"; sourceTree = "<group>"; };
 		9992F28825DC5D620079AD1D /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sets-response.json"; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD80ADA925DAB8970016B1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD80ADAD25DAB8970016B1BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD80ADB025DAB8970016B1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BD80ADB325DAB8970016B1BE /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
-		BD80ADB525DAB8980016B1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BD80ADB825DAB8980016B1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BD80ADBA25DAB8980016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicTests.swift; sourceTree = "<group>"; };
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +140,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		994ECBC425DD367700F0257F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBC525DD367700F0257F /* Expansion */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		994ECBC525DD367700F0257F /* Expansion */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBC625DD367700F0257F /* ExpansionViewController.swift */,
+				994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */,
+				994ECBC825DD367700F0257F /* ExpansionViewControllerScreen.swift */,
+				994ECBC925DD367700F0257F /* ExpansionTableViewCell.swift */,
+				994ECC0925DD50C000F0257F /* ExpansionHeaderView.swift */,
+			);
+			path = Expansion;
+			sourceTree = "<group>";
+		};
+		994ECBD425DD369500F0257F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBD525DD369500F0257F /* TabBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		994ECBD525DD369500F0257F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBD625DD369500F0257F /* TabItem.swift */,
+				994ECBD725DD369500F0257F /* TabNavigationMenu.swift */,
+				994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		994ECBD925DD369500F0257F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBDA25DD369500F0257F /* Assets.xcassets */,
+				994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */,
+				994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */,
+				994ECBDF25DD369500F0257F /* AppDelegate.swift */,
+				994ECBE025DD369500F0257F /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		994ECBEF25DD376000F0257F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBF025DD376100F0257F /* MainCoordinator.swift */,
+				994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */,
+			);
+			name = Coordinator;
+			path = "Bootcamp-Magic/Coordinator";
+			sourceTree = SOURCE_ROOT;
+		};
+		994ECBF625DD376E00F0257F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBF725DD376E00F0257F /* ViewCodable.swift */,
+				994ECBF825DD376E00F0257F /* Coordinatable.swift */,
+			);
+			name = Protocols;
+			path = "Bootcamp-Magic/Protocols";
+			sourceTree = SOURCE_ROOT;
+		};
+		994ECC0D25DD579B00F0257F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				994ECC0E25DD57A800F0257F /* String+Extensions.swift */,
+				994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9992F28625DC5D410079AD1D /* JSONFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,18 +249,16 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				994ECC0D25DD579B00F0257F /* Extensions */,
+				994ECBF625DD376E00F0257F /* Protocols */,
+				994ECBEF25DD376000F0257F /* Coordinator */,
+				994ECBD425DD369500F0257F /* Components */,
+				994ECBD925DD369500F0257F /* Core */,
+				994ECBC425DD367700F0257F /* ViewController */,
 				E67957C425DC063900EAC7E8 /* Utils */,
 				BDEE378525DB0589003B2F5A /* Network */,
 				E6537A8B25DAF05800ECD9D9 /* ViewModel */,
 				E6537A1125DAC12B00ECD9D9 /* Model */,
-				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
-				BD80ADAB25DAB8970016B1BE /* SceneDelegate.swift */,
-				BD80ADAD25DAB8970016B1BE /* ViewController.swift */,
-				BD80ADAF25DAB8970016B1BE /* Main.storyboard */,
-				BD80ADB525DAB8980016B1BE /* Assets.xcassets */,
-				BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */,
-				BD80ADBA25DAB8980016B1BE /* Info.plist */,
-				BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */,
 			);
 			path = "Bootcamp-Magic";
 			sourceTree = "<group>";
@@ -322,6 +423,7 @@
 		E67957C425DC063900EAC7E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				994ECBBC25DD364F00F0257F /* Constants.swift */,
 				E67957C525DC064600EAC7E8 /* Dict.swift */,
 				BDEE383625DC3833003B2F5A /* AutoLayout.swift */,
 				E6AEA71225DD503600375F4E /* ViewCodable.swift */,
@@ -400,7 +502,6 @@
 			mainGroup = BD80AD9D25DAB8970016B1BE;
 			packageReferences = (
 				9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */,
-				9992F27925DC546A0079AD1D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = BD80ADA725DAB8970016B1BE /* Products */;
 			projectDirPath = "";
@@ -417,9 +518,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */,
-				BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */,
-				BD80ADB125DAB8970016B1BE /* Main.storyboard in Resources */,
+				994ECBE525DD369500F0257F /* LaunchScreen.storyboard in Resources */,
+				994ECBE425DD369500F0257F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,24 +562,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				994ECBBD25DD364F00F0257F /* Constants.swift in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
-				E6AEA71325DD503600375F4E /* ViewCodable.swift in Sources */,
+				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
 				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
+				994ECBCC25DD367700F0257F /* ExpansionViewControllerScreen.swift in Sources */,
+				994ECBE725DD369500F0257F /* AppDelegate.swift in Sources */,
 				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
+				994ECBCD25DD367700F0257F /* ExpansionTableViewCell.swift in Sources */,
+				994ECBE225DD369500F0257F /* TabNavigationMenu.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
+				994ECBE125DD369500F0257F /* TabItem.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
+				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
-				BD80ADAE25DAB8970016B1BE /* ViewController.swift in Sources */,
 				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
-				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
+				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
+				994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */,
+				994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */,
+				994ECC0A25DD50C000F0257F /* ExpansionHeaderView.swift in Sources */,
+				994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
-				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
+				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
+				994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
+				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
 				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,18 +623,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD80ADAF25DAB8970016B1BE /* Main.storyboard */ = {
+		994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD80ADB025DAB8970016B1BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD80ADB825DAB8980016B1BE /* Base */,
+				994ECBDC25DD369500F0257F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -652,7 +756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-Magic/Info.plist";
+				INFOPLIST_FILE = "Bootcamp-Magic/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,7 +774,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-Magic/Info.plist";
+				INFOPLIST_FILE = "Bootcamp-Magic/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,14 +869,6 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		9992F27925DC546A0079AD1D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -784,12 +880,12 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */ = {
+		994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BD80ADB325DAB8970016B1BE /* Bootcamp_Magic.xcdatamodel */,
+				994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */,
 			);
-			currentVersion = BD80ADB325DAB8970016B1BE /* Bootcamp_Magic.xcdatamodel */;
+			currentVersion = 994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */;
 			path = Bootcamp_Magic.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

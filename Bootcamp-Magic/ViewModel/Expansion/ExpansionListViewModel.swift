@@ -10,7 +10,6 @@ import Foundation
 final class ExpansionListViewModel {
 
     private let networkManager: NetworkManager
-    private(set) var expansions: [ExpansionViewModel] = []
     private(set) var dictExpansions: [Dict<String, [ExpansionViewModel]>] = []
 
     init(networkManager: NetworkManager = NetworkManager()) {
