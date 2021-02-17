@@ -15,7 +15,7 @@ class CardListTestCase: XCTestCase {
         let data = try readJSONFile()
         let list = try JSONDecoder().decode(CardList.self, from: data)
         
-        XCTAssertEqual(list.cards.count, 2)
+        XCTAssertEqual(list.cards.count, 3)
     }
     
     //MARK: Auxiliary methods

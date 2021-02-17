@@ -8,7 +8,6 @@
 import Foundation
 
 protocol ServiceProtocol {
-    var basePath: String { get }
     var path: String { get }
     var method: HttpMethods { get }
     var parameters: [String: Any]? { get }
@@ -17,22 +16,25 @@ protocol ServiceProtocol {
 
 
 enum CardsService {
-    case cardsList(setName: String)
+    case cardsList(setCode: String)
     case setList
+    case cardImage(imagePath: String)
 }
 
 extension CardsService: ServiceProtocol {
     
-    var basePath: String {
-        return "https://api.magicthegathering.io/v1/"
+    private var basePath: String {
+        return "https://api.magicthegathering.io/v1"
     }
     
     var path: String {
         switch self {
-        case .cardsList(let setName):
-            return (self.basePath + "/cards?sets=" + "\"\(setName)\"")
+        case .cardsList(let code):
+            return (self.basePath + "/cards?set=" + code)
         case .setList:
-            return (self.basePath + "/sets")
+            return (self.basePath + "/sets?page=1&pageSize=40")
+        case .cardImage(let imagePath):
+            return imagePath
         }
     }
     
@@ -41,6 +43,8 @@ extension CardsService: ServiceProtocol {
         case .cardsList:
             return .get
         case .setList:
+            return .get
+        case .cardImage:
             return .get
         }
     }
@@ -51,6 +55,8 @@ extension CardsService: ServiceProtocol {
             return nil
         case .setList:
             return nil
+        case .cardImage:
+            return nil
         }
     }
     
@@ -59,7 +65,9 @@ extension CardsService: ServiceProtocol {
         case .cardsList:
             return nil
         case .setList:
-            return ["Count": "40"]
+            return nil
+        case .cardImage:
+            return nil
         }
     }
 }

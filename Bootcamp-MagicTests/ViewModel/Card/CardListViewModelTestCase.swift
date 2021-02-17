@@ -1,16 +1,17 @@
 //
-//  ExpansionListViewModelTestCase.swift
+//  CardListViewModelTestCase.swift
 //  Bootcamp-MagicTests
 //
-//  Created by lucas.henrique.costa on 15/02/21.
+//  Created by lucas.henrique.costa on 16/02/21.
 //
 
 import XCTest
+
 @testable import Bootcamp_Magic
 
-class ExpansionListViewModelTestCase: XCTestCase {
+class CardListViewModelTestCase: XCTestCase {
 
-    var sut: ExpansionListViewModel!
+    var sut: CardListViewModel!
     var networkManager: NetworkManager!
     var serviceStub: NetworkServiceStub!
     
@@ -18,9 +19,9 @@ class ExpansionListViewModelTestCase: XCTestCase {
         super.setUp()
         let bundle = Bundle(for: type(of: self))
         serviceStub = NetworkServiceStub(bundle: bundle)
-        serviceStub.json = bundle.url(forResource: "expansions", withExtension: "json")
+        serviceStub.json = bundle.url(forResource: "cards", withExtension: "json")
         networkManager = NetworkManager(service: serviceStub)
-        sut = ExpansionListViewModel(networkManager: networkManager)
+        sut = CardListViewModel(networkManager: networkManager)
     }
     
     override func tearDown() {
@@ -30,12 +31,12 @@ class ExpansionListViewModelTestCase: XCTestCase {
         super.tearDown()
     }
 
-    func testFetchExpansions() {
+    func testFetchCards() {
         
-        let exp = expectation(description: "Fetch expansion")
+        let exp = expectation(description: "Fetch cards")
         var error: Error?
         
-        sut.fetchExpansions { (responseError) in
+        sut.fetchCards(setCode: "") { (responseError) in
             error = responseError
             exp.fulfill()
         }
@@ -43,19 +44,19 @@ class ExpansionListViewModelTestCase: XCTestCase {
         wait(for: [exp], timeout: 1)
         
         XCTAssertNil(error)
-        XCTAssertEqual(sut.dictExpansions.map({ $0.key }).count, 2)
-        XCTAssertEqual(sut.dictExpansions.flatMap({ $0.value }).count, 2)
+        XCTAssertEqual(sut.dictCards.map({ $0.key }).count, 2)
+        XCTAssertEqual(sut.dictCards.flatMap({ $0.value }).count, 3)
     }
     
-    func testFetchExpansionsWithError() {
+    func testFetchCardsWithError() {
         
-        let exp = expectation(description: "Fetch expansions with error")
+        let exp = expectation(description: "Fetch cards with error")
         var error: Error?
         
         serviceStub.shouldFail = true
         serviceStub.statusCode = 404
         
-        sut.fetchExpansions { (responseError) in
+        sut.fetchCards(setCode: "") { (responseError) in
             error = responseError
             exp.fulfill()
         }
@@ -65,14 +66,13 @@ class ExpansionListViewModelTestCase: XCTestCase {
         XCTAssertNotNil(error)
     }
     
-    func testSeparateExpansionsWithKeysAndValuesSorted() {
+    func testSeparateCardsWithTypeSorted() {
         
-        let names = ["Tenth Edition", "Unlimited Edition"]
-        let keys = ["T", "U"]
+        let types = ["Creature — Horror", "Enchantment"]
         let exp = expectation(description: "Fetch cards")
         var error: Error?
         
-        sut.fetchExpansions { (responseError) in
+        sut.fetchCards(setCode: "") { (responseError) in
             error = responseError
             exp.fulfill()
         }
@@ -80,10 +80,8 @@ class ExpansionListViewModelTestCase: XCTestCase {
         wait(for: [exp], timeout: 1)
         
         XCTAssertNil(error)
-        XCTAssertEqual(sut.dictExpansions.map({ $0.key }), keys)
-        XCTAssertEqual(sut.dictExpansions.flatMap({ $0.value.map({ $0.name }) }), names)
+        XCTAssertEqual(sut.dictCards.map({ $0.key }), types)
     }
     
     
-
 }

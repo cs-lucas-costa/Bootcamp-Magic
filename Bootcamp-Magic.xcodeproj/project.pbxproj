@@ -7,30 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9910285125DBF1A300EC1A35 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9910285025DBF1A300EC1A35 /* SnapKit */; };
-		9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */; };
-		9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */; };
-		9910286D25DC04EE00EC1A35 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910286C25DC04EE00EC1A35 /* TabItem.swift */; };
-		9910287725DC238E00EC1A35 /* ExpansionViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910287625DC238E00EC1A35 /* ExpansionViewControllerScreen.swift */; };
-		9949EC8125DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949EC8025DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift */; };
-		9949EC8625DC36B400B8FB8C /* ExpansionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949EC8525DC36B400B8FB8C /* ExpansionTableViewCell.swift */; };
-		9949EC8C25DC39F300B8FB8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949EC8B25DC39F300B8FB8C /* Constants.swift */; };
-		9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */; };
-		9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F00325DB0D7100EC3BBA /* Coordinatable.swift */; };
-		9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */; };
-		9978F01A25DB0E9400EC3BBA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978F01925DB0E9400EC3BBA /* MainCoordinator.swift */; };
+		994ECBBD25DD364F00F0257F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBBC25DD364F00F0257F /* Constants.swift */; };
+		994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC625DD367700F0257F /* ExpansionViewController.swift */; };
+		994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */; };
+		994ECBCC25DD367700F0257F /* ExpansionViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC825DD367700F0257F /* ExpansionViewControllerScreen.swift */; };
+		994ECBCD25DD367700F0257F /* ExpansionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC925DD367700F0257F /* ExpansionTableViewCell.swift */; };
+		994ECBE125DD369500F0257F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD625DD369500F0257F /* TabItem.swift */; };
+		994ECBE225DD369500F0257F /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD725DD369500F0257F /* TabNavigationMenu.swift */; };
+		994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */; };
+		994ECBE425DD369500F0257F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBDA25DD369500F0257F /* Assets.xcassets */; };
+		994ECBE525DD369500F0257F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */; };
+		994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */; };
+		994ECBE725DD369500F0257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBDF25DD369500F0257F /* AppDelegate.swift */; };
+		994ECBE825DD369500F0257F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBE025DD369500F0257F /* Info.plist */; };
+		994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF025DD376100F0257F /* MainCoordinator.swift */; };
+		994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF725DD376E00F0257F /* ViewCodable.swift */; };
+		994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF825DD376E00F0257F /* Coordinatable.swift */; };
+		9992F27125DC3D070079AD1D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9992F27025DC3D070079AD1D /* SnapKit */; };
+		9992F28925DC5D620079AD1D /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28725DC5D620079AD1D /* cards-response.json */; };
+		9992F28A25DC5D620079AD1D /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28825DC5D620079AD1D /* sets-response.json */; };
 		BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADA925DAB8970016B1BE /* AppDelegate.swift */; };
 		BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */; };
 		BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB525DAB8980016B1BE /* Assets.xcassets */; };
 		BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */; };
 		BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */; };
-		BD80ADCF25DAB8990016B1BE /* Bootcamp_MagicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */; };
 		BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376925DB04EB003B2F5A /* NetworkManager.swift */; };
 		BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376E25DB0504003B2F5A /* RequestError.swift */; };
 		BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377325DB052F003B2F5A /* NetworkError.swift */; };
 		BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377825DB0547003B2F5A /* URLSession + Extension.swift */; };
 		BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377D25DB0562003B2F5A /* NetworkService.swift */; };
 		BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE379225DB0E1C003B2F5A /* CardsService.swift */; };
+		BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */; };
+		BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */; };
+		BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */; };
+		BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE383625DC3833003B2F5A /* AutoLayout.swift */; };
 		E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1525DAC14D00ECD9D9 /* Expansion.swift */; };
 		E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */; };
 		E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */ = {isa = PBXBuildFile; fileRef = E6537A2E25DAC40400ECD9D9 /* expansions.json */; };
@@ -41,6 +51,10 @@
 		E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A9125DAF14500ECD9D9 /* ExpansionViewModel.swift */; };
 		E6537AA025DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A9F25DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift */; };
 		E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */; };
+		E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579725DBE97900EAC7E8 /* CardViewModel.swift */; };
+		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
+		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
+		E67957C625DC064600EAC7E8 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957C525DC064600EAC7E8 /* Dict.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,45 +65,45 @@
 			remoteGlobalIDString = BD80ADA525DAB8970016B1BE;
 			remoteInfo = "Bootcamp-Magic";
 		};
-		BD80ADCB25DAB8990016B1BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD80AD9E25DAB8970016B1BE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD80ADA525DAB8970016B1BE;
-			remoteInfo = "Bootcamp-Magic";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
-		9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
-		9910286C25DC04EE00EC1A35 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		9910287625DC238E00EC1A35 /* ExpansionViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerScreen.swift; sourceTree = "<group>"; };
-		9949EC8025DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
-		9949EC8525DC36B400B8FB8C /* ExpansionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTableViewCell.swift; sourceTree = "<group>"; };
-		9949EC8B25DC39F300B8FB8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
-		9978F00325DB0D7100EC3BBA /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
-		9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
-		9978F01925DB0E9400EC3BBA /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		994ECBBC25DD364F00F0257F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		994ECBC625DD367700F0257F /* ExpansionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
+		994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
+		994ECBC825DD367700F0257F /* ExpansionViewControllerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerScreen.swift; sourceTree = "<group>"; };
+		994ECBC925DD367700F0257F /* ExpansionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionTableViewCell.swift; sourceTree = "<group>"; };
+		994ECBD625DD369500F0257F /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		994ECBD725DD369500F0257F /* TabNavigationMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
+		994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
+		994ECBDA25DD369500F0257F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		994ECBDC25DD369500F0257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
+		994ECBDF25DD369500F0257F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		994ECBE025DD369500F0257F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994ECBF025DD376100F0257F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		994ECBF725DD376E00F0257F /* ViewCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		994ECBF825DD376E00F0257F /* Coordinatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		9992F28725DC5D620079AD1D /* cards-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cards-response.json"; sourceTree = "<group>"; };
+		9992F28825DC5D620079AD1D /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sets-response.json"; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADA925DAB8970016B1BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD80ADB325DAB8970016B1BE /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
 		BD80ADB525DAB8980016B1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD80ADB825DAB8980016B1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BD80ADBA25DAB8980016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicTests.swift; sourceTree = "<group>"; };
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicUITests.swift; sourceTree = "<group>"; };
-		BD80ADD025DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDEE376925DB04EB003B2F5A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BDEE376E25DB0504003B2F5A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		BDEE377325DB052F003B2F5A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BDEE377825DB0547003B2F5A /* URLSession + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession + Extension.swift"; sourceTree = "<group>"; };
 		BDEE377D25DB0562003B2F5A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		BDEE379225DB0E1C003B2F5A /* CardsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsService.swift; sourceTree = "<group>"; };
+		BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceStub.swift; sourceTree = "<group>"; };
+		BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFakeDataTask.swift; sourceTree = "<group>"; };
+		BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		BDEE383625DC3833003B2F5A /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		E6537A1525DAC14D00ECD9D9 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListTestCase.swift; sourceTree = "<group>"; };
 		E6537A2E25DAC40400ECD9D9 /* expansions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = expansions.json; sourceTree = "<group>"; };
@@ -100,6 +114,10 @@
 		E6537A9125DAF14500ECD9D9 /* ExpansionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewModel.swift; sourceTree = "<group>"; };
 		E6537A9F25DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListViewModelTestCase.swift; sourceTree = "<group>"; };
 		E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expansion+Fixture.swift"; sourceTree = "<group>"; };
+		E679579725DBE97900EAC7E8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
+		E67957C525DC064600EAC7E8 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9910285125DBF1A300EC1A35 /* SnapKit in Frameworks */,
+				9992F27125DC3D070079AD1D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,88 +136,95 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD80ADC725DAB8990016B1BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9910285525DBF24D00EC1A35 /* Components */ = {
+		994ECBB525DD361300F0257F /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				9910285B25DBF31500EC1A35 /* TabBar */,
+				BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */,
+				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
+				BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */,
+				BD80ADB525DAB8980016B1BE /* Assets.xcassets */,
 			);
-			path = Components;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		9910285B25DBF31500EC1A35 /* TabBar */ = {
+		994ECBC425DD367700F0257F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9910285625DBF29200EC1A35 /* NavigationMenuTabBarController.swift */,
-				9910286125DBF38500EC1A35 /* TabNavigationMenu.swift */,
-				9910286C25DC04EE00EC1A35 /* TabItem.swift */,
+				994ECBC525DD367700F0257F /* Expansion */,
 			);
-			path = TabBar;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		9910287525DC237A00EC1A35 /* Expansion */ = {
+		994ECBC525DD367700F0257F /* Expansion */ = {
 			isa = PBXGroup;
 			children = (
-				9978F01425DB0E6B00EC3BBA /* ExpansionViewController.swift */,
-				9910287625DC238E00EC1A35 /* ExpansionViewControllerScreen.swift */,
-				9949EC8025DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift */,
-				9949EC8525DC36B400B8FB8C /* ExpansionTableViewCell.swift */,
+				994ECBC625DD367700F0257F /* ExpansionViewController.swift */,
+				994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */,
+				994ECBC825DD367700F0257F /* ExpansionViewControllerScreen.swift */,
+				994ECBC925DD367700F0257F /* ExpansionTableViewCell.swift */,
 			);
 			path = Expansion;
 			sourceTree = "<group>";
 		};
-		9949EC8A25DC39EB00B8FB8C /* Utils */ = {
+		994ECBD425DD369500F0257F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9949EC8B25DC39F300B8FB8C /* Constants.swift */,
+				994ECBD525DD369500F0257F /* TabBar */,
 			);
-			path = Utils;
+			path = Components;
 			sourceTree = "<group>";
 		};
-		9978EFFA25DB0C9400EC3BBA /* Protocols */ = {
+		994ECBD525DD369500F0257F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				9978EFFB25DB0CA200EC3BBA /* ViewCodable.swift */,
-				9978F00325DB0D7100EC3BBA /* Coordinatable.swift */,
+				994ECBD625DD369500F0257F /* TabItem.swift */,
+				994ECBD725DD369500F0257F /* TabNavigationMenu.swift */,
+				994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */,
 			);
-			path = Protocols;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
-		9978F00825DB0D9900EC3BBA /* Coordinator */ = {
+		994ECBD925DD369500F0257F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9978F01925DB0E9400EC3BBA /* MainCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		9978F00F25DB0DC200EC3BBA /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				BD80ADA925DAB8970016B1BE /* AppDelegate.swift */,
-				BD80ADB525DAB8980016B1BE /* Assets.xcassets */,
-				BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */,
-				BD80ADBA25DAB8980016B1BE /* Info.plist */,
-				BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */,
+				994ECBDA25DD369500F0257F /* Assets.xcassets */,
+				994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */,
+				994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */,
+				994ECBDF25DD369500F0257F /* AppDelegate.swift */,
+				994ECBE025DD369500F0257F /* Info.plist */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		9978F01325DB0E4100EC3BBA /* ViewController */ = {
+		994ECBEF25DD376000F0257F /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				9910287525DC237A00EC1A35 /* Expansion */,
+				994ECBF025DD376100F0257F /* MainCoordinator.swift */,
 			);
-			path = ViewController;
+			name = Coordinator;
+			path = "Bootcamp-Magic/Coordinator";
+			sourceTree = SOURCE_ROOT;
+		};
+		994ECBF625DD376E00F0257F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBF725DD376E00F0257F /* ViewCodable.swift */,
+				994ECBF825DD376E00F0257F /* Coordinatable.swift */,
+			);
+			name = Protocols;
+			path = "Bootcamp-Magic/Protocols";
+			sourceTree = SOURCE_ROOT;
+		};
+		9992F28625DC5D410079AD1D /* JSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9992F28725DC5D620079AD1D /* cards-response.json */,
+				9992F28825DC5D620079AD1D /* sets-response.json */,
+			);
+			path = JSONFiles;
 			sourceTree = "<group>";
 		};
 		BD80AD9D25DAB8970016B1BE = {
@@ -207,8 +232,8 @@
 			children = (
 				BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */,
 				BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */,
-				BD80ADCD25DAB8990016B1BE /* Bootcamp-MagicUITests */,
 				BD80ADA725DAB8970016B1BE /* Products */,
+				994ECBB525DD361300F0257F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,7 +242,6 @@
 			children = (
 				BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */,
 				BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */,
-				BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,12 +249,12 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
-				9949EC8A25DC39EB00B8FB8C /* Utils */,
-				9910285525DBF24D00EC1A35 /* Components */,
-				9978F01325DB0E4100EC3BBA /* ViewController */,
-				9978F00F25DB0DC200EC3BBA /* Core */,
-				9978F00825DB0D9900EC3BBA /* Coordinator */,
-				9978EFFA25DB0C9400EC3BBA /* Protocols */,
+				994ECBF625DD376E00F0257F /* Protocols */,
+				994ECBEF25DD376000F0257F /* Coordinator */,
+				994ECBD425DD369500F0257F /* Components */,
+				994ECBD925DD369500F0257F /* Core */,
+				994ECBC425DD367700F0257F /* ViewController */,
+				E67957C425DC063900EAC7E8 /* Utils */,
 				BDEE378525DB0589003B2F5A /* Network */,
 				E6537A8B25DAF05800ECD9D9 /* ViewModel */,
 				E6537A1125DAC12B00ECD9D9 /* Model */,
@@ -249,15 +273,6 @@
 				BD80ADC525DAB8990016B1BE /* Info.plist */,
 			);
 			path = "Bootcamp-MagicTests";
-			sourceTree = "<group>";
-		};
-		BD80ADCD25DAB8990016B1BE /* Bootcamp-MagicUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BD80ADCE25DAB8990016B1BE /* Bootcamp_MagicUITests.swift */,
-				BD80ADD025DAB8990016B1BE /* Info.plist */,
-			);
-			path = "Bootcamp-MagicUITests";
 			sourceTree = "<group>";
 		};
 		BDEE378525DB0589003B2F5A /* Network */ = {
@@ -292,8 +307,28 @@
 		BDEE379125DB0C6D003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9992F28625DC5D410079AD1D /* JSONFiles */,
+				BDEE37AA25DBEDCD003B2F5A /* Fakes */,
+				BDEE37A925DBED9E003B2F5A /* Stubs */,
+				BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BDEE37A925DBED9E003B2F5A /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		BDEE37AA25DBEDCD003B2F5A /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		E6537A1125DAC12B00ECD9D9 /* Model */ = {
@@ -327,6 +362,7 @@
 		E6537A8B25DAF05800ECD9D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E679579625DBE96B00EAC7E8 /* Card */,
 				E6537A9625DAF1B200ECD9D9 /* Expansion */,
 			);
 			path = ViewModel;
@@ -344,6 +380,7 @@
 		E6537A9D25DAF93B00ECD9D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E67957BB25DBF89B00EAC7E8 /* Card */,
 				E6537A9E25DAF94000ECD9D9 /* Expansion */,
 			);
 			path = ViewModel;
@@ -365,6 +402,33 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
+		E679579625DBE96B00EAC7E8 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				E679579725DBE97900EAC7E8 /* CardViewModel.swift */,
+				E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		E67957BB25DBF89B00EAC7E8 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		E67957C425DC063900EAC7E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				994ECBBC25DD364F00F0257F /* Constants.swift */,
+				E67957C525DC064600EAC7E8 /* Dict.swift */,
+				BDEE383625DC3833003B2F5A /* AutoLayout.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,7 +446,7 @@
 			);
 			name = "Bootcamp-Magic";
 			packageProductDependencies = (
-				9910285025DBF1A300EC1A35 /* SnapKit */,
+				9992F27025DC3D070079AD1D /* SnapKit */,
 			);
 			productName = "Bootcamp-Magic";
 			productReference = BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */;
@@ -406,24 +470,6 @@
 			productReference = BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD80ADC925DAB8990016B1BE /* Bootcamp-MagicUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD80ADD925DAB8990016B1BE /* Build configuration list for PBXNativeTarget "Bootcamp-MagicUITests" */;
-			buildPhases = (
-				BD80ADC625DAB8990016B1BE /* Sources */,
-				BD80ADC725DAB8990016B1BE /* Frameworks */,
-				BD80ADC825DAB8990016B1BE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD80ADCC25DAB8990016B1BE /* PBXTargetDependency */,
-			);
-			name = "Bootcamp-MagicUITests";
-			productName = "Bootcamp-MagicUITests";
-			productReference = BD80ADCA25DAB8990016B1BE /* Bootcamp-MagicUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -440,10 +486,6 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = BD80ADA525DAB8970016B1BE;
 					};
-					BD80ADC925DAB8990016B1BE = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = BD80ADA525DAB8970016B1BE;
-					};
 				};
 			};
 			buildConfigurationList = BD80ADA125DAB8970016B1BE /* Build configuration list for PBXProject "Bootcamp-Magic" */;
@@ -456,7 +498,7 @@
 			);
 			mainGroup = BD80AD9D25DAB8970016B1BE;
 			packageReferences = (
-				9910284F25DBF1A300EC1A35 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = BD80ADA725DAB8970016B1BE /* Products */;
 			projectDirPath = "";
@@ -464,7 +506,6 @@
 			targets = (
 				BD80ADA525DAB8970016B1BE /* Bootcamp-Magic */,
 				BD80ADBE25DAB8990016B1BE /* Bootcamp-MagicTests */,
-				BD80ADC925DAB8990016B1BE /* Bootcamp-MagicUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -475,6 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD80ADB925DAB8980016B1BE /* LaunchScreen.storyboard in Resources */,
+				994ECBE525DD369500F0257F /* LaunchScreen.storyboard in Resources */,
+				994ECBE425DD369500F0257F /* Assets.xcassets in Resources */,
+				994ECBE825DD369500F0257F /* Info.plist in Resources */,
 				BD80ADB625DAB8980016B1BE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,15 +527,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9992F28925DC5D620079AD1D /* cards-response.json in Resources */,
+				9992F28A25DC5D620079AD1D /* sets-response.json in Resources */,
 				E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */,
 				E6537A5925DAE3E400ECD9D9 /* cards.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD80ADC825DAB8990016B1BE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,28 +542,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				994ECBBD25DD364F00F0257F /* Constants.swift in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
-				9978F00425DB0D7100EC3BBA /* Coordinatable.swift in Sources */,
+				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
+				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
+				994ECBCC25DD367700F0257F /* ExpansionViewControllerScreen.swift in Sources */,
+				994ECBE725DD369500F0257F /* AppDelegate.swift in Sources */,
+				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
+				994ECBCD25DD367700F0257F /* ExpansionTableViewCell.swift in Sources */,
+				994ECBE225DD369500F0257F /* TabNavigationMenu.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
-				9949EC8C25DC39F300B8FB8C /* Constants.swift in Sources */,
-				9910287725DC238E00EC1A35 /* ExpansionViewControllerScreen.swift in Sources */,
+				994ECBE125DD369500F0257F /* TabItem.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
-				9910286225DBF38500EC1A35 /* TabNavigationMenu.swift in Sources */,
+				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
-				9949EC8125DC358D00B8FB8C /* ExpansionViewControllerDataSource.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
-				9910285725DBF29200EC1A35 /* NavigationMenuTabBarController.swift in Sources */,
-				9978F01525DB0E6B00EC3BBA /* ExpansionViewController.swift in Sources */,
-				9910286D25DC04EE00EC1A35 /* TabItem.swift in Sources */,
-				9978F01A25DB0E9400EC3BBA /* MainCoordinator.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
+				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
+				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
 				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
+				994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
-				9978EFFC25DB0CA200EC3BBA /* ViewCodable.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
-				9949EC8625DC36B400B8FB8C /* ExpansionTableViewCell.swift in Sources */,
+				994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
+				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
+				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,19 +577,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */,
 				E6537AA025DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift in Sources */,
 				E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */,
+				BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */,
+				BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */,
+				BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */,
 				BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */,
 				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,
 				E6537A5E25DAE54000ECD9D9 /* CardListTestCase.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD80ADC625DAB8990016B1BE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD80ADCF25DAB8990016B1BE /* Bootcamp_MagicUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,14 +597,17 @@
 			target = BD80ADA525DAB8970016B1BE /* Bootcamp-Magic */;
 			targetProxy = BD80ADC025DAB8990016B1BE /* PBXContainerItemProxy */;
 		};
-		BD80ADCC25DAB8990016B1BE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD80ADA525DAB8970016B1BE /* Bootcamp-Magic */;
-			targetProxy = BD80ADCB25DAB8990016B1BE /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				994ECBDC25DD369500F0257F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		BD80ADB725DAB8980016B1BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -705,7 +749,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-Magic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -723,7 +767,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-Magic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -769,44 +813,6 @@
 			};
 			name = Release;
 		};
-		BD80ADDA25DAB8990016B1BE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-MagicUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-MagicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bootcamp-Magic";
-			};
-			name = Debug;
-		};
-		BD80ADDB25DAB8990016B1BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Bootcamp-MagicUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Bootcamp-MagicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Bootcamp-Magic";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -837,21 +843,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD80ADD925DAB8990016B1BE /* Build configuration list for PBXNativeTarget "Bootcamp-MagicUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD80ADDA25DAB8990016B1BE /* Debug */,
-				BD80ADDB25DAB8990016B1BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9910284F25DBF1A300EC1A35 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
@@ -860,14 +857,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9910285025DBF1A300EC1A35 /* SnapKit */ = {
+		9992F27025DC3D070079AD1D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9910284F25DBF1A300EC1A35 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */,
+			);
+			currentVersion = 994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */;
+			path = Bootcamp_Magic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		BD80ADB225DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

@@ -39,8 +39,7 @@ extension ExpansionTableViewCell: ViewCodable {
   }
   
   func setupConstraints() {
-    horizontalDivisor.snp.makeConstraints { make in
-    }
+    
   }
   
   func setupAdditionalConfiguration() {

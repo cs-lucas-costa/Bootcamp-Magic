@@ -27,3 +27,16 @@ extension ExpansionList {
         case sets
     }
 }
+
+extension Expansion: Equatable {
+    static func == (lhs: Expansion, rhs: Expansion) -> Bool {
+        return lhs.name == rhs.name
+            && lhs.code == rhs.code
+    }
+}
+
+extension ExpansionList: Equatable {
+    static func == (lhs: ExpansionList, rhs: ExpansionList) -> Bool {
+        return lhs.expansions == rhs.expansions
+    }
+}
