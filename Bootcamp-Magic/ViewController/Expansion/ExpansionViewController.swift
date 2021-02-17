@@ -12,6 +12,13 @@ final class ExpansionViewController: UIViewController {
   // MARK: - Properties
   let dataSource = ExpansionViewControllerDataSource()
   lazy var screen = ExpansionViewControllerScreen(frame: view.bounds)
+  let expasion = [Expansion(code: "", name: "Alpha"),
+                  Expansion(code: "", name: "Alliances"),
+                  Expansion(code: "", name: "Beta"),
+                  Expansion(code: "", name: "Betrayers of Kamigawa"),
+                  Expansion(code: "", name: "Champions of Kamigawa"),
+                  Expansion(code: "", name: "Coldsnap"),
+                  Expansion(code: "", name: "Darksteel")]
   
   
   // MARK: - LoadView
