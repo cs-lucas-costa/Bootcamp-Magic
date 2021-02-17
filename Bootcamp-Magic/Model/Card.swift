@@ -32,4 +32,3 @@ extension CardList: Equatable {
         return lhs.cards == rhs.cards
     }
 }
-

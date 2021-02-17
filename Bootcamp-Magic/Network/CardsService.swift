@@ -14,7 +14,6 @@ protocol ServiceProtocol {
     var headers: [String: String]? { get }
 }
 
-
 enum CardsService {
     case cardsList(setCode: String)
     case setList
@@ -22,11 +21,11 @@ enum CardsService {
 }
 
 extension CardsService: ServiceProtocol {
-    
+
     private var basePath: String {
         return "https://api.magicthegathering.io/v1"
     }
-    
+
     var path: String {
         switch self {
         case .cardsList(let code):
@@ -37,7 +36,7 @@ extension CardsService: ServiceProtocol {
             return imagePath
         }
     }
-    
+
     var method: HttpMethods {
         switch self {
         case .cardsList:
@@ -48,7 +47,7 @@ extension CardsService: ServiceProtocol {
             return .get
         }
     }
-    
+
     var parameters: [String : Any]? {
         switch self {
         case .cardsList:
@@ -59,7 +58,7 @@ extension CardsService: ServiceProtocol {
             return nil
         }
     }
-    
+
     var headers: [String : String]? {
         switch self {
         case .cardsList:
