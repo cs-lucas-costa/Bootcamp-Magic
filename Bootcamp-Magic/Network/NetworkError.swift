@@ -15,7 +15,7 @@ enum NetworkError {
 }
 
 extension NetworkError: RequestError {
-    
+
     var description: String {
         switch self {
         case .notUrl(let networkErrorDescription):
@@ -28,7 +28,7 @@ extension NetworkError: RequestError {
             return "Should Fail"
         }
     }
-    
+
     var title: String? {
         switch self {
         case .notUrl:
@@ -41,9 +41,8 @@ extension NetworkError: RequestError {
             return "Purposeful Error"
         }
     }
-    
+
     var errorDescription: String? { return description }
     var failureReason: String? { return description }
-    
-    
+
 }

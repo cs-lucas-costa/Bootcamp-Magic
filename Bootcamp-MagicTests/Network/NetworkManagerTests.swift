@@ -52,7 +52,7 @@ final class NetworkManagerTests: XCTestCase {
             }
 
         } catch {
-            XCTFail()
+            XCTFail("Failed to attempt to decode data ")
         }
 
         wait(for: [expectation], timeout: 1)
@@ -69,7 +69,7 @@ final class NetworkManagerTests: XCTestCase {
             let fakeJSONURL = try XCTUnwrap(service.bundle.url(forResource: "cards-response", withExtension: "json"))
             let fakeJSONData = try Data(contentsOf: fakeJSONURL)
             let fakeJSON = try JSONDecoder().decode(CardList.self, from: fakeJSONData)
-            
+
             service.json = fakeJSONURL
 
             self.sut?.getRequest(cardsService: cardService, decodableType: CardList.self) { response in
@@ -84,7 +84,7 @@ final class NetworkManagerTests: XCTestCase {
             }
 
         } catch {
-            XCTFail()
+            XCTFail("Failed to attempt to decode data ")
         }
 
         wait(for: [expectation], timeout: 1)

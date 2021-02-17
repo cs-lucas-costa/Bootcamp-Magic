@@ -8,23 +8,23 @@
 import UIKit
 
 final class CardViewModel {
-    
+
     private let card: Card
-    
+
     init(card: Card) {
         self.card = card
     }
-    
+
     var name: String {
         card.name
     }
-    
+
     var type: String {
         card.type
     }
-    
+
     var image: UIImage? {
-        //TODO: Download image
+        // TODO: Download image
         return UIImage(named: "")
     }
 

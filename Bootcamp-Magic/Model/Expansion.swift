@@ -13,9 +13,9 @@ struct Expansion: Decodable {
 }
 
 struct ExpansionList: Decodable {
-    
+
     let expansions: [Expansion]
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         expansions = try container.decode([Expansion].self, forKey: .sets)

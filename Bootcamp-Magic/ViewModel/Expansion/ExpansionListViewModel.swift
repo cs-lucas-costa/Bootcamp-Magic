@@ -8,15 +8,15 @@
 import Foundation
 
 final class ExpansionListViewModel {
-    
+
     private let networkManager: NetworkManager
     private(set) var expansions: [ExpansionViewModel] = []
     private(set) var dictExpansions: [Dict<String, [ExpansionViewModel]>] = []
-    
+
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
     }
-    
+
     /// Fetch expansions from API.
     /// - Parameter completion: error or nil when fetch.
     func fetchExpansions(completion: @escaping (Error?) -> Void) {
@@ -32,18 +32,18 @@ final class ExpansionListViewModel {
     }
 }
 
-//MARK:- Private methods
+// MARK: - Private methods
 private extension ExpansionListViewModel {
-    
+
     func createDictExpansions(from list: ExpansionList) {
         list.expansions
             .sorted(by: { $0.name < $1.name })
             .forEach { [weak self] (expansion) in
-                
+
                 guard let self = self else { return }
                 guard let key = expansion.name.first?.uppercased() else { return }
                 let viewModel = ExpansionViewModel(expansion: expansion)
-                
+
                 if let dict = self.dictExpansions.first(where: { $0.key == key }) {
                     dict.value.append(viewModel)
                 } else {

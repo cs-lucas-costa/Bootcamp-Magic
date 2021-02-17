@@ -8,17 +8,16 @@
 import XCTest
 @testable import Bootcamp_Magic
 
-
 class CardListTestCase: XCTestCase {
 
     func testDecodeCardList() throws {
         let data = try readJSONFile()
         let list = try JSONDecoder().decode(CardList.self, from: data)
-        
+
         XCTAssertEqual(list.cards.count, 3)
     }
-    
-    //MARK: Auxiliary methods
+
+    // MARK: Auxiliary methods
     func readJSONFile() throws -> Data {
         let bundle = Bundle(for: type(of: self))
         let path = try XCTUnwrap(bundle.url(forResource: "cards", withExtension: "json"))
