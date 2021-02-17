@@ -31,9 +31,12 @@ final class ExpansionViewController: UIViewController {
   
   // MARK: - Methods
   func fetchExpansions() {
+    self.screen.state = .fetching
     viewModel.fetchExpansions { [weak self] error in
-      
       guard let self = self else { return }
+      
+      self.screen.state = .fetched
+      
       if error == nil {
         
         for viewModels in self.viewModel.dictExpansions.map({ $0.value.map({ $0 }) }) {
