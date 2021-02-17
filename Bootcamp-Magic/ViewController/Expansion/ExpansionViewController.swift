@@ -22,7 +22,6 @@ final class ExpansionViewController: UIViewController {
   
   // MARK: - Methods
   func setupTableView() {
-    screen.tableView.register
     screen.tableView.delegate = dataSource
     screen.tableView.dataSource = dataSource
   }
