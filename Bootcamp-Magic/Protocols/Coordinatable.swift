@@ -5,8 +5,9 @@
 //  Created by luis.gustavo.jacinto on 15/02/21.
 //
 
-import Foundation
+import UIKit
 
-protocol Coordinatable {
+protocol Coordinatable: AnyObject {
+  var currentViewController: UIViewController? { get set }
   func start()
 }

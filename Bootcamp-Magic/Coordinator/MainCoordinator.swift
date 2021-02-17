@@ -10,10 +10,16 @@ import UIKit
 final class MainCoordinator: Coordinatable {
   
   // MARK: - Properties
-  var navigationMenuTabBarController: NavigationMenuTabBarController?
-
+  var currentViewController: UIViewController?
+  let expasionCoordinator = ExpansionCoordinator()
+  
   func start() {
-    print(#function)
-    navigationMenuTabBarController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [ExpansionViewController(), UIViewController()])
+    expasionCoordinator.start()
+    
+    guard let viewController = expasionCoordinator.currentViewController else {
+      preconditionFailure("CurrentViewControllerffrom ExpasionCoordinator must exist")
+    }
+    
+    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [viewController, UIViewController()])
   }
 }

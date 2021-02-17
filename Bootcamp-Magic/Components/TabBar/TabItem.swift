@@ -18,11 +18,4 @@ enum TabItem: CaseIterable {
     case .favorites: return "Favorites"
     }
   }
-  
-  var type: UIViewController.Type {
-    switch self {
-    case .expansion: return ExpansionViewController.self
-    case .favorites: return UIViewController.self
-    }
-  }
 }
