@@ -16,6 +16,7 @@ final class ExpansionTableViewCell: UITableViewCell {
   #warning("Remover string hardcoded")
   let rightChevronImage = UIImageView(image: Constants.Images.rightChevron)
   let horizontalDivisor = UIView(frame: .zero)
+  let margin = CGFloat(16)
   
   // MARK: - Init
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,10 +40,32 @@ extension ExpansionTableViewCell: ViewCodable {
   }
   
   func setupConstraints() {
+    #warning("remover números mágicos")
     
+    horizontalDivisor.snp.makeConstraints { make in
+      make.bottom.centerX.equalToSuperview()
+      make.width.equalToSuperview().multipliedBy(0.8)
+      make.height.equalToSuperview().multipliedBy(0.05)
+    }
+    
+    rightChevronImage.snp.makeConstraints { make in
+      make.right.equalToSuperview().inset(margin)
+      make.centerY.equalToSuperview()
+    }
+    
+    expansionImage.snp.makeConstraints { make in
+      make.left.equalToSuperview().offset(margin)
+      make.centerY.equalToSuperview()
+    }
+    
+    expasionName.snp.makeConstraints { make in
+      make.left.equalTo(expansionImage.snp.right)
+      make.right.equalTo(rightChevronImage.snp.left)
+      make.centerY.equalToSuperview()
+    }
   }
   
   func setupAdditionalConfiguration() {
-    
+    horizontalDivisor.backgroundColor = .white
   }
 }
