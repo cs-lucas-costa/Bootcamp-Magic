@@ -42,6 +42,7 @@
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
 		E67957C625DC064600EAC7E8 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957C525DC064600EAC7E8 /* Dict.swift */; };
+		E6AEA71325DD503600375F4E /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA71225DD503600375F4E /* ViewCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
 		E67957C525DC064600EAC7E8 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
+		E6AEA71225DD503600375F4E /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +324,7 @@
 			children = (
 				E67957C525DC064600EAC7E8 /* Dict.swift */,
 				BDEE383625DC3833003B2F5A /* AutoLayout.swift */,
+				E6AEA71225DD503600375F4E /* ViewCodable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
+				E6AEA71325DD503600375F4E /* ViewCodable.swift in Sources */,
 				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
