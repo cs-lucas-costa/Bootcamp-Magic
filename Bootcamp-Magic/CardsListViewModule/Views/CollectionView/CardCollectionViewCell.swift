@@ -27,7 +27,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
     
 }
 
-//MARK: ViewCodable
+// MARK: ViewCodable
 extension CardCollectionViewCell: ViewCodable {
     
     func buildViewHierarchy() {

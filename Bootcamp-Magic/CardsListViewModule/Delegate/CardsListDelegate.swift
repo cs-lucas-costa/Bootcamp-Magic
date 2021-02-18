@@ -22,7 +22,3 @@ final class CardsListDelegate: NSObject, UICollectionViewDelegate {
     }
 
 }
-
-
-
-

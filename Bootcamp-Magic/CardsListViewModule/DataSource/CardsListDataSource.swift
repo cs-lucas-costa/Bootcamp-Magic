@@ -37,7 +37,7 @@ class CardsListDataSource: NSObject {
     }
 }
 
-//MARK:- UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension CardsListDataSource: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -80,4 +80,3 @@ extension CardsListDataSource: UICollectionViewDataSource {
     }
     
 }
-

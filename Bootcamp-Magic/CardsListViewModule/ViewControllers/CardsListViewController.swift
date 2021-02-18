@@ -12,8 +12,10 @@ final class CardsListViewController: UIViewController {
     private let cardsListView: CardsListView
     private let viewModel: CardListViewModel
     private let expansionViewModel: ExpansionViewModel
+    
     var dataSource: CardsListDataSource?
-    var delegate: CardsListDelegate?
+    var cardListDelegate: CardsListDelegate? //Não pode ser weak
+    weak var coordinator: CardsListCoordinatorProtocol?
     
     init(numberOfCardsPerRow: Int,
          viewModel: CardListViewModel,
@@ -47,18 +49,20 @@ final class CardsListViewController: UIViewController {
             if let error = error {
                 print("Error to fetch cards - \(error)")
             } else {
-                self.delegate = CardsListDelegate(dictCards: self.viewModel.dictCards)
+                self.cardListDelegate = CardsListDelegate(dictCards: self.viewModel.dictCards)
                 self.dataSource = CardsListDataSource(dictCards: self.viewModel.dictCards)
                 
                 self.cardsListView.collectionView.dataSource = self.dataSource
-                self.cardsListView.collectionView.delegate = self.delegate
+                self.cardsListView.collectionView.delegate = self.cardListDelegate
                 self.cardsListView.collectionView.reloadData()
             }
         }
+        
+        showCardDetail()
     }
 }
 
-//MARK: CardsListSearchViewDelegate
+// MARK: CardsListSearchViewDelegate
 extension CardsListViewController: CardsListSearchViewDelegate {
     
     func textDidChange(_ text: String) {
@@ -77,4 +81,13 @@ extension CardsListViewController: CardsListSearchViewDelegate {
         }
     }
     
+}
+
+// MARK: Actions
+private extension CardsListViewController {
+    func showCardDetail() {
+        cardListDelegate?.didSelectCard = { [weak self] card in
+            self?.coordinator?.showCardDetail(card)
+        }
+    }
 }

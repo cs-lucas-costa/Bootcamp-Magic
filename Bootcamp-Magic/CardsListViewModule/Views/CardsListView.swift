@@ -47,7 +47,7 @@ final class CardsListView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 20
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 28, bottom: 25, right: 28)
         layout.headerReferenceSize = CGSize(width: frame.width, height: 35)
         
         let spaceBetweenCells = layout.minimumInteritemSpacing * CGFloat(numberOfCardsPerRow - 1)
@@ -68,6 +68,7 @@ final class CardsListView: UIView {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
+        label.font = Fonts.robotoBold(size: 36).font
         return label
     }()
     
@@ -80,7 +81,7 @@ final class CardsListView: UIView {
     
 }
 
-//MARK: ViewCodable
+// MARK: ViewCodable
 extension CardsListView: ViewCodable {
     
     func buildViewHierarchy() {
@@ -89,7 +90,6 @@ extension CardsListView: ViewCodable {
         addSubview(expansionTitleView)
         addSubview(collectionView)
     }
-
     
     func setupConstraints() {
         
@@ -98,15 +98,15 @@ extension CardsListView: ViewCodable {
         }
         
         searchView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide)
-            make.leading.equalTo(safeAreaLayoutGuide).offset(15)
-            make.trailing.equalTo(safeAreaLayoutGuide).offset(-15)
+            make.top.equalTo(safeAreaLayoutGuide).offset(30)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(25)
+            make.trailing.equalTo(safeAreaLayoutGuide).offset(-25)
         }
         
         expansionTitleView.snp.makeConstraints { (make) in
-            make.top.equalTo(searchView.snp.bottom).offset(15)
-            make.leading.equalTo(safeAreaLayoutGuide).offset(15)
-            make.trailing.equalTo(safeAreaLayoutGuide).offset(-15)
+            make.top.equalTo(searchView.snp.bottom).offset(20)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(25)
+            make.trailing.equalTo(safeAreaLayoutGuide).offset(-25)
         }
         
         collectionView.snp.makeConstraints { (make) in
@@ -117,7 +117,7 @@ extension CardsListView: ViewCodable {
     }
     
     func setupAdditionalConfiguration() {
-        backgroundView.image = UIImage(named: "background")
+        backgroundView.image = Constants.Images.backgroundImage
     }
     
 }

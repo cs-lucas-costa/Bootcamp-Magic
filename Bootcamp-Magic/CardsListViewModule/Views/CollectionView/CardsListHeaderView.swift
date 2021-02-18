@@ -20,13 +20,14 @@ final class CardsListHeaderView: UICollectionReusableView {
         let titleView = UILabel(frame: .zero)
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.backgroundColor = .clear
-        titleView.font = .boldSystemFont(ofSize: 25)
+        titleView.font = Fonts.robotoBold(size: 16).font
+        titleView.textColor = .white
         return titleView
     }()
         
 }
 
-//MARK: ViewCodable
+// MARK: ViewCodable
 extension CardsListHeaderView: ViewCodable {
     
     func buildViewHierarchy() {
@@ -35,8 +36,8 @@ extension CardsListHeaderView: ViewCodable {
     
     func setupConstraints() {
         titleView.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().offset(15)
-            make.trailing.equalToSuperview().offset(-15)
+            make.leading.equalToSuperview().offset(25)
+            make.trailing.equalToSuperview().offset(-25)
             make.top.bottom.equalToSuperview()
         }
     }

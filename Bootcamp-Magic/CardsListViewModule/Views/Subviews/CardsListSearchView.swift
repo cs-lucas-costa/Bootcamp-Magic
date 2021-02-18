@@ -24,8 +24,10 @@ final class CardsListSearchView: UIView {
         textField.placeholder = placeholder
         textField.textColor = .white
         textField.attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                             attributes: [.foregroundColor: UIColor.white])
+                                                             attributes: [.foregroundColor: UIColor.white,
+                                                                          .font: Fonts.robotoBold(size: 14).font])
         textField.addTarget(self, action: #selector(searchCards), for: .valueChanged)
+        textField.font = Fonts.robotoBold(size: 14).font
         return textField
     }()
         
@@ -41,6 +43,7 @@ final class CardsListSearchView: UIView {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancel", for: .normal)
+        button.titleLabel?.font = Fonts.robotoBold(size: 14).font
         button.tintColor = .white
         button.addTarget(self, action: #selector(cancelSearch), for: .touchUpInside)
         return button
@@ -50,7 +53,7 @@ final class CardsListSearchView: UIView {
         let stackView = UIStackView(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 10
-        stackView.layer.borderWidth = 3
+        stackView.layer.borderWidth = 1
         stackView.layer.borderColor = UIColor.white.cgColor
         stackView.layer.cornerRadius = 4
         stackView.clipsToBounds = true
@@ -82,7 +85,7 @@ final class CardsListSearchView: UIView {
     
 }
 
-//MARK: ViewCodable
+// MARK: ViewCodable
 extension CardsListSearchView: ViewCodable {
     
     func buildViewHierarchy() {
@@ -103,7 +106,7 @@ extension CardsListSearchView: ViewCodable {
     
 }
 
-//MARK: Actions
+// MARK: Actions
 private extension CardsListSearchView {
     
     @objc func searchCards(with text: String) {
