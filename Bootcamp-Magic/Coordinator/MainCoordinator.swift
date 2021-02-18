@@ -25,6 +25,6 @@ final class MainCoordinator: Coordinatable {
       preconditionFailure("CurrentViewControllerffrom ExpasionCoordinator must exist")
     }
 
-    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [viewController, UIViewController()])
+    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [expasionCoordinator.navigationController, UIViewController()])
   }
 }
