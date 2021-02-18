@@ -61,7 +61,7 @@ final class CardsListView: UIView {
     }()
     
     private(set) lazy var searchView: CardsListSearchView = {
-        let placeholder = state == .favorites ? Texts.searchForFavorites.text : Texts.searchForCards.text
+        let placeholder = state == .favourites ? Texts.searchForFavorites.text : Texts.searchForCards.text
         let searchView = CardsListSearchView(placeholder: placeholder)
         searchView.translatesAutoresizingMaskIntoConstraints = false
         return searchView

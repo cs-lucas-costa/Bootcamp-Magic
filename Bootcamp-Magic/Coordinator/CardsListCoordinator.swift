@@ -39,8 +39,8 @@ private extension CardsListCoordinator {
             return AllCardsListViewController(numberOfCardsPerRow: 3,
                                               viewModel: CardListViewModel(),
                                               with: expansion)
-        case .favorites:
-            return FavoritesCardsListViewController(numberOfCardsPerRow: 3,
+        case .favourites:
+            return FavouritesCardsListViewController(numberOfCardsPerRow: 3,
                                                     viewModel: CardListViewModel())
         }
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FavoritesCardsListViewController: UIViewController, CardsListViewControllerProtocol {
+final class FavouritesCardsListViewController: UIViewController, CardsListViewControllerProtocol {
     
     // MARK: Properties
     let cardsListView: CardsListView
@@ -23,7 +23,7 @@ final class FavoritesCardsListViewController: UIViewController, CardsListViewCon
          viewModel: CardListViewModel) {
         
         self.cardsListView = CardsListView(numberOfCardsPerRow: 3,
-                                           state: .favorites)
+                                           state: .favourites)
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

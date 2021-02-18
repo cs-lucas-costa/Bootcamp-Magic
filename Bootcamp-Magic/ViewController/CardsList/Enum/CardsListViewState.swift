@@ -8,7 +8,7 @@
 import Foundation
 
 enum CardsListViewState {
-    case favorites
+    case favourites
     case all(expansion: ExpansionViewModel)
 }
 
@@ -17,7 +17,7 @@ extension CardsListViewState: Equatable {
         switch (lhs, rhs) {
         case (.all(let lhsExpansions), .all(let rhsExpansions)):
             return lhsExpansions === rhsExpansions
-        case (.favorites, .favorites):
+        case (.favourites, .favourites):
             return true
         default:
             return false
