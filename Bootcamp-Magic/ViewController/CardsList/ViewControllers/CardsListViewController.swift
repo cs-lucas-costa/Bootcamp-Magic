@@ -9,12 +9,15 @@ import UIKit
 
 final class CardsListViewController: UIViewController {
 
-    private let cardsListView: CardsListView
+    // MARK: Properties
+    let cardsListView: CardsListView
     private let viewModel: CardListViewModel
     private let expansionViewModel: ExpansionViewModel
     
+    // MARK: Delegates and DataSources
     var dataSource: CardsListDataSource?
-    var cardListDelegate: CardsListDelegate? //Não pode ser weak
+    var cardListDelegate: CardsListDelegate?
+    var searchViewDelegate: CardsListSearchViewDelegate?
     weak var coordinator: CardsListCoordinatorProtocol?
     
     init(numberOfCardsPerRow: Int,
@@ -24,6 +27,7 @@ final class CardsListViewController: UIViewController {
         self.cardsListView = CardsListView(numberOfCardsPerRow: numberOfCardsPerRow)
         self.viewModel = viewModel
         self.expansionViewModel = expansionViewModel
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -41,7 +45,7 @@ final class CardsListViewController: UIViewController {
         super.viewDidLoad()
         
         cardsListView.expansionTitle = expansionViewModel.name
-        cardsListView.searchView.delegate = self
+        self.cardsListView.searchView.delegate = searchViewDelegate ?? self
         
         viewModel.fetchCards(setCode: expansionViewModel.code) { [weak self] (error) in
             guard let self = self else { return }
@@ -58,7 +62,7 @@ final class CardsListViewController: UIViewController {
             }
         }
         
-        showCardDetail()
+        setupClosures()
     }
 }
 
@@ -85,7 +89,7 @@ extension CardsListViewController: CardsListSearchViewDelegate {
 
 // MARK: Actions
 private extension CardsListViewController {
-    func showCardDetail() {
+    func setupClosures() {
         cardListDelegate?.didSelectCard = { [weak self] card in
             self?.coordinator?.showCardDetail(card)
         }

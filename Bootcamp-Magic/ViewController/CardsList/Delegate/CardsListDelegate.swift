@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CardsListDelegate: NSObject, UICollectionViewDelegate {
+class CardsListDelegate: NSObject, UICollectionViewDelegate {
             
     private let dictCards: [Dict<String, [CardViewModel]>]
     var didSelectCard: ((CardViewModel) -> Void)?
