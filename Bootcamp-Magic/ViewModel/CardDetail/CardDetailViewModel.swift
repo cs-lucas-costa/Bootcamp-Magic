@@ -14,11 +14,7 @@ final class CardDetailViewModel {
 
     private let networkManager: NetworkManager
 
-    private var expansionCards: [Card] {
-        didSet {
-            cardsImages = self.getCardsImages()
-        }
-    }
+    private var expansionCards: [Card]
 
     private var expansionName: String = "" {
         didSet {
@@ -35,11 +31,12 @@ final class CardDetailViewModel {
     init(networkManager: NetworkManager, expansionCards: [Card]) {
         self.networkManager = networkManager
         self.expansionCards = expansionCards
+        getCardsImages()
     }
 
-    private func getCardsImages() -> [UIImage?] {
+    private func getCardsImages() {
 
-        let images = imagesPath.map { (imagePath) -> UIImage? in
+        cardsImages = imagesPath.map { (imagePath) -> UIImage? in
 
             var recoveredImage : UIImage?
 
@@ -54,7 +51,6 @@ final class CardDetailViewModel {
 
             return recoveredImage
         }
-        return images
     }
 
     func getExpansionName(index: Int) {

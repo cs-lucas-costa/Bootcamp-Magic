@@ -7,13 +7,6 @@
 
 import Foundation
 
-protocol ServiceProtocol {
-    var path: String { get }
-    var method: HttpMethods { get }
-    var parameters: [String: Any]? { get }
-    var headers: [String: String]? { get }
-}
-
 enum CardsService {
     case cardsList(setCode: String)
     case setList
