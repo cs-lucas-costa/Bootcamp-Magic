@@ -29,11 +29,9 @@ class CardsListViewTestCase: XCTestCase {
     }
     
     func testCardsListWithCards() {
-        sut.expansionTitle = "Khans of Tharkir"
+        sut.expansionTitle = "Khans of Tarkir"
         sut.collectionView.dataSource = dataSource
         assertSnapshot(matching: sut, as: .image)
     }
     
 }
-
-
