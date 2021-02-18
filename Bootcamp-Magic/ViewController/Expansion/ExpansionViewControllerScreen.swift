@@ -7,15 +7,13 @@
 
 import UIKit
 
-
-
 final class ExpansionViewControllerScreen: UIView {
-  
+
   enum State {
     case fetching
     case fetched
   }
-  
+
   // MARK: - Properties
   let tableView = UITableView(frame: .zero)
   let backgroundImage = UIImageView(frame: .zero)
@@ -25,17 +23,17 @@ final class ExpansionViewControllerScreen: UIView {
       change(to: state)
     }
   }
-  
+
   // MARK: - Init
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupView()
   }
-  
+
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   func showActivityIndicator() {
     DispatchQueue.main.async { [weak self] in
       guard let self = self else { return }
@@ -51,7 +49,7 @@ final class ExpansionViewControllerScreen: UIView {
       self.activityIndicator.stopAnimating()
     }
   }
-  
+
   fileprivate func change(to state: ExpansionViewControllerScreen.State) {
       switch state {
       case .fetching:
@@ -69,28 +67,28 @@ extension ExpansionViewControllerScreen: ViewCodable {
     addSubview(tableView)
     addSubview(activityIndicator)
   }
-  
+
   func setupConstraints() {
 
     backgroundImage.snp.makeConstraints { make in
       make.left.right.bottom.top.equalToSuperview()
     }
-    
+
     activityIndicator.snp.makeConstraints { make in
       make.top.left.right.bottom.equalTo(safeAreaLayoutGuide)
     }
-    
+
     tableView.snp.makeConstraints { make in
       make.top.left.right.bottom.equalTo(safeAreaLayoutGuide)
     }
   }
-  
+
   func setupAdditionalConfiguration() {
     backgroundImage.image = Constants.Images.backgroundImage
 
     tableView.backgroundColor = .clear
     bringSubviewToFront(tableView)
-    
+
     activityIndicator.color = .white
     activityIndicator.style = .large
     bringSubviewToFront(activityIndicator)
