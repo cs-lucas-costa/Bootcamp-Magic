@@ -30,6 +30,13 @@
 		9992F28925DC5D620079AD1D /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28725DC5D620079AD1D /* cards-response.json */; };
 		9992F28A25DC5D620079AD1D /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28825DC5D620079AD1D /* sets-response.json */; };
 		BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */; };
+		BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */; };
+		BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */; };
+		BD9CDD7925DEA0580010AE2C /* CardDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */; };
+		BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */; };
+		BD9CDD8425DEA0E20010AE2C /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */; };
+		BD9CDD8825DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */; };
+		BD9CDD8C25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */; };
 		BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376925DB04EB003B2F5A /* NetworkManager.swift */; };
 		BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376E25DB0504003B2F5A /* RequestError.swift */; };
 		BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377325DB052F003B2F5A /* NetworkError.swift */; };
@@ -54,7 +61,6 @@
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
 		E67957C625DC064600EAC7E8 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957C525DC064600EAC7E8 /* Dict.swift */; };
-		E6AEA71325DD503600375F4E /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA71225DD503600375F4E /* ViewCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +100,13 @@
 		BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootcamp_MagicTests.swift; sourceTree = "<group>"; };
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesService.swift; sourceTree = "<group>"; };
+		BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
+		BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BDEE376925DB04EB003B2F5A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BDEE376E25DB0504003B2F5A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		BDEE377325DB052F003B2F5A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -143,6 +156,7 @@
 		994ECBC425DD367700F0257F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BD9CDD7E25DEA0910010AE2C /* CardDetail */,
 				994ECBC525DD367700F0257F /* Expansion */,
 			);
 			path = ViewController;
@@ -249,6 +263,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				BD9CDD7625DE9FEA0010AE2C /* View */,
 				994ECC0D25DD579B00F0257F /* Extensions */,
 				994ECBF625DD376E00F0257F /* Protocols */,
 				994ECBEF25DD376000F0257F /* Coordinator */,
@@ -276,6 +291,41 @@
 			path = "Bootcamp-MagicTests";
 			sourceTree = "<group>";
 		};
+		BD9CDD6F25DE9F700010AE2C /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		BD9CDD7625DE9FEA0010AE2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD7725DEA0410010AE2C /* CardDetail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD9CDD7725DEA0410010AE2C /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		BD9CDD7E25DEA0910010AE2C /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */,
+				BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */,
+				BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */,
+				BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
 		BDEE378525DB0589003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +334,7 @@
 				BDEE378725DB0596003B2F5A /* Protocols */,
 				BDEE378625DB0590003B2F5A /* Helpers */,
 				BDEE379225DB0E1C003B2F5A /* CardsService.swift */,
+				BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -363,6 +414,7 @@
 		E6537A8B25DAF05800ECD9D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BD9CDD6F25DE9F700010AE2C /* CardDetail */,
 				E679579625DBE96B00EAC7E8 /* Card */,
 				E6537A9625DAF1B200ECD9D9 /* Expansion */,
 			);
@@ -573,23 +625,30 @@
 				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
 				994ECBCD25DD367700F0257F /* ExpansionTableViewCell.swift in Sources */,
 				994ECBE225DD369500F0257F /* TabNavigationMenu.swift in Sources */,
+				BD9CDD8825DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift in Sources */,
 				BDEE377E25DB0562003B2F5A /* NetworkService.swift in Sources */,
 				994ECBE125DD369500F0257F /* TabItem.swift in Sources */,
+				BD9CDD8425DEA0E20010AE2C /* CardDetailViewController.swift in Sources */,
+				BD9CDD8C25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
 				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
+				BD9CDD7925DEA0580010AE2C /* CardDetailCollectionViewCell.swift in Sources */,
 				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
 				994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */,
+				BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */,
 				994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */,
+				BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */,
 				994ECC0A25DD50C000F0257F /* ExpansionHeaderView.swift in Sources */,
 				994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
 				994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */,
 				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
 				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
 				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,

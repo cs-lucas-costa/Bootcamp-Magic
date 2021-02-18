@@ -17,7 +17,6 @@ protocol ServiceProtocol {
 enum CardsService {
     case cardsList(setCode: String)
     case setList
-    case cardImage(imagePath: String)
 }
 
 extension CardsService: ServiceProtocol {
@@ -32,8 +31,6 @@ extension CardsService: ServiceProtocol {
             return (self.basePath + "/cards?set=" + code)
         case .setList:
             return (self.basePath + "/sets?page=1&pageSize=40")
-        case .cardImage(let imagePath):
-            return imagePath
         }
     }
 
@@ -42,8 +39,6 @@ extension CardsService: ServiceProtocol {
         case .cardsList:
             return .get
         case .setList:
-            return .get
-        case .cardImage:
             return .get
         }
     }
@@ -54,8 +49,6 @@ extension CardsService: ServiceProtocol {
             return nil
         case .setList:
             return nil
-        case .cardImage:
-            return nil
         }
     }
 
@@ -64,8 +57,6 @@ extension CardsService: ServiceProtocol {
         case .cardsList:
             return nil
         case .setList:
-            return nil
-        case .cardImage:
             return nil
         }
     }

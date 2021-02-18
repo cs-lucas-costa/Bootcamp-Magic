@@ -11,7 +11,7 @@ enum NetworkError {
     case notUrl(networkErrorDescription: String)
     case requestFailed(networkErrorDescription: String)
     case failedToDecode(networkErrorDescription: String)
-    case puposefulError
+    case purposefulError
 }
 
 extension NetworkError: RequestError {
@@ -24,7 +24,7 @@ extension NetworkError: RequestError {
             return networkErrorDescription
         case .failedToDecode(let networkErrorDescription):
             return networkErrorDescription
-        case .puposefulError:
+        case .purposefulError:
             return "Should Fail"
         }
     }
@@ -37,7 +37,7 @@ extension NetworkError: RequestError {
             return "Unable to complete the Request"
         case .failedToDecode:
             return "Unable to Decode the response"
-        case .puposefulError:
+        case .purposefulError:
             return "Purposeful Error"
         }
     }

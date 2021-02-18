@@ -23,7 +23,7 @@ final class NetworkServiceStub: NetworkService {
     func dataTask(with url: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
 
         if shouldFail {
-            completionHandler(nil, nil, NetworkError.puposefulError)
+            completionHandler(nil, nil, NetworkError.purposefulError)
             return ServiceFakeDataTask()
         }
 
