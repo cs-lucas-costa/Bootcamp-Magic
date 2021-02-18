@@ -30,7 +30,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
 //MARK: ViewCodable
 extension CardCollectionViewCell: ViewCodable {
     
-    func setupViewHierarchy() {
+    func buildViewHierarchy() {
         contentView.addSubview(imageView)
     }
     

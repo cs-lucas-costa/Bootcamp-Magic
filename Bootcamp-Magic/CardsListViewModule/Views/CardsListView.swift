@@ -21,7 +21,7 @@ final class CardsListView: UIView {
     init(frame: CGRect = .zero, numberOfCardsPerRow: Int) {
         self.numberOfCardsPerRow = numberOfCardsPerRow
         super.init(frame: frame)
-        setupViews()
+        setupView()
     }
     
     @available(*, unavailable)
@@ -83,12 +83,13 @@ final class CardsListView: UIView {
 //MARK: ViewCodable
 extension CardsListView: ViewCodable {
     
-    func setupViewHierarchy() {
+    func buildViewHierarchy() {
         addSubview(backgroundView)
         addSubview(searchView)
         addSubview(expansionTitleView)
         addSubview(collectionView)
     }
+
     
     func setupConstraints() {
         

@@ -29,7 +29,7 @@ final class CardsListHeaderView: UICollectionReusableView {
 //MARK: ViewCodable
 extension CardsListHeaderView: ViewCodable {
     
-    func setupViewHierarchy() {
+    func buildViewHierarchy() {
         addSubview(titleView)
     }
     

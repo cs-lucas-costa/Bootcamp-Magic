@@ -57,7 +57,7 @@ extension CardsListDataSource: UICollectionViewDataSource {
             filteredCards[indexPath.section].value[indexPath.item]
         
         cell.image = card.image
-        cell.setupViews()
+        cell.setupView()
         return cell
     }
     
@@ -72,7 +72,7 @@ extension CardsListDataSource: UICollectionViewDataSource {
                 filteredCards[indexPath.section].key
             
             header.title = title
-            header.setupViews()
+            header.setupView()
             return header
         }
         

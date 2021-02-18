@@ -72,7 +72,7 @@ final class CardsListSearchView: UIView {
     init(frame: CGRect = .zero, placeholder: String) {
         self.placeholder = placeholder
         super.init(frame: frame)
-        setupViews()
+        setupView()
     }
     
     @available(*, unavailable)
@@ -85,7 +85,7 @@ final class CardsListSearchView: UIView {
 //MARK: ViewCodable
 extension CardsListSearchView: ViewCodable {
     
-    func setupViewHierarchy() {
+    func buildViewHierarchy() {
         
         stackViewTextFieldSearchButton.addArrangedSubview(textField)
         stackViewTextFieldSearchButton.addArrangedSubview(searchButton)
