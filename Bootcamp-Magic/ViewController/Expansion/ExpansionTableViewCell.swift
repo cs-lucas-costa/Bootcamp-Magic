@@ -13,16 +13,14 @@ final class ExpansionTableViewCell: UITableViewCell {
   // MARK: - Properties
   let expansionImage = UIImageView(frame: .zero)
   let expasionName = UILabel(frame: .zero)
-  #warning("Remover string hardcoded")
   let rightChevronImage = UIImageView(image: Constants.Images.rightChevron)
   let horizontalDivisor = UIView(frame: .zero)
-  let horizontalMargin = CGFloat(16)
-  let verticalMargin = CGFloat(5)
+  let horizontalMargin = Constants.Margin.Expasion.horizontalMargin
+  let verticalMargin = Constants.Margin.Expasion.verticalMargin
 
   // MARK: - Init
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-
     setupView()
   }
 
@@ -82,25 +80,28 @@ extension ExpansionTableViewCell: ViewCodable {
   }
 
   func setupConstraints() {
-    #warning("remover números mágicos")
 
     horizontalDivisor.snp.makeConstraints { make in
+      let heightMultiplier = CGFloat(0.05)
       make.bottom.equalToSuperview()
       make.left.equalToSuperview().offset(horizontalMargin)
       make.right.equalToSuperview().inset(horizontalMargin)
-      make.height.equalToSuperview().multipliedBy(0.05)
+      make.height.equalToSuperview().multipliedBy(heightMultiplier)
     }
 
     rightChevronImage.snp.makeConstraints { make in
+      let widthMultiplier = CGFloat(0.024)
+      let heightMultiplier = CGFloat(0.24)
       make.right.equalToSuperview().inset(horizontalMargin)
-      make.width.equalToSuperview().multipliedBy(0.024)
-      make.height.equalToSuperview().multipliedBy(0.24)
+      make.width.equalToSuperview().multipliedBy(widthMultiplier)
+      make.height.equalToSuperview().multipliedBy(heightMultiplier)
       make.centerY.equalToSuperview()
     }
 
     expansionImage.snp.makeConstraints { make in
+      let widthMultiplier = CGFloat(0.024)
       make.left.equalToSuperview().offset(horizontalMargin)
-      make.width.equalToSuperview().multipliedBy(0.1)
+      make.width.equalToSuperview().multipliedBy(widthMultiplier)
       make.top.equalToSuperview().offset(verticalMargin)
       make.bottom.equalToSuperview().inset(verticalMargin)
     }
@@ -114,8 +115,7 @@ extension ExpansionTableViewCell: ViewCodable {
   }
 
   func setupAdditionalConfiguration() {
-    #warning("Remover números mágicos")
-    expasionName.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+    expasionName.font = UIFont.systemFont(ofSize: Constants.FontSize.default, weight: .bold)
     expasionName.textAlignment = .left
     expasionName.textColor = .white
 
