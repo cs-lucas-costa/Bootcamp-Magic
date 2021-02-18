@@ -24,7 +24,7 @@ final class CardViewModel {
     }
 
     var image: UIImage? {
-        // TODO: Download image
+        //TODO: - Download image
         return UIImage(named: "")
     }
 
