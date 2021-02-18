@@ -37,6 +37,7 @@
 		BD9CDD8425DEA0E20010AE2C /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */; };
 		BD9CDD8825DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */; };
 		BD9CDD8C25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */; };
+		BD9CDD9B25DEB5540010AE2C /* CardDetailViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD9A25DEB5540010AE2C /* CardDetailViewModelDelegate.swift */; };
 		BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376925DB04EB003B2F5A /* NetworkManager.swift */; };
 		BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376E25DB0504003B2F5A /* RequestError.swift */; };
 		BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377325DB052F003B2F5A /* NetworkError.swift */; };
@@ -129,6 +130,7 @@
 		BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		BD9CDD9A25DEB5540010AE2C /* CardDetailViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModelDelegate.swift; sourceTree = "<group>"; };
 		BDEE376925DB04EB003B2F5A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BDEE376E25DB0504003B2F5A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		BDEE377325DB052F003B2F5A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		BD9CDD6F25DE9F700010AE2C /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
+				BD9CDD9925DEB5380010AE2C /* Delegate */,
 				BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */,
 			);
 			path = CardDetail;
@@ -372,6 +375,14 @@
 				BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */,
 			);
 			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		BD9CDD9925DEB5380010AE2C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD9A25DEB5540010AE2C /* CardDetailViewModelDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		BDEE378525DB0589003B2F5A /* Network */ = {
@@ -861,6 +872,7 @@
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
 				994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */,
+				BD9CDD9B25DEB5540010AE2C /* CardDetailViewModelDelegate.swift in Sources */,
 				BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */,
 				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
 				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
