@@ -47,6 +47,8 @@
 		BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */; };
 		BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */; };
 		BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE383625DC3833003B2F5A /* AutoLayout.swift */; };
+		E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60CD15825DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift */; };
+		E60CD16225DE922B00D941B6 /* CardsListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60CD16125DE922B00D941B6 /* CardsListDelegate.swift */; };
 		E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A1525DAC14D00ECD9D9 /* Expansion.swift */; };
 		E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */; };
 		E6537A2F25DAC40400ECD9D9 /* expansions.json in Resources */ = {isa = PBXBuildFile; fileRef = E6537A2E25DAC40400ECD9D9 /* expansions.json */; };
@@ -61,6 +63,19 @@
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
 		E67957C625DC064600EAC7E8 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957C525DC064600EAC7E8 /* Dict.swift */; };
+		E6AEA71325DD503600375F4E /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA71225DD503600375F4E /* ViewCodable.swift */; };
+		E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */; };
+		E6AEA72D25DD5BC200375F4E /* CardsListSearchViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA72C25DD5BC200375F4E /* CardsListSearchViewTestCase.swift */; };
+		E6AEA74525DD625F00375F4E /* CardsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA74425DD625F00375F4E /* CardsListDataSource.swift */; };
+		E6AEA74925DD635900375F4E /* UIView+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA74825DD635900375F4E /* UIView+Identifiable.swift */; };
+		E6AEA74D25DD645C00375F4E /* CardsListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA74C25DD645C00375F4E /* CardsListHeaderView.swift */; };
+		E6AEA75225DD7BB000375F4E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA75125DD7BB000375F4E /* CardCollectionViewCell.swift */; };
+		E6AEA76025DD854800375F4E /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA75F25DD854800375F4E /* CardsListViewController.swift */; };
+		E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA76525DD861200375F4E /* CardsListView.swift */; };
+		E6AEA76D25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA76C25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift */; };
+		E6AEA77825DD9C8700375F4E /* Card+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA77725DD9C8700375F4E /* Card+Extension.swift */; };
+		E6AEA77C25DDA16300375F4E /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = E6AEA77B25DDA16300375F4E /* SnapshotTesting */; };
+		E6AEA78525DDB38500375F4E /* CardsListViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA78425DDB38500375F4E /* CardsListViewTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +132,8 @@
 		BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFakeDataTask.swift; sourceTree = "<group>"; };
 		BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		BDEE383625DC3833003B2F5A /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
+		E60CD15825DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsListDataSource+Fixture.swift"; sourceTree = "<group>"; };
+		E60CD16125DE922B00D941B6 /* CardsListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListDelegate.swift; sourceTree = "<group>"; };
 		E6537A1525DAC14D00ECD9D9 /* Expansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansion.swift; sourceTree = "<group>"; };
 		E6537A2425DAC3BF00ECD9D9 /* ExpansionListTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListTestCase.swift; sourceTree = "<group>"; };
 		E6537A2E25DAC40400ECD9D9 /* expansions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = expansions.json; sourceTree = "<group>"; };
@@ -132,6 +149,17 @@
 		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
 		E67957C525DC064600EAC7E8 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
 		E6AEA71225DD503600375F4E /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListSearchView.swift; sourceTree = "<group>"; };
+		E6AEA72C25DD5BC200375F4E /* CardsListSearchViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListSearchViewTestCase.swift; sourceTree = "<group>"; };
+		E6AEA74425DD625F00375F4E /* CardsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListDataSource.swift; sourceTree = "<group>"; };
+		E6AEA74825DD635900375F4E /* UIView+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Identifiable.swift"; sourceTree = "<group>"; };
+		E6AEA74C25DD645C00375F4E /* CardsListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListHeaderView.swift; sourceTree = "<group>"; };
+		E6AEA75125DD7BB000375F4E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		E6AEA75F25DD854800375F4E /* CardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
+		E6AEA76525DD861200375F4E /* CardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListView.swift; sourceTree = "<group>"; };
+		E6AEA76C25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListDataSourceTestCase.swift; sourceTree = "<group>"; };
+		E6AEA77725DD9C8700375F4E /* Card+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Extension.swift"; sourceTree = "<group>"; };
+		E6AEA78425DDB38500375F4E /* CardsListViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6AEA77C25DDA16300375F4E /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +277,7 @@
 				BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */,
 				BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */,
 				BD80ADA725DAB8970016B1BE /* Products */,
+				E6AEA73025DD5E8A00375F4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +300,7 @@
 				994ECBD425DD369500F0257F /* Components */,
 				994ECBD925DD369500F0257F /* Core */,
 				994ECBC425DD367700F0257F /* ViewController */,
+				E6AEA71825DD51C600375F4E /* CardsListViewModule */,
 				E67957C425DC063900EAC7E8 /* Utils */,
 				BDEE378525DB0589003B2F5A /* Network */,
 				E6537A8B25DAF05800ECD9D9 /* ViewModel */,
@@ -281,6 +312,7 @@
 		BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				E6AEA72725DD5B3E00375F4E /* CardsListViewModule */,
 				BDEE379125DB0C6D003B2F5A /* Network */,
 				E6537A9D25DAF93B00ECD9D9 /* ViewModel */,
 				E6537A2D25DAC3EF00ECD9D9 /* Helpers */,
@@ -383,6 +415,14 @@
 			path = Fakes;
 			sourceTree = "<group>";
 		};
+		E60CD16025DE921A00D941B6 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E60CD16125DE922B00D941B6 /* CardsListDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		E6537A1125DAC12B00ECD9D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +491,8 @@
 			isa = PBXGroup;
 			children = (
 				E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */,
+				E6AEA77725DD9C8700375F4E /* Card+Extension.swift */,
+				E60CD15825DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -479,8 +521,104 @@
 				E67957C525DC064600EAC7E8 /* Dict.swift */,
 				BDEE383625DC3833003B2F5A /* AutoLayout.swift */,
 				E6AEA71225DD503600375F4E /* ViewCodable.swift */,
+				E6AEA74825DD635900375F4E /* UIView+Identifiable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6AEA71825DD51C600375F4E /* CardsListViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				E60CD16025DE921A00D941B6 /* Delegate */,
+				E6AEA73B25DD622200375F4E /* DataSource */,
+				E6AEA73A25DD621B00375F4E /* ViewControllers */,
+				E6AEA73925DD621100375F4E /* Views */,
+			);
+			path = CardsListViewModule;
+			sourceTree = "<group>";
+		};
+		E6AEA72725DD5B3E00375F4E /* CardsListViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA76B25DD9B9300375F4E /* DataSource */,
+				E6AEA77225DD9C2700375F4E /* Views */,
+			);
+			path = CardsListViewModule;
+			sourceTree = "<group>";
+		};
+		E6AEA73025DD5E8A00375F4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6AEA73925DD621100375F4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA76325DD85DF00375F4E /* Subviews */,
+				E6AEA75025DD669E00375F4E /* CollectionView */,
+				E6AEA76525DD861200375F4E /* CardsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6AEA73A25DD621B00375F4E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA75F25DD854800375F4E /* CardsListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E6AEA73B25DD622200375F4E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA74425DD625F00375F4E /* CardsListDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E6AEA75025DD669E00375F4E /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA74C25DD645C00375F4E /* CardsListHeaderView.swift */,
+				E6AEA75125DD7BB000375F4E /* CardCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E6AEA76325DD85DF00375F4E /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		E6AEA76B25DD9B9300375F4E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA76C25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E6AEA77225DD9C2700375F4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA78325DDB36500375F4E /* Subviews */,
+				E6AEA78425DDB38500375F4E /* CardsListViewTestCase.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6AEA78325DDB36500375F4E /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				E6AEA72C25DD5BC200375F4E /* CardsListSearchViewTestCase.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,6 +659,9 @@
 				BD80ADC125DAB8990016B1BE /* PBXTargetDependency */,
 			);
 			name = "Bootcamp-MagicTests";
+			packageProductDependencies = (
+				E6AEA77B25DDA16300375F4E /* SnapshotTesting */,
+			);
 			productName = "Bootcamp-MagicTests";
 			productReference = BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -615,6 +756,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				994ECBBD25DD364F00F0257F /* Constants.swift in Sources */,
+				E6AEA76025DD854800375F4E /* CardsListViewController.swift in Sources */,
+				E60CD16225DE922B00D941B6 /* CardsListDelegate.swift in Sources */,
+				BD80ADB425DAB8970016B1BE /* Bootcamp_Magic.xcdatamodeld in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
@@ -632,6 +776,7 @@
 				BD9CDD8C25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
+				E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
@@ -644,13 +789,20 @@
 				BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */,
 				994ECC0A25DD50C000F0257F /* ExpansionHeaderView.swift in Sources */,
 				994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */,
+				E6AEA74525DD625F00375F4E /* CardsListDataSource.swift in Sources */,
+				BD80ADAA25DAB8970016B1BE /* AppDelegate.swift in Sources */,
+				E6AEA75225DD7BB000375F4E /* CardCollectionViewCell.swift in Sources */,
+				E6AEA74D25DD645C00375F4E /* CardsListHeaderView.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
+				E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
 				994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */,
 				BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */,
 				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
 				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
+				BD80ADAC25DAB8970016B1BE /* SceneDelegate.swift in Sources */,
+				E6AEA74925DD635900375F4E /* UIView+Identifiable.swift in Sources */,
 				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,9 +816,14 @@
 				E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */,
 				BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */,
 				BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */,
+				E6AEA78525DDB38500375F4E /* CardsListViewTestCase.swift in Sources */,
+				E6AEA77825DD9C8700375F4E /* Card+Extension.swift in Sources */,
 				BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */,
+				E6AEA72D25DD5BC200375F4E /* CardsListSearchViewTestCase.swift in Sources */,
 				BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */,
+				E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */,
 				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,
+				E6AEA76D25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift in Sources */,
 				E6537A5E25DAE54000ECD9D9 /* CardListTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -870,6 +1027,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Bootcamp-MagicTests/Info.plist";
@@ -935,6 +1093,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9992F26F25DC3D070079AD1D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		E6AEA77B25DDA16300375F4E /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9992F27925DC546A0079AD1D /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 
