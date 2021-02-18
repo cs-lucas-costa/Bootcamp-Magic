@@ -8,18 +8,18 @@
 import UIKit
 
 final class MainCoordinator: Coordinatable {
-  
+
   // MARK: - Properties
   var currentViewController: UIViewController?
   let expasionCoordinator = ExpansionCoordinator()
-  
+
   func start() {
     expasionCoordinator.start()
-    
+
     guard let viewController = expasionCoordinator.currentViewController else {
       preconditionFailure("CurrentViewControllerffrom ExpasionCoordinator must exist")
     }
-    
+
     currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [viewController, UIViewController()])
   }
 }

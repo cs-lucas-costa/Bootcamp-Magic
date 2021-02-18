@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum HttpMethods: String {
     case get = "Get"
@@ -88,5 +89,26 @@ final class NetworkManager {
         }
 
         self.dataTask(request: request, decodableType: decodableType, completion: completion)
+    }
+
+    func getImageFromURL(imagesService: ImagesService, completion: @escaping (Result<UIImage, Error>) -> Void) {
+
+        guard let url = URL(string: imagesService.path) else {
+            completion(.failure(NetworkError.notUrl(networkErrorDescription: "Could not Create URL")))
+            return
+        }
+
+        do {
+
+            let data = try Data(contentsOf: url)
+            guard let image = UIImage(data: data) else {
+                completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Could not transform data to UIImage")))
+                return
+            }
+            completion(.success(image))
+
+        } catch {
+            completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Could not retrieve data from url")))
+        }
     }
 }

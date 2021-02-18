@@ -8,11 +8,11 @@
 import UIKit
 
 final class ExpansionCoordinator: Coordinatable {
-  
+
   // MARK: - Properties
   var currentViewController: UIViewController?
   let expansionViewController = ExpansionViewController()
-  
+
   func start() {
     let navigationController = UINavigationController()
     navigationController.pushViewController(expansionViewController, animated: true)

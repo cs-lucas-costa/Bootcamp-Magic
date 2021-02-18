@@ -8,19 +8,19 @@
 import UIKit
 
 final class ExpansionViewController: UIViewController {
-  
+
   // MARK: - Properties
   lazy var dataSource = ExpansionViewControllerDataSource(expansions: expansions)
   lazy var screen = ExpansionViewControllerScreen(frame: view.bounds)
   var expansions = [Expansion]()
   let viewModel = ExpansionListViewModel()
-  
+
   // MARK: - LoadView
   override func loadView() {
     super.loadView()
     view = screen
   }
-  
+
   // MARK: - ViewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,25 +28,25 @@ final class ExpansionViewController: UIViewController {
     setupNavigationTitle()
     fetchExpansions()
   }
-  
+
   // MARK: - Methods
   func fetchExpansions() {
     self.screen.state = .fetching
     viewModel.fetchExpansions { [weak self] error in
       guard let self = self else { return }
-      
+
       self.screen.state = .fetched
-      
+
       if error == nil {
-        
+
         for viewModels in self.viewModel.dictExpansions.map({ $0.value.map({ $0 }) }) {
           for viewModel in viewModels {
             self.expansions.append(Expansion(code: viewModel.code, name: viewModel.name))
           }
         }
-        
+
         self.dataSource = ExpansionViewControllerDataSource(expansions: self.expansions)
-        
+
         DispatchQueue.main.async { [weak self] in
           guard let self = self else { return }
           self.screen.tableView.delegate = self.dataSource
@@ -58,18 +58,17 @@ final class ExpansionViewController: UIViewController {
       }
     }
   }
-  
+
   func setupNavigationTitle() {
     #warning("remover string hardcoded")
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     navigationItem.title = "Events"
   }
-  
+
   func setupTableView() {
     screen.tableView.register(ExpansionTableViewCell.self, forCellReuseIdentifier: Constants.ExpasionTableViewCell.identifier)
     screen.tableView.delegate = dataSource
     screen.tableView.dataSource = dataSource
   }
 }
-

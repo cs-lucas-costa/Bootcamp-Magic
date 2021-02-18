@@ -10,7 +10,7 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+
   var window: UIWindow?
   var coordinator: MainCoordinator?
 
@@ -19,14 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // Setup Coordinator
       coordinator = MainCoordinator()
       coordinator?.start()
-      
+
       // Setup Window
       self.window = UIWindow(frame: UIScreen.main.bounds)
       self.window?.makeKeyAndVisible()
       self.window?.rootViewController = coordinator?.currentViewController
-      
+
       return true
     }
 
 }
-

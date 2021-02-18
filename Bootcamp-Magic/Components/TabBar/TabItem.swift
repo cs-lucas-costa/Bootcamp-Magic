@@ -10,7 +10,7 @@ import UIKit
 enum TabItem: CaseIterable {
   case expansion
   case favorites
-  
+
   var title: String {
     switch self {
     #warning("Remover string fixas")
