@@ -24,11 +24,10 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
          viewModel: CardListViewModel,
          with expansionViewModel: ExpansionViewModel) {
         
-        self.cardsListView = CardsListView(numberOfCardsPerRow: 3,
-                                           state: .all(expansion: expansionViewModel))
+        self.cardsListView = CardsListView(numberOfCardsPerRow: 3, state: .all)
         self.viewModel = viewModel
         self.expansionViewModel = expansionViewModel
-        
+
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -19,6 +19,7 @@ protocol CardsListViewControllerProtocol: UIViewController, CardsListSearchViewD
     func setupDelegates()
     func setupDataSources()
     func setupClosures()
+    
 }
 
 // MARK: Default implementations
