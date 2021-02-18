@@ -12,6 +12,11 @@ final class MainCoordinator: Coordinatable {
   // MARK: - Properties
   var currentViewController: UIViewController?
   let expasionCoordinator = ExpansionCoordinator()
+    var navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController = UINavigationController()) {
+        self.navigationController = navigationController
+    }
 
   func start() {
     expasionCoordinator.start()
