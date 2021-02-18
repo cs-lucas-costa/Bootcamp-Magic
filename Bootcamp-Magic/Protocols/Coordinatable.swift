@@ -8,6 +8,7 @@
 import UIKit
 
 protocol Coordinatable: AnyObject {
-  var currentViewController: UIViewController? { get set }
-  func start()
+    var currentViewController: UIViewController? { get set }
+    var navigationController: UINavigationController { get set }
+    func start()
 }

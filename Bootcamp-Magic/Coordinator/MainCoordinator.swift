@@ -12,6 +12,11 @@ final class MainCoordinator: Coordinatable {
   // MARK: - Properties
   var currentViewController: UIViewController?
   let expasionCoordinator = ExpansionCoordinator()
+    var navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController = UINavigationController()) {
+        self.navigationController = navigationController
+    }
 
   func start() {
     expasionCoordinator.start()
@@ -20,6 +25,6 @@ final class MainCoordinator: Coordinatable {
       preconditionFailure("CurrentViewControllerffrom ExpasionCoordinator must exist")
     }
 
-    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [viewController, UIViewController()])
+    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [expasionCoordinator.navigationController, UIViewController()])
   }
 }

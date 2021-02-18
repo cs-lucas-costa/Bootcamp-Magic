@@ -52,5 +52,4 @@ extension ExpansionHeaderView: ViewCodable {
     initialCharacterLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
     backgroundColor = .white
   }
-
 }
