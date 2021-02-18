@@ -19,12 +19,16 @@ final class CardDetailViewController: UIViewController {
 
     private lazy var collectionViewDataSource = CardDetailCollectionViewDataSource(cards: viewModel.sendCardsImage())
 
-    private lazy var collectionViewFlowLayoutDelegate: CardDetailCollectionViewDelegate = CardDetailCollectionViewDelegate(detailCollectionView: detailCollectionView, superView: self.view)
+    private lazy var collectionViewFlowLayoutDelegate: CardDetailCollectionViewDelegate = CardDetailCollectionViewDelegate(detailCollectionView: detailCollectionView, superView: self.view, cards: viewModel.sendCards()) { [weak self] index in
+        self?.viewModel.getExpansionName(index: index)
+    }
 
     init(viewModel: CardDetailViewModel) {
         self.viewModel = viewModel
 
         super.init(nibName: nil, bundle: nil)
+
+        self.viewModel.delegate = self
     }
 
     required init?(coder: NSCoder) {
@@ -50,8 +54,8 @@ final class CardDetailViewController: UIViewController {
         expansionNameLabel.textAlignment = .center
         expansionNameLabel.adjustsFontSizeToFitWidth = true
         expansionNameLabel.textColor = .white
-        expansionNameLabel.font = UIFont(name: "Roboto", size: 30)
-        expansionNameLabel.text = "Teste"
+        expansionNameLabel.font = .systemFont(ofSize: 30)
+        expansionNameLabel.text = viewModel.sendExpansionName()
     }
 
     private func setUpdetailCollectionView() {
@@ -61,6 +65,7 @@ final class CardDetailViewController: UIViewController {
         detailCollectionView.delegate = collectionViewFlowLayoutDelegate
         detailCollectionView.dataSource = collectionViewDataSource
         detailCollectionView.register(CardDetailCollectionViewCell.self, forCellWithReuseIdentifier: CardDetailCollectionViewCell.cellID())
+        detailCollectionView.collectionViewLayout = CardDetailCollectionViewFlowLayout()
     }
 
     private func expansionLabelConstraints() {
@@ -81,5 +86,11 @@ final class CardDetailViewController: UIViewController {
             maker.width.equalToSuperview()
             maker.height.equalToSuperview().multipliedBy(0.46)
         }
+    }
+}
+
+extension CardDetailViewController: CardDetailViewModelDelegate {
+    func updateUI() {
+        expansionNameLabel.text = viewModel.sendExpansionName()
     }
 }

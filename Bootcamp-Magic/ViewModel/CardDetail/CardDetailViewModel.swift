@@ -10,11 +10,15 @@ import UIKit
 
 final class CardDetailViewModel {
 
+    weak var delegate: CardDetailViewModelDelegate?
+
     private let networkManager: NetworkManager
 
-    private var expansionCards: [Card] {
+    private var expansionCards: [Card]
+
+    private var expansionName: String = "" {
         didSet {
-            cardsImages = self.getCardsImages()
+            delegate?.updateUI()
         }
     }
 
@@ -27,11 +31,12 @@ final class CardDetailViewModel {
     init(networkManager: NetworkManager, expansionCards: [Card]) {
         self.networkManager = networkManager
         self.expansionCards = expansionCards
+        getCardsImages()
     }
 
-    private func getCardsImages() -> [UIImage?] {
+    private func getCardsImages() {
 
-        let images = imagesPath.map { (imagePath) -> UIImage? in
+        cardsImages = imagesPath.map { (imagePath) -> UIImage? in
 
             var recoveredImage : UIImage?
 
@@ -46,7 +51,14 @@ final class CardDetailViewModel {
 
             return recoveredImage
         }
-        return images
+    }
+
+    func getExpansionName(index: Int) {
+        self.expansionName = expansionCards[index].name
+    }
+
+    func sendCards() -> [Card] {
+        expansionCards
     }
 
     func sendCardsImage() -> [UIImage] {
@@ -61,5 +73,9 @@ final class CardDetailViewModel {
         }
 
         return guardedImagesArray
+    }
+
+    func sendExpansionName() -> String {
+        expansionName
     }
 }
