@@ -65,8 +65,8 @@
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
 		E67957C625DC064600EAC7E8 /* Dict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957C525DC064600EAC7E8 /* Dict.swift */; };
-		E691C62225DEA7B6004D41CF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691C62125DEA7B6004D41CF /* Roboto-Bold.ttf */; };
 		E691C62625DEA7DA004D41CF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C62525DEA7DA004D41CF /* Fonts.swift */; };
+		E691C62A25DEBA47004D41CF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691C62925DEBA47004D41CF /* Roboto-Bold.ttf */; };
 		E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */; };
 		E6AEA72D25DD5BC200375F4E /* CardsListSearchViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA72C25DD5BC200375F4E /* CardsListSearchViewTestCase.swift */; };
 		E6AEA74525DD625F00375F4E /* CardsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA74425DD625F00375F4E /* CardsListDataSource.swift */; };
@@ -151,8 +151,8 @@
 		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
 		E67957C525DC064600EAC7E8 /* Dict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dict.swift; sourceTree = "<group>"; };
-		E691C62125DEA7B6004D41CF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		E691C62525DEA7DA004D41CF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		E691C62925DEBA47004D41CF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListSearchView.swift; sourceTree = "<group>"; };
 		E6AEA72C25DD5BC200375F4E /* CardsListSearchViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListSearchViewTestCase.swift; sourceTree = "<group>"; };
 		E6AEA74425DD625F00375F4E /* CardsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListDataSource.swift; sourceTree = "<group>"; };
@@ -541,7 +541,7 @@
 		E691C62025DEA7AA004D41CF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				E691C62125DEA7B6004D41CF /* Roboto-Bold.ttf */,
+				E691C62925DEBA47004D41CF /* Roboto-Bold.ttf */,
 				E691C62525DEA7DA004D41CF /* Fonts.swift */,
 			);
 			path = Fonts;
@@ -736,7 +736,7 @@
 			files = (
 				994ECBE525DD369500F0257F /* LaunchScreen.storyboard in Resources */,
 				994ECBE425DD369500F0257F /* Assets.xcassets in Resources */,
-				E691C62225DEA7B6004D41CF /* Roboto-Bold.ttf in Resources */,
+				E691C62A25DEBA47004D41CF /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
