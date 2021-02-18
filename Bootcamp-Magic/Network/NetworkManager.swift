@@ -92,23 +92,39 @@ final class NetworkManager {
     }
 
     func getImageFromURL(imagesService: ImagesService, completion: @escaping (Result<UIImage, Error>) -> Void) {
-
+        
         guard let url = URL(string: imagesService.path) else {
             completion(.failure(NetworkError.notUrl(networkErrorDescription: "Could not Create URL")))
             return
         }
-
-        do {
-
-            let data = try Data(contentsOf: url)
-            guard let image = UIImage(data: data) else {
-                completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Could not transform data to UIImage")))
+        
+        let request = createRequest(url: url, method: .get)
+        
+        service.dataTask(with: request as URLRequest) { data, response, error in
+            
+            if let serviceError = error {
+                completion(.failure(serviceError))
                 return
             }
-            completion(.success(image))
-
-        } catch {
-            completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Could not retrieve data from url")))
-        }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(NetworkError.notUrl(networkErrorDescription: "Could not use URL as Response")))
+                return
+            }
+            
+            if httpResponse.statusCode == 200 {
+                
+                guard let data = data else {
+                    completion(.failure(NetworkError.requestFailed(networkErrorDescription: "Could not retrive data from URL")))
+                    return
+                }
+                
+                guard let image = UIImage(data: data) else {
+                    completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Could not transform data to UIImage")))
+                    return
+                }
+                completion(.success(image))
+            }
+        }.resume()
     }
 }

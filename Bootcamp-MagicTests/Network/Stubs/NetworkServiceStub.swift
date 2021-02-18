@@ -40,7 +40,51 @@ final class NetworkServiceStub: NetworkService {
         }
 
         guard let jsonUrl = json, let data = try? Data(contentsOf: jsonUrl) else {
+            completionHandler(nil, urlResponse, nil)
+            return ServiceFakeDataTask()
+        }
+
+        completionHandler(data, urlResponse, nil)
+
+        return ServiceFakeDataTask()
+    }
+
+}
+
+final class ImageRetrievingNetworkServiceStub: NetworkService {
+
+    let bundle: Bundle
+
+    var shouldFail: Bool = false
+    var statusCode: Int = 200
+
+    init(bundle: Bundle) {
+        self.bundle = bundle
+    }
+
+    func dataTask(with url: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+
+        if shouldFail {
+            completionHandler(nil, nil, NetworkError.purposefulError)
+            return ServiceFakeDataTask()
+        }
+        
+        guard let urlPath = url.url?.path else {
             completionHandler(nil, nil, nil)
+            return ServiceFakeDataTask()
+        }
+        
+        let newURL = URL(fileURLWithPath: urlPath)
+
+        let urlResponse = HTTPURLResponse(url: newURL, statusCode: statusCode, httpVersion: nil, headerFields: nil)
+
+        if statusCode != 200 {
+            completionHandler(nil, urlResponse, nil)
+            return ServiceFakeDataTask()
+        }
+
+       guard let data = try? Data(contentsOf: newURL) else {
+            completionHandler(nil, urlResponse, nil)
             return ServiceFakeDataTask()
         }
 
