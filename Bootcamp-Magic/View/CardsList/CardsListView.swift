@@ -11,15 +11,17 @@ import SnapKit
 final class CardsListView: UIView {
     
     private let numberOfCardsPerRow: Int
+    private let state: CardsListViewState
     
-    var expansionTitle: String? {
+    var title: String? {
         didSet {
-            expansionTitleView.text = expansionTitle?.capitalized
+            titleView.text = title?.capitalized
         }
     }
     
-    init(frame: CGRect = .zero, numberOfCardsPerRow: Int) {
+    init(frame: CGRect = .zero, numberOfCardsPerRow: Int, state: CardsListViewState) {
         self.numberOfCardsPerRow = numberOfCardsPerRow
+        self.state = state
         super.init(frame: frame)
         setupView()
     }
@@ -58,13 +60,14 @@ final class CardsListView: UIView {
         return layout
     }()
     
-    private(set) var searchView: CardsListSearchView = {
-        let searchView = CardsListSearchView(placeholder: "Search")
+    private(set) lazy var searchView: CardsListSearchView = {
+        let placeholder = state == .favorites ? Texts.searchForFavorites.text : Texts.searchForCards.text
+        let searchView = CardsListSearchView(placeholder: placeholder)
         searchView.translatesAutoresizingMaskIntoConstraints = false
         return searchView
     }()
     
-    private let expansionTitleView: UILabel = {
+    private let titleView: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -87,7 +90,7 @@ extension CardsListView: ViewCodable {
     func buildViewHierarchy() {
         addSubview(backgroundView)
         addSubview(searchView)
-        addSubview(expansionTitleView)
+        addSubview(titleView)
         addSubview(collectionView)
     }
     
@@ -103,14 +106,14 @@ extension CardsListView: ViewCodable {
             make.trailing.equalTo(safeAreaLayoutGuide).offset(-25)
         }
         
-        expansionTitleView.snp.makeConstraints { (make) in
+        titleView.snp.makeConstraints { (make) in
             make.top.equalTo(searchView.snp.bottom).offset(20)
             make.leading.equalTo(safeAreaLayoutGuide).offset(25)
             make.trailing.equalTo(safeAreaLayoutGuide).offset(-25)
         }
         
         collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(expansionTitleView.snp.bottom).offset(15)
+            make.top.equalTo(titleView.snp.bottom).offset(15)
             make.trailing.leading.bottom.equalTo(safeAreaLayoutGuide)
         }
         
