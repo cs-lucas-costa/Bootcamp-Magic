@@ -11,15 +11,17 @@ import XCTest
 
 class CardsListViewControllerTestCase: XCTestCase {
 
-    var sut: CardsListViewController!
+    var sut: CardsListViewControllerProtocol!
     var viewModel: CardListViewModel!
     
     override func setUp() {
         super.setUp()
         
-        let service = NetworkServiceStub(bundle: Bundle(for: type(of: self)))
+        let bundle = Bundle(for: type(of: self))
+        let service = NetworkServiceStub(bundle: bundle)
+        service.json = bundle.url(forResource: "cards", withExtension: "json")
         viewModel = CardListViewModel(networkManager: NetworkManager(service: service))
-        sut = CardsListViewController(numberOfCardsPerRow: 3,
+        sut = AllCardsListViewController(numberOfCardsPerRow: 3,
                                       viewModel: viewModel,
                                       with: ExpansionViewModel(expansion: .fixture()))
     }
