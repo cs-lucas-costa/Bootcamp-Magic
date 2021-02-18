@@ -26,6 +26,9 @@
 		994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC0E25DD57A800F0257F /* String+Extensions.swift */; };
 		994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */; };
 		994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */; };
+		998BAC7925DEE86100CD7C8F /* ExpansionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BAC7825DEE86100CD7C8F /* ExpansionHeaderView.swift */; };
+		998BAC8125DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BAC8025DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift */; };
+		998BAC8525DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BAC8425DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift */; };
 		9992F27125DC3D070079AD1D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9992F27025DC3D070079AD1D /* SnapKit */; };
 		9992F28925DC5D620079AD1D /* cards-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28725DC5D620079AD1D /* cards-response.json */; };
 		9992F28A25DC5D620079AD1D /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28825DC5D620079AD1D /* sets-response.json */; };
@@ -128,6 +131,9 @@
 		994ECC0E25DD57A800F0257F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
 		994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionCoordinator.swift; sourceTree = "<group>"; };
+		998BAC7825DEE86100CD7C8F /* ExpansionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionHeaderView.swift; sourceTree = "<group>"; };
+		998BAC8025DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTableViewCellTestCase.swift; sourceTree = "<group>"; };
+		998BAC8425DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerScreenTestCase.swift; sourceTree = "<group>"; };
 		9992F28725DC5D620079AD1D /* cards-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cards-response.json"; sourceTree = "<group>"; };
 		9992F28825DC5D620079AD1D /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sets-response.json"; sourceTree = "<group>"; };
 		BD11DA1525DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerRetrievingImageTests.swift; sourceTree = "<group>"; };
@@ -304,6 +310,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		998BAC7425DEE71C00CD7C8F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				998BAC7525DEE72600CD7C8F /* Expansion */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		998BAC7525DEE72600CD7C8F /* Expansion */ = {
+			isa = PBXGroup;
+			children = (
+				998BAC7825DEE86100CD7C8F /* ExpansionHeaderView.swift */,
+				998BAC8025DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift */,
+				998BAC8425DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift */,
+			);
+			path = Expansion;
+			sourceTree = "<group>";
+		};
 		9992F28625DC5D410079AD1D /* JSONFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +377,7 @@
 		BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				998BAC7425DEE71C00CD7C8F /* ViewController */,
 				E6AEA72725DD5B3E00375F4E /* CardsListViewModule */,
 				BDEE379125DB0C6D003B2F5A /* Network */,
 				E6537A9D25DAF93B00ECD9D9 /* ViewModel */,
@@ -970,7 +995,9 @@
 				E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */,
 				BD9CDDBA25DED8480010AE2C /* FakeCardsArray.swift in Sources */,
 				E6537AA025DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift in Sources */,
+				998BAC8525DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift in Sources */,
 				E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */,
+				998BAC8125DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift in Sources */,
 				BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */,
 				E691C65725DED51E004D41CF /* CardsListSearchViewDelegateSpy.swift in Sources */,
 				BD11DA1625DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift in Sources */,
@@ -982,6 +1009,7 @@
 				E6AEA72D25DD5BC200375F4E /* CardsListSearchViewTestCase.swift in Sources */,
 				E691C63B25DECC73004D41CF /* CardsListHeaderViewTestCase.swift in Sources */,
 				E691C65125DED104004D41CF /* CardsListDelegateSpy.swift in Sources */,
+				998BAC7925DEE86100CD7C8F /* ExpansionHeaderView.swift in Sources */,
 				BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */,
 				E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */,
 				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,

@@ -12,6 +12,7 @@ final class ExpansionViewControllerDataSource: NSObject {
   // MARK: - Properties
   let expansions: [Expansion]
   let initials: [Character]
+  let heightMultiplier = CGFloat(0.08)
 
   // MARK: - Init
   init(expansions: [Expansion]) {
@@ -55,16 +56,12 @@ extension ExpansionViewControllerDataSource: UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    #warning("remover número mágico")
-
-    let height = UIScreen.main.bounds.size.height * 0.08
+    let height = UIScreen.main.bounds.size.height * heightMultiplier
     return height
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    #warning("remover número mágico")
-
-    let height = UIScreen.main.bounds.size.height * 0.08
+    let height = UIScreen.main.bounds.size.height * heightMultiplier
     return height
   }
 
