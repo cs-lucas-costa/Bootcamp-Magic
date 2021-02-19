@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol CardsListViewControllerProtocol: UIViewController, CardsListSearchViewDelegate {
+protocol CardsListViewControllerProtocol: UIViewController,
+                                          CardsListSearchViewDelegate,
+                                          CardsListViewDelegate {
     
     var cardsListView: CardsListView { get }
     var coordinator: CardsListCoordinatorProtocol? { get set }
@@ -31,14 +33,17 @@ extension CardsListViewControllerProtocol {
     }
     
     func setupDelegates() {
-        cardListDelegate = CardsListDelegate(dictCards: viewModel.dictCards)
+        cardListDelegate = CardsListDelegate()
         cardsListView.collectionView.delegate = cardListDelegate
         cardsListView.searchView.delegate = searchViewDelegate ?? self
+        cardsListView.delegate = self
     }
         
     func setupClosures() {
-        cardListDelegate?.didSelectCard = { [weak self] cards in
-            self?.coordinator?.showCardDetail(cards)
+        cardListDelegate?.didSelectCard = { [weak self] indexPath in
+            guard let self = self else { return }
+            let cards = self.viewModel.dictCards[indexPath.section].value
+            self.coordinator?.showCardDetail(cards)
         }
     }
     
@@ -48,7 +53,9 @@ extension CardsListViewControllerProtocol {
 extension CardsListViewControllerProtocol {
     
     func textDidChange(_ text: String) {
-        dataSource?.filter = (true, text)
+        
+        let filter = !text.isEmpty
+        dataSource?.filter = (filter, text)
         
         DispatchQueue.main.async {
             self.cardsListView.collectionView.reloadData()
@@ -61,6 +68,14 @@ extension CardsListViewControllerProtocol {
         DispatchQueue.main.async {
             self.cardsListView.collectionView.reloadData()
         }
+    }
+}
+
+// MARK: CardsListDelegate
+extension CardsListViewControllerProtocol {
+    
+    func dismiss() {
+        coordinator?.dismiss()
     }
     
 }

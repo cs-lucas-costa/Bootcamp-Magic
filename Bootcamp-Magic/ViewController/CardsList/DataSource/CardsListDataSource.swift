@@ -26,7 +26,7 @@ class CardsListDataSource: NSObject {
         self.dictCards = dictCards
     }
     
-    private func filterCards(with name: String) {
+    private func filterCards(with name: String) {        
         filteredCards = dictCards.compactMap {
             let cards = $0.value.filter { (card) -> Bool in
                 return card.name.uppercased().contains(name.uppercased())
@@ -60,7 +60,10 @@ extension CardsListDataSource: UICollectionViewDataSource {
             dictCards[indexPath.section].value[indexPath.item] :
             filteredCards[indexPath.section].value[indexPath.item]
         
-        cell.imageView.downloadImage(with: card.imageUrl)
+        if let imageUrl = card.imageUrl {
+            cell.imageView.downloadImage(with: imageUrl)
+        }
+        
         cell.setupView()
         return cell
     }
