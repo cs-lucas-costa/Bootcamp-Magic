@@ -12,9 +12,14 @@ import Foundation
 class CardsListCoordinatorSpy: CardsListCoordinatorProtocol {
 
     var selectCard: Bool = false
+    var isDismissed: Bool = false
     
     func showCardDetail(_ card: [CardViewModel]) {
         selectCard = true
+    }
+    
+    func dismiss() {
+        isDismissed = true
     }
 
 }
