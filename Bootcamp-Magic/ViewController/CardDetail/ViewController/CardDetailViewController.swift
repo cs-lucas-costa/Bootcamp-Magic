@@ -100,7 +100,7 @@ final class CardDetailViewController: UIViewController {
     private func detailCollectionViewConstraints() {
 
         detailCollectionView.snp.makeConstraints { maker in
-            maker.top.equalTo(self.expansionNameLabel).offset(50)
+            maker.top.equalTo(self.expansionNameLabel.snp.bottom).offset(50)
             maker.centerX.equalToSuperview()
             maker.width.equalToSuperview()
             maker.height.equalToSuperview().multipliedBy(0.46)
