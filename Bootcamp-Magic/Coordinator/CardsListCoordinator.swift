@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CardsListCoordinatorProtocol: Coordinatable {
+protocol CardsListCoordinatorProtocol: AnyObject {
     func showCardDetail(_ cards: [CardViewModel])
 }
 

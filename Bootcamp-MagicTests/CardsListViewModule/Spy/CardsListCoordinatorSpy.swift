@@ -10,10 +10,10 @@ import Foundation
 @testable import Bootcamp_Magic
 
 class CardsListCoordinatorSpy: CardsListCoordinatorProtocol {
-    
+
     var selectCard: Bool = false
     
-    func showCardDetail(_ card: CardViewModel) {
+    func showCardDetail(_ card: [CardViewModel]) {
         selectCard = true
     }
 

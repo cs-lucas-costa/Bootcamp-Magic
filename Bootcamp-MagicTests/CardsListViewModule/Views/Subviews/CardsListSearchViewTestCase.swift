@@ -19,6 +19,7 @@ class CardsListSearchViewTestCase: XCTestCase {
         let frame = CGRect(origin: .zero,
                            size: CGSize(width: UIScreen.main.bounds.width, height: 40))
         sut = CardsListSearchView(frame: frame, placeholder: "Search")
+//        isRecording = true
     }
     
     override func tearDown() {

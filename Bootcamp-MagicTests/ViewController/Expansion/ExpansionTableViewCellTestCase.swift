@@ -19,6 +19,7 @@ class ExpansionTableViewCellTestCase: XCTestCase {
   override func setUp() {
     super.setUp()
     sut = ExpansionTableViewCell(style: .default, reuseIdentifier: "")
+    
   }
   
   // MARK: - TearDown
