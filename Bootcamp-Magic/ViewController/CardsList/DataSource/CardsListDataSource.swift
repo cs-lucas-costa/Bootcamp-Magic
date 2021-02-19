@@ -86,5 +86,4 @@ extension CardsListDataSource: UICollectionViewDataSource {
         
         return UICollectionReusableView()
     }
-    
 }

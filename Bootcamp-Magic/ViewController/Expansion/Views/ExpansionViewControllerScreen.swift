@@ -23,7 +23,7 @@ final class ExpansionViewControllerScreen: UIView {
       change(to: state)
     }
   }
-
+  
   // MARK: - Init
   override init(frame: CGRect) {
     super.init(frame: frame)
