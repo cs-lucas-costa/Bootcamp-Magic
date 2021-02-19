@@ -42,6 +42,11 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
         view = cardsListView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,12 +58,13 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
             if let error = error {
                 print("Error to fetch cards - \(error)")
             } else {
-                self.setupDataSources()
-                self.setupDelegates()
-                self.cardsListView.collectionView.reloadData()
+                DispatchQueue.main.async {
+                    self.setupDataSources()
+                    self.setupDelegates()
+                    self.setupClosures()
+                    self.cardsListView.collectionView.reloadData()
+                }
             }
         }
-        
-        setupClosures()
     }
 }

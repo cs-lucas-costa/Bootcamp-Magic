@@ -10,20 +10,19 @@ import SnapKit
 
 final class CardCollectionViewCell: UICollectionViewCell {
     
-    var image: UIImage? {
-        didSet {
-            imageView.image = image
-        }
-    }
-    
-    private let imageView: UIImageView = {
+    let imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .clear
         imageView.clipsToBounds = true
         return imageView
     }()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
     
 }
 
@@ -39,9 +38,4 @@ extension CardCollectionViewCell: ViewCodable {
             make.edges.equalTo(contentView)
         }
     }
-    
-    func setupAdditionalConfiguration() {
-        backgroundColor = .white
-    }
-    
 }

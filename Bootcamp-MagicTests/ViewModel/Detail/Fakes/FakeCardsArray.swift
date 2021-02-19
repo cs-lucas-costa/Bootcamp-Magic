@@ -20,14 +20,14 @@ final class FakeCardsArray {
         self.networkManager = NetworkManager(service: serviceStub)
     }
     
-    func getCards() -> [Card] {
+    func getCards() -> [CardViewModel] {
         
-        var cards: [Card] = []
+        var cards: [CardViewModel] = []
         
         networkManager.getRequest(cardsService: CardsService.cardsList(setCode: ""), decodableType: CardList.self) { result in
             switch result {
             case .success(let cardList):
-                cards = cardList.cards
+                cards = cardList.cards.map { CardViewModel(card: $0) }
             case .failure:
                 cards = []
             }

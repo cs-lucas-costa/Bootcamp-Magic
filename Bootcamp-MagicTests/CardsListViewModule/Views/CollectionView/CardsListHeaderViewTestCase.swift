@@ -20,6 +20,7 @@ class CardsListHeaderViewTestCase: XCTestCase {
                            size: CGSize(width: UIScreen.main.bounds.width, height: 40))
         sut = CardsListHeaderView(frame: frame)
 //        isRecording = true
+
     }
 
     override func tearDown() {

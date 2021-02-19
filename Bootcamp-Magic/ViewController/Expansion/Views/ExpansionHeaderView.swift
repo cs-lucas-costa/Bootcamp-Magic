@@ -11,7 +11,7 @@ final class ExpansionHeaderView: UIView {
 
   // MARK: - Properties
   let initialCharacterLabel = UILabel(frame: .zero)
-  let margin = CGFloat(16)
+  let margin = Constants.Margin.Expasion.horizontalMargin
 
   // MARK: - Init
   init(frame: CGRect, character: Character) {
@@ -47,9 +47,9 @@ extension ExpansionHeaderView: ViewCodable {
   }
 
   func setupAdditionalConfiguration() {
-    #warning("Remover números mágicos")
     initialCharacterLabel.textColor = .black
-    initialCharacterLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+    initialCharacterLabel.font = UIFont.systemFont(ofSize: Constants.FontSize.default, weight: .bold)
+    
     backgroundColor = .white
   }
 }

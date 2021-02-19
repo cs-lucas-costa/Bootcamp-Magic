@@ -10,7 +10,7 @@ import UIKit
 final class CardViewModel {
 
     private let card: Card
-
+    
     init(card: Card) {
         self.card = card
     }
@@ -22,10 +22,9 @@ final class CardViewModel {
     var type: String {
         card.type
     }
-
-    var image: UIImage? {
-        // (- Download image)
-        return UIImage(named: "")
+    
+    var imageUrl: String {
+        card.imageUrl
     }
 
 }

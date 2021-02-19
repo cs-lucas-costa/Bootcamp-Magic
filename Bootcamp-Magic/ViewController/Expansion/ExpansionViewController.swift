@@ -10,10 +10,11 @@ import UIKit
 final class ExpansionViewController: UIViewController {
 
   // MARK: - Properties
+  let viewModel = ExpansionListViewModel()
+  var expansions = [Expansion]()
+  weak var navigationDelegate: ExpansionViewControllerNavigationDelegate?
   lazy var dataSource = ExpansionViewControllerDataSource(expansions: expansions)
   lazy var screen = ExpansionViewControllerScreen(frame: view.bounds)
-  var expansions = [Expansion]()
-  let viewModel = ExpansionListViewModel()
 
   // MARK: - LoadView
   override func loadView() {
@@ -45,7 +46,10 @@ final class ExpansionViewController: UIViewController {
           }
         }
 
-        self.dataSource = ExpansionViewControllerDataSource(expansions: self.expansions)
+        self.dataSource = ExpansionViewControllerDataSource(expansions: self.expansions, didSelectExpansion: { [weak self] expansion in
+          guard let self = self else { return }
+          self.navigationDelegate?.expansionSelected(expansion)
+        })
 
         DispatchQueue.main.async { [weak self] in
           guard let self = self else { return }
@@ -60,10 +64,9 @@ final class ExpansionViewController: UIViewController {
   }
 
   func setupNavigationTitle() {
-    #warning("remover string hardcoded")
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    navigationItem.title = "Events"
+    navigationItem.title = Constants.String.Expansion.navigationTitle
   }
 
   func setupTableView() {

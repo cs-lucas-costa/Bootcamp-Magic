@@ -12,11 +12,14 @@ final class ExpansionViewControllerDataSource: NSObject {
   // MARK: - Properties
   let expansions: [Expansion]
   let initials: [Character]
+  let heightMultiplier = CGFloat(0.08)
+  let didSelectExpansion: ((Expansion) -> Void)?
 
   // MARK: - Init
-  init(expansions: [Expansion]) {
+  init(expansions: [Expansion], didSelectExpansion: ((Expansion) -> Void)? = nil) {
     self.expansions = expansions
     self.initials = expansions.map({ $0.name[0] }).unique(for: \.self)
+    self.didSelectExpansion = didSelectExpansion
   }
 }
 
@@ -47,6 +50,11 @@ extension ExpansionViewControllerDataSource: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ExpansionViewControllerDataSource: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let expansion = expansions.filter({ $0.name[0] == initials[indexPath.section] })[indexPath.row]
+    didSelectExpansion?(expansion)
+  }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let header = ExpansionHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: tableView.frame.size.width, height: 0)), character: initials[section])
@@ -55,16 +63,12 @@ extension ExpansionViewControllerDataSource: UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    #warning("remover número mágico")
-
-    let height = UIScreen.main.bounds.size.height * 0.08
+    let height = UIScreen.main.bounds.size.height * heightMultiplier
     return height
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    #warning("remover número mágico")
-
-    let height = UIScreen.main.bounds.size.height * 0.08
+    let height = UIScreen.main.bounds.size.height * heightMultiplier
     return height
   }
 

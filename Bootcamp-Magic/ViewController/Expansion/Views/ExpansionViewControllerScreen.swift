@@ -23,7 +23,7 @@ final class ExpansionViewControllerScreen: UIView {
       change(to: state)
     }
   }
-
+  
   // MARK: - Init
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -34,18 +34,16 @@ final class ExpansionViewControllerScreen: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func showActivityIndicator() {
+  private func showActivityIndicator() {
     DispatchQueue.main.async { [weak self] in
       guard let self = self else { return }
-      self.activityIndicator.isHidden = false
       self.activityIndicator.startAnimating()
     }
   }
 
-  func hideActivityIndicator() {
+  private func hideActivityIndicator() {
     DispatchQueue.main.async { [weak self] in
       guard let self = self else { return }
-      self.activityIndicator.isHidden = true
       self.activityIndicator.stopAnimating()
     }
   }
