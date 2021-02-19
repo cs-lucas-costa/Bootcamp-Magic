@@ -82,5 +82,4 @@ class CardListViewModelTestCase: XCTestCase {
         XCTAssertNil(error)
         XCTAssertEqual(sut.dictCards.map({ $0.key }), types)
     }
-
 }

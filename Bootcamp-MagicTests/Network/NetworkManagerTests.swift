@@ -89,5 +89,4 @@ final class NetworkManagerTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1)
     }
-
 }

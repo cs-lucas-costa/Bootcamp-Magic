@@ -49,8 +49,12 @@ extension CardsListDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier,
-                                                      for: indexPath) as! CardCollectionViewCell
+        
+        guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CardCollectionViewCell.identifier,
+                for: indexPath) as? CardCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         
         let card = !filter.isFiltering ?
             dictCards[indexPath.section].value[indexPath.item] :
@@ -64,9 +68,13 @@ extension CardsListDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionView.elementKindSectionHeader {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                       withReuseIdentifier: CardsListHeaderView.identifier,
-                                                                       for: indexPath) as! CardsListHeaderView
+            guard let header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: CardsListHeaderView.identifier,
+                    for: indexPath) as? CardsListHeaderView else {
+                return UICollectionReusableView()
+            }
+            
             let title = !filter.isFiltering ?
                 dictCards[indexPath.section].key :
                 filteredCards[indexPath.section].key

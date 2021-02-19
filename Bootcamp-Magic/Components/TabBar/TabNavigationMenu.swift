@@ -38,9 +38,10 @@ extension TabNavigationMenu: ViewCodable {
 
   func setupConstraints() {
     verticalDivider.snp.makeConstraints { make in
-      #warning("remover números mágicos")
-      make.width.equalToSuperview().multipliedBy(0.005)
-      make.height.equalToSuperview().multipliedBy(0.8)
+      let widthMultiplier = CGFloat(0.005)
+      let heightMultiplier = CGFloat(0.8)
+      make.width.equalToSuperview().multipliedBy(widthMultiplier)
+      make.height.equalToSuperview().multipliedBy(heightMultiplier)
       make.centerX.equalToSuperview()
       make.bottom.equalToSuperview()
     }
@@ -64,14 +65,13 @@ extension TabNavigationMenu: ViewCodable {
   }
 
   func setupAdditionalConfiguration() {
-    #warning("remover números mágicos")
     expansionButton.setTitle(TabItem.expansion.title, for: .normal)
     expansionButton.setTitleColor(.white, for: .normal)
-    expansionButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+    expansionButton.titleLabel?.font = UIFont.systemFont(ofSize: Constants.FontSize.default, weight: .bold)
 
     favoritesButton.setTitle(TabItem.favorites.title, for: .normal)
     favoritesButton.setTitleColor(.white, for: .normal)
-    favoritesButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+    favoritesButton.titleLabel?.font = UIFont.systemFont(ofSize: Constants.FontSize.default, weight: .bold)
 
     verticalDivider.backgroundColor = .white
     horizontalDivider.backgroundColor = .white

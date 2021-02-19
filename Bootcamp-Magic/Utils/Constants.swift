@@ -32,5 +32,10 @@ struct Constants {
     struct Expansion {
       static let navigationTitle = "Expansion"
     }
+    
+    struct TabBar {
+      static let expansion = "Expansion"
+      static let favorites = "Favorites"
+    }
   }
 }

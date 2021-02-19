@@ -23,5 +23,3 @@ final class ExpansionCoordinator: Coordinatable {
         navigationController.pushViewController(expansionViewController, animated: true)
     }
 }
-
-

@@ -17,7 +17,8 @@ class CardsListViewTestCase: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3)
+        sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
+                            state: .all(expansion: .init(expansion: .fixture())))
         dataSource = .fixture()
 //        isRecording = true
     }
@@ -29,7 +30,7 @@ class CardsListViewTestCase: XCTestCase {
     }
     
     func testCardsListWithCards() {
-        sut.expansionTitle = "Khans of Tarkir"
+        sut.title = "Khans of Tarkir"
         sut.collectionView.dataSource = dataSource
         assertSnapshot(matching: sut, as: .image)
     }

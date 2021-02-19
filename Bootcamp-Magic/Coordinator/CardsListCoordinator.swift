@@ -13,24 +13,37 @@ protocol CardsListCoordinatorProtocol: AnyObject {
 
 final class CardsListCoordinator: Coordinatable {
     
-    private let expansionViewModel: ExpansionViewModel
+    private let state: CardsListViewState
     var currentViewController: UIViewController?
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController, expansionViewModel: ExpansionViewModel) {
-        self.expansionViewModel = expansionViewModel
+    init(navigationController: UINavigationController,
+         state: CardsListViewState) {
         self.navigationController = navigationController
+        self.state = state
     }
     
     func start() {
-        let viewController = CardsListViewController(numberOfCardsPerRow: 3,
-                                                     viewModel: CardListViewModel(),
-                                                     with: expansionViewModel)
+        let viewController = startViewController()
         viewController.coordinator = self
         currentViewController = viewController
         navigationController.pushViewController(viewController, animated: true)
     }
-    
+}
+
+// MARK: Private methods
+private extension CardsListCoordinator {
+    func startViewController() -> CardsListViewControllerProtocol {
+        switch state {
+        case .all(let expansion):
+            return AllCardsListViewController(numberOfCardsPerRow: 3,
+                                              viewModel: CardListViewModel(),
+                                              with: expansion)
+        case .favourites:
+            return FavouritesCardsListViewController(numberOfCardsPerRow: 3,
+                                                    viewModel: CardListViewModel())
+        }
+    }
 }
 
 // MARK: Delegates
