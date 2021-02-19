@@ -12,11 +12,11 @@ final class CardDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate
 
     private let detailCollectionView: UICollectionView
     private let superView: UIView
-    private let cards: [Card]
+    private let cards: [CardViewModel]
 
     private var didDisplayCellWithIndexPath: (Int) -> Void
 
-    init(detailCollectionView: UICollectionView, superView: UIView, cards: [Card], didDisplayCell: @escaping (Int) -> Void) {
+    init(detailCollectionView: UICollectionView, superView: UIView, cards: [CardViewModel], didDisplayCell: @escaping (Int) -> Void) {
         self.detailCollectionView = detailCollectionView
         self.superView = superView
         self.cards = cards

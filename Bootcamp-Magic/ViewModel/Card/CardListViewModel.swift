@@ -12,7 +12,7 @@ final class CardListViewModel {
     private let networkManager: NetworkManager
     private(set) var dictCards: [Dict<String, [CardViewModel]>] = []
 
-    init(networkManager: NetworkManager = NetworkManager()) {
+    init(networkManager: NetworkManager) {
         self.networkManager = networkManager
     }
 
@@ -41,7 +41,7 @@ private extension CardListViewModel {
                 guard let self = self else { return }
                 let key = card.type
                 let viewModel = CardViewModel(card: card)
-
+                
                 if let dict = self.dictCards.first(where: { $0.key == key }) {
                     dict.value.append(viewModel)
                 } else {

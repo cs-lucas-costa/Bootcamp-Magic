@@ -14,7 +14,7 @@ final class CardDetailViewModel {
 
     private let networkManager: NetworkManager
 
-    private var expansionCards: [Card]
+    private var expansionCards: [CardViewModel]
 
     private var expansionName: String = "" {
         didSet {
@@ -28,7 +28,7 @@ final class CardDetailViewModel {
         return self.expansionCards.map { $0.imageUrl }
     }()
 
-    init(networkManager: NetworkManager, expansionCards: [Card]) {
+    init(networkManager: NetworkManager, expansionCards: [CardViewModel]) {
         self.networkManager = networkManager
         self.expansionCards = expansionCards
         getCardsImages()
@@ -57,7 +57,7 @@ final class CardDetailViewModel {
         self.expansionName = expansionCards[index].name
     }
 
-    func sendCards() -> [Card] {
+    func sendCards() -> [CardViewModel] {
         expansionCards
     }
 
