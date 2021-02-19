@@ -14,8 +14,6 @@ final class CardDetailViewController: UIViewController {
     private var viewModel: CardDetailViewModel
 
     @AutoLayout private var expansionNameLabel: UILabel
-
-    @AutoLayout private var detailCollectionView: UICollectionView
     
     var expansionName: String = "" {
         didSet {
@@ -24,6 +22,10 @@ final class CardDetailViewController: UIViewController {
             }
         }
     }
+    
+    private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
+    
+    private lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
 
     private lazy var collectionViewDataSource = CardDetailCollectionViewDataSource(cards: viewModel.sendCardsImage())
 
@@ -39,6 +41,7 @@ final class CardDetailViewController: UIViewController {
         self.viewModel.delegate = self
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -73,14 +76,14 @@ final class CardDetailViewController: UIViewController {
         detailCollectionView.delegate = collectionViewFlowLayoutDelegate
         detailCollectionView.dataSource = collectionViewDataSource
         detailCollectionView.register(CardDetailCollectionViewCell.self, forCellWithReuseIdentifier: CardDetailCollectionViewCell.cellID())
-        detailCollectionView.collectionViewLayout = CardDetailCollectionViewFlowLayout()
+        detailCollectionView.translatesAutoresizingMaskIntoConstraints = false
     }
 
     private func expansionLabelConstraints() {
 
         expansionNameLabel.snp.makeConstraints { maker in
             maker.top.equalTo(self.view).offset(130)
-            maker.center.equalTo(self.view)
+            maker.centerX.equalTo(self.view)
             maker.width.equalToSuperview().multipliedBy(0.8)
             maker.height.equalTo(expansionNameLabel.frame.width).multipliedBy(0.14)
         }
@@ -90,7 +93,7 @@ final class CardDetailViewController: UIViewController {
 
         detailCollectionView.snp.makeConstraints { maker in
             maker.top.equalTo(self.expansionNameLabel).offset(50)
-            maker.center.equalToSuperview()
+            maker.centerX.equalToSuperview()
             maker.width.equalToSuperview()
             maker.height.equalToSuperview().multipliedBy(0.46)
         }

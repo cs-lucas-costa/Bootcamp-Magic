@@ -9,7 +9,7 @@ import XCTest
 
 @testable import Bootcamp_Magic
 
-class CardDetailViewControllerTests: XCTestCase {
+final class CardDetailViewControllerTests: XCTestCase {
 
     var sut: CardDetailViewController!
     var viewModel: CardDetailViewModel!
@@ -37,5 +37,4 @@ class CardDetailViewControllerTests: XCTestCase {
         
         XCTAssertEqual(cardName, cards[0].name)
     }
-    
 }
