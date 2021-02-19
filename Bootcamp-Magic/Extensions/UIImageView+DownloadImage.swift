@@ -11,6 +11,7 @@ import SnapKit
 extension UIImageView {
     
     var activityIndicator: UIActivityIndicatorView {
+        
         let activity = UIActivityIndicatorView(style: .medium)
         addSubview(activity)
         
@@ -29,8 +30,8 @@ extension UIImageView {
         DownloadImage.shared.loadImage(with: path) { [weak self] (image) in
             DispatchQueue.main.async {
                 self?.image = image
-                activity.removeFromSuperview()
                 activity.stopAnimating()
+                activity.removeFromSuperview()
             }
         }
     }

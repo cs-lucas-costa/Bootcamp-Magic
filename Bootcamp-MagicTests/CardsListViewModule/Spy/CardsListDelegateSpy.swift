@@ -12,7 +12,7 @@ import UIKit
 class CardsListDelegateSpy: CardsListDelegate {
         
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectCard?([CardViewModel(card: .fixture())])
+        didSelectCard?(indexPath)
     }
     
 }

@@ -16,6 +16,8 @@ final class CardCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .clear
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 5
+        imageView.backgroundColor = .white
         return imageView
     }()
     

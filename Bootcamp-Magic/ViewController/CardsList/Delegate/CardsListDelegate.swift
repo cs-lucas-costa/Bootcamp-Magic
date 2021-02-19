@@ -9,16 +9,10 @@ import UIKit
 
 class CardsListDelegate: NSObject, UICollectionViewDelegate {
             
-    private let dictCards: [Dict<String, [CardViewModel]>]
-    var didSelectCard: (([CardViewModel]) -> Void)?
-    
-    init(dictCards: [Dict<String, [CardViewModel]>]) {
-        self.dictCards = dictCards
-    }
+    var didSelectCard: ((IndexPath) -> Void)?
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let card = dictCards[indexPath.section].value
-        didSelectCard?(card)
+        didSelectCard?(indexPath)
     }
 
 }

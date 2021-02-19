@@ -81,4 +81,8 @@ extension ExpansionCoordinator: CardsListCoordinatorProtocol {
         currentViewController = viewController
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func dismiss() {
+        navigationController.popViewController(animated: true)
+    }
 }

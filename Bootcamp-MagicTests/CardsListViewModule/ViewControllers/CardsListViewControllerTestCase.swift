@@ -33,7 +33,7 @@ class CardsListViewControllerTestCase: XCTestCase {
 
     func testSelectCard() {
         
-        let delegate = CardsListDelegateSpy(dictCards: viewModel.dictCards)
+        let delegate = CardsListDelegateSpy()
         let coordinator = CardsListCoordinatorSpy()
         
         sut.coordinator = coordinator
@@ -54,24 +54,22 @@ class CardsListViewControllerTestCase: XCTestCase {
 
         let delegate = CardsListSearchViewDelegateSpy()
         sut.searchViewDelegate = delegate
-
         sut.viewDidLoad()
-        sut.cardsListView.searchView.delegate?.textDidChange("")
-
-        #warning("refact search cards")
-//        XCTAssertTrue(delegate.isChangeText)
+        
+        sut.cardsListView.searchView.delegate?.textDidChange("a")
+        
+        XCTAssertTrue(delegate.isChangeText)
     }
 
     func testCancelSearchCards() {
 
         let delegate = CardsListSearchViewDelegateSpy()
         sut.searchViewDelegate = delegate
-
         sut.viewDidLoad()
+
         sut.cardsListView.searchView.delegate?.didCancelSearch()
 
-        #warning("refact search cards")
-//        XCTAssertTrue(delegate.isCancelSearch)
+        XCTAssertTrue(delegate.isCancelSearch)
     }
     
 }

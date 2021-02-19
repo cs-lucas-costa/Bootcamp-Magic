@@ -1078,7 +1078,6 @@
 				E691C63B25DECC73004D41CF /* CardsListHeaderViewTestCase.swift in Sources */,
 				E691C65125DED104004D41CF /* CardsListDelegateSpy.swift in Sources */,
 				998BAC7925DEE86100CD7C8F /* ExpansionHeaderView.swift in Sources */,
-				BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */,
 				E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */,
 				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,
 				E6AEA76D25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift in Sources */,

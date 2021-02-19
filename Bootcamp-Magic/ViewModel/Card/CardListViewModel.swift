@@ -38,7 +38,7 @@ private extension CardListViewModel {
             .sorted(by: { $0.type < $1.type })
             .forEach { [weak self] (card) in
 
-                guard let self = self else { return }
+                guard let self = self, card.imageUrl != nil else { return }
                 let key = card.type
                 let viewModel = CardViewModel(card: card)
                 

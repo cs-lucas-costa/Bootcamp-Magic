@@ -8,10 +8,15 @@
 import UIKit
 import SnapKit
 
+protocol CardsListViewDelegate: AnyObject {
+    func dismiss()
+}
+
 final class CardsListView: UIView {
     
     private let numberOfCardsPerRow: Int
     private let state: CardsListViewState
+    weak var delegate: CardsListViewDelegate?
     
     var title: String? {
         didSet {
@@ -48,7 +53,7 @@ final class CardsListView: UIView {
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 20
-        layout.minimumInteritemSpacing = 20
+        layout.minimumInteritemSpacing = 35
         layout.sectionInset = UIEdgeInsets(top: 10, left: 28, bottom: 25, right: 28)
         layout.headerReferenceSize = CGSize(width: frame.width, height: 35)
         
@@ -75,6 +80,19 @@ final class CardsListView: UIView {
         return label
     }()
     
+    private lazy var backButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let image = UIImage(systemName: "chevron.left",
+                            withConfiguration: UIImage.SymbolConfiguration(pointSize: 25,
+                                                                           weight: .light))
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        button.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
+        return button
+    }()
+    
     private let backgroundView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -82,14 +100,30 @@ final class CardsListView: UIView {
         return imageView
     }()
     
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
+    
+    private let backButtonSearchViewStackView: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 15
+        return stackView
+    }()
 }
 
 // MARK: ViewCodable
 extension CardsListView: ViewCodable {
     
     func buildViewHierarchy() {
+        
+        backButtonSearchViewStackView.addArrangedSubview(backButton)
+        backButtonSearchViewStackView.addArrangedSubview(searchView)
+    
         addSubview(backgroundView)
-        addSubview(searchView)
+        addSubview(backButtonSearchViewStackView)
         addSubview(titleView)
         addSubview(collectionView)
     }
@@ -100,9 +134,9 @@ extension CardsListView: ViewCodable {
             make.edges.equalToSuperview()
         }
         
-        searchView.snp.makeConstraints { (make) in
+        backButtonSearchViewStackView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide).offset(30)
-            make.leading.equalTo(safeAreaLayoutGuide).offset(25)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(20)
             make.trailing.equalTo(safeAreaLayoutGuide).offset(-25)
         }
         
@@ -121,6 +155,15 @@ extension CardsListView: ViewCodable {
     
     func setupAdditionalConfiguration() {
         backgroundView.image = Constants.Images.backgroundImage
+    }
+    
+}
+
+// MARK: Actions
+private extension CardsListView {
+    
+    @objc func dismiss() {
+        delegate?.dismiss()
     }
     
 }

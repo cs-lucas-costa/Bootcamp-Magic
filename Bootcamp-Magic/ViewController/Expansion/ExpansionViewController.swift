@@ -21,6 +21,11 @@ final class ExpansionViewController: UIViewController {
     super.loadView()
     view = screen
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
 
   // MARK: - ViewDidLoad
   override func viewDidLoad() {
