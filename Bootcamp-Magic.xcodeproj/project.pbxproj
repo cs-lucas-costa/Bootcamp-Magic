@@ -39,6 +39,7 @@
 		BD11DA1625DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11DA1525DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift */; };
 		BD11DA2625DF00AB00EF1300 /* Image.ashx.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BD11DA2525DF00AB00EF1300 /* Image.ashx.jpeg */; };
 		BD11DA4E25DFF32100EF1300 /* AutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */; };
+		BD11DA5725DFFA3400EF1300 /* CardDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11DA5625DFFA3400EF1300 /* CardDetailViewControllerTests.swift */; };
 		BD80ADC425DAB8990016B1BE /* Bootcamp_MagicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80ADC325DAB8990016B1BE /* Bootcamp_MagicTests.swift */; };
 		BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */; };
 		BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */; };
@@ -150,6 +151,7 @@
 		BD11DA1525DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerRetrievingImageTests.swift; sourceTree = "<group>"; };
 		BD11DA2525DF00AB00EF1300 /* Image.ashx.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.ashx.jpeg; sourceTree = "<group>"; };
 		BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTests.swift; sourceTree = "<group>"; };
+		BD11DA5625DFFA3400EF1300 /* CardDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -423,6 +425,22 @@
 				BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		BD11DA5425DFF6E700EF1300 /* CardsDetailViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				BD11DA5525DFFA0E00EF1300 /* ViewController */,
+			);
+			path = CardsDetailViewModule;
+			sourceTree = "<group>";
+		};
+		BD11DA5525DFFA0E00EF1300 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD11DA5625DFFA3400EF1300 /* CardDetailViewControllerTests.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		BD80AD9D25DAB8970016B1BE = {

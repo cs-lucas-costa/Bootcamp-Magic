@@ -16,6 +16,14 @@ final class CardDetailViewController: UIViewController {
     @AutoLayout private var expansionNameLabel: UILabel
 
     @AutoLayout private var detailCollectionView: UICollectionView
+    
+    var expansionName: String = "" {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.expansionNameLabel.text = self?.expansionName
+            }
+        }
+    }
 
     private lazy var collectionViewDataSource = CardDetailCollectionViewDataSource(cards: viewModel.sendCardsImage())
 
@@ -91,6 +99,6 @@ final class CardDetailViewController: UIViewController {
 
 extension CardDetailViewController: CardDetailViewModelDelegate {
     func updateUI() {
-        expansionNameLabel.text = viewModel.sendExpansionName()
+        expansionName = viewModel.sendExpansionName()
     }
 }
