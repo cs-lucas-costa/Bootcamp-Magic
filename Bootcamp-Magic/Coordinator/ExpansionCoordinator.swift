@@ -79,7 +79,7 @@ extension ExpansionCoordinator: CardsListCoordinatorProtocol {
                                             expansionCards: cards)
         let viewController = CardDetailViewController(viewModel: viewModel)
         currentViewController = viewController
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController.present(viewController, animated: true, completion: nil)
     }
     
     func dismiss() {

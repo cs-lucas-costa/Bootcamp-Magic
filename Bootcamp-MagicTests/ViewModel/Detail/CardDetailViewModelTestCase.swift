@@ -40,7 +40,7 @@ class CardDetailViewModelTestCase: XCTestCase {
     }
 
     func testGetAndSendExpansionNameBehavior() {
-        sut.getExpansionName(index: 0)
+        sut.setExpansionName(index: 0)
         
         let expansionName: String = sut.sendExpansionName()
         let cards = sut.sendCards()
@@ -48,14 +48,14 @@ class CardDetailViewModelTestCase: XCTestCase {
         XCTAssertEqual(expansionName, cards[0].name)
     }
 
-    func testSendCardsImageBehavior() {
+    func testSendCardsPathBehavior() {
         let expectation = XCTestExpectation()
         
-        let images = self.sut.sendCardsImage()
+        let imagesPath = self.sut.sendImagesPath()
         expectation.fulfill()
         
         wait(for: [expectation], timeout: 1)
         
-        XCTAssertEqual(images.count, 3)
+        XCTAssertEqual(imagesPath.count, 3)
     }
 }

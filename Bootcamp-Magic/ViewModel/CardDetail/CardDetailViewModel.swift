@@ -22,60 +22,39 @@ final class CardDetailViewModel {
         }
     }
 
-    private var cardsImages: [UIImage?] = []
-
     private lazy var imagesPath: [String] = {
         return self.expansionCards.compactMap { $0.imageUrl }
     }()
+    
+    var actualIndex: Int = 0 {
+        didSet {
+            expansionName = expansionCards[actualIndex].name
+        }
+    }
 
     init(networkManager: NetworkManager, expansionCards: [CardViewModel]) {
         self.networkManager = networkManager
         self.expansionCards = expansionCards
-        getCardsImages()
     }
 
-    private func getCardsImages() {
-
-        cardsImages = imagesPath.map { (imagePath) -> UIImage? in
-
-            var recoveredImage : UIImage?
-
-            networkManager.getImageFromURL(imagesService: .cardImage(imagePath: imagePath)) { result in
-                switch result {
-                case .success(let image):
-                    recoveredImage = image
-                case .failure:
-                    recoveredImage = nil
-                }
-            }
-
-            return recoveredImage
-        }
+    func setExpansionName(index: Int) {
+        self.actualIndex = index
     }
-
-    func getExpansionName(index: Int) {
-        self.expansionName = expansionCards[index].name
+    
+    func sendImagesPath() -> [String] {
+        imagesPath
     }
 
     func sendCards() -> [CardViewModel] {
         expansionCards
     }
-
-    func sendCardsImage() -> [UIImage] {
-
-        let guardedImagesArray = cardsImages.map { image -> UIImage in
-
-            if let guardedImage = image {
-                return guardedImage
-            } else {
-                return UIImage()
-            }
-        }
-
-        return guardedImagesArray
+    
+    func sendFirtsExpansionName() -> String {
+        expansionCards[actualIndex].name
     }
 
     func sendExpansionName() -> String {
         expansionName
     }
+    
 }
