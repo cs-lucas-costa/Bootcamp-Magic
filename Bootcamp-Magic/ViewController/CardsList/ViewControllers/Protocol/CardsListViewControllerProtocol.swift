@@ -37,8 +37,8 @@ extension CardsListViewControllerProtocol {
     }
         
     func setupClosures() {
-        cardListDelegate?.didSelectCard = { [weak self] card in
-            self?.coordinator?.showCardDetail(card)
+        cardListDelegate?.didSelectCard = { [weak self] cards in
+            self?.coordinator?.showCardDetail(cards)
         }
     }
     

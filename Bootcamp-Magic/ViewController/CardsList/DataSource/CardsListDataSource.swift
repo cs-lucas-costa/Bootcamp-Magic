@@ -60,7 +60,7 @@ extension CardsListDataSource: UICollectionViewDataSource {
             dictCards[indexPath.section].value[indexPath.item] :
             filteredCards[indexPath.section].value[indexPath.item]
         
-        cell.image = card.image
+        cell.imageView.downloadImage(with: card.imageUrl)
         cell.setupView()
         return cell
     }
