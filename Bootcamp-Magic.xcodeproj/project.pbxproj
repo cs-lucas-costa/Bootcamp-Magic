@@ -101,6 +101,7 @@
 		E6AEA78525DDB38500375F4E /* CardsListViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA78425DDB38500375F4E /* CardsListViewTestCase.swift */; };
 		E6BC833525DFE97E002F83F4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC833425DFE97E002F83F4 /* main.swift */; };
 		E6BC833925DFE9C8002F83F4 /* AppDelegateFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */; };
+		E6BC834225DFED09002F83F4 /* CardsListViewStateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		E6AEA78425DDB38500375F4E /* CardsListViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewTestCase.swift; sourceTree = "<group>"; };
 		E6BC833425DFE97E002F83F4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFake.swift; sourceTree = "<group>"; };
+		E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewStateTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -754,6 +756,7 @@
 		E6AEA72725DD5B3E00375F4E /* CardsListViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				E6BC834025DFECEC002F83F4 /* Enum */,
 				E691C64825DECFAA004D41CF /* Spy */,
 				E691C64725DECF3F004D41CF /* Coordinator */,
 				E691C64025DECDE4004D41CF /* ViewControllers */,
@@ -838,6 +841,14 @@
 				E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E6BC834025DFECEC002F83F4 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1054,6 +1065,7 @@
 				E691C65725DED51E004D41CF /* CardsListSearchViewDelegateSpy.swift in Sources */,
 				BD11DA1625DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift in Sources */,
 				E691C64225DECDF8004D41CF /* CardsListViewControllerTestCase.swift in Sources */,
+				E6BC834225DFED09002F83F4 /* CardsListViewStateTestCase.swift in Sources */,
 				BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */,
 				E6AEA78525DDB38500375F4E /* CardsListViewTestCase.swift in Sources */,
 				E6AEA77825DD9C8700375F4E /* Card+Extension.swift in Sources */,
