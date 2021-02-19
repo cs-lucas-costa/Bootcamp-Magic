@@ -25,7 +25,7 @@ final class CardDetailViewModel {
     private var cardsImages: [UIImage?] = []
 
     private lazy var imagesPath: [String] = {
-        return self.expansionCards.map { $0.imageUrl }
+        return self.expansionCards.compactMap { $0.imageUrl }
     }()
 
     init(networkManager: NetworkManager, expansionCards: [CardViewModel]) {

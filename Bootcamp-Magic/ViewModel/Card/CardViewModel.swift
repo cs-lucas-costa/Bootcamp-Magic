@@ -23,7 +23,7 @@ final class CardViewModel {
         card.type
     }
     
-    var imageUrl: String {
+    var imageUrl: String? {
         card.imageUrl
     }
 
