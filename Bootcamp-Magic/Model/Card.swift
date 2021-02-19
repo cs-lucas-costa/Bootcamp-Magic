@@ -9,7 +9,7 @@ import Foundation
 
 struct Card: Decodable {
     let name: String
-    let imageUrl: String
+    let imageUrl: String?
     let type: String
     let id: String
 }
