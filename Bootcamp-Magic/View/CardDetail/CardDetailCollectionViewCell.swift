@@ -11,7 +11,7 @@ import SnapKit
 
 final class CardDetailCollectionViewCell: UICollectionViewCell {
 
-    @AutoLayout private var cardImageView: UIImageView
+    @AutoLayout var cardImageView: UIImageView
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,10 +23,6 @@ final class CardDetailCollectionViewCell: UICollectionViewCell {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func setUpCardImage(with image: UIImage) {
-        cardImageView.image = image
     }
 
     private func setUpCardImageConstraints() {

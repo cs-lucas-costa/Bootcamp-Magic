@@ -10,26 +10,26 @@ import UIKit
 
 final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
-    private var cards: [UIImage]
+    private var cardsPaths: [String]
 
-    init(cards: [UIImage]) {
-        self.cards = cards
+    init(cardsPaths: [String]) {
+        self.cardsPaths = cardsPaths
         super.init()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Int.max
+        return cardsPaths.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let currentImage = cards[indexPath.row % cards.count]
+        let currentImage = cardsPaths[indexPath.row % cardsPaths.count]
 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardDetailCollectionViewCell.cellID(), for: indexPath) as? CardDetailCollectionViewCell else {
             return UICollectionViewCell()
         }
-
-        cell.setUpCardImage(with: currentImage)
+        
+        cell.cardImageView.downloadImage(with: currentImage)
 
         return cell
     }

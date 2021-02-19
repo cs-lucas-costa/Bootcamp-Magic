@@ -31,8 +31,26 @@ final class CardDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate
         20
     }
 
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        didDisplayCellWithIndexPath(indexPath.row)
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        
+//        //        let index = collectionView.contentOffset.x / cell.frame.width
+//        
+//        let index = indexPath.row % cards.count
+//        
+//        if index == 0 {
+//            didDisplayCellWithIndexPath(index)
+//        } else if index == (cards.count - 1) {
+//            didDisplayCellWithIndexPath(index)
+//        } else {
+//            didDisplayCellWithIndexPath(index - 1)
+//        }
+//    }
+
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+
+        let index = collectionView.contentOffset.x / cell.frame.width
+
+        didDisplayCellWithIndexPath(Int(index))
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

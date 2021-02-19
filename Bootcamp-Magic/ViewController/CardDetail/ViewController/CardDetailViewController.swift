@@ -27,7 +27,7 @@ final class CardDetailViewController: UIViewController {
     
     private lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
 
-    private lazy var collectionViewDataSource = CardDetailCollectionViewDataSource(cards: viewModel.sendCardsImage())
+    private lazy var collectionViewDataSource = CardDetailCollectionViewDataSource(cardsPaths: viewModel.sendImagesPath())
 
     private lazy var collectionViewFlowLayoutDelegate: CardDetailCollectionViewDelegate = CardDetailCollectionViewDelegate(detailCollectionView: detailCollectionView, superView: self.view, cards: viewModel.sendCards()) { [weak self] index in
         self?.viewModel.getExpansionName(index: index)
@@ -66,7 +66,7 @@ final class CardDetailViewController: UIViewController {
         expansionNameLabel.adjustsFontSizeToFitWidth = true
         expansionNameLabel.textColor = .white
         expansionNameLabel.font = .systemFont(ofSize: 30)
-        expansionNameLabel.text = viewModel.sendExpansionName()
+        expansionNameLabel.text = viewModel.sendFirtsExpansionName()
     }
 
     private func setUpdetailCollectionView() {
@@ -85,7 +85,7 @@ final class CardDetailViewController: UIViewController {
             maker.top.equalTo(self.view).offset(130)
             maker.centerX.equalTo(self.view)
             maker.width.equalToSuperview().multipliedBy(0.8)
-            maker.height.equalTo(expansionNameLabel.frame.width).multipliedBy(0.14)
+            maker.height.equalTo(60)
         }
     }
 
