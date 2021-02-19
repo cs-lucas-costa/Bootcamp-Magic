@@ -18,7 +18,7 @@ final class CardsListSearchView: UIView {
     weak var delegate: CardsListSearchViewDelegate?
     private let placeholder: String
 
-    private lazy var textField: UITextField = {
+    private(set) lazy var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = placeholder
@@ -26,7 +26,7 @@ final class CardsListSearchView: UIView {
         textField.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                              attributes: [.foregroundColor: UIColor.white,
                                                                           .font: Fonts.robotoBold(size: 14).font])
-        textField.addTarget(self, action: #selector(searchCards), for: .valueChanged)
+        textField.addTarget(self, action: #selector(searchCards(_:)), for: .editingChanged)
         textField.font = Fonts.robotoBold(size: 14).font
         return textField
     }()
@@ -36,6 +36,7 @@ final class CardsListSearchView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
         button.tintColor = .white
+        button.isEnabled = false
         return button
     }()
     
@@ -45,6 +46,7 @@ final class CardsListSearchView: UIView {
         button.setTitle("Cancel", for: .normal)
         button.titleLabel?.font = Fonts.robotoBold(size: 14).font
         button.tintColor = .white
+        button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         button.addTarget(self, action: #selector(cancelSearch), for: .touchUpInside)
         return button
     }()
@@ -89,7 +91,6 @@ final class CardsListSearchView: UIView {
 extension CardsListSearchView: ViewCodable {
     
     func buildViewHierarchy() {
-        
         stackViewTextFieldSearchButton.addArrangedSubview(textField)
         stackViewTextFieldSearchButton.addArrangedSubview(searchButton)
         
@@ -109,12 +110,16 @@ extension CardsListSearchView: ViewCodable {
 // MARK: Actions
 private extension CardsListSearchView {
     
-    @objc func searchCards(with text: String) {
-        delegate?.textDidChange(text)
+    @objc func searchCards(_ textField: UITextField) {
+        if let text = textField.text {
+            delegate?.textDidChange(text)
+        }
     }
     
     @objc func cancelSearch() {
-        textField.text = ""
-        delegate?.didCancelSearch()
+        if !(textField.text?.isEmpty ?? false) {
+            textField.text = ""
+            delegate?.didCancelSearch()
+        }
     }
 }
