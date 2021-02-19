@@ -8,7 +8,6 @@
 import UIKit
 import SnapKit
 
-// final class NavigationMenuTabBarController: UI
 final class NavigationMenuTabBarController: UITabBarController {
 
   // MARK: - Properties
