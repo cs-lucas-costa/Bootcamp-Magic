@@ -8,28 +8,31 @@
 import UIKit
 
 final class ExpansionCoordinator: Coordinatable {
-  
-  // MARK: - State
-  enum State {
-    case expansion
-    case favourites
-    case all(expansion: ExpansionViewModel)
-  }
     
-  // MARK: - Properties
-  var currentViewController: UIViewController?
-  var navigationController: UINavigationController
-  var state = State.expansion
+    // MARK: - State
+    enum State {
+        case expansion
+        case favourites
+        case all(expansion: ExpansionViewModel)
+    }
     
-  init(navigationController: UINavigationController = UINavigationController()) {
-    self.navigationController = navigationController
-  }
+    // MARK: - Properties
+    var currentViewController: UIViewController?
+    var navigationController: UINavigationController
+    var state = State.expansion
+    private let networkManager: NetworkManager
     
-  func start() {
-    let viewController = startViewController()
-    navigationController.pushViewController(viewController, animated: true)
-    currentViewController = viewController
-  }
+    init(navigationController: UINavigationController = UINavigationController(),
+         networkManager: NetworkManager) {
+        self.navigationController = navigationController
+        self.networkManager = networkManager
+    }
+    
+    func start() {
+        let viewController = startViewController()
+        navigationController.pushViewController(viewController, animated: true)
+        currentViewController = viewController
+    }
 }
 
 // MARK: - Methods
@@ -37,28 +40,45 @@ extension ExpansionCoordinator {
     func startViewController() -> UIViewController {
         switch state {
         case .expansion:
-          let expansionViewController = ExpansionViewController()
-          expansionViewController.navigationDelegate = self
-          return expansionViewController
+            let expansionViewController = ExpansionViewController()
+            expansionViewController.navigationDelegate = self
+            return expansionViewController
         case .all(let expansion):
-            return AllCardsListViewController(numberOfCardsPerRow: 3,
-                                              viewModel: CardListViewModel(),
-                                              with: expansion)
+            let viewController = AllCardsListViewController(numberOfCardsPerRow: 3,
+                                                            viewModel: CardListViewModel(
+                                                                networkManager: networkManager),
+                                                            with: expansion)
+            viewController.coordinator = self
+            return viewController
         case .favourites:
-            return FavouritesCardsListViewController(numberOfCardsPerRow: 3,
-                                                    viewModel: CardListViewModel())
+            let viewController = FavouritesCardsListViewController(numberOfCardsPerRow: 3,
+                                                                   viewModel: CardListViewModel(
+                                                                    networkManager: networkManager))
+            viewController.coordinator = self
+            return viewController
         }
     }
 }
 
 // MARK: - ExpansionViewControllerNavigationDelegate Extension
 extension ExpansionCoordinator: ExpansionViewControllerNavigationDelegate {
-  func expansionSelected(_ expansion: Expansion) {
-    let viewModel = ExpansionViewModel(expansion: expansion)
-    state = .all(expansion: viewModel)
-    
-    let viewController = startViewController()
-    navigationController.pushViewController(viewController, animated: true)
-    currentViewController = viewController
-  }
+    func expansionSelected(_ expansion: Expansion) {
+        let viewModel = ExpansionViewModel(expansion: expansion)
+        state = .all(expansion: viewModel)
+        
+        let viewController = startViewController()
+        navigationController.pushViewController(viewController, animated: true)
+        currentViewController = viewController
+    }
+}
+
+// MARK: - CardsListCoordinatorProtocol Extension
+extension ExpansionCoordinator: CardsListCoordinatorProtocol {
+    func showCardDetail(_ cards: [CardViewModel]) {
+        let viewModel = CardDetailViewModel(networkManager: networkManager,
+                                            expansionCards: cards)
+        let viewController = CardDetailViewController(viewModel: viewModel)
+        currentViewController = viewController
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

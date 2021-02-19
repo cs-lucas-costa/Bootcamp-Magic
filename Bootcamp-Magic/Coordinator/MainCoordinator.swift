@@ -10,7 +10,7 @@ import UIKit
 final class MainCoordinator: Coordinatable {
 
   // MARK: - Properties
-  let expansionCoordinator = ExpansionCoordinator()
+    let expansionCoordinator = ExpansionCoordinator(networkManager: NetworkManager())
   var currentViewController: UIViewController?
   var navigationController: UINavigationController
     

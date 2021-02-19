@@ -5,12 +5,12 @@
 //  Created by lucas.henrique.costa on 18/02/21.
 //
 
-//import UIKit
-//
-//protocol CardsListCoordinatorProtocol: AnyObject {
-//    func showCardDetail(_ card: CardViewModel)
-//}
-//
+import UIKit
+
+protocol CardsListCoordinatorProtocol: Coordinatable {
+    func showCardDetail(_ cards: [CardViewModel])
+}
+
 //final class CardsListCoordinator: Coordinatable {
 //
 //    private let state: CardsListViewState
