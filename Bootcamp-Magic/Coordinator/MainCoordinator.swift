@@ -10,21 +10,17 @@ import UIKit
 final class MainCoordinator: Coordinatable {
 
   // MARK: - Properties
+  let expansionCoordinator = ExpansionCoordinator()
   var currentViewController: UIViewController?
-  let expasionCoordinator = ExpansionCoordinator()
-    var navigationController: UINavigationController
+  var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController = UINavigationController()) {
-        self.navigationController = navigationController
-    }
+  init(navigationController: UINavigationController = UINavigationController()) {
+    self.navigationController = navigationController
+  }
 
   func start() {
-    expasionCoordinator.start()
+    expansionCoordinator.start()
 
-    guard let viewController = expasionCoordinator.currentViewController else {
-      preconditionFailure("CurrentViewControllerffrom ExpasionCoordinator must exist")
-    }
-
-    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [expasionCoordinator.navigationController, UIViewController()])
+    currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [expansionCoordinator.navigationController, UIViewController()])
   }
 }
