@@ -10,56 +10,49 @@ import UIKit
 
 final class CardDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    private let detailCollectionView: UICollectionView
     private let superView: UIView
     private let cards: [CardViewModel]
+    private var lastDeceleratingOffset: CGFloat = 0
+    private var lastDraggingOffset: CGFloat = 0
+    
+    weak var delegate: DidDisplayCellDelegate?
 
-    private var didDisplayCellWithIndexPath: (Int) -> Void
-
-    init(detailCollectionView: UICollectionView, superView: UIView, cards: [CardViewModel], didDisplayCell: @escaping (Int) -> Void) {
-        self.detailCollectionView = detailCollectionView
+    init(superView: UIView, cards: [CardViewModel]) {
         self.superView = superView
         self.cards = cards
-        self.didDisplayCellWithIndexPath = didDisplayCell
     }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.frame.width - 40, height: collectionView.frame.height)
+    
+    private func updateOffset(offSet: inout CGFloat, scrollView: UIScrollView) {
+        let toPrevious: Bool = scrollView.contentOffset.x < offSet
+        
+        delegate?.didOffsetChanged(offset: scrollView.contentOffset.x, toPrevious: toPrevious)
+        offSet = scrollView.contentOffset.x
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        20
+        let horizontalSpacing = (UIScreen.main.bounds.width * 0.054)
+        return horizontalSpacing
     }
-
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        
-//        //        let index = collectionView.contentOffset.x / cell.frame.width
-//        
-//        let index = indexPath.row % cards.count
-//        
-//        if index == 0 {
-//            didDisplayCellWithIndexPath(index)
-//        } else if index == (cards.count - 1) {
-//            didDisplayCellWithIndexPath(index)
-//        } else {
-//            didDisplayCellWithIndexPath(index - 1)
-//        }
-//    }
-
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-
-        let index = collectionView.contentOffset.x / cell.frame.width
-
-        didDisplayCellWithIndexPath(Int(index))
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        let horizontalInset = (UIScreen.main.bounds.width * 0.15)
+        
+        return .init(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let centerX = self.detailCollectionView.center.x
+        
+        guard let collection = scrollView as? UICollectionView else {
+            return
+        }
+        
+        let centerX = collection.center.x
 
-        for cell in self.detailCollectionView.visibleCells {
+        for cell in collection.visibleCells {
 
             let basePosition = cell.convert(CGPoint.zero, to: self.superView)
-            let cellCenterX = basePosition.x + self.detailCollectionView.frame.size.width / 2.0
+            let cellCenterX = basePosition.x + collection.frame.size.width / 2.0
 
             let distance = abs(cellCenterX - centerX)
 
@@ -76,19 +69,14 @@ final class CardDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate
             cell.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
     }
-
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-
-        var indexOfCellWithLargestWidth = 0
-        var largestWidth : CGFloat = 1
-
-        for cell in self.detailCollectionView.visibleCells where cell.frame.size.width > largestWidth {
-            largestWidth = cell.frame.size.width
-            if let indexPath = self.detailCollectionView.indexPath(for: cell) {
-                indexOfCellWithLargestWidth = indexPath.item
-            }
-        }
-
-        detailCollectionView.scrollToItem(at: IndexPath(item: indexOfCellWithLargestWidth, section: 0), at: .centeredHorizontally, animated: true)
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        updateOffset(offSet: &lastDraggingOffset, scrollView: scrollView)
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        
+        updateOffset(offSet: &lastDeceleratingOffset, scrollView: scrollView)
     }
 }

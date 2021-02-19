@@ -40,7 +40,7 @@ class CardDetailViewModelTestCase: XCTestCase {
     }
 
     func testGetAndSendExpansionNameBehavior() {
-        sut.getExpansionName(index: 0)
+        sut.setExpansionName(index: 0)
         
         let expansionName: String = sut.sendExpansionName()
         let cards = sut.sendCards()

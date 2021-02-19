@@ -13,15 +13,8 @@ final class CardDetailViewController: UIViewController {
 
     private var viewModel: CardDetailViewModel
 
-    @AutoLayout private var expansionNameLabel: UILabel
-    
-    var expansionName: String = "" {
-        didSet {
-            DispatchQueue.main.async { [weak self] in
-                self?.expansionNameLabel.text = self?.expansionName
-            }
-        }
-    }
+    @AutoLayout var expansionNameLabel: UILabel
+    @AutoLayout var backgroundImageVIew: UIImageView
     
     private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
     
@@ -29,9 +22,7 @@ final class CardDetailViewController: UIViewController {
 
     private lazy var collectionViewDataSource = CardDetailCollectionViewDataSource(cardsPaths: viewModel.sendImagesPath())
 
-    private lazy var collectionViewFlowLayoutDelegate: CardDetailCollectionViewDelegate = CardDetailCollectionViewDelegate(detailCollectionView: detailCollectionView, superView: self.view, cards: viewModel.sendCards()) { [weak self] index in
-        self?.viewModel.getExpansionName(index: index)
-    }
+    private lazy var collectionViewFlowLayoutDelegate: CardDetailCollectionViewDelegate = CardDetailCollectionViewDelegate(superView: self.view, cards: viewModel.sendCards())
 
     init(viewModel: CardDetailViewModel) {
         self.viewModel = viewModel
@@ -47,17 +38,26 @@ final class CardDetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        self.view.addSubview(backgroundImageVIew)
         self.view.addSubview(expansionNameLabel)
         self.view.addSubview(detailCollectionView)
+        setUpBackgrounImageView()
         setUpdetailCollectionView()
         setUpexpansionNameLabel()
+        self.collectionViewFlowLayoutDelegate.delegate = self
         super.viewDidLoad()
     }
 
     override func viewDidLayoutSubviews() {
+        backgroundImageViewConstraints()
         expansionLabelConstraints()
         detailCollectionViewConstraints()
         super.viewDidLayoutSubviews()
+    }
+    
+    private func setUpBackgrounImageView() {
+        
+        backgroundImageVIew.image = Constants.Images.backgroundImage
     }
 
     private func setUpexpansionNameLabel() {
@@ -65,18 +65,26 @@ final class CardDetailViewController: UIViewController {
         expansionNameLabel.textAlignment = .center
         expansionNameLabel.adjustsFontSizeToFitWidth = true
         expansionNameLabel.textColor = .white
-        expansionNameLabel.font = .systemFont(ofSize: 30)
+        expansionNameLabel.font = Fonts.robotoBold(size: 30).font
         expansionNameLabel.text = viewModel.sendFirtsExpansionName()
     }
 
     private func setUpdetailCollectionView() {
 
+        detailCollectionView.backgroundColor = .clear
         detailCollectionView.showsVerticalScrollIndicator = false
         detailCollectionView.allowsMultipleSelection = false
         detailCollectionView.delegate = collectionViewFlowLayoutDelegate
         detailCollectionView.dataSource = collectionViewDataSource
         detailCollectionView.register(CardDetailCollectionViewCell.self, forCellWithReuseIdentifier: CardDetailCollectionViewCell.cellID())
         detailCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func backgroundImageViewConstraints() {
+        
+        backgroundImageVIew.snp.makeConstraints {  maker in
+            maker.edges.equalToSuperview()
+        }
     }
 
     private func expansionLabelConstraints() {
@@ -102,6 +110,22 @@ final class CardDetailViewController: UIViewController {
 
 extension CardDetailViewController: CardDetailViewModelDelegate {
     func updateUI() {
-        expansionName = viewModel.sendExpansionName()
+        DispatchQueue.main.async { [weak self] in
+            self?.expansionNameLabel.text = self?.viewModel.sendExpansionName()
+        }
+    }
+}
+
+extension CardDetailViewController: DidDisplayCellDelegate {
+    func didOffsetChanged(offset: CGFloat, toPrevious: Bool) {
+
+        let previousOffset: CGFloat = toPrevious ? self.detailCollectionView.frame.size.width * 0.7 : 0
+        let contentIndex = Int(ceil((offset - previousOffset) / self.detailCollectionView.frame.size.width))
+        let cardsCount: Int = viewModel.sendCards().count
+
+        let index = contentIndex < cardsCount ? contentIndex : cardsCount - 1
+        
+        detailCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+        viewModel.setExpansionName(index: index)
     }
 }

@@ -31,8 +31,8 @@ final class CardDetailViewControllerTests: XCTestCase {
     }
     
     func testUpdateUIBehavior() {
-        viewModel.getExpansionName(index: 0)
-        let cardName = sut.expansionName
+        viewModel.setExpansionName(index: 0)
+        let cardName = viewModel.sendFirtsExpansionName()
         let cards = viewModel.sendCards()
         
         XCTAssertEqual(cardName, cards[0].name)

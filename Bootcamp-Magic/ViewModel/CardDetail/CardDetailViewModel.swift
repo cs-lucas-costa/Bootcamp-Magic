@@ -25,14 +25,20 @@ final class CardDetailViewModel {
     private lazy var imagesPath: [String] = {
         return self.expansionCards.compactMap { $0.imageUrl }
     }()
+    
+    var actualIndex: Int = 0 {
+        didSet {
+            expansionName = expansionCards[actualIndex].name
+        }
+    }
 
     init(networkManager: NetworkManager, expansionCards: [CardViewModel]) {
         self.networkManager = networkManager
         self.expansionCards = expansionCards
     }
 
-    func getExpansionName(index: Int) {
-        self.expansionName = expansionCards[index].name
+    func setExpansionName(index: Int) {
+        self.actualIndex = index
     }
     
     func sendImagesPath() -> [String] {
@@ -44,10 +50,11 @@ final class CardDetailViewModel {
     }
     
     func sendFirtsExpansionName() -> String {
-        expansionCards[0].name
+        expansionCards[actualIndex].name
     }
 
     func sendExpansionName() -> String {
         expansionName
     }
+    
 }
