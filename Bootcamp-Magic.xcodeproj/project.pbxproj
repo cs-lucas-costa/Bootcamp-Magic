@@ -390,6 +390,30 @@
 			path = JSONFiles;
 			sourceTree = "<group>";
 		};
+		BD11DA3B25DFE7D500EF1300 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BD11DA3C25DFE7DF00EF1300 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BD11DA3D25DFE80700EF1300 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		BD80AD9D25DAB8970016B1BE = {
 			isa = PBXGroup;
 			children = (
@@ -472,9 +496,9 @@
 		BD9CDD7E25DEA0910010AE2C /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */,
-				BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */,
-				BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */,
+				BD11DA3D25DFE80700EF1300 /* ViewController */,
+				BD11DA3C25DFE7DF00EF1300 /* Delegate */,
+				BD11DA3B25DFE7D500EF1300 /* DataSource */,
 				BD9CDD8B25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift */,
 			);
 			path = CardDetail;
