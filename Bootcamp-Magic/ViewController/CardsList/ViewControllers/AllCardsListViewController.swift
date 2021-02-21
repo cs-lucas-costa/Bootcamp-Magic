@@ -52,18 +52,21 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
         
         cardsListView.title = expansionViewModel.name
         setupDelegates()
+        cardsListView.isLoading = true
         
         viewModel.fetchCards(setCode: expansionViewModel.code) { [weak self] (error) in
             guard let self = self else { return }
-                                    
-            if let error = error {
-                print("Error to fetch cards - \(error)")
-            } else {
-                DispatchQueue.main.async {
+            
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error to fetch cards - \(error)")
+                } else {
                     self.setupDataSources()
                     self.setupClosures()
                     self.cardsListView.collectionView.reloadData()
                 }
+                
+                self.cardsListView.isLoading = false
             }
         }
     }
