@@ -20,7 +20,6 @@ class CardsListViewTestCase: XCTestCase {
         sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
                             state: .all(expansion: .init(expansion: .fixture())))
         dataSource = .fixture()
-//        isRecording = true
     }
     
     override func tearDown() {
