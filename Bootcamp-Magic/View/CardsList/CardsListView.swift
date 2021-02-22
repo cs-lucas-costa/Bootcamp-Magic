@@ -18,6 +18,19 @@ final class CardsListView: UIView {
     private let state: CardsListViewState
     weak var delegate: CardsListViewDelegate?
     
+    var isLoading: Bool? {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self, let isLoading = self.isLoading else { return }
+                if isLoading {
+                    self.addLoadingView()
+                } else {
+                    self.removeLoadingView()
+                }
+            }
+        }
+    }
+    
     var title: String? {
         didSet {
             titleView.text = title?.capitalized
@@ -36,6 +49,7 @@ final class CardsListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Components
     private(set) lazy var collectionView: UICollectionView = {
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -103,6 +117,7 @@ final class CardsListView: UIView {
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.color = .white
         return activityIndicator
     }()
     
@@ -166,4 +181,24 @@ private extension CardsListView {
         delegate?.dismiss()
     }
     
+}
+
+// MARK: Loading
+private extension CardsListView {
+    
+    func addLoadingView() {
+        addSubview(activityIndicator)
+        
+        activityIndicator.snp.makeConstraints { (make) in
+            make.centerX.centerY.equalToSuperview()
+        }
+        
+        activityIndicator.startAnimating()
+    }
+    
+    func removeLoadingView() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
+    }
+
 }

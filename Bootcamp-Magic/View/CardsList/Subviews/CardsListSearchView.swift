@@ -28,6 +28,7 @@ final class CardsListSearchView: UIView {
                                                                           .font: Fonts.robotoBold(size: 14).font])
         textField.addTarget(self, action: #selector(searchCards(_:)), for: .editingChanged)
         textField.font = Fonts.robotoBold(size: 14).font
+        textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return textField
     }()
         
