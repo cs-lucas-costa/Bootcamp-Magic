@@ -41,6 +41,8 @@
 		BD11DA4E25DFF32100EF1300 /* AutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */; };
 		BD71EDA325E0314000E6FAB9 /* CardDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */; };
 		BD71EDB125E0554200E6FAB9 /* DidDisplayCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDB025E0554200E6FAB9 /* DidDisplayCellDelegate.swift */; };
+		BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */; };
+		BD71EDEA25E4091600E6FAB9 /* CardDetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDE925E4091600E6FAB9 /* CardDetailViewControllerProtocol.swift */; };
 		BD80ADC425DAB8990016B1BE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */; };
 		BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */; };
@@ -154,6 +156,8 @@
 		BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTests.swift; sourceTree = "<group>"; };
 		BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		BD71EDB025E0554200E6FAB9 /* DidDisplayCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidDisplayCellDelegate.swift; sourceTree = "<group>"; };
+		BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		BD71EDE925E4091600E6FAB9 /* CardDetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewControllerProtocol.swift; sourceTree = "<group>"; };
 		BD80ADA625DAB8970016B1BE /* Bootcamp-Magic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bootcamp-Magic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADBF25DAB8990016B1BE /* Bootcamp-MagicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bootcamp-MagicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 		BD11DA3D25DFE80700EF1300 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BD71EDE825E408FB00E6FAB9 /* Protocol */,
 				BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */,
 			);
 			path = ViewController;
@@ -444,6 +449,14 @@
 				BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BD71EDE825E408FB00E6FAB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BD71EDE925E4091600E6FAB9 /* CardDetailViewControllerProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BD80AD9D25DAB8970016B1BE = {
@@ -523,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */,
+				BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */,
 			);
 			path = CardDetail;
 			sourceTree = "<group>";
@@ -1076,6 +1090,7 @@
 				BD9CDD8C25DEA1230010AE2C /* CardDetailCollectionViewFlowLayout.swift in Sources */,
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
+				BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */,
 				E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6BC835225E013E9002F83F4 /* UIImageView+DownloadImage.swift in Sources */,
@@ -1095,6 +1110,7 @@
 				E6AEA74525DD625F00375F4E /* CardsListDataSource.swift in Sources */,
 				E6AEA75225DD7BB000375F4E /* CardCollectionViewCell.swift in Sources */,
 				E6AEA74D25DD645C00375F4E /* CardsListHeaderView.swift in Sources */,
+				BD71EDEA25E4091600E6FAB9 /* CardDetailViewControllerProtocol.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
@@ -1222,7 +1238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1277,7 +1293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
