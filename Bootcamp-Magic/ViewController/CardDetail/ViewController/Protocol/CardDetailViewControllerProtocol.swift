@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol CardDetailViewControllerProtocol: UIViewController, CardDetailViewModelDelegate, DidDisplayCellDelegate {
+protocol CardDetailViewControllerProtocol: UIViewController,
+                                           CardDetailViewModelDelegate,
+                                           DidDisplayCellDelegate, CardDetailViewDelegate {
     
     var cardDetailView: CardDetailView { get }
     var collectionViewDelegate: CardDetailCollectionViewDelegate? { get set }
@@ -30,6 +32,7 @@ extension CardDetailViewControllerProtocol {
     func setupDelegates() {
         collectionViewDelegate = CardDetailCollectionViewDelegate(superView: self.view, cards: viewModel.sendCards())
         cardDetailView.detailCollectionView.delegate = collectionViewDelegate
+        cardDetailView.delegate = self
         
         collectionViewDelegate?.delegate = self
         viewModel.delegate = self
@@ -67,5 +70,12 @@ extension CardDetailViewControllerProtocol {
 
         self.cardDetailView.detailCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
         viewModel.setExpansionIndex(index: index)
+    }
+}
+
+// MARK: CardDetailViewControllerProtocol
+extension CardDetailViewControllerProtocol {
+    func dismiss() {
+       dismiss(animated: true, completion: nil)
     }
 }
