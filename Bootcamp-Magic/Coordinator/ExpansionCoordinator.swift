@@ -77,7 +77,7 @@ extension ExpansionCoordinator: CardsListCoordinatorProtocol {
     
     func showCardDetail(at index: Int, cards: [CardViewModel]) {
         let viewModel = CardDetailViewModel(expansionCards: cards)
-        viewModel.actualIndex = index
+        viewModel.setExpansionIndex(index: index)
         
         let viewController = CardDetailViewController(viewModel: viewModel)
         viewController.modalPresentationStyle = .fullScreen
