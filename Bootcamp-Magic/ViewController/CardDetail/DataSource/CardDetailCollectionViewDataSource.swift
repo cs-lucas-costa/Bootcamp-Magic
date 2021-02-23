@@ -25,13 +25,15 @@ final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSo
 
         let currentImage = cardsPaths[indexPath.row % cardsPaths.count]
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardDetailCollectionViewCell.cellID(), for: indexPath) as? CardDetailCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else {
             return UICollectionViewCell()
         }
         
         if let image = currentImage.cardImage {
-            cell.cardImageView.image = image
+            cell.imageView.image = image
         }
+        
+        cell.setupView()
 
         return cell
     }

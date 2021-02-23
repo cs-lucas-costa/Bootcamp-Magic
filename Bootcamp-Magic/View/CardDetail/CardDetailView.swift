@@ -39,7 +39,7 @@ final class CardDetailView: UIView {
         detailCollectionView.backgroundColor = .clear
         detailCollectionView.showsVerticalScrollIndicator = false
         detailCollectionView.allowsMultipleSelection = false
-        detailCollectionView.register(CardDetailCollectionViewCell.self, forCellWithReuseIdentifier: CardDetailCollectionViewCell.cellID())
+        detailCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
         detailCollectionView.translatesAutoresizingMaskIntoConstraints = false
     }
     
