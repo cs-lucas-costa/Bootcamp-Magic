@@ -31,7 +31,7 @@ final class CardDetailViewControllerTests: XCTestCase {
     }
     
     func testUpdateUIBehavior() {
-        viewModel.setExpansionName(index: 0)
+        viewModel.setExpansionIndex(index: 0)
         let cardName = viewModel.sendFirtsExpansionName()
         let cards = viewModel.sendCards()
         

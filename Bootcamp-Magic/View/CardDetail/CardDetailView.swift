@@ -12,11 +12,11 @@ import SnapKit
 final class CardDetailView: UIView {
     
     @AutoLayout var expansionNameLabel: UILabel
-    @AutoLayout var backgroundImageVIew: UIImageView
+    @AutoLayout private var backgroundImageVIew: UIImageView
     
     private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
     
-    private lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+    private(set) lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -41,6 +41,11 @@ final class CardDetailView: UIView {
         detailCollectionView.allowsMultipleSelection = false
         detailCollectionView.register(CardDetailCollectionViewCell.self, forCellWithReuseIdentifier: CardDetailCollectionViewCell.cellID())
         detailCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func setupBackgroundImage() {
+        backgroundImageVIew.image = Constants.Images.backgroundImage
+        backgroundImageVIew.contentMode = .scaleAspectFill
     }
 }
 
@@ -73,7 +78,7 @@ extension CardDetailView: ViewCodable {
     }
     
     func setupAdditionalConfiguration() {
-        backgroundImageVIew.image = Constants.Images.backgroundImage
+        setupBackgroundImage()
         setupExpansionNameLabel()
         setupDetailCollectionView()
     }

@@ -37,7 +37,7 @@ final class CardDetailViewModel {
         self.expansionCards = expansionCards
     }
 
-    func setExpansionName(index: Int) {
+    func setExpansionIndex(index: Int) {
         self.actualIndex = index
     }
     
