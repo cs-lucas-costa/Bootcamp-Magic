@@ -111,6 +111,7 @@
 		E6BC833925DFE9C8002F83F4 /* AppDelegateFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */; };
 		E6BC834225DFED09002F83F4 /* CardsListViewStateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */; };
 		E6BC835225E013E9002F83F4 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */; };
+		E6FAE41B25E57F120080E559 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +230,7 @@
 		E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFake.swift; sourceTree = "<group>"; };
 		E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewStateTestCase.swift; sourceTree = "<group>"; };
 		E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +325,7 @@
 				994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */,
 				E6AEA74825DD635900375F4E /* UIView+Identifiable.swift */,
 				E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */,
+				E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1144,6 +1147,7 @@
 				E6BC833525DFE97E002F83F4 /* main.swift in Sources */,
 				E6AEA74925DD635900375F4E /* UIView+Identifiable.swift in Sources */,
 				E691C67425DEEB91004D41CF /* CardsListViewControllerProtocol.swift in Sources */,
+				E6FAE41B25E57F120080E559 /* UIStackView+Border.swift in Sources */,
 				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
