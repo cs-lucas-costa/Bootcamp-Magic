@@ -8,6 +8,5 @@
 import UIKit
 
 protocol CardsListCoordinatorProtocol: AnyObject {
-    func showCardDetail(_ cards: [CardViewModel])
-    func dismiss()
+    func showCardDetail(at index: Int, cards: [CardViewModel])
 }
