@@ -12,7 +12,7 @@ import SnapKit
 final class CardDetailView: UIView {
     
     @AutoLayout var expansionNameLabel: UILabel
-    @AutoLayout private var backgroundImageVIew: UIImageView
+    @AutoLayout private var backgroundImageView: UIImageView
     
     private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
     
