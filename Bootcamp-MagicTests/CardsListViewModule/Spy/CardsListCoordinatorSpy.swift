@@ -16,5 +16,4 @@ class CardsListCoordinatorSpy: CardsListCoordinatorProtocol {
     func showCardDetail(at index: Int, cards: [CardViewModel]) {
         selectCard = true
     }
-    
 }
