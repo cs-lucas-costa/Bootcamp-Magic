@@ -22,7 +22,7 @@ extension UIImageView {
         return activity
     }
     
-    func downloadImage(with path: String) {
+    func downloadImage(with path: String, completion: @escaping (UIImage?) -> Void) {
         
         let activity = activityIndicator
         activity.startAnimating()
@@ -30,6 +30,7 @@ extension UIImageView {
         DownloadImage.shared.loadImage(with: path) { [weak self] (image) in
             DispatchQueue.main.async {
                 self?.image = image
+                completion(image)
                 activity.stopAnimating()
                 activity.removeFromSuperview()
             }

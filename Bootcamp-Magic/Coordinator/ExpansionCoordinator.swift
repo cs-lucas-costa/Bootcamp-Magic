@@ -75,8 +75,7 @@ extension ExpansionCoordinator: ExpansionViewControllerNavigationDelegate {
 // MARK: - CardsListCoordinatorProtocol Extension
 extension ExpansionCoordinator: CardsListCoordinatorProtocol {
     func showCardDetail(_ cards: [CardViewModel]) {
-        let viewModel = CardDetailViewModel(networkManager: networkManager,
-                                            expansionCards: cards)
+        let viewModel = CardDetailViewModel(expansionCards: cards)
         let viewController = CardDetailViewController(viewModel: viewModel)
         currentViewController = viewController
         navigationController.present(viewController, animated: true, completion: nil)

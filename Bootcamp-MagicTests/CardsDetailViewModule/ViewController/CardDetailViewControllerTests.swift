@@ -20,7 +20,7 @@ final class CardDetailViewControllerTests: XCTestCase {
         let bundle = Bundle(for: type(of: self))
         let service = NetworkServiceStub(bundle: bundle)
         service.json = bundle.url(forResource: "cards", withExtension: "json")
-        viewModel = CardDetailViewModel(networkManager: NetworkManager(service: service), expansionCards: FakeCardsArray().getCards())
+        viewModel = CardDetailViewModel(expansionCards: FakeCardsArray().getCards())
         sut = CardDetailViewController(viewModel: viewModel)
     }
     
