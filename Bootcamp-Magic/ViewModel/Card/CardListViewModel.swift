@@ -40,7 +40,7 @@ private extension CardListViewModel {
 
                 guard let self = self, card.imageUrl != nil else { return }
                 let key = card.type
-                let viewModel = CardViewModel(card: card)
+                let viewModel = CardViewModel(card: card, networkManager: networkManager)
                 
                 if let dict = self.dictCards.first(where: { $0.key == key }) {
                     dict.value.append(viewModel)
