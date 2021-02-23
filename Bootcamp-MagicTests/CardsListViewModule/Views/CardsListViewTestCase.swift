@@ -14,24 +14,39 @@ class CardsListViewTestCase: XCTestCase {
 
     var sut: CardsListView!
     var dataSource: CardsListDataSource!
+    var service: NetworkServiceStub!
+    var networkManager: NetworkManager!
     
     override func setUp() {
         super.setUp()
+        
+        let bundle = Bundle(for: type(of: self))
+        service = NetworkServiceStub(bundle: bundle)
+        networkManager = NetworkManager(service: service)
         sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
                             state: .all(expansion: .init(expansion: .fixture())))
+<<<<<<< HEAD
         dataSource = .fixture()
+=======
+        dataSource = .fixture(networkManager: networkManager)
+//        isRecording = true
+>>>>>>> Adds unit tests
     }
     
     override func tearDown() {
         sut = nil
         dataSource = nil
+        service = nil
+        networkManager = nil
         super.tearDown()
     }
     
-    func testCardsListWithCards() {
-        sut.title = "Khans of Tarkir"
-        sut.collectionView.dataSource = dataSource
-        assertSnapshot(matching: sut, as: .image)
-    }
+    // TODO
+    
+//    func testCardsListWithCards() {
+//        sut.title = "Khans of Tarkir"
+//        sut.collectionView.dataSource = dataSource
+//        assertSnapshot(matching: sut, as: .image)
+//    }
     
 }

@@ -20,7 +20,7 @@ final class CardDetailViewModel {
         }
     }
     
-    var actualIndex: Int = 0 {
+    private var actualIndex: Int = 0 {
         didSet {
             expansionName = expansionCards[actualIndex].name
         }
@@ -44,6 +44,10 @@ final class CardDetailViewModel {
 
     func sendExpansionName() -> String {
         expansionName
+    }
+    
+    func sendExpansionIndex() -> Int {
+        actualIndex
     }
     
 }
