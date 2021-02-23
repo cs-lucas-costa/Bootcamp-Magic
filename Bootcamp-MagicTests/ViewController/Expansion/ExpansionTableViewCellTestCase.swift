@@ -29,20 +29,6 @@ class ExpansionTableViewCellTestCase: XCTestCase {
   }
 
   // MARK: - Tests
-  func testExpansionViewCellWithImage() {
-    let image = UIImage(named: "right-chevron")
-    
-    sut.setupCell(with: expansion, image: image)
-    
-    assertSnapshot(matching: sut, as: .image)
-  }
-  
-  func testExpansionViewCellWithoutImage() {
-    sut.setupCell(with: expansion)
-    
-    assertSnapshot(matching: sut, as: .image)
-  }
-  
   func testExpansionViewCellWithDivisor() {
     sut.setupCell(with: expansion)
     sut.showDivisor()
