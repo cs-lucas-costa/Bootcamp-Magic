@@ -9,10 +9,26 @@ import Foundation
 import UIKit
 import SnapKit
 
+protocol CardDetailViewDelegate: AnyObject {
+    func dismiss()
+}
+
 final class CardDetailView: UIView {
     
     @AutoLayout var expansionNameLabel: UILabel
-    @AutoLayout private var backgroundImageView: UIImageView
+    @AutoLayout private var backgroundImageVIew: UIImageView
+    weak var delegate: CardDetailViewDelegate?
+    
+    private lazy var closeButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(systemName: "xmark",
+                                withConfiguration: UIImage.SymbolConfiguration(pointSize: 44,
+                                                                               weight: .light)),
+                        for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
+        return button
+    }()
     
     private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
     
@@ -51,7 +67,8 @@ final class CardDetailView: UIView {
 
 extension CardDetailView: ViewCodable {
     func buildViewHierarchy() {
-        addSubview(backgroundImageView)
+        addSubview(backgroundImageVIew)
+        addSubview(closeButton)
         addSubview(expansionNameLabel)
         addSubview(detailCollectionView)
     }
@@ -60,6 +77,12 @@ extension CardDetailView: ViewCodable {
         
         backgroundImageView.snp.makeConstraints {  maker in
             maker.edges.equalToSuperview()
+        }
+        
+        #warning("remover valores mágicos")
+        closeButton.snp.makeConstraints { (maker) in
+            maker.left.equalToSuperview().inset(20)
+            maker.top.equalTo(safeAreaLayoutGuide).inset(30)
         }
         
         expansionNameLabel.snp.makeConstraints { maker in
@@ -81,5 +104,12 @@ extension CardDetailView: ViewCodable {
         setupBackgroundImage()
         setupExpansionNameLabel()
         setupDetailCollectionView()
+    }
+}
+
+// MARK: Actions
+extension CardDetailView {
+    @objc func dismiss() {
+        delegate?.dismiss()
     }
 }
