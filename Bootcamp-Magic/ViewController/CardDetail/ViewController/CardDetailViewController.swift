@@ -11,9 +11,7 @@ import UIKit
 final class CardDetailViewController: UIViewController, CardDetailViewControllerProtocol {
     
     var cardDetailView: CardDetailView
-    
     var collectionViewDelegate: CardDetailCollectionViewDelegate?
-    
     var collectionViewDataSource: CardDetailCollectionViewDataSource?
     
     var viewModel: CardDetailViewModel
@@ -35,9 +33,20 @@ final class CardDetailViewController: UIViewController, CardDetailViewController
         view = cardDetailView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let indexPath = IndexPath(item: self.viewModel.actualIndex, section: 0)
+            self.cardDetailView.detailCollectionView.scrollToItem(at: indexPath,
+                                                             at: .centeredHorizontally, animated: false)
+        }
+    }
+    
     override func viewDidLoad() {
         setup()
-        
         super.viewDidLoad()
     }
+    
 }
