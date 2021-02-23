@@ -11,7 +11,6 @@ import SnapKit
 final class ExpansionTableViewCell: UITableViewCell {
 
   // MARK: - Properties
-  let expansionImage = UIImageView(frame: .zero)
   let expasionName = UILabel(frame: .zero)
   let rightChevronImage = UIImageView(image: Constants.Images.rightChevron)
   let horizontalDivisor = UIView(frame: .zero)
@@ -29,36 +28,8 @@ final class ExpansionTableViewCell: UITableViewCell {
   }
 
   // MARK: - Extensions
-  func setupCell(with expansion: Expansion, image: UIImage? = nil) {
+  func setupCell(with expansion: Expansion) {
     expasionName.text = expansion.name
-
-    if image != nil {
-      addExpansionImageOnView()
-    } else {
-      removeExpansionImageFromView()
-    }
-  }
-
-  private func removeExpansionImageFromView() {
-    expansionImage.isHidden = true
-    expasionName.snp.removeConstraints()
-    expasionName.snp.makeConstraints { make in
-      make.left.equalToSuperview().offset(horizontalMargin)
-      make.right.equalTo(rightChevronImage.snp.left)
-      make.top.equalToSuperview().offset(verticalMargin)
-      make.bottom.equalToSuperview().inset(verticalMargin)
-    }
-  }
-
-  private func addExpansionImageOnView() {
-    expansionImage.isHidden = false
-    expasionName.snp.removeConstraints()
-    expasionName.snp.makeConstraints { make in
-      make.left.equalTo(expansionImage.snp.right).offset(horizontalMargin)
-      make.right.equalTo(rightChevronImage.snp.left)
-      make.top.equalToSuperview().offset(verticalMargin)
-      make.bottom.equalToSuperview().inset(verticalMargin)
-    }
   }
 
   func hideDivisor() {
@@ -73,7 +44,6 @@ final class ExpansionTableViewCell: UITableViewCell {
 
 extension ExpansionTableViewCell: ViewCodable {
   func buildViewHierarchy() {
-    addSubview(expansionImage)
     addSubview(expasionName)
     addSubview(rightChevronImage)
     addSubview(horizontalDivisor)
@@ -98,16 +68,8 @@ extension ExpansionTableViewCell: ViewCodable {
       make.centerY.equalToSuperview()
     }
 
-    expansionImage.snp.makeConstraints { make in
-      let widthMultiplier = CGFloat(0.024)
-      make.left.equalToSuperview().offset(horizontalMargin)
-      make.width.equalToSuperview().multipliedBy(widthMultiplier)
-      make.top.equalToSuperview().offset(verticalMargin)
-      make.bottom.equalToSuperview().inset(verticalMargin)
-    }
-
     expasionName.snp.makeConstraints { make in
-      make.left.equalTo(expansionImage.snp.right).offset(horizontalMargin)
+      make.left.equalToSuperview().offset(horizontalMargin)
       make.right.equalTo(rightChevronImage.snp.left)
       make.top.equalToSuperview().offset(verticalMargin)
       make.bottom.equalToSuperview().inset(verticalMargin)
@@ -120,8 +82,6 @@ extension ExpansionTableViewCell: ViewCodable {
     expasionName.textColor = .white
 
     horizontalDivisor.backgroundColor = .white
-
-    expansionImage.contentMode = .scaleAspectFit
 
     rightChevronImage.contentMode = .scaleAspectFit
 

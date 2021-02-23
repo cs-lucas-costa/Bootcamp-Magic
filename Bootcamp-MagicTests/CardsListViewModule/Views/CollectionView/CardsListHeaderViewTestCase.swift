@@ -19,7 +19,6 @@ class CardsListHeaderViewTestCase: XCTestCase {
         let frame = CGRect(origin: .zero,
                            size: CGSize(width: UIScreen.main.bounds.width, height: 40))
         sut = CardsListHeaderView(frame: frame)
-//        isRecording = true
 
     }
 
