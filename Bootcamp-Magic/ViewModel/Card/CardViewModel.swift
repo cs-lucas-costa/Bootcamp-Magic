@@ -10,9 +10,11 @@ import UIKit
 final class CardViewModel {
 
     private let card: Card
+    private let networkManager: NetworkManager
     
-    init(card: Card) {
+    init(card: Card, networkManager: NetworkManager) {
         self.card = card
+        self.networkManager = networkManager
     }
 
     var name: String {
@@ -27,6 +29,29 @@ final class CardViewModel {
         card.imageUrl
     }
     
-    var cardImage: UIImage?
-
+    private var cardImage: UIImage?
+    
+    func fetchCards(completion: @escaping (UIImage?) -> Void) {
+        
+        guard cardImage == nil else {
+            completion(cardImage)
+            return
+        }
+        
+        guard let url = card.imageUrl else {
+            completion(nil)
+            return
+        }
+        
+        networkManager.getImageFromURL(imagesService: .cardImage(imagePath: url)) { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.cardImage = image
+                completion(image)
+            case .failure:
+                completion(nil)
+            }
+        }
+    }
+ 
 }
