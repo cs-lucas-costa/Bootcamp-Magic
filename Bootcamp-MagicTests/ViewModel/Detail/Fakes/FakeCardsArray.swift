@@ -24,10 +24,13 @@ final class FakeCardsArray {
         
         var cards: [CardViewModel] = []
         
-        networkManager.getRequest(cardsService: CardsService.cardsList(setCode: ""), decodableType: CardList.self) { result in
+        networkManager.getRequest(cardsService: CardsService.cardsList(setCode: ""), decodableType: CardList.self) { [weak self] result in
+            
+            guard let self = self else { return }
+            
             switch result {
             case .success(let cardList):
-                cards = cardList.cards.map { CardViewModel(card: $0) }
+                cards = cardList.cards.map { CardViewModel(card: $0, networkManager: (self.networkManager)) }
             case .failure:
                 cards = []
             }

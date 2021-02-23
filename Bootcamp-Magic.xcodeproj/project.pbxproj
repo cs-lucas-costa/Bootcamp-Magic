@@ -56,6 +56,7 @@
 		BD9CDDBA25DED8480010AE2C /* FakeCardsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDDB925DED8480010AE2C /* FakeCardsArray.swift */; };
 		BDD6541B25E53D44004C9F88 /* CardDetailTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6541A25E53D44004C9F88 /* CardDetailTestCase.swift */; };
 		BDD6542125E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6542025E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift */; };
+		BDD6542E25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6542D25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift */; };
 		BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376925DB04EB003B2F5A /* NetworkManager.swift */; };
 		BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE376E25DB0504003B2F5A /* RequestError.swift */; };
 		BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE377325DB052F003B2F5A /* NetworkError.swift */; };
@@ -174,6 +175,7 @@
 		BD9CDDB925DED8480010AE2C /* FakeCardsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCardsArray.swift; sourceTree = "<group>"; };
 		BDD6541A25E53D44004C9F88 /* CardDetailTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTestCase.swift; sourceTree = "<group>"; };
 		BDD6542025E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailDataSource+Fixtures.swift"; sourceTree = "<group>"; };
+		BDD6542D25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDelegateTestCase.swift; sourceTree = "<group>"; };
 		BDEE376925DB04EB003B2F5A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BDEE376E25DB0504003B2F5A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		BDEE377325DB052F003B2F5A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 		BD71ED9D25E0314000E6FAB9 /* CardsDetailViewModule */ = {
 			isa = PBXGroup;
 			children = (
+				BDD6542C25E5696A004C9F88 /* Delegate */,
 				BDD6541925E53D24004C9F88 /* Views */,
 				BD71ED9E25E0314000E6FAB9 /* ViewController */,
 			);
@@ -585,6 +588,14 @@
 				BDD6541A25E53D44004C9F88 /* CardDetailTestCase.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BDD6542C25E5696A004C9F88 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BDD6542D25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		BDEE378525DB0589003B2F5A /* Network */ = {
@@ -1161,6 +1172,7 @@
 				E6AEA77825DD9C8700375F4E /* Card+Extension.swift in Sources */,
 				BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */,
 				BDD6542125E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift in Sources */,
+				BDD6542E25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift in Sources */,
 				E6AEA72D25DD5BC200375F4E /* CardsListSearchViewTestCase.swift in Sources */,
 				E691C63B25DECC73004D41CF /* CardsListHeaderViewTestCase.swift in Sources */,
 				E691C65125DED104004D41CF /* CardsListDelegateSpy.swift in Sources */,

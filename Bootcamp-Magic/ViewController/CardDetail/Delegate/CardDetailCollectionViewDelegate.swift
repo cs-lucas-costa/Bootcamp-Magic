@@ -12,8 +12,8 @@ final class CardDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate
 
     private let superView: UIView
     private let cards: [CardViewModel]
-    private var lastDeceleratingOffset: CGFloat = 0
-    private var lastDraggingOffset: CGFloat = 0
+    private(set) var lastDeceleratingOffset: CGFloat = 0
+    private(set) var lastDraggingOffset: CGFloat = 0
     
     weak var delegate: DidDisplayCellDelegate?
 
