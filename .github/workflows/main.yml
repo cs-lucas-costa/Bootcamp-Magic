@@ -1,8 +1,6 @@
 name: CI
 
 on:
-  # push:
-    # branches: [ master, develop ]
   pull_request:
     branches: [ master, develop ]
 
@@ -12,9 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    # - name: Force xcode 11.2.1
-    #   run: sudo xcode-select -switch /Applications/Xcode_11.2.1.app
 
     - name: Set Xcode version
       uses: maxim-lobanov/setup-xcode@v1.1
