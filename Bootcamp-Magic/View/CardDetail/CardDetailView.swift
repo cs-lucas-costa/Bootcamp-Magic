@@ -12,11 +12,11 @@ import SnapKit
 final class CardDetailView: UIView {
     
     @AutoLayout var expansionNameLabel: UILabel
-    @AutoLayout var backgroundImageVIew: UIImageView
+    @AutoLayout private var backgroundImageView: UIImageView
     
     private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
     
-    private lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+    private(set) lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -39,21 +39,26 @@ final class CardDetailView: UIView {
         detailCollectionView.backgroundColor = .clear
         detailCollectionView.showsVerticalScrollIndicator = false
         detailCollectionView.allowsMultipleSelection = false
-        detailCollectionView.register(CardDetailCollectionViewCell.self, forCellWithReuseIdentifier: CardDetailCollectionViewCell.cellID())
+        detailCollectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
         detailCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func setupBackgroundImage() {
+        backgroundImageView.image = Constants.Images.backgroundImage
+        backgroundImageView.contentMode = .scaleAspectFill
     }
 }
 
 extension CardDetailView: ViewCodable {
     func buildViewHierarchy() {
-        addSubview(backgroundImageVIew)
+        addSubview(backgroundImageView)
         addSubview(expansionNameLabel)
         addSubview(detailCollectionView)
     }
     
     func setupConstraints() {
         
-        backgroundImageVIew.snp.makeConstraints {  maker in
+        backgroundImageView.snp.makeConstraints {  maker in
             maker.edges.equalToSuperview()
         }
         
@@ -73,7 +78,7 @@ extension CardDetailView: ViewCodable {
     }
     
     func setupAdditionalConfiguration() {
-        backgroundImageVIew.image = Constants.Images.backgroundImage
+        setupBackgroundImage()
         setupExpansionNameLabel()
         setupDetailCollectionView()
     }

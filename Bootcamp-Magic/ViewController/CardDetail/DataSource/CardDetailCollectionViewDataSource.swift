@@ -10,9 +10,9 @@ import UIKit
 
 final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
-    private var cardsPaths: [String]
+    private var cardsPaths: [CardViewModel]
 
-    init(cardsPaths: [String]) {
+    init(cardsPaths: [CardViewModel]) {
         self.cardsPaths = cardsPaths
         super.init()
     }
@@ -25,11 +25,17 @@ final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSo
 
         let currentImage = cardsPaths[indexPath.row % cardsPaths.count]
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardDetailCollectionViewCell.cellID(), for: indexPath) as? CardDetailCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell else {
             return UICollectionViewCell()
         }
         
-        cell.cardImageView.downloadImage(with: currentImage)
+        currentImage.fetchCards { image in
+            DispatchQueue.main.async {
+                cell.imageView.image = image
+            }
+        }
+        
+        cell.setupView()
 
         return cell
     }

@@ -11,14 +11,22 @@ import XCTest
 class CardsListDataSourceTestCase: XCTestCase {
     
     var sut: CardsListDataSource!
+    var service: NetworkServiceStub!
+    var networkManager: NetworkManager!
     
     override func setUp() {
         super.setUp()
-        sut = .fixture()
+        
+        let bundle = Bundle(for: type(of: self))
+        service = NetworkServiceStub(bundle: bundle)
+        networkManager = NetworkManager(service: service)
+        sut = .fixture(networkManager: networkManager)
     }
     
     override func tearDown() {
         sut = nil
+        service = nil
+        networkManager = nil
         super.tearDown()
     }
     

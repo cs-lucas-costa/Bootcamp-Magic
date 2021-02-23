@@ -1,8 +1,8 @@
 //
-//  CardsListViewTestCase.swift
+//  CardDetailTestCase.swift
 //  Bootcamp-MagicTests
 //
-//  Created by lucas.henrique.costa on 17/02/21.
+//  Created by pedro.silveira on 23/02/21.
 //
 
 import XCTest
@@ -10,25 +10,24 @@ import SnapshotTesting
 
 @testable import Bootcamp_Magic
 
-class CardsListViewTestCase: XCTestCase {
+class CardDetailTestCase: XCTestCase {
 
-    var sut: CardsListView!
-    var dataSource: CardsListDataSource!
+    var sut: CardDetailView!
+    var dataSource: CardDetailCollectionViewDataSource!
     var service: NetworkServiceStub!
     var networkManager: NetworkManager!
     
     override func setUp() {
         super.setUp()
-        
         let bundle = Bundle(for: type(of: self))
+        
+        sut = CardDetailView(frame: UIScreen.main.bounds)
         service = NetworkServiceStub(bundle: bundle)
         networkManager = NetworkManager(service: service)
-        sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
-                            state: .all(expansion: .init(expansion: .fixture())))
         dataSource = .fixture(networkManager: networkManager)
 //        isRecording = true
     }
-    
+
     override func tearDown() {
         sut = nil
         dataSource = nil
@@ -36,13 +35,11 @@ class CardsListViewTestCase: XCTestCase {
         networkManager = nil
         super.tearDown()
     }
-    
-    // TODO
-    
-//    func testCardsListWithCards() {
-//        sut.title = "Khans of Tarkir"
-//        sut.collectionView.dataSource = dataSource
-//        assertSnapshot(matching: sut, as: .image)
-//    }
+
+    func testCardsListWithCards() {
+        sut.expansionNameLabel.text = "Khans of Tarkir"
+        sut.detailCollectionView.dataSource = dataSource
+        assertSnapshot(matching: sut, as: .image)
+    }
     
 }

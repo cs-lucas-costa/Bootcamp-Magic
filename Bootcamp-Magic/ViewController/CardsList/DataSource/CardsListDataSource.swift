@@ -60,8 +60,10 @@ extension CardsListDataSource: UICollectionViewDataSource {
             dictCards[indexPath.section].value[indexPath.item] :
             filteredCards[indexPath.section].value[indexPath.item]
         
-        if let imageUrl = card.imageUrl {
-            cell.imageView.downloadImage(with: imageUrl)
+        card.fetchCards { image in
+            DispatchQueue.main.async {
+                cell.imageView.image = image
+            }
         }
         
         cell.setupView()

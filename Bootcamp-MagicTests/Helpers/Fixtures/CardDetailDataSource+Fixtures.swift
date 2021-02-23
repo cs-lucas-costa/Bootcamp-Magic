@@ -1,17 +1,17 @@
 //
-//  CardsListDataSource+Fixture.swift
+//  CardDetailDataSource+Fixtures.swift
 //  Bootcamp-MagicTests
 //
-//  Created by lucas.henrique.costa on 18/02/21.
+//  Created by pedro.silveira on 23/02/21.
 //
 
 import Foundation
 
 @testable import Bootcamp_Magic
 
-extension CardsListDataSource {
+extension CardDetailCollectionViewDataSource {
     
-    static func fixture(networkManager: NetworkManager) -> CardsListDataSource {
+    static func fixture(networkManager: NetworkManager) -> CardDetailCollectionViewDataSource {
         
         let type1 = "Enchantment"
         let type2 = "Creature — Horror"
@@ -20,9 +20,8 @@ extension CardsListDataSource {
                                                       type: type1), networkManager: networkManager)
         let viewModel2 = CardViewModel(card: .fixture(name: "Abomination of Gudul",
                                                       type: type2), networkManager: networkManager)
-        let dictCards = [Dict(key: type1, value: [viewModel1]),
-                         Dict(key: type2, value: [viewModel2])]
+        let cards = [viewModel1, viewModel2]
         
-        return CardsListDataSource(dictCards: dictCards)
+        return CardDetailCollectionViewDataSource(cardsPaths: cards)
     }
 }

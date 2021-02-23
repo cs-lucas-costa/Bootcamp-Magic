@@ -6,12 +6,13 @@
 //
 
 import XCTest
+import SnapshotTesting
 
 @testable import Bootcamp_Magic
 
 final class CardDetailViewControllerTests: XCTestCase {
 
-    var sut: CardDetailViewController!
+    var sut: CardDetailViewControllerProtocol!
     var viewModel: CardDetailViewModel!
     
     override func setUp() {
@@ -20,8 +21,11 @@ final class CardDetailViewControllerTests: XCTestCase {
         let bundle = Bundle(for: type(of: self))
         let service = NetworkServiceStub(bundle: bundle)
         service.json = bundle.url(forResource: "cards", withExtension: "json")
-        viewModel = CardDetailViewModel(networkManager: NetworkManager(service: service), expansionCards: FakeCardsArray().getCards())
+        viewModel = CardDetailViewModel(expansionCards: FakeCardsArray().getCards())
         sut = CardDetailViewController(viewModel: viewModel)
+        sut.loadView()
+        sut.viewDidLoad()
+//        isRecording = true
     }
     
     override func tearDown() {
@@ -31,10 +35,30 @@ final class CardDetailViewControllerTests: XCTestCase {
     }
     
     func testUpdateUIBehavior() {
-        viewModel.setExpansionName(index: 0)
+        viewModel.setExpansionIndex(index: 0)
         let cardName = viewModel.sendFirtsExpansionName()
         let cards = viewModel.sendCards()
         
         XCTAssertEqual(cardName, cards[0].name)
+    }
+    
+    func testCardDetail() {
+        assertSnapshot(matching: sut, as: .image)
+    }
+    
+    func testDidOffsetChangedBehavior() {
+        
+        let firstIndex = viewModel.sendExpansionIndex()
+        
+        sut.cardDetailView.frame = UIScreen.main.bounds
+        sut.cardDetailView.detailCollectionView.frame = UIScreen.main.bounds
+        
+        let offset = CGFloat(100)
+        
+        sut.didOffsetChanged(offset: offset, toPrevious: false)
+        
+        let finalIndex = viewModel.sendExpansionIndex()
+        
+        XCTAssertNotEqual(firstIndex, finalIndex)
     }
 }
