@@ -23,7 +23,7 @@ protocol CardDetailViewControllerProtocol: UIViewController, CardDetailViewModel
 extension CardDetailViewControllerProtocol {
     
     func setupDataSources() {
-        collectionViewDataSource = CardDetailCollectionViewDataSource(cardsPaths: viewModel.sendImagesPath())
+        collectionViewDataSource = CardDetailCollectionViewDataSource(cardsPaths: viewModel.sendCards())
         cardDetailView.detailCollectionView.dataSource = collectionViewDataSource
     }
     

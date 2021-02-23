@@ -26,5 +26,7 @@ final class CardViewModel {
     var imageUrl: String? {
         card.imageUrl
     }
+    
+    var cardImage: UIImage?
 
 }

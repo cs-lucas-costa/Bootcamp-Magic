@@ -10,9 +10,9 @@ import UIKit
 
 final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
-    private var cardsPaths: [String]
+    private var cardsPaths: [CardViewModel]
 
-    init(cardsPaths: [String]) {
+    init(cardsPaths: [CardViewModel]) {
         self.cardsPaths = cardsPaths
         super.init()
     }
@@ -29,7 +29,9 @@ final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSo
             return UICollectionViewCell()
         }
         
-        cell.cardImageView.downloadImage(with: currentImage)
+        if let image = currentImage.cardImage {
+            cell.cardImageView.image = image
+        }
 
         return cell
     }

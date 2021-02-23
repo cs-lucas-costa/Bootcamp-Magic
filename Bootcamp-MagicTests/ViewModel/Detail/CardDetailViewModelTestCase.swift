@@ -22,7 +22,7 @@ class CardDetailViewModelTestCase: XCTestCase {
         serviceStub = NetworkServiceStub(bundle: bundle)
         serviceStub.json = bundle.url(forResource: "cards", withExtension: "json")
         networkManager = NetworkManager(service: serviceStub)
-        sut = CardDetailViewModel(networkManager: networkManager, expansionCards: fakeCardsArray.getCards())
+        sut = CardDetailViewModel(expansionCards: fakeCardsArray.getCards())
     }
 
     override func tearDown() {
@@ -46,16 +46,5 @@ class CardDetailViewModelTestCase: XCTestCase {
         let cards = sut.sendCards()
         
         XCTAssertEqual(expansionName, cards[0].name)
-    }
-
-    func testSendCardsPathBehavior() {
-        let expectation = XCTestExpectation()
-        
-        let imagesPath = self.sut.sendImagesPath()
-        expectation.fulfill()
-        
-        wait(for: [expectation], timeout: 1)
-        
-        XCTAssertEqual(imagesPath.count, 3)
     }
 }
