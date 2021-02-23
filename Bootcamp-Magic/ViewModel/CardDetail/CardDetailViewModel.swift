@@ -20,7 +20,7 @@ final class CardDetailViewModel {
         }
     }
     
-    private var actualIndex: Int = 0 {
+    private(set) var actualIndex: Int = 0 {
         didSet {
             expansionName = expansionCards[actualIndex].name
         }
