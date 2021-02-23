@@ -46,7 +46,6 @@
 		BD80ADC425DAB8990016B1BE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */; };
 		BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */; };
-		BD9CDD7925DEA0580010AE2C /* CardDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */; };
 		BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */; };
 		BD9CDD8425DEA0E20010AE2C /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */; };
 		BD9CDD8825DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */; };
@@ -165,7 +164,6 @@
 		BD80ADC525DAB8990016B1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesService.swift; sourceTree = "<group>"; };
 		BD9CDD7025DE9F950010AE2C /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
-		BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD9CDD7F25DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		BD9CDD8325DEA0E20010AE2C /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		BD9CDD8725DEA1080010AE2C /* CardDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -540,7 +538,6 @@
 		BD9CDD7725DEA0410010AE2C /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BD9CDD7825DEA0580010AE2C /* CardDetailCollectionViewCell.swift */,
 				BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */,
 			);
 			path = CardDetail;
@@ -1112,7 +1109,6 @@
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
 				998BACA425DFE36200CD7C8F /* ExpansionViewControllerNavigation.swift in Sources */,
 				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
-				BD9CDD7925DEA0580010AE2C /* CardDetailCollectionViewCell.swift in Sources */,
 				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
 				994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */,
 				E691C66925DEE8DC004D41CF /* CardsListView+Texts.swift in Sources */,
