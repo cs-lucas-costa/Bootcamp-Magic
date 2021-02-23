@@ -25,12 +25,8 @@ class CardsListViewTestCase: XCTestCase {
         networkManager = NetworkManager(service: service)
         sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
                             state: .all(expansion: .init(expansion: .fixture())))
-<<<<<<< HEAD
-        dataSource = .fixture()
-=======
         dataSource = .fixture(networkManager: networkManager)
 //        isRecording = true
->>>>>>> Adds unit tests
     }
     
     override func tearDown() {
