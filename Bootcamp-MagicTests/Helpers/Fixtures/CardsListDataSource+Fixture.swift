@@ -13,7 +13,6 @@ extension CardsListDataSource {
     
     static func fixture(networkManager: NetworkManager) -> CardsListDataSource {
         
-        let network = NetworkManager(service: NetworkServiceStub(bundle: bundle))
         let type1 = "Enchantment"
         let type2 = "Creature — Horror"
         

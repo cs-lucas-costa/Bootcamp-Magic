@@ -16,7 +16,7 @@ protocol CardDetailViewDelegate: AnyObject {
 final class CardDetailView: UIView {
     
     @AutoLayout var expansionNameLabel: UILabel
-    @AutoLayout private var backgroundImageVIew: UIImageView
+    @AutoLayout private var backgroundImageView: UIImageView
     weak var delegate: CardDetailViewDelegate?
     
     private lazy var closeButton: UIButton = {
@@ -67,7 +67,7 @@ final class CardDetailView: UIView {
 
 extension CardDetailView: ViewCodable {
     func buildViewHierarchy() {
-        addSubview(backgroundImageVIew)
+        addSubview(backgroundImageView)
         addSubview(closeButton)
         addSubview(expansionNameLabel)
         addSubview(detailCollectionView)
