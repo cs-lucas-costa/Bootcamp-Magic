@@ -44,21 +44,21 @@ final class CardDetailView: UIView {
     }
     
     private func setupBackgroundImage() {
-        backgroundImageVIew.image = Constants.Images.backgroundImage
-        backgroundImageVIew.contentMode = .scaleAspectFill
+        backgroundImageView.image = Constants.Images.backgroundImage
+        backgroundImageView.contentMode = .scaleAspectFill
     }
 }
 
 extension CardDetailView: ViewCodable {
     func buildViewHierarchy() {
-        addSubview(backgroundImageVIew)
+        addSubview(backgroundImageView)
         addSubview(expansionNameLabel)
         addSubview(detailCollectionView)
     }
     
     func setupConstraints() {
         
-        backgroundImageVIew.snp.makeConstraints {  maker in
+        backgroundImageView.snp.makeConstraints {  maker in
             maker.edges.equalToSuperview()
         }
         
