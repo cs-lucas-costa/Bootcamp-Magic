@@ -74,14 +74,15 @@ extension ExpansionCoordinator: ExpansionViewControllerNavigationDelegate {
 
 // MARK: - CardsListCoordinatorProtocol Extension
 extension ExpansionCoordinator: CardsListCoordinatorProtocol {
-    func showCardDetail(_ cards: [CardViewModel]) {
-        let viewModel = CardDetailViewModel(expansionCards: cards)
-        let viewController = CardDetailViewController(viewModel: viewModel)
-        currentViewController = viewController
-        navigationController.present(viewController, animated: true, completion: nil)
-    }
     
-    func dismiss() {
-        navigationController.popViewController(animated: true)
+    func showCardDetail(at index: Int, cards: [CardViewModel]) {
+        let viewModel = CardDetailViewModel(expansionCards: cards)
+        viewModel.actualIndex = index
+        
+        let viewController = CardDetailViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        currentViewController = viewController
+        
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }
