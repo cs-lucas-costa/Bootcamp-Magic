@@ -51,7 +51,7 @@ extension ExpansionCoordinator {
             viewController.coordinator = self
             return viewController
         case .favourites:
-            let viewController = FavouritesCardsListViewController(numberOfCardsPerRow: 3,
+            let viewController = FavoriteCardsListViewController(numberOfCardsPerRow: 3,
                                                                    viewModel: CardListViewModel(
                                                                     networkManager: networkManager))
             viewController.coordinator = self

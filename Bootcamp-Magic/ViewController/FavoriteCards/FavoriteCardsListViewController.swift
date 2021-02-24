@@ -1,5 +1,5 @@
 //
-//  FavoritesCardsListViewController.swift
+//  FavoriteCardsListViewController.swift
 //  Bootcamp-Magic
 //
 //  Created by lucas.henrique.costa on 18/02/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FavouritesCardsListViewController: UIViewController, CardsListViewControllerProtocol {
+final class FavoriteCardsListViewController: UIViewController, CardsListViewControllerProtocol {
     
     // MARK: Properties
     let cardsListView: CardsListView
@@ -36,13 +36,12 @@ final class FavouritesCardsListViewController: UIViewController, CardsListViewCo
     override func loadView() {
         super.loadView()
         view = cardsListView
+      view.backgroundColor = .red
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cardsListView.title = "Favorites"
-        
-        // (- Realizar o fetch das cartas favoritas). (todo)        
+      cardsListView.title = Constants.String.TabBar.favorites
     }
 }
