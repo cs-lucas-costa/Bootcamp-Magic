@@ -21,7 +21,7 @@ class CardListViewModelTestCase: XCTestCase {
         serviceStub = NetworkServiceStub(bundle: bundle)
         serviceStub.json = bundle.url(forResource: "cards", withExtension: "json")
         networkManager = NetworkManager(service: serviceStub)
-        sut = CardListViewModel(networkManager: networkManager)
+        sut = CardListViewModelRemote(networkManager: networkManager)
     }
 
     override func tearDown() {

@@ -18,12 +18,13 @@ class NavigationMenuTabBarControllerTestCase: XCTestCase {
   override func setUp() {
     super.setUp()
     sut = NavigationMenuTabBarController(frame: .init(origin: .zero, size: CGSize(width: 500, height: 800)), controllers: [])
+//    isRecording = true
   }
   
   // MARK: - Teardown
   override func tearDown() {
-    super.tearDown()
     sut = nil
+    super.tearDown()
   }
   
   // MARK: - Tests
