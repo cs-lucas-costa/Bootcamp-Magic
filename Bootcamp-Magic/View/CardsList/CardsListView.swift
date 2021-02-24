@@ -163,7 +163,7 @@ extension CardsListView: ViewCodable {
         
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(titleView.snp.bottom).offset(15)
-            make.trailing.leading.bottom.equalTo(safeAreaLayoutGuide)
+            make.trailing.leading.bottom.equalToSuperview()
         }
         
     }
