@@ -71,6 +71,9 @@ extension ExpansionCoordinator: ExpansionViewControllerNavigationDelegate {
 extension ExpansionCoordinator: CardsListCoordinatorProtocol {
     
     func showCardDetail(at index: Int, cards: [CardViewModel]) {
+        
+        cards.forEach { $0.verifyIsFavorite() }
+        
         let viewModel = CardDetailViewModel(expansionCards: cards)
         viewModel.setExpansionIndex(index: index)
         
