@@ -16,7 +16,6 @@ class CardsListDataSourceTestCase: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
         let bundle = Bundle(for: type(of: self))
         service = NetworkServiceStub(bundle: bundle)
         networkManager = NetworkManager(service: service)

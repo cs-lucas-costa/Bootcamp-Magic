@@ -43,7 +43,7 @@ extension CardsListViewControllerProtocol {
         cardListDelegate?.didSelectCard = { [weak self] indexPath in
             guard let self = self else { return }
             let cards = self.viewModel.dictCards[indexPath.section].value
-            self.coordinator?.showCardDetail(cards)
+            self.coordinator?.showCardDetail(at: indexPath.item, cards: cards)
         }
     }
     
@@ -75,7 +75,7 @@ extension CardsListViewControllerProtocol {
 extension CardsListViewControllerProtocol {
     
     func dismiss() {
-        coordinator?.dismiss()
+        navigationController?.popViewController(animated: true)
     }
     
 }

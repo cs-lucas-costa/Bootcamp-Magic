@@ -30,7 +30,7 @@ final class FakeCardsArray {
             
             switch result {
             case .success(let cardList):
-                cards = cardList.cards.map { CardViewModel(card: $0, networkManager: (self.networkManager)) }
+                cards = cardList.cards.map { CardViewModel(card: $0, networkManager: self.networkManager) }
             case .failure:
                 cards = []
             }
