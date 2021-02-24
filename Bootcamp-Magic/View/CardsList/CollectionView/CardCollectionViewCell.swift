@@ -13,11 +13,9 @@ final class CardCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
-        imageView.backgroundColor = .clear
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 5
-        imageView.backgroundColor = .white
+        imageView.backgroundColor = .clear
         return imageView
     }()
     

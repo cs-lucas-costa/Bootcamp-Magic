@@ -9,10 +9,29 @@ import Foundation
 import UIKit
 import SnapKit
 
+protocol CardDetailViewDelegate: AnyObject {
+    func dismiss()
+}
+
 final class CardDetailView: UIView {
+    
+    //MARK: Constants
+    private static let closeButtonEdges = UIEdgeInsets(top: 30, left: 20, bottom: 0, right: 0)
     
     @AutoLayout var expansionNameLabel: UILabel
     @AutoLayout private var backgroundImageView: UIImageView
+    weak var delegate: CardDetailViewDelegate?
+    
+    private lazy var closeButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.setImage(UIImage(systemName: "xmark",
+                                withConfiguration: UIImage.SymbolConfiguration(pointSize: 44,
+                                                                               weight: .light)),
+                        for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
+        return button
+    }()
     
     private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
     
@@ -52,6 +71,7 @@ final class CardDetailView: UIView {
 extension CardDetailView: ViewCodable {
     func buildViewHierarchy() {
         addSubview(backgroundImageView)
+        addSubview(closeButton)
         addSubview(expansionNameLabel)
         addSubview(detailCollectionView)
     }
@@ -60,6 +80,11 @@ extension CardDetailView: ViewCodable {
         
         backgroundImageView.snp.makeConstraints {  maker in
             maker.edges.equalToSuperview()
+        }
+        
+        closeButton.snp.makeConstraints { (maker) in
+            maker.top.equalTo(safeAreaLayoutGuide).offset(CardDetailView.closeButtonEdges.top)
+            maker.left.equalToSuperview().offset(CardDetailView.closeButtonEdges.left)
         }
         
         expansionNameLabel.snp.makeConstraints { maker in
@@ -81,5 +106,12 @@ extension CardDetailView: ViewCodable {
         setupBackgroundImage()
         setupExpansionNameLabel()
         setupDetailCollectionView()
+    }
+}
+
+// MARK: Actions
+extension CardDetailView {
+    @objc func dismiss() {
+        delegate?.dismiss()
     }
 }

@@ -56,10 +56,7 @@ final class CardsListSearchView: UIView {
         let stackView = UIStackView(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 10
-        stackView.layer.borderWidth = 1
-        stackView.layer.borderColor = UIColor.white.cgColor
-        stackView.layer.cornerRadius = 4
-        stackView.clipsToBounds = true
+        stackView.addBorder(color: .white, width: 1, cornerRadius: 4)
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 10,
                                                                      leading: 15,
