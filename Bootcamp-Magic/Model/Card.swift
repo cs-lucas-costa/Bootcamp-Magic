@@ -7,15 +7,12 @@
 
 import Foundation
 
+// MARK: Card
 struct Card: Decodable {
     let name: String
     let imageUrl: String?
     let type: String
     let id: String
-}
-
-struct CardList: Decodable {
-    let cards: [Card]
 }
 
 extension Card: Equatable {
@@ -25,6 +22,11 @@ extension Card: Equatable {
             && lhs.type == rhs.type
             && lhs.id == rhs.id
     }
+}
+
+// MARK: CardList
+struct CardList: Decodable {
+    let cards: [Card]
 }
 
 extension CardList: Equatable {
