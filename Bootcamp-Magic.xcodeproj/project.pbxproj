@@ -93,6 +93,7 @@
 		E65AE35725E68CDA003F938E /* CoreDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE35625E68CDA003F938E /* CoreDataDB.swift */; };
 		E65AE35F25E698C2003F938E /* CoreDataContainerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE35E25E698C2003F938E /* CoreDataContainerFake.swift */; };
 		E65AE36525E699A8003F938E /* CoreDataDBTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE36425E699A8003F938E /* CoreDataDBTestCase.swift */; };
+		E65AE38B25E6F568003F938E /* CardDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE38A25E6F568003F938E /* CardDetailCoordinator.swift */; };
 		E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579725DBE97900EAC7E8 /* CardViewModel.swift */; };
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
@@ -224,6 +225,7 @@
 		E65AE35625E68CDA003F938E /* CoreDataDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDB.swift; sourceTree = "<group>"; };
 		E65AE35E25E698C2003F938E /* CoreDataContainerFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainerFake.swift; sourceTree = "<group>"; };
 		E65AE36425E699A8003F938E /* CoreDataDBTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDBTestCase.swift; sourceTree = "<group>"; };
+		E65AE38A25E6F568003F938E /* CardDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCoordinator.swift; sourceTree = "<group>"; };
 		E679579725DBE97900EAC7E8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */,
 				E60CD18925DE9B9900D941B6 /* CardsListCoordinator.swift */,
 				9966CFC225E6916900616431 /* FavoriteCardsCoordinator.swift */,
+				E65AE38A25E6F568003F938E /* CardDetailCoordinator.swift */,
 			);
 			name = Coordinator;
 			path = "Bootcamp-Magic/Coordinator";
@@ -1165,6 +1168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				994ECBBD25DD364F00F0257F /* Constants.swift in Sources */,
+				E65AE38B25E6F568003F938E /* CardDetailCoordinator.swift in Sources */,
 				E6AEA76025DD854800375F4E /* AllCardsListViewController.swift in Sources */,
 				E65AE32225E684BE003F938E /* CoreDataProtocol.swift in Sources */,
 				E60CD16225DE922B00D941B6 /* CardsListDelegate.swift in Sources */,

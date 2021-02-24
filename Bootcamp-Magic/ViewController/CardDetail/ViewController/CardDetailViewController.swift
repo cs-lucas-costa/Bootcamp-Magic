@@ -14,6 +14,7 @@ final class CardDetailViewController: UIViewController, CardDetailViewController
     var cardDetailView: CardDetailView
     var collectionViewDelegate: CardDetailCollectionViewDelegate?
     var collectionViewDataSource: CardDetailCollectionViewDataSource?
+    weak var coordinator: CardDetailCoordinatorProtocol?
     
     var viewModel: CardDetailViewModel
     

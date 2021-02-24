@@ -21,7 +21,8 @@ final class CardListViewModelRemote: CardListViewModel {
     }
     
     func fetchCards(setCode: String, completion: @escaping (Error?) -> Void) {
-        networkManager.getRequest(cardsService: .cardsList(setCode: setCode), decodableType: CardList.self) { [weak self] (result) in
+        networkManager.getRequest(cardsService: .cardsList(setCode: setCode),
+                                  decodableType: CardList.self) { [weak self] (result) in
             switch result {
             case .success(let list):
                 self?.separateCardsWithType(list: list)

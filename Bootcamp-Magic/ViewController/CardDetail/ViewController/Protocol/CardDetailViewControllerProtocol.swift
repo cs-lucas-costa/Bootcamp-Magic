@@ -16,6 +16,7 @@ protocol CardDetailViewControllerProtocol: UIViewController,
     var collectionViewDataSource: CardDetailCollectionViewDataSource? { get set }
     var viewModel: CardDetailViewModel { get }
     var delegate: CardDetailToggleButtonDelegate? { get set }
+    var coordinator: CardDetailCoordinatorProtocol? { get }
 
     func setup()
     func setupDelegates()
@@ -86,6 +87,6 @@ extension CardDetailViewControllerProtocol {
 // MARK: CardDetailViewControllerProtocol
 extension CardDetailViewControllerProtocol {
     func dismiss() {
-       dismiss(animated: true, completion: nil)
+        coordinator?.dismiss()
     }
 }

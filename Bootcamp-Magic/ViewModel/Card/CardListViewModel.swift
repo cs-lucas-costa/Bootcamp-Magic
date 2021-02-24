@@ -16,6 +16,9 @@ protocol CardListViewModel: AnyObject {
 
 extension CardListViewModel {
     func separateCardsWithType(list: CardList) {
+        
+        dictCards = []
+        
         list.cards
             .sorted(by: { $0.type < $1.type })
             .forEach { [weak self] (card) in

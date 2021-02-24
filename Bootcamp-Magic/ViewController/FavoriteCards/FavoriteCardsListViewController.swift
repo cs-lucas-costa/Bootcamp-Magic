@@ -18,6 +18,7 @@ final class FavoriteCardsListViewController: UIViewController, CardsListViewCont
     var cardListDelegate: CardsListDelegate?
     var searchViewDelegate: CardsListSearchViewDelegate?
     weak var coordinator: CardsListCoordinatorProtocol?
+    let setCode: String = ""
     
     init(numberOfCardsPerRow: Int,
          viewModel: CardListViewModel) {
@@ -45,28 +46,13 @@ final class FavoriteCardsListViewController: UIViewController, CardsListViewCont
         super.viewDidLoad()
         setupNavigationTitle()
         setupDelegates()
-        
-        viewModel.fetchCards(setCode: "") { [weak self] (error) in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                if let error = error {
-                    print("Error to fetch cards - \(error)")
-                } else {
-                    self.setupDataSources()
-                    self.setupClosures()
-                    self.cardsListView.collectionView.reloadData()
-                }
-                
-                self.cardsListView.isLoading = false
-            }
-        }
     }
     
     // MARK: - ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        fetchCards()
     }
     
     // MARK: - Methods
