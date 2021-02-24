@@ -29,6 +29,12 @@ struct Constants {
   }
   
   struct String {
+    
+    struct TabBar {
+      static let expasions = "Expansions"
+      static let favorites = "Favorites"
+    }
+    
     struct Expansion {
       static let navigationTitle = "Expansion"
     }
