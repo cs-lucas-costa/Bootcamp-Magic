@@ -13,9 +13,8 @@ enum TabItem: CaseIterable {
 
   var title: String {
     switch self {
-    #warning("Remover string fixas")
-    case .expansion: return "Expansions"
-    case .favorites: return "Favorites"
+    case .expansion: return Constants.String.TabBar.expasions
+    case .favorites: return Constants.String.TabBar.favorites
     }
   }
 }

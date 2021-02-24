@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Constants {
+enum Constants {
   struct Images {
     static let rightChevron = UIImage(named: "right-chevron")
     static let backgroundImage = UIImage(named: "background-image")
@@ -22,6 +22,7 @@ struct Constants {
   }
   
   struct Margin {
+    
     struct Expasion {
       static let horizontalMargin = CGFloat(16)
       static let verticalMargin = CGFloat(5)
@@ -29,6 +30,12 @@ struct Constants {
   }
   
   struct String {
+    
+    struct TabBar {
+      static let expasions = "Expansions"
+      static let favorites = "Favorites"
+    }
+    
     struct Expansion {
       static let navigationTitle = "Expansion"
     }

@@ -12,8 +12,6 @@ final class NavigationMenuTabBarController: UITabBarController {
 
   // MARK: - Properties
   let customTabBar: TabNavigationMenu
-  #warning("Remover número mágico")
-  let customTabBarHeight = CGFloat(70)
 
   // MARK: - Init
   init(frame: CGRect, controllers: [UIViewController]) {
@@ -65,7 +63,7 @@ extension NavigationMenuTabBarController: ViewCodable {
   func setupConstraints() {
     customTabBar.snp.makeConstraints { make in
       make.left.bottom.right.equalTo(view.safeAreaLayoutGuide)
-      make.height.equalTo(customTabBarHeight)
+      make.height.equalTo(tabBar.frame.size.height)
     }
   }
 

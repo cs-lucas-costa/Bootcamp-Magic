@@ -12,7 +12,6 @@ final class ExpansionCoordinator: Coordinatable {
     // MARK: - State
     enum State {
         case expansion
-        case favourites
         case all(expansion: ExpansionViewModel)
     }
     
@@ -45,15 +44,9 @@ extension ExpansionCoordinator {
             return expansionViewController
         case .all(let expansion):
             let viewController = AllCardsListViewController(numberOfCardsPerRow: 3,
-                                                            viewModel: CardListViewModel(
-                                                                networkManager: networkManager),
+                                                            viewModel: CardListViewModelRemote(
+                                                              networkManager: networkManager),
                                                             with: expansion)
-            viewController.coordinator = self
-            return viewController
-        case .favourites:
-            let viewController = FavouritesCardsListViewController(numberOfCardsPerRow: 3,
-                                                                   viewModel: CardListViewModel(
-                                                                    networkManager: networkManager))
             viewController.coordinator = self
             return viewController
         }
