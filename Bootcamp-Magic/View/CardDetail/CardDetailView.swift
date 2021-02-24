@@ -15,6 +15,9 @@ protocol CardDetailViewDelegate: AnyObject {
 
 final class CardDetailView: UIView {
     
+    //MARK: Constants
+    private static let closeButtonEdges = UIEdgeInsets(top: 30, left: 20, bottom: 0, right: 0)
+    
     @AutoLayout var expansionNameLabel: UILabel
     @AutoLayout private var backgroundImageView: UIImageView
     weak var delegate: CardDetailViewDelegate?
@@ -79,10 +82,9 @@ extension CardDetailView: ViewCodable {
             maker.edges.equalToSuperview()
         }
         
-        #warning("remover valores mágicos")
         closeButton.snp.makeConstraints { (maker) in
-            maker.left.equalToSuperview().inset(20)
-            maker.top.equalTo(safeAreaLayoutGuide).inset(30)
+            maker.top.equalTo(safeAreaLayoutGuide).offset(CardDetailView.closeButtonEdges.top)
+            maker.left.equalToSuperview().offset(CardDetailView.closeButtonEdges.left)
         }
         
         expansionNameLabel.snp.makeConstraints { maker in
