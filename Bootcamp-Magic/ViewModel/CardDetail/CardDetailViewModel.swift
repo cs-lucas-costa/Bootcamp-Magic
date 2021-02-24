@@ -13,7 +13,7 @@ final class CardDetailViewModel {
     weak var delegate: CardDetailViewModelDelegate?
 
     private var expansionCards: [CardViewModel]
-
+        
     private var expansionName: String = "" {
         didSet {
             delegate?.updateUI()
@@ -23,6 +23,7 @@ final class CardDetailViewModel {
     private(set) var actualIndex: Int = 0 {
         didSet {
             expansionName = expansionCards[actualIndex].name
+            delegate?.updateUI()
         }
     }
 
@@ -50,9 +51,14 @@ final class CardDetailViewModel {
         actualIndex
     }
     
-    #warning("Implementar o método")
+    func sendActualCard() -> CardViewModel {
+        return expansionCards[actualIndex]
+    }
+    
     @objc func setToFavorite() {
-        print("Favoritou")
+        let cardViewModel = expansionCards[actualIndex]
+        
+        cardViewModel.update()
     }
     
 }

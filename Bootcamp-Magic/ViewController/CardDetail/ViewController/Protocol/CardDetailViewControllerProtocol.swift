@@ -15,7 +15,8 @@ protocol CardDetailViewControllerProtocol: UIViewController,
     var collectionViewDelegate: CardDetailCollectionViewDelegate? { get set }
     var collectionViewDataSource: CardDetailCollectionViewDataSource? { get set }
     var viewModel: CardDetailViewModel { get }
-    
+    var delegate: CardDetailToggleButtonDelegate? { get set }
+
     func setup()
     func setupDelegates()
     func setupDataSources()
@@ -36,6 +37,7 @@ extension CardDetailViewControllerProtocol {
         
         collectionViewDelegate?.delegate = self
         viewModel.delegate = self
+        delegate = cardDetailView.favoriteButton
         
     }
     
@@ -59,7 +61,10 @@ extension CardDetailViewControllerProtocol {
 
     func updateUI() {
         DispatchQueue.main.async { [weak self] in
-            self?.cardDetailView.expansionNameLabel.text = self?.viewModel.sendExpansionName()
+            guard let self = self else { return }
+            self.cardDetailView.expansionNameLabel.text = self.viewModel.sendExpansionName()
+            let actualCard = self.viewModel.sendActualCard()
+            self.delegate?.didChangeCard(isFavorite: actualCard.isFavorite)
         }
     }
 }

@@ -20,11 +20,13 @@ final class ExpansionCoordinator: Coordinatable {
     var navigationController: UINavigationController
     var state = State.expansion
     private let networkManager: NetworkManager
+    private let databaseManager: DatabaseProtocol
     
     init(navigationController: UINavigationController = UINavigationController(),
-         networkManager: NetworkManager) {
+         networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
         self.navigationController = navigationController
         self.networkManager = networkManager
+        self.databaseManager = dataBaseManager
     }
     
     func start() {
@@ -45,7 +47,7 @@ extension ExpansionCoordinator {
         case .all(let expansion):
             let viewController = AllCardsListViewController(numberOfCardsPerRow: 3,
                                                             viewModel: CardListViewModelRemote(
-                                                              networkManager: networkManager),
+                                                              networkManager: networkManager, dataBaseManager: databaseManager),
                                                             with: expansion)
             viewController.coordinator = self
             return viewController

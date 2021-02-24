@@ -11,11 +11,13 @@ final class CardListViewModelRemote: CardListViewModel {
     
     // MARK: - Properties
     let networkManager: NetworkManager
+    var dataBaseManager: DatabaseProtocol
     var dictCards: [Dict<String, [CardViewModel]>] = []
     
     // MARK: - Init
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
         self.networkManager = networkManager
+        self.dataBaseManager = dataBaseManager
     }
     
     func fetchCards(setCode: String, completion: @escaping (Error?) -> Void) {

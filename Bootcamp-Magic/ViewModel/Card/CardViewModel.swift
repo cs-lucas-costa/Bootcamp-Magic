@@ -11,10 +11,12 @@ final class CardViewModel {
 
     private let card: Card
     private let networkManager: NetworkManager
+    private var dataBaseManager: DatabaseProtocol
     
-    init(card: Card, networkManager: NetworkManager) {
+    init(card: Card, networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
         self.card = card
         self.networkManager = networkManager
+        self.dataBaseManager = dataBaseManager
     }
 
     var name: String {
@@ -28,6 +30,8 @@ final class CardViewModel {
     var imageUrl: String? {
         card.imageUrl
     }
+    
+    var isFavorite: Bool = false
     
     private var cardImage: UIImage?
     
@@ -51,6 +55,34 @@ final class CardViewModel {
             case .failure:
                 completion(nil)
             }
+        }
+    }
+    
+    func update() {
+        if isFavorite {
+            deleteFromDataBase()
+        } else {
+            saveOnDataBase()
+        }
+    }
+    
+    private func saveOnDataBase() {
+        dataBaseManager.create(element: card) { [weak self] result in
+            switch result {
+            case .success:
+                self?.isFavorite = true
+            case .failure:
+                self?.isFavorite = false
+            }
+        }
+    }
+    
+    private func deleteFromDataBase() {
+        dataBaseManager.delete(element: card) { [weak self] error in
+            guard error == nil else {
+                return
+            }
+            self?.isFavorite = false
         }
     }
  

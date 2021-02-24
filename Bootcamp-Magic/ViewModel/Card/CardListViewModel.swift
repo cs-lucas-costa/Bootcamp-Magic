@@ -10,6 +10,7 @@ import Foundation
 protocol CardListViewModel: AnyObject {
     var dictCards: [Dict<String, [CardViewModel]>] { get set }
     var networkManager: NetworkManager { get }
+    var dataBaseManager: DatabaseProtocol { get }
     func fetchCards(setCode: String, completion: @escaping (Error?) -> Void)
 }
 
@@ -21,7 +22,7 @@ extension CardListViewModel {
 
                 guard let self = self, card.imageUrl != nil else { return }
                 let key = card.type
-                let viewModel = CardViewModel(card: card, networkManager: self.networkManager)
+                let viewModel = CardViewModel(card: card, networkManager: self.networkManager, dataBaseManager: dataBaseManager)
                 
                 if let dict = self.dictCards.first(where: { $0.key == key }) {
                     dict.value.append(viewModel)
