@@ -22,6 +22,7 @@ final class MainCoordinator: Coordinatable {
 
   func start() {
     expansionCoordinator.start()
+    favoriteCardsCoordinator.start()
 
     currentViewController = NavigationMenuTabBarController(frame: UIScreen.main.bounds, controllers: [expansionCoordinator.navigationController, favoriteCardsCoordinator.navigationController])
   }

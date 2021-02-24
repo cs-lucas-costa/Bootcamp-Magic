@@ -26,6 +26,8 @@
 		994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */; };
 		994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */; };
 		9966CFC325E6916900616431 /* FavoriteCardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966CFC225E6916900616431 /* FavoriteCardsCoordinator.swift */; };
+		9966CFD825E69A3600616431 /* CardListViewModelRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966CFD725E69A3600616431 /* CardListViewModelRemote.swift */; };
+		9966CFDC25E69B4900616431 /* CardListViewModelLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9966CFDB25E69B4900616431 /* CardListViewModelLocal.swift */; };
 		998BAC7925DEE86100CD7C8F /* ExpansionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BAC7825DEE86100CD7C8F /* ExpansionHeaderView.swift */; };
 		998BAC8125DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BAC8025DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift */; };
 		998BAC8525DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BAC8425DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift */; };
@@ -154,6 +156,8 @@
 		994ECC1625DD58F800F0257F /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
 		994ECC1C25DD89E300F0257F /* ExpansionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionCoordinator.swift; sourceTree = "<group>"; };
 		9966CFC225E6916900616431 /* FavoriteCardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCardsCoordinator.swift; sourceTree = "<group>"; };
+		9966CFD725E69A3600616431 /* CardListViewModelRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelRemote.swift; sourceTree = "<group>"; };
+		9966CFDB25E69B4900616431 /* CardListViewModelLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelLocal.swift; sourceTree = "<group>"; };
 		998BAC7825DEE86100CD7C8F /* ExpansionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionHeaderView.swift; sourceTree = "<group>"; };
 		998BAC8025DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionTableViewCellTestCase.swift; sourceTree = "<group>"; };
 		998BAC8425DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerScreenTestCase.swift; sourceTree = "<group>"; };
@@ -818,6 +822,8 @@
 			children = (
 				E679579725DBE97900EAC7E8 /* CardViewModel.swift */,
 				E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */,
+				9966CFD725E69A3600616431 /* CardListViewModelRemote.swift */,
+				9966CFDB25E69B4900616431 /* CardListViewModelLocal.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -1160,6 +1166,7 @@
 				E65AE32225E684BE003F938E /* CoreDataProtocol.swift in Sources */,
 				E60CD16225DE922B00D941B6 /* CardsListDelegate.swift in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
+				9966CFDC25E69B4900616431 /* CardListViewModelLocal.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
 				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
@@ -1201,6 +1208,7 @@
 				BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */,
 				994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */,
 				E65AE35725E68CDA003F938E /* CoreDataDB.swift in Sources */,
+				9966CFD825E69A3600616431 /* CardListViewModelRemote.swift in Sources */,
 				BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */,
 				994ECC0A25DD50C000F0257F /* ExpansionHeaderView.swift in Sources */,
 				994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */,

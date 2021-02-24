@@ -32,16 +32,44 @@ final class FavoriteCardsListViewController: UIViewController, CardsListViewCont
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+  
+  // MARK: - LoadView
     override func loadView() {
-        super.loadView()
-        view = cardsListView
-      view.backgroundColor = .red
+      super.loadView()
+      view = cardsListView
+      view.backgroundColor = .green
     }
     
+  // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      cardsListView.title = Constants.String.TabBar.favorites
+      setupNavigationTitle()
+      
+      viewModel.fetchCards(setCode: "") { [weak self] (error) in
+          guard let self = self else { return }
+          
+          DispatchQueue.main.async {
+              if let error = error {
+                  print("Error to fetch cards - \(error)")
+              } else {
+                  self.setupDataSources()
+                  self.setupClosures()
+                  self.cardsListView.collectionView.reloadData()
+              }
+              
+              self.cardsListView.isLoading = false
+          }
+      }
     }
+  
+  // MARK: - ViewWillAppear
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.isHidden = true
+  }
+  
+  // MARK: - Methods
+  func setupNavigationTitle() {
+    cardsListView.title = Constants.String.TabBar.favorites
+  }
 }
