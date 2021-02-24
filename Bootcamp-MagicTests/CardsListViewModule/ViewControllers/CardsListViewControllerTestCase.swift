@@ -20,7 +20,8 @@ class CardsListViewControllerTestCase: XCTestCase {
         let bundle = Bundle(for: type(of: self))
         let service = NetworkServiceStub(bundle: bundle)
         service.json = bundle.url(forResource: "cards", withExtension: "json")
-        viewModel = CardListViewModelRemote(networkManager: NetworkManager(service: service))
+        viewModel = CardListViewModelRemote(networkManager: NetworkManager(service: service),
+                                            dataBaseManager: CoreDataDB(container: CoreDataContainerFake()))
         sut = AllCardsListViewController(numberOfCardsPerRow: 3,
                                       viewModel: viewModel,
                                       with: ExpansionViewModel(expansion: .fixture()))
