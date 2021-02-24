@@ -55,6 +55,9 @@
 		BD9CDDA825DED3920010AE2C /* CardDetailViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDDA725DED3920010AE2C /* CardDetailViewModelTestCase.swift */; };
 		BD9CDDB325DED6EF0010AE2C /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDDB225DED6EF0010AE2C /* ServiceProtocol.swift */; };
 		BD9CDDBA25DED8480010AE2C /* FakeCardsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9CDDB925DED8480010AE2C /* FakeCardsArray.swift */; };
+		BDA2F84825E685E300A2E2B7 /* CardDetailToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA2F84725E685E300A2E2B7 /* CardDetailToggleButton.swift */; };
+		BDA2F85325E68A6000A2E2B7 /* CardDetailToggleButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA2F85225E68A6000A2E2B7 /* CardDetailToggleButtonDelegate.swift */; };
+		BDA2F85725E69D1400A2E2B7 /* CardDetailToggleButtonTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA2F85625E69D1400A2E2B7 /* CardDetailToggleButtonTestCase.swift */; };
 		BDD6541B25E53D44004C9F88 /* CardDetailTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6541A25E53D44004C9F88 /* CardDetailTestCase.swift */; };
 		BDD6542125E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6542025E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift */; };
 		BDD6542E25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6542D25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift */; };
@@ -184,6 +187,9 @@
 		BD9CDDA725DED3920010AE2C /* CardDetailViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModelTestCase.swift; sourceTree = "<group>"; };
 		BD9CDDB225DED6EF0010AE2C /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		BD9CDDB925DED8480010AE2C /* FakeCardsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCardsArray.swift; sourceTree = "<group>"; };
+		BDA2F84725E685E300A2E2B7 /* CardDetailToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailToggleButton.swift; sourceTree = "<group>"; };
+		BDA2F85225E68A6000A2E2B7 /* CardDetailToggleButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailToggleButtonDelegate.swift; sourceTree = "<group>"; };
+		BDA2F85625E69D1400A2E2B7 /* CardDetailToggleButtonTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailToggleButtonTestCase.swift; sourceTree = "<group>"; };
 		BDD6541A25E53D44004C9F88 /* CardDetailTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTestCase.swift; sourceTree = "<group>"; };
 		BDD6542025E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailDataSource+Fixtures.swift"; sourceTree = "<group>"; };
 		BDD6542D25E56B15004C9F88 /* CardDetailCollectionViewDelegateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCollectionViewDelegateTestCase.swift; sourceTree = "<group>"; };
@@ -565,7 +571,9 @@
 		BD9CDD7725DEA0410010AE2C /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
+				BDA2F84B25E68A2C00A2E2B7 /* Protocol */,
 				BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */,
+				BDA2F84725E685E300A2E2B7 /* CardDetailToggleButton.swift */,
 			);
 			path = CardDetail;
 			sourceTree = "<group>";
@@ -606,10 +614,19 @@
 			path = Fakes;
 			sourceTree = "<group>";
 		};
+		BDA2F84B25E68A2C00A2E2B7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BDA2F85225E68A6000A2E2B7 /* CardDetailToggleButtonDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		BDD6541925E53D24004C9F88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BDD6541A25E53D44004C9F88 /* CardDetailTestCase.swift */,
+				BDA2F85625E69D1400A2E2B7 /* CardDetailToggleButtonTestCase.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1155,6 +1172,7 @@
 				9966CFDC25E69B4900616431 /* CardListViewModelLocal.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
+				BDA2F84825E685E300A2E2B7 /* CardDetailToggleButton.swift in Sources */,
 				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				BD71EDB125E0554200E6FAB9 /* DidDisplayCellDelegate.swift in Sources */,
@@ -1166,6 +1184,7 @@
 				994ECBE725DD369500F0257F /* AppDelegate.swift in Sources */,
 				E60CD18A25DE9B9900D941B6 /* CardsListCoordinator.swift in Sources */,
 				E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */,
+				BDA2F85325E68A6000A2E2B7 /* CardDetailToggleButtonDelegate.swift in Sources */,
 				E691C66E25DEEA96004D41CF /* CardsListViewState.swift in Sources */,
 				994ECBCD25DD367700F0257F /* ExpansionTableViewCell.swift in Sources */,
 				994ECBE225DD369500F0257F /* TabNavigationMenu.swift in Sources */,
@@ -1253,6 +1272,7 @@
 				E65AE36525E699A8003F938E /* CoreDataDBTestCase.swift in Sources */,
 				E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */,
 				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,
+				BDA2F85725E69D1400A2E2B7 /* CardDetailToggleButtonTestCase.swift in Sources */,
 				E6AEA76D25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift in Sources */,
 				BDD6541B25E53D44004C9F88 /* CardDetailTestCase.swift in Sources */,
 				E6537A5E25DAE54000ECD9D9 /* CardListTestCase.swift in Sources */,

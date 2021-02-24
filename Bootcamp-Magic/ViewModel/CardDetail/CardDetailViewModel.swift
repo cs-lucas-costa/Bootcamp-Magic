@@ -50,4 +50,9 @@ final class CardDetailViewModel {
         actualIndex
     }
     
+    #warning("Implementar o método")
+    @objc func setToFavorite() {
+        print("Favoritou")
+    }
+    
 }

@@ -43,10 +43,15 @@ extension CardDetailViewControllerProtocol {
         cardDetailView.expansionNameLabel.text = self.viewModel.sendFirtsExpansionName()
     }
     
+    func setupButton() {
+        cardDetailView.favoriteButton.addTarget(viewModel, action: #selector(viewModel.setToFavorite), for: .touchUpInside)
+    }
+    
     func setup() {
         setupDelegates()
         setupDataSources()
         setupLabels()
+        setupButton()
     }
 }
 
