@@ -46,18 +46,13 @@ final class CardDetailViewModel {
     func sendExpansionName() -> String {
         expansionName
     }
-    
-    func sendExpansionIndex() -> Int {
-        actualIndex
-    }
-    
+        
     func sendActualCard() -> CardViewModel {
         return expansionCards[actualIndex]
     }
     
     @objc func setToFavorite() {
         let cardViewModel = expansionCards[actualIndex]
-        
         cardViewModel.update()
     }
     

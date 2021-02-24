@@ -8,7 +8,7 @@
 import UIKit
 
 final class CardViewModel {
-
+    
     private let card: Card
     private let networkManager: NetworkManager
     private var dataBaseManager: DatabaseProtocol
@@ -18,11 +18,11 @@ final class CardViewModel {
         self.networkManager = networkManager
         self.dataBaseManager = dataBaseManager
     }
-
+    
     var name: String {
         card.name
     }
-
+    
     var type: String {
         card.type
     }
@@ -31,7 +31,7 @@ final class CardViewModel {
         card.imageUrl
     }
     
-    var isFavorite: Bool = false
+    var isFavorite: Bool = true
     
     private var cardImage: UIImage?
     
@@ -65,8 +65,27 @@ final class CardViewModel {
             saveOnDataBase()
         }
     }
+        
+    func verifyIsFavorite() {
+        
+        let predicate = NSPredicate(format: "id = %@", card.identifier)
+        
+        dataBaseManager.fetch(type: Card.self, with: predicate, and: []) { [weak self] result in
+            switch result {
+            case .success(let cards):
+                self?.isFavorite = cards.first != nil
+            case .failure:
+                self?.isFavorite = false
+            }
+        }
+    }
     
-    private func saveOnDataBase() {
+}
+
+// MARK: Private methods
+private extension CardViewModel {
+    
+    func saveOnDataBase() {
         dataBaseManager.create(element: card) { [weak self] result in
             switch result {
             case .success:
@@ -77,7 +96,7 @@ final class CardViewModel {
         }
     }
     
-    private func deleteFromDataBase() {
+    func deleteFromDataBase() {
         dataBaseManager.delete(element: card) { [weak self] error in
             guard error == nil else {
                 return
@@ -85,5 +104,5 @@ final class CardViewModel {
             self?.isFavorite = false
         }
     }
- 
+    
 }
