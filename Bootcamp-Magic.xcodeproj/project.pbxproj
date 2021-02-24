@@ -17,7 +17,6 @@
 		994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */; };
 		994ECBE425DD369500F0257F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBDA25DD369500F0257F /* Assets.xcassets */; };
 		994ECBE525DD369500F0257F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */; };
-		994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */; };
 		994ECBE725DD369500F0257F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBDF25DD369500F0257F /* AppDelegate.swift */; };
 		994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF025DD376100F0257F /* MainCoordinator.swift */; };
 		994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBF725DD376E00F0257F /* ViewCodable.swift */; };
@@ -81,6 +80,15 @@
 		E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A9125DAF14500ECD9D9 /* ExpansionViewModel.swift */; };
 		E6537AA025DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537A9F25DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift */; };
 		E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */; };
+		E65AE32225E684BE003F938E /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE32125E684BE003F938E /* CoreDataProtocol.swift */; };
+		E65AE32825E68502003F938E /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE32725E68502003F938E /* CoreDataContainer.swift */; };
+		E65AE32F25E686AC003F938E /* BootcampMagic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E65AE32D25E686AC003F938E /* BootcampMagic.xcdatamodeld */; };
+		E65AE34025E6888E003F938E /* Storageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE33F25E6888E003F938E /* Storageable.swift */; };
+		E65AE34425E68A1A003F938E /* Card+Storageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE34325E68A1A003F938E /* Card+Storageable.swift */; };
+		E65AE34A25E68B1E003F938E /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE34925E68B1E003F938E /* DatabaseProtocol.swift */; };
+		E65AE35725E68CDA003F938E /* CoreDataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE35625E68CDA003F938E /* CoreDataDB.swift */; };
+		E65AE35F25E698C2003F938E /* CoreDataContainerFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE35E25E698C2003F938E /* CoreDataContainerFake.swift */; };
+		E65AE36525E699A8003F938E /* CoreDataDBTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65AE36425E699A8003F938E /* CoreDataDBTestCase.swift */; };
 		E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579725DBE97900EAC7E8 /* CardViewModel.swift */; };
 		E679579D25DBEA1100EAC7E8 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */; };
 		E67957BD25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */; };
@@ -135,7 +143,6 @@
 		994ECBD825DD369500F0257F /* NavigationMenuTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMenuTabBarController.swift; sourceTree = "<group>"; };
 		994ECBDA25DD369500F0257F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994ECBDC25DD369500F0257F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bootcamp_Magic.xcdatamodel; sourceTree = "<group>"; };
 		994ECBDF25DD369500F0257F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		994ECBE025DD369500F0257F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		994ECBF025DD376100F0257F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -200,6 +207,15 @@
 		E6537A9125DAF14500ECD9D9 /* ExpansionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionViewModel.swift; sourceTree = "<group>"; };
 		E6537A9F25DAF95800ECD9D9 /* ExpansionListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionListViewModelTestCase.swift; sourceTree = "<group>"; };
 		E6537AB325DAF9CA00ECD9D9 /* Expansion+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expansion+Fixture.swift"; sourceTree = "<group>"; };
+		E65AE32125E684BE003F938E /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
+		E65AE32725E68502003F938E /* CoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainer.swift; sourceTree = "<group>"; };
+		E65AE32E25E686AC003F938E /* BootcampMagic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BootcampMagic.xcdatamodel; sourceTree = "<group>"; };
+		E65AE33F25E6888E003F938E /* Storageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storageable.swift; sourceTree = "<group>"; };
+		E65AE34325E68A1A003F938E /* Card+Storageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Storageable.swift"; sourceTree = "<group>"; };
+		E65AE34925E68B1E003F938E /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
+		E65AE35625E68CDA003F938E /* CoreDataDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDB.swift; sourceTree = "<group>"; };
+		E65AE35E25E698C2003F938E /* CoreDataContainerFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContainerFake.swift; sourceTree = "<group>"; };
+		E65AE36425E699A8003F938E /* CoreDataDBTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDBTestCase.swift; sourceTree = "<group>"; };
 		E679579725DBE97900EAC7E8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		E679579C25DBEA1100EAC7E8 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
 		E67957BC25DBF8B600EAC7E8 /* CardListViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTestCase.swift; sourceTree = "<group>"; };
@@ -289,10 +305,10 @@
 			children = (
 				994ECBDA25DD369500F0257F /* Assets.xcassets */,
 				994ECBDB25DD369500F0257F /* LaunchScreen.storyboard */,
-				994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */,
 				E6BC833D25DFEB03002F83F4 /* AppDelegate */,
 				994ECBE025DD369500F0257F /* Info.plist */,
 				E6BC833425DFE97E002F83F4 /* main.swift */,
+				E65AE32D25E686AC003F938E /* BootcampMagic.xcdatamodeld */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -490,6 +506,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				E65AE32025E68496003F938E /* Storage */,
 				BD9CDD7625DE9FEA0010AE2C /* View */,
 				994ECC0D25DD579B00F0257F /* Extensions */,
 				994ECBF625DD376E00F0257F /* Protocols */,
@@ -507,6 +524,7 @@
 		BD80ADC225DAB8990016B1BE /* Bootcamp-MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				E65AE35C25E69816003F938E /* Storage */,
 				BD71ED9D25E0314000E6FAB9 /* CardsDetailViewModule */,
 				998BAC9525DFDC1000CD7C8F /* View */,
 				998BAC8C25DFD96C00CD7C8F /* Extensions */,
@@ -674,6 +692,7 @@
 			children = (
 				E6537A1525DAC14D00ECD9D9 /* Expansion.swift */,
 				E6537A4E25DADD6100ECD9D9 /* Card.swift */,
+				E65AE34325E68A1A003F938E /* Card+Storageable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -743,6 +762,43 @@
 				BDD6542025E53DEA004C9F88 /* CardDetailDataSource+Fixtures.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		E65AE32025E68496003F938E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E65AE34D25E68C84003F938E /* CoreData */,
+				E65AE33F25E6888E003F938E /* Storageable.swift */,
+				E65AE34925E68B1E003F938E /* DatabaseProtocol.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E65AE34D25E68C84003F938E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E65AE32125E684BE003F938E /* CoreDataProtocol.swift */,
+				E65AE32725E68502003F938E /* CoreDataContainer.swift */,
+				E65AE35625E68CDA003F938E /* CoreDataDB.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E65AE35C25E69816003F938E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E65AE35D25E6984D003F938E /* CoreData */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E65AE35D25E6984D003F938E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E65AE35E25E698C2003F938E /* CoreDataContainerFake.swift */,
+				E65AE36425E699A8003F938E /* CoreDataDBTestCase.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		E679579625DBE96B00EAC7E8 /* Card */ = {
@@ -1090,6 +1146,7 @@
 			files = (
 				994ECBBD25DD364F00F0257F /* Constants.swift in Sources */,
 				E6AEA76025DD854800375F4E /* AllCardsListViewController.swift in Sources */,
+				E65AE32225E684BE003F938E /* CoreDataProtocol.swift in Sources */,
 				E60CD16225DE922B00D941B6 /* CardsListDelegate.swift in Sources */,
 				BDEE379325DB0E1C003B2F5A /* CardsService.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
@@ -1098,6 +1155,7 @@
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				BD71EDB125E0554200E6FAB9 /* DidDisplayCellDelegate.swift in Sources */,
 				E691C67B25DEF10D004D41CF /* FavoritesCardsListViewController.swift in Sources */,
+				E65AE34425E68A1A003F938E /* Card+Storageable.swift in Sources */,
 				994ECBCC25DD367700F0257F /* ExpansionViewControllerScreen.swift in Sources */,
 				BD9CDDB325DED6EF0010AE2C /* ServiceProtocol.swift in Sources */,
 				E6BC833925DFE9C8002F83F4 /* AppDelegateFake.swift in Sources */,
@@ -1119,15 +1177,18 @@
 				E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6BC835225E013E9002F83F4 /* UIImageView+DownloadImage.swift in Sources */,
+				E65AE32825E68502003F938E /* CoreDataContainer.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
 				998BACA425DFE36200CD7C8F /* ExpansionViewControllerNavigation.swift in Sources */,
 				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
+				E65AE34A25E68B1E003F938E /* DatabaseProtocol.swift in Sources */,
 				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
 				994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */,
 				E691C66925DEE8DC004D41CF /* CardsListView+Texts.swift in Sources */,
 				BD9CDD6C25DE9D590010AE2C /* ImagesService.swift in Sources */,
 				994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */,
+				E65AE35725E68CDA003F938E /* CoreDataDB.swift in Sources */,
 				BD9CDD7125DE9F950010AE2C /* CardDetailViewModel.swift in Sources */,
 				994ECC0A25DD50C000F0257F /* ExpansionHeaderView.swift in Sources */,
 				994ECC1725DD58F800F0257F /* Sequence+Extensions.swift in Sources */,
@@ -1136,10 +1197,11 @@
 				E6AEA74D25DD645C00375F4E /* CardsListHeaderView.swift in Sources */,
 				BD71EDEA25E4091600E6FAB9 /* CardDetailViewControllerProtocol.swift in Sources */,
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
+				E65AE32F25E686AC003F938E /* BootcampMagic.xcdatamodeld in Sources */,
+				E65AE34025E6888E003F938E /* Storageable.swift in Sources */,
 				E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
-				994ECBE625DD369500F0257F /* Bootcamp_Magic.xcdatamodeld in Sources */,
 				BD9CDD9B25DEB5540010AE2C /* CardDetailViewModelDelegate.swift in Sources */,
 				BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */,
 				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
@@ -1165,6 +1227,7 @@
 				998BAC8525DEEE5300CD7C8F /* ExpansionViewControllerScreenTestCase.swift in Sources */,
 				E6537AB425DAF9CA00ECD9D9 /* Expansion+Fixture.swift in Sources */,
 				998BAC8125DEEC1C00CD7C8F /* ExpansionTableViewCellTestCase.swift in Sources */,
+				E65AE35F25E698C2003F938E /* CoreDataContainerFake.swift in Sources */,
 				BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */,
 				E691C65725DED51E004D41CF /* CardsListSearchViewDelegateSpy.swift in Sources */,
 				BD11DA1625DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift in Sources */,
@@ -1183,6 +1246,7 @@
 				998BAC7925DEE86100CD7C8F /* ExpansionHeaderView.swift in Sources */,
 				BD71EDA325E0314000E6FAB9 /* CardDetailViewControllerTests.swift in Sources */,
 				BD80ADC425DAB8990016B1BE /* (null) in Sources */,
+				E65AE36525E699A8003F938E /* CoreDataDBTestCase.swift in Sources */,
 				E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */,
 				E6537A2525DAC3BF00ECD9D9 /* ExpansionListTestCase.swift in Sources */,
 				E6AEA76D25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift in Sources */,
@@ -1477,13 +1541,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		994ECBDD25DD369500F0257F /* Bootcamp_Magic.xcdatamodeld */ = {
+		E65AE32D25E686AC003F938E /* BootcampMagic.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */,
+				E65AE32E25E686AC003F938E /* BootcampMagic.xcdatamodel */,
 			);
-			currentVersion = 994ECBDE25DD369500F0257F /* Bootcamp_Magic.xcdatamodel */;
-			path = Bootcamp_Magic.xcdatamodeld;
+			currentVersion = E65AE32E25E686AC003F938E /* BootcampMagic.xcdatamodel */;
+			path = BootcampMagic.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
