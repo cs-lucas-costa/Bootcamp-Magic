@@ -32,44 +32,45 @@ final class FavoriteCardsListViewController: UIViewController, CardsListViewCont
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-  
-  // MARK: - LoadView
+    
+    // MARK: - LoadView
     override func loadView() {
-      super.loadView()
-      view = cardsListView
-      view.backgroundColor = .green
+        super.loadView()
+        view = cardsListView
+        view.backgroundColor = .green
     }
     
-  // MARK: - ViewDidLoad
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-      setupNavigationTitle()
-      
-      viewModel.fetchCards(setCode: "") { [weak self] (error) in
-          guard let self = self else { return }
-          
-          DispatchQueue.main.async {
-              if let error = error {
-                  print("Error to fetch cards - \(error)")
-              } else {
-                  self.setupDataSources()
-                  self.setupClosures()
-                  self.cardsListView.collectionView.reloadData()
-              }
-              
-              self.cardsListView.isLoading = false
-          }
-      }
+        setupNavigationTitle()
+        setupDelegates()
+        
+        viewModel.fetchCards(setCode: "") { [weak self] (error) in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error to fetch cards - \(error)")
+                } else {
+                    self.setupDataSources()
+                    self.setupClosures()
+                    self.cardsListView.collectionView.reloadData()
+                }
+                
+                self.cardsListView.isLoading = false
+            }
+        }
     }
-  
-  // MARK: - ViewWillAppear
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navigationController?.navigationBar.isHidden = true
-  }
-  
-  // MARK: - Methods
-  func setupNavigationTitle() {
-    cardsListView.title = Constants.String.TabBar.favorites
-  }
+    
+    // MARK: - ViewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    // MARK: - Methods
+    func setupNavigationTitle() {
+        cardsListView.title = Constants.String.TabBar.favorites
+    }
 }

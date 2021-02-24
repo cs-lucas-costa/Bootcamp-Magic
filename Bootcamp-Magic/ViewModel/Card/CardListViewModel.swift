@@ -7,7 +7,28 @@
 
 import Foundation
 
-protocol CardListViewModel {
-  var dictCards: [Dict<String, [CardViewModel]>] { get }
-  func fetchCards(setCode: String, completion: @escaping (Error?) -> Void)
+protocol CardListViewModel: AnyObject {
+    var dictCards: [Dict<String, [CardViewModel]>] { get set }
+    var networkManager: NetworkManager { get }
+    func fetchCards(setCode: String, completion: @escaping (Error?) -> Void)
+}
+
+extension CardListViewModel {
+    func separateCardsWithType(list: CardList) {
+        list.cards
+            .sorted(by: { $0.type < $1.type })
+            .forEach { [weak self] (card) in
+
+                guard let self = self, card.imageUrl != nil else { return }
+                let key = card.type
+                let viewModel = CardViewModel(card: card, networkManager: self.networkManager)
+                
+                if let dict = self.dictCards.first(where: { $0.key == key }) {
+                    dict.value.append(viewModel)
+                } else {
+                    self.dictCards.append(Dict(key: key, value: [viewModel]))
+                }
+            }
+
+    }
 }

@@ -134,7 +134,9 @@ extension CardsListView: ViewCodable {
     
     func buildViewHierarchy() {
         
-        backButtonSearchViewStackView.addArrangedSubview(backButton)
+        if state != .favourites {
+            backButtonSearchViewStackView.addArrangedSubview(backButton)
+        }
         backButtonSearchViewStackView.addArrangedSubview(searchView)
     
         addSubview(backgroundView)

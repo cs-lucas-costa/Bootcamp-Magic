@@ -1201,7 +1201,6 @@
 				998BACA425DFE36200CD7C8F /* ExpansionViewControllerNavigation.swift in Sources */,
 				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
 				E65AE34A25E68B1E003F938E /* DatabaseProtocol.swift in Sources */,
-				9966CFBD25E68EF100616431 /* FavoritesViewController.swift in Sources */,
 				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
 				994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */,
 				E691C66925DEE8DC004D41CF /* CardsListView+Texts.swift in Sources */,
