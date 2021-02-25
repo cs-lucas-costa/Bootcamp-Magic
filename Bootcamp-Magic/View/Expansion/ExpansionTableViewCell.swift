@@ -86,5 +86,7 @@ extension ExpansionTableViewCell: ViewCodable {
     rightChevronImage.contentMode = .scaleAspectFit
 
     backgroundColor = .clear
+    
+    selectionStyle = .none
   }
 }

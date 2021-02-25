@@ -40,7 +40,6 @@
 		9992F28A25DC5D620079AD1D /* sets-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9992F28825DC5D620079AD1D /* sets-response.json */; };
 		BD11DA1625DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11DA1525DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift */; };
 		BD11DA2625DF00AB00EF1300 /* Image.ashx.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BD11DA2525DF00AB00EF1300 /* Image.ashx.jpeg */; };
-		BD11DA4E25DFF32100EF1300 /* AutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */; };
 		BD71EDA325E0314000E6FAB9 /* CardDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */; };
 		BD71EDB125E0554200E6FAB9 /* DidDisplayCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDB025E0554200E6FAB9 /* DidDisplayCellDelegate.swift */; };
 		BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */; };
@@ -68,7 +67,6 @@
 		BDEE37B525DBEE3F003B2F5A /* NetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */; };
 		BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */; };
 		BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */; };
-		BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE383625DC3833003B2F5A /* AutoLayout.swift */; };
 		E60CD15925DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60CD15825DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift */; };
 		E60CD16225DE922B00D941B6 /* CardsListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60CD16125DE922B00D941B6 /* CardsListDelegate.swift */; };
 		E60CD18325DE9B3500D941B6 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = E60CD18225DE9B3500D941B6 /* SnapshotTesting */; };
@@ -169,7 +167,6 @@
 		9992F28825DC5D620079AD1D /* sets-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sets-response.json"; sourceTree = "<group>"; };
 		BD11DA1525DEF8E100EF1300 /* NetworkManagerRetrievingImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerRetrievingImageTests.swift; sourceTree = "<group>"; };
 		BD11DA2525DF00AB00EF1300 /* Image.ashx.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.ashx.jpeg; sourceTree = "<group>"; };
-		BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTests.swift; sourceTree = "<group>"; };
 		BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		BD71EDB025E0554200E6FAB9 /* DidDisplayCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidDisplayCellDelegate.swift; sourceTree = "<group>"; };
 		BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
@@ -199,7 +196,6 @@
 		BDEE37B425DBEE3F003B2F5A /* NetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceStub.swift; sourceTree = "<group>"; };
 		BDEE37B925DBEF1A003B2F5A /* ServiceFakeDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFakeDataTask.swift; sourceTree = "<group>"; };
 		BDEE37C425DBF974003B2F5A /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
-		BDEE383625DC3833003B2F5A /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		E60CD15825DE8FAB00D941B6 /* CardsListDataSource+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsListDataSource+Fixture.swift"; sourceTree = "<group>"; };
 		E60CD16125DE922B00D941B6 /* CardsListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListDelegate.swift; sourceTree = "<group>"; };
 		E60CD18925DE9B9900D941B6 /* CardsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListCoordinator.swift; sourceTree = "<group>"; };
@@ -465,14 +461,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		BD11DA4C25DFF21A00EF1300 /* AutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				BD11DA4D25DFF32100EF1300 /* AutoLayoutTests.swift */,
-			);
-			path = AutoLayout;
-			sourceTree = "<group>";
-		};
 		BD71ED9D25E0314000E6FAB9 /* CardsDetailViewModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,7 +532,6 @@
 				998BAC9525DFDC1000CD7C8F /* View */,
 				998BAC8C25DFD96C00CD7C8F /* Extensions */,
 				998BAC7425DEE71C00CD7C8F /* ViewController */,
-				BD11DA4C25DFF21A00EF1300 /* AutoLayout */,
 				E6AEA72725DD5B3E00375F4E /* CardsListViewModule */,
 				BDEE379125DB0C6D003B2F5A /* Network */,
 				E6537A9D25DAF93B00ECD9D9 /* ViewModel */,
@@ -842,7 +829,6 @@
 				E691C62025DEA7AA004D41CF /* Fonts */,
 				994ECBBC25DD364F00F0257F /* Constants.swift */,
 				E67957C525DC064600EAC7E8 /* Dict.swift */,
-				BDEE383625DC3833003B2F5A /* AutoLayout.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1199,7 +1185,6 @@
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
 				998BACA425DFE36200CD7C8F /* ExpansionViewControllerNavigation.swift in Sources */,
-				BDEE383725DC3833003B2F5A /* AutoLayout.swift in Sources */,
 				E65AE34A25E68B1E003F938E /* DatabaseProtocol.swift in Sources */,
 				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
 				994ECC1D25DD89E300F0257F /* ExpansionCoordinator.swift in Sources */,
@@ -1254,7 +1239,6 @@
 				E691C64225DECDF8004D41CF /* CardsListViewControllerTestCase.swift in Sources */,
 				E6BC834225DFED09002F83F4 /* CardsListViewStateTestCase.swift in Sources */,
 				BDEE37BA25DBEF1A003B2F5A /* ServiceFakeDataTask.swift in Sources */,
-				BD11DA4E25DFF32100EF1300 /* AutoLayoutTests.swift in Sources */,
 				E6AEA78525DDB38500375F4E /* CardsListViewTestCase.swift in Sources */,
 				E6AEA77825DD9C8700375F4E /* Card+Extension.swift in Sources */,
 				BDEE37C525DBF974003B2F5A /* NetworkManagerTests.swift in Sources */,
