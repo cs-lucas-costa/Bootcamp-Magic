@@ -16,11 +16,12 @@ protocol CardDetailCoordinatorProtocol: AnyObject {
 }
 
 class CardDetailCoordinator: Coordinatable {
-    
+        
     var currentViewController: UIViewController?
     var navigationController: UINavigationController
     private let viewModel: CardDetailViewModel
     weak var delegate: CardDetailCoordinatorDelegate?
+    var childCoordinators: [Coordinatable] = []
     
     init(navigationController: UINavigationController,
          viewModel: CardDetailViewModel) {

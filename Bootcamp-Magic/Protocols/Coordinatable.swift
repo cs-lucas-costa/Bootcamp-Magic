@@ -10,5 +10,18 @@ import UIKit
 protocol Coordinatable: AnyObject {
     var currentViewController: UIViewController? { get set }
     var navigationController: UINavigationController { get set }
+    var childCoordinators: [Coordinatable] { get set }
+    
     func start()
+    func removeChild()
+}
+
+extension Coordinatable {
+        
+    func removeChild() {
+        if !childCoordinators.isEmpty {
+            childCoordinators.removeLast()
+        }
+    }
+    
 }

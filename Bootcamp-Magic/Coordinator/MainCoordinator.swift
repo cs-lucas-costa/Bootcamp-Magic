@@ -16,6 +16,7 @@ final class MainCoordinator: Coordinatable {
     lazy var favoriteCardsCoordinator = FavoriteCardsCoordinator(networkManager: networkManager, dataBaseManager: dataBaseManager)
     var currentViewController: UIViewController?
     var navigationController: UINavigationController
+    var childCoordinators: [Coordinatable] = []
     
     init(navigationController: UINavigationController = UINavigationController()) {
         self.navigationController = navigationController
