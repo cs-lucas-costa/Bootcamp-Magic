@@ -21,8 +21,7 @@ final class ExpansionCoordinator: Coordinatable {
     var state = State.expansion
     private let networkManager: NetworkManager
     private let databaseManager: DatabaseProtocol
-    private var childCoordinators: [Coordinatable] = []
-
+    var childCoordinators: [Coordinatable] = []
 
     init(navigationController: UINavigationController = UINavigationController(),
          networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
@@ -88,12 +87,7 @@ extension ExpansionCoordinator: CardsListCoordinatorProtocol {
 }
 
 extension ExpansionCoordinator: CardDetailCoordinatorDelegate {
-    
     func didDismiss() {
-        guard let viewController = currentViewController as? AllCardsListViewController else {
-            return
-        }
-        viewController.fetchCards()
+        removeChild()
     }
-    
 }

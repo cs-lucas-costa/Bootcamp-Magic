@@ -14,7 +14,7 @@ final class FavoriteCardsCoordinator: Coordinatable {
     private let dataBaseManager: DatabaseProtocol
     var currentViewController: UIViewController?
     var navigationController: UINavigationController
-    private var childCoordinators: [Coordinatable] = []
+    var childCoordinators: [Coordinatable] = []
     
     // MARK: - Inits
     init(navigationController: UINavigationController = UINavigationController(), networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
@@ -50,9 +50,6 @@ extension FavoriteCardsCoordinator: CardsListCoordinatorProtocol {
 extension FavoriteCardsCoordinator: CardDetailCoordinatorDelegate {
     
     func didDismiss() {
-        guard let viewController = currentViewController as? FavoriteCardsListViewController else {
-            return
-        }
-        viewController.fetchCards()
+        removeChild()
     }
 }

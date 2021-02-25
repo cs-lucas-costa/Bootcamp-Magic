@@ -30,6 +30,8 @@ extension CardsListViewControllerProtocol {
     
     func fetchCards() {
         
+        cardsListView.isLoading = true
+        
         viewModel.fetchCards(setCode: setCode) { [weak self] (error) in
             guard let self = self else { return }
             
