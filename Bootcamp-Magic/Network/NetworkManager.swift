@@ -99,12 +99,11 @@ final class NetworkManager {
             return
         }
       
-      // Check if image is in cache
-      if let image = cache[url] {
-        print("IMAGE IS CACHED")
-        completion(.success(image))
-        return
-      }
+        // Check if image is already cached
+        if let image = cache[url] {
+          completion(.success(image))
+          return
+        }
         
         let request = createRequest(url: url, method: .get)
         
@@ -132,9 +131,8 @@ final class NetworkManager {
                     return
                 }
               
-              // Cache image
-              self?.cache[url] = image
-              print("IMAGE GOT CACHED")
+                // Cache image
+                self?.cache[url] = image
                 completion(.success(image))
             }
         }.resume()
