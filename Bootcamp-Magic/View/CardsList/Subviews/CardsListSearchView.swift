@@ -26,9 +26,11 @@ final class CardsListSearchView: UIView {
         textField.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                              attributes: [.foregroundColor: UIColor.white,
                                                                           .font: Fonts.robotoBold(size: 14).font])
+        textField.autocapitalizationType = .none
         textField.addTarget(self, action: #selector(searchCards(_:)), for: .editingChanged)
         textField.font = Fonts.robotoBold(size: 14).font
         textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        textField.delegate = self
         return textField
     }()
         
@@ -83,6 +85,11 @@ final class CardsListSearchView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        cancelButton.removeTarget(self, action: nil, for: .touchUpInside)
+        textField.removeTarget(self, action: nil, for: .editingChanged)
+    }
+    
 }
 
 // MARK: ViewCodable
@@ -115,6 +122,9 @@ private extension CardsListSearchView {
     }
     
     @objc func cancelSearch() {
+        
+        textField.resignFirstResponder()
+        
         if !(textField.text?.isEmpty ?? false) {
             textField.text = ""
             delegate?.didCancelSearch()
