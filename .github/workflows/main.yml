@@ -26,10 +26,12 @@ jobs:
     - name: Build app
       run: |
         set -o pipefail
+        slather setup
         xcodebuild clean build-for-testing \
         -project 'Bootcamp-Magic.xcodeproj' \
         -scheme 'Bootcamp-Magic' \
         -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max' \
+        -derivedDataPath build \
         | xcpretty 
 
     - name: Archive derived data artifacts
@@ -70,7 +72,22 @@ jobs:
         -project "Bootcamp-Magic.xcodeproj" \
         -scheme "Bootcamp-Magic" \
         -destination "platform=iOS Simulator,name=iPhone 11 Pro Max" \
+        -derivedDataPath build \
+        -enableCodeCoverage YES \
         | xcpretty
+    
+    - name: Coverage report
+      run: slather coverage -x --binary-basename 'iOSGitHubActions'
+
+    - name: Coverage report
+      run: slather coverage -x --binary-basename 'iOSGitHubActions'
+      
+    - name: Post coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./Coverage/cobertura.xml
+        fail_ci_if_error: true
 
 
         
