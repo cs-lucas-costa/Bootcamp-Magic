@@ -52,4 +52,8 @@ final class CardDetailViewController: UIViewController, CardDetailViewController
         super.viewDidLoad()
     }
     
+    deinit {
+        removeTarget()
+    }
+    
 }

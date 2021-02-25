@@ -50,6 +50,10 @@ extension CardDetailViewControllerProtocol {
         cardDetailView.favoriteButton.addTarget(viewModel, action: #selector(viewModel.setToFavorite), for: .touchUpInside)
     }
     
+    func removeTarget() {
+        cardDetailView.favoriteButton.removeTarget(viewModel, action: nil, for: .touchUpInside)
+    }
+    
     func setup() {
         setupDelegates()
         setupDataSources()

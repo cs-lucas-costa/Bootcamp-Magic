@@ -36,6 +36,10 @@ final class CardDetailToggleButton: UIButton {
         self.addTarget(self, action: #selector(toggleIsFavorite), for: .touchDown)
     }
     
+    deinit {
+        self.removeTarget(self, action: nil, for: .touchDown)
+    }
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
