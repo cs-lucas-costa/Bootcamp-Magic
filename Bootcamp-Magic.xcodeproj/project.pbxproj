@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9902430925E7CE010063D602 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902430825E7CE010063D602 /* UIImage+Extensions.swift */; };
+		9902430D25E7CF460063D602 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902430C25E7CF460063D602 /* ImageCacheType.swift */; };
+		9902431125E7CF7C0063D602 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902431025E7CF7C0063D602 /* ImageCache.swift */; };
+		9902431F25E81ABB0063D602 /* ImageCacheTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902431E25E81ABB0063D602 /* ImageCacheTestCase.swift */; };
 		994ECBBD25DD364F00F0257F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBBC25DD364F00F0257F /* Constants.swift */; };
 		994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC625DD367700F0257F /* ExpansionViewController.swift */; };
 		994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */; };
@@ -139,6 +143,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9902430825E7CE010063D602 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		9902430C25E7CF460063D602 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
+		9902431025E7CF7C0063D602 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		9902431E25E81ABB0063D602 /* ImageCacheTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTestCase.swift; sourceTree = "<group>"; };
 		994ECBBC25DD364F00F0257F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		994ECBC625DD367700F0257F /* ExpansionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
 		994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
@@ -281,6 +289,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9902430725E7CDE40063D602 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				9902430C25E7CF460063D602 /* ImageCacheType.swift */,
+				9902431025E7CF7C0063D602 /* ImageCache.swift */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
+		9902431D25E81A920063D602 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				9902431E25E81ABB0063D602 /* ImageCacheTestCase.swift */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
 		994ECBC425DD367700F0257F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +381,7 @@
 				E6AEA74825DD635900375F4E /* UIView+Identifiable.swift */,
 				E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */,
 				E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */,
+				9902430825E7CE010063D602 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -647,6 +673,7 @@
 		BDEE378525DB0589003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9902430725E7CDE40063D602 /* ImageCache */,
 				BDEE379225DB0E1C003B2F5A /* CardsService.swift */,
 				BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */,
 				BDEE377325DB052F003B2F5A /* NetworkError.swift */,
@@ -678,6 +705,7 @@
 		BDEE379125DB0C6D003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9902431D25E81A920063D602 /* ImageCache */,
 				9992F28625DC5D410079AD1D /* JSONFiles */,
 				BDEE37AA25DBEDCD003B2F5A /* Fakes */,
 				BDEE37A925DBED9E003B2F5A /* Stubs */,
@@ -1179,6 +1207,7 @@
 				9966CFDC25E69B4900616431 /* CardListViewModelLocal.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
+				9902430D25E7CF460063D602 /* ImageCacheType.swift in Sources */,
 				BDA2F84825E685E300A2E2B7 /* CardDetailToggleButton.swift in Sources */,
 				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
@@ -1204,6 +1233,7 @@
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
 				BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */,
+				9902430925E7CE010063D602 /* UIImage+Extensions.swift in Sources */,
 				E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6BC835225E013E9002F83F4 /* UIImageView+DownloadImage.swift in Sources */,
@@ -1231,6 +1261,7 @@
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				E65AE32F25E686AC003F938E /* BootcampMagic.xcdatamodeld in Sources */,
 				E65AE34025E6888E003F938E /* Storageable.swift in Sources */,
+				9902431125E7CF7C0063D602 /* ImageCache.swift in Sources */,
 				E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
@@ -1284,6 +1315,7 @@
 				E6AEA76D25DD9BAB00375F4E /* CardsListDataSourceTestCase.swift in Sources */,
 				BDD6541B25E53D44004C9F88 /* CardDetailTestCase.swift in Sources */,
 				E6537A5E25DAE54000ECD9D9 /* CardListTestCase.swift in Sources */,
+				9902431F25E81ABB0063D602 /* ImageCacheTestCase.swift in Sources */,
 				E691C64A25DECFBE004D41CF /* CardsListCoordinatorSpy.swift in Sources */,
 				998BAC9E25DFDCFF00CD7C8F /* NavigationMenuTabBarControllerTestCase.swift in Sources */,
 			);
