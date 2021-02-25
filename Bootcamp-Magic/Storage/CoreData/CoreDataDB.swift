@@ -87,7 +87,7 @@ private extension CoreDataDB {
         
         let asyncRequest = NSAsynchronousFetchRequest(fetchRequest: request) { (result) in
             
-            guard let objects = result.finalResult, !objects.isEmpty else {
+            guard let objects = result.finalResult else {
                 completion(.failure(CoreDataDBError.notFoundObjects))
                 return
             }

@@ -45,27 +45,7 @@ class CoreDataDBTestCase: XCTestCase {
         
         wait(for: [exp], timeout: 1)
     }
-    
-    func testNotFoundObjectWhenFetch() {
-        
-        let exp = expectation(description: "Not found object to fetch")
-        var error: Error?
 
-        sut.fetch(type: Card.self) { (result) in
-            switch result {
-            case .failure(let newError):
-                error = newError
-            default:
-                break
-            }
-            
-            exp.fulfill()
-        }
-        
-        wait(for: [exp], timeout: 1)
-        XCTAssertEqual(error as? CoreDataDBError, .notFoundObjects)
-    }
-    
     func testFetchObjects() throws {
         
         let count = 2
