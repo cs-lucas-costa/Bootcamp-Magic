@@ -18,6 +18,7 @@ class TabNavigationMenuTestCase: XCTestCase {
   override func setUp() {
     super.setUp()
     sut = TabNavigationMenu(frame: .init(origin: .zero, size: CGSize(width: 200, height: 49)))
+//    isRecording = true
   }
 
   // MARK: - Teardown
