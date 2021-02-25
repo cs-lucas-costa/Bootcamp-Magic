@@ -12,12 +12,14 @@ final class FakeCardsArray {
     
     var networkManager: NetworkManager!
     var serviceStub: NetworkServiceStub!
+    var databaseManager: DatabaseProtocol!
 
     init() {
         let bundle = Bundle(for: type(of: self))
         self.serviceStub = NetworkServiceStub(bundle: bundle)
         serviceStub.json = bundle.url(forResource: "cards", withExtension: "json")
         self.networkManager = NetworkManager(service: serviceStub)
+        self.databaseManager = CoreDataDB(container: CoreDataContainerFake())
     }
     
     func getCards() -> [CardViewModel] {
@@ -30,7 +32,8 @@ final class FakeCardsArray {
             
             switch result {
             case .success(let cardList):
-                cards = cardList.cards.map { CardViewModel(card: $0, networkManager: self.networkManager) }
+                cards = cardList.cards.map { CardViewModel(card: $0, networkManager: self.networkManager,
+                                                           dataBaseManager: self.databaseManager) }
             case .failure:
                 cards = []
             }

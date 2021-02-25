@@ -17,15 +17,35 @@ protocol CardsListViewControllerProtocol: UIViewController,
     var searchViewDelegate: CardsListSearchViewDelegate? { get set }
     var dataSource: CardsListDataSource? { get set }
     var viewModel: CardListViewModel { get }
+    var setCode: String { get }
     
     func setupDelegates()
     func setupDataSources()
     func setupClosures()
-    
+    func fetchCards()
 }
 
 // MARK: Default implementations
 extension CardsListViewControllerProtocol {
+    
+    func fetchCards() {
+        
+        viewModel.fetchCards(setCode: setCode) { [weak self] (error) in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error to fetch cards - \(error)")
+                } else {
+                    self.setupDataSources()
+                    self.setupClosures()
+                    self.cardsListView.collectionView.reloadData()
+                }
+                
+                self.cardsListView.isLoading = false
+            }
+        }
+    }
     
     func setupDataSources() {
         dataSource = CardsListDataSource(dictCards: viewModel.dictCards)

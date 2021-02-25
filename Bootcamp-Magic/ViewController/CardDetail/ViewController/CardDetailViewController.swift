@@ -10,9 +10,11 @@ import UIKit
 
 final class CardDetailViewController: UIViewController, CardDetailViewControllerProtocol {
     
+    weak var delegate: CardDetailToggleButtonDelegate?
     var cardDetailView: CardDetailView
     var collectionViewDelegate: CardDetailCollectionViewDelegate?
     var collectionViewDataSource: CardDetailCollectionViewDataSource?
+    weak var coordinator: CardDetailCoordinatorProtocol?
     
     var viewModel: CardDetailViewModel
     
@@ -41,12 +43,17 @@ final class CardDetailViewController: UIViewController, CardDetailViewController
             let indexPath = IndexPath(item: self.viewModel.actualIndex, section: 0)
             self.cardDetailView.detailCollectionView.scrollToItem(at: indexPath,
                                                              at: .centeredHorizontally, animated: false)
+            self.viewModel.delegate?.updateUI()
         }
     }
     
     override func viewDidLoad() {
         setup()
         super.viewDidLoad()
+    }
+    
+    deinit {
+        removeTarget()
     }
     
 }

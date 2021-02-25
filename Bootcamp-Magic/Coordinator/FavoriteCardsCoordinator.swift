@@ -14,6 +14,7 @@ final class FavoriteCardsCoordinator: Coordinatable {
     private let dataBaseManager: DatabaseProtocol
     var currentViewController: UIViewController?
     var navigationController: UINavigationController
+    private var childCoordinators: [Coordinatable] = []
     
     // MARK: - Inits
     init(navigationController: UINavigationController = UINavigationController(), networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
@@ -34,18 +35,24 @@ final class FavoriteCardsCoordinator: Coordinatable {
 
 // MARK: - Extension
 extension FavoriteCardsCoordinator: CardsListCoordinatorProtocol {
+    
     func showCardDetail(at index: Int, cards: [CardViewModel]) {
         let viewModel = CardDetailViewModel(expansionCards: cards)
         viewModel.setExpansionIndex(index: index)
         
-        let viewController = CardDetailViewController(viewModel: viewModel)
-        viewController.modalPresentationStyle = .fullScreen
-        currentViewController = viewController
-        
-        navigationController.present(viewController, animated: true, completion: nil)
+        let coordinator = CardDetailCoordinator(navigationController: navigationController, viewModel: viewModel)
+        coordinator.delegate = self
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
+}
+
+extension FavoriteCardsCoordinator: CardDetailCoordinatorDelegate {
     
-    func dismiss() {
-        navigationController.popViewController(animated: true)
+    func didDismiss() {
+        guard let viewController = currentViewController as? FavoriteCardsListViewController else {
+            return
+        }
+        viewController.fetchCards()
     }
 }
