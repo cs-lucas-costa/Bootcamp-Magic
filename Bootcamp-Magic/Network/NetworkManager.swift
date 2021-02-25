@@ -14,7 +14,8 @@ enum HttpMethods: String {
 
 final class NetworkManager {
 
-    private let service: NetworkService
+  private let service: NetworkService
+  private let cache = ImageCache()
 
     init(service: NetworkService = URLSession.shared) {
         self.service = service
@@ -97,10 +98,17 @@ final class NetworkManager {
             completion(.failure(NetworkError.notUrl(networkErrorDescription: "Could not Create URL")))
             return
         }
+      
+      // Check if image is in cache
+      if let image = cache[url] {
+        print("IMAGE IS CACHED")
+        completion(.success(image))
+        return
+      }
         
         let request = createRequest(url: url, method: .get)
         
-        service.dataTask(with: request as URLRequest) { data, response, error in
+        service.dataTask(with: request as URLRequest) { [weak self] data, response, error in
             
             if let serviceError = error {
                 completion(.failure(serviceError))
@@ -123,6 +131,10 @@ final class NetworkManager {
                     completion(.failure(NetworkError.failedToDecode(networkErrorDescription: "Could not transform data to UIImage")))
                     return
                 }
+              
+              // Cache image
+              self?.cache[url] = image
+              print("IMAGE GOT CACHED")
                 completion(.success(image))
             }
         }.resume()

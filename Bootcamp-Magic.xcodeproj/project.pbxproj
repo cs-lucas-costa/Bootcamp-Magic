@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9902430925E7CE010063D602 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902430825E7CE010063D602 /* UIImage+Extensions.swift */; };
+		9902430D25E7CF460063D602 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902430C25E7CF460063D602 /* ImageCacheType.swift */; };
+		9902431125E7CF7C0063D602 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902431025E7CF7C0063D602 /* ImageCache.swift */; };
 		994ECBBD25DD364F00F0257F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBBC25DD364F00F0257F /* Constants.swift */; };
 		994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC625DD367700F0257F /* ExpansionViewController.swift */; };
 		994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */; };
@@ -138,6 +140,8 @@
 
 /* Begin PBXFileReference section */
 		9902430825E7CE010063D602 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		9902430C25E7CF460063D602 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
+		9902431025E7CF7C0063D602 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		994ECBBC25DD364F00F0257F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		994ECBC625DD367700F0257F /* ExpansionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
 		994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
@@ -280,6 +284,8 @@
 		9902430725E7CDE40063D602 /* ImageCache */ = {
 			isa = PBXGroup;
 			children = (
+				9902430C25E7CF460063D602 /* ImageCacheType.swift */,
+				9902431025E7CF7C0063D602 /* ImageCache.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -531,7 +537,6 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
-				9902430725E7CDE40063D602 /* ImageCache */,
 				E65AE32025E68496003F938E /* Storage */,
 				BD9CDD7625DE9FEA0010AE2C /* View */,
 				994ECC0D25DD579B00F0257F /* Extensions */,
@@ -649,6 +654,7 @@
 		BDEE378525DB0589003B2F5A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9902430725E7CDE40063D602 /* ImageCache */,
 				BDEE379225DB0E1C003B2F5A /* CardsService.swift */,
 				BD9CDD6B25DE9D590010AE2C /* ImagesService.swift */,
 				BDEE377325DB052F003B2F5A /* NetworkError.swift */,
@@ -1180,6 +1186,7 @@
 				9966CFDC25E69B4900616431 /* CardListViewModelLocal.swift in Sources */,
 				BDEE377425DB052F003B2F5A /* NetworkError.swift in Sources */,
 				994ECBE325DD369500F0257F /* NavigationMenuTabBarController.swift in Sources */,
+				9902430D25E7CF460063D602 /* ImageCacheType.swift in Sources */,
 				E67957C625DC064600EAC7E8 /* Dict.swift in Sources */,
 				E6537A4F25DADD6100ECD9D9 /* Card.swift in Sources */,
 				BD71EDB125E0554200E6FAB9 /* DidDisplayCellDelegate.swift in Sources */,
@@ -1231,6 +1238,7 @@
 				BDEE376A25DB04EB003B2F5A /* NetworkManager.swift in Sources */,
 				E65AE32F25E686AC003F938E /* BootcampMagic.xcdatamodeld in Sources */,
 				E65AE34025E6888E003F938E /* Storageable.swift in Sources */,
+				9902431125E7CF7C0063D602 /* ImageCache.swift in Sources */,
 				E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */,
 				BDEE376F25DB0504003B2F5A /* RequestError.swift in Sources */,
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
