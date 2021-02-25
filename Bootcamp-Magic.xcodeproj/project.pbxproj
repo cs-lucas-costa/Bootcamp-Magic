@@ -124,6 +124,7 @@
 		E6BC833925DFE9C8002F83F4 /* AppDelegateFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */; };
 		E6BC834225DFED09002F83F4 /* CardsListViewStateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */; };
 		E6BC835225E013E9002F83F4 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */; };
+		E6C2698A25E80756006347BE /* CardsListSearchView+UITextDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2698925E80756006347BE /* CardsListSearchView+UITextDelegate.swift */; };
 		E6FAE41B25E57F120080E559 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +257,7 @@
 		E6BC833825DFE9C8002F83F4 /* AppDelegateFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFake.swift; sourceTree = "<group>"; };
 		E6BC834125DFED09002F83F4 /* CardsListViewStateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewStateTestCase.swift; sourceTree = "<group>"; };
 		E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		E6C2698925E80756006347BE /* CardsListSearchView+UITextDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsListSearchView+UITextDelegate.swift"; sourceTree = "<group>"; };
 		E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -983,6 +985,7 @@
 			isa = PBXGroup;
 			children = (
 				E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */,
+				E6C2698925E80756006347BE /* CardsListSearchView+UITextDelegate.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -1207,6 +1210,7 @@
 				E65AE32825E68502003F938E /* CoreDataContainer.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,
 				E6537A9225DAF14500ECD9D9 /* ExpansionViewModel.swift in Sources */,
+				E6C2698A25E80756006347BE /* CardsListSearchView+UITextDelegate.swift in Sources */,
 				998BACA425DFE36200CD7C8F /* ExpansionViewControllerNavigation.swift in Sources */,
 				E65AE34A25E68B1E003F938E /* DatabaseProtocol.swift in Sources */,
 				994ECBFA25DD376E00F0257F /* Coordinatable.swift in Sources */,
