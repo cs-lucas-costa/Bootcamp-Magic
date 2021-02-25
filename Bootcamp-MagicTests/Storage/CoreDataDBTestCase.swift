@@ -46,6 +46,26 @@ class CoreDataDBTestCase: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
+    func testNotFoundObjectWhenFetch() {
+        
+        let exp = expectation(description: "Not found object to fetch")
+        var error: Error?
+
+        sut.fetch(type: Card.self) { (result) in
+            switch result {
+            case .failure(let newError):
+                error = newError
+            default:
+                break
+            }
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 1)
+        XCTAssertEqual(error as? CoreDataDBError, .notFoundObjects)
+    }
+    
     func testFetchObjects() throws {
         
         let count = 2
@@ -71,13 +91,30 @@ class CoreDataDBTestCase: XCTestCase {
         
         let card = try XCTUnwrap(try createCardObjects(count: 1).first)
         let exp = expectation(description: "Delete object")
+        var error: Error?
         
-        sut.delete(element: card) { (error) in
-            XCTAssertNil(error)
+        sut.delete(element: card) { (result) in
+            error = result
             exp.fulfill()
         }
         
         wait(for: [exp], timeout: 1)
+        XCTAssertNil(error)
+    }
+    
+    func testNotFoundObjectWhenDelete() throws {
+        
+        let card = Card.fixture()
+        let exp = expectation(description: "Not found object to delete")
+        var error: Error?
+        
+        sut.delete(element: card) { (result) in
+            error = result
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 1)
+        XCTAssertEqual((error as? CoreDataDBError), .notFoundObjects)
     }
 
 }
