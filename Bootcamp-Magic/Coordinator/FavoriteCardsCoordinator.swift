@@ -17,7 +17,9 @@ final class FavoriteCardsCoordinator: Coordinatable {
     var childCoordinators: [Coordinatable] = []
     
     // MARK: - Inits
-    init(navigationController: UINavigationController = UINavigationController(), networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
+    init(navigationController: UINavigationController = UINavigationController(),
+         networkManager: NetworkManager,
+         dataBaseManager: DatabaseProtocol) {
         self.navigationController = navigationController
         self.networkManager = networkManager
         self.dataBaseManager = dataBaseManager
