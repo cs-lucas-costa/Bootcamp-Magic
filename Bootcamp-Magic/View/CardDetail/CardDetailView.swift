@@ -15,13 +15,16 @@ protocol CardDetailViewDelegate: AnyObject {
 
 final class CardDetailView: UIView {
     
-    //MARK: Constants
-    private static let closeButtonEdges = UIEdgeInsets(top: 30, left: 20, bottom: 0, right: 0)
-    
-    @AutoLayout var expansionNameLabel: UILabel
-    @AutoLayout private var backgroundImageView: UIImageView
+    // MARK: - Properties
+    var expansionNameLabel: UILabel = UILabel(frame: .zero)
     weak var delegate: CardDetailViewDelegate?
-    
+    private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
+    private var backgroundImageView = UIImageView(frame: .zero)
+    lazy var favoriteButton: CardDetailToggleButton = CardDetailToggleButton()
+
+    // MARK: Constants
+    private static let closeButtonEdges = UIEdgeInsets(top: 30, left: 20, bottom: 0, right: 0)
+
     private lazy var closeButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setImage(UIImage(systemName: "xmark",
@@ -32,11 +35,9 @@ final class CardDetailView: UIView {
         button.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
         return button
     }()
-    
-    private let collectionViewFlowLayout = CardDetailCollectionViewFlowLayout()
-    
     private(set) lazy var detailCollectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
     
+    // MARK: - Inits
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
@@ -47,6 +48,7 @@ final class CardDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Methods
     private func setupExpansionNameLabel() {
         expansionNameLabel.textAlignment = .center
         expansionNameLabel.adjustsFontSizeToFitWidth = true
@@ -68,12 +70,14 @@ final class CardDetailView: UIView {
     }
 }
 
+// MARK: - ViewCodable Extensions
 extension CardDetailView: ViewCodable {
     func buildViewHierarchy() {
         addSubview(backgroundImageView)
         addSubview(closeButton)
         addSubview(expansionNameLabel)
         addSubview(detailCollectionView)
+        addSubview(favoriteButton)
     }
     
     func setupConstraints() {
@@ -100,6 +104,13 @@ extension CardDetailView: ViewCodable {
             maker.width.equalToSuperview()
             maker.height.equalToSuperview().multipliedBy(0.46)
         }
+        
+        favoriteButton.snp.makeConstraints { maker in
+            maker.top.equalTo(self.detailCollectionView.snp.bottom).offset(64)
+            maker.centerX.equalToSuperview()
+            maker.width.equalToSuperview().multipliedBy(0.688)
+            maker.height.equalToSuperview().multipliedBy(0.06)
+        }
     }
     
     func setupAdditionalConfiguration() {
@@ -107,6 +118,7 @@ extension CardDetailView: ViewCodable {
         setupExpansionNameLabel()
         setupDetailCollectionView()
     }
+    
 }
 
 // MARK: Actions

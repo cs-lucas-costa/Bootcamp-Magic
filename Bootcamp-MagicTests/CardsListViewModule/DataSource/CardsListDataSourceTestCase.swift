@@ -19,7 +19,7 @@ class CardsListDataSourceTestCase: XCTestCase {
         let bundle = Bundle(for: type(of: self))
         service = NetworkServiceStub(bundle: bundle)
         networkManager = NetworkManager(service: service)
-        sut = .fixture(networkManager: networkManager)
+        sut = .fixture(networkManager: networkManager, databaseManager: CoreDataDB(container: CoreDataContainerFake()))
     }
     
     override func tearDown() {

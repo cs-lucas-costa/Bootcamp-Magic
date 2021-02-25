@@ -20,11 +20,14 @@ final class ExpansionCoordinator: Coordinatable {
     var navigationController: UINavigationController
     var state = State.expansion
     private let networkManager: NetworkManager
-    
+    private let databaseManager: DatabaseProtocol
+    var childCoordinators: [Coordinatable] = []
+
     init(navigationController: UINavigationController = UINavigationController(),
-         networkManager: NetworkManager) {
+         networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
         self.navigationController = navigationController
         self.networkManager = networkManager
+        self.databaseManager = dataBaseManager
     }
     
     func start() {
@@ -45,7 +48,7 @@ extension ExpansionCoordinator {
         case .all(let expansion):
             let viewController = AllCardsListViewController(numberOfCardsPerRow: 3,
                                                             viewModel: CardListViewModelRemote(
-                                                              networkManager: networkManager),
+                                                              networkManager: networkManager, dataBaseManager: databaseManager),
                                                             with: expansion)
             viewController.coordinator = self
             return viewController
@@ -69,13 +72,22 @@ extension ExpansionCoordinator: ExpansionViewControllerNavigationDelegate {
 extension ExpansionCoordinator: CardsListCoordinatorProtocol {
     
     func showCardDetail(at index: Int, cards: [CardViewModel]) {
+        
+        cards.forEach { $0.verifyIsFavorite() }
+
         let viewModel = CardDetailViewModel(expansionCards: cards)
         viewModel.setExpansionIndex(index: index)
         
-        let viewController = CardDetailViewController(viewModel: viewModel)
-        viewController.modalPresentationStyle = .fullScreen
-        currentViewController = viewController
-        
-        navigationController.present(viewController, animated: true, completion: nil)
+        let coordinator = CardDetailCoordinator(navigationController: navigationController, viewModel: viewModel)
+        coordinator.delegate = self
+        childCoordinators.append(coordinator)
+        coordinator.start()
+    }
+    
+}
+
+extension ExpansionCoordinator: CardDetailCoordinatorDelegate {
+    func didDismiss() {
+        removeChild()
     }
 }

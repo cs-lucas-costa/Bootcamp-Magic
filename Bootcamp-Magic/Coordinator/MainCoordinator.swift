@@ -12,10 +12,11 @@ final class MainCoordinator: Coordinatable {
     // MARK: - Properties
     private let networkManager = NetworkManager()
     private let dataBaseManager = CoreDataDB()
-    lazy var expansionCoordinator = ExpansionCoordinator(networkManager: networkManager)
+    lazy var expansionCoordinator = ExpansionCoordinator(networkManager: networkManager, dataBaseManager: dataBaseManager)
     lazy var favoriteCardsCoordinator = FavoriteCardsCoordinator(networkManager: networkManager, dataBaseManager: dataBaseManager)
     var currentViewController: UIViewController?
     var navigationController: UINavigationController
+    var childCoordinators: [Coordinatable] = []
     
     init(navigationController: UINavigationController = UINavigationController()) {
         self.navigationController = navigationController

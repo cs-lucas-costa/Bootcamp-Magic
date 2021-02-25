@@ -77,7 +77,8 @@ extension ExpansionViewControllerScreen: ViewCodable {
     }
 
     tableView.snp.makeConstraints { make in
-      make.top.left.right.bottom.equalToSuperview()
+        make.bottom.leading.trailing.equalToSuperview()
+        make.top.equalTo(safeAreaLayoutGuide)
     }
   }
 

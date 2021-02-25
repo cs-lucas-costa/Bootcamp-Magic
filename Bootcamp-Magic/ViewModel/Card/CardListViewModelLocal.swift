@@ -11,7 +11,7 @@ final class CardListViewModelLocal: CardListViewModel {
     
     // MARK: - Properties
     let networkManager: NetworkManager
-    private let dataBaseManager: DatabaseProtocol
+    let dataBaseManager: DatabaseProtocol
     var dictCards: [Dict<String, [CardViewModel]>] = []
     
     // MARK: - Init

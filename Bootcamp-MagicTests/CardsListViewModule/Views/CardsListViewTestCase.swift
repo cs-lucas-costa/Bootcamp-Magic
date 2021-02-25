@@ -25,7 +25,7 @@ class CardsListViewTestCase: XCTestCase {
         networkManager = NetworkManager(service: service)
         sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
                             state: .all(expansion: .init(expansion: .fixture())))
-        dataSource = .fixture(networkManager: networkManager)
+        dataSource = .fixture(networkManager: networkManager, databaseManager: CoreDataDB(container: CoreDataContainerFake()))
 //        isRecording = true
     }
     

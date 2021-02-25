@@ -20,6 +20,10 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
     var searchViewDelegate: CardsListSearchViewDelegate?
     weak var coordinator: CardsListCoordinatorProtocol?
     
+    var setCode: String {
+        expansionViewModel.code
+    }
+    
     init(numberOfCardsPerRow: Int,
          viewModel: CardListViewModel,
          with expansionViewModel: ExpansionViewModel) {
@@ -49,25 +53,8 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         cardsListView.title = expansionViewModel.name
         setupDelegates()
-        cardsListView.isLoading = true
-        
-        viewModel.fetchCards(setCode: expansionViewModel.code) { [weak self] (error) in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                if let error = error {
-                    print("Error to fetch cards - \(error)")
-                } else {
-                    self.setupDataSources()
-                    self.setupClosures()
-                    self.cardsListView.collectionView.reloadData()
-                }
-                
-                self.cardsListView.isLoading = false
-            }
-        }
+        fetchCards()
     }
 }

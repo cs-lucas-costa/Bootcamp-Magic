@@ -39,7 +39,7 @@ final class CoreDataDB: DatabaseProtocol {
                                      and sortDescriptors: [NSSortDescriptor] = [],
                                      completion: @escaping ((Result<[Element], Error>) -> Void)) {
         
-        fetchManagedObjects(type: type) { result in
+        fetchManagedObjects(type: type, with: predicate, and: sortDescriptors) { result in
             switch result {
             case .success(let objects):
                 completion(.success(objects.map { Element(managedObject: $0) }))
@@ -51,7 +51,7 @@ final class CoreDataDB: DatabaseProtocol {
     
     func delete<Element: Storageable>(element: Element, completion: @escaping (Error?) -> Void) {
         
-        let predicate = NSPredicate(format: "%K = %@", "id", element.identifier)
+        let predicate = NSPredicate(format: "id = %@", element.identifier)
         
         fetchManagedObjects(type: Element.self, with: predicate) { [weak self] (result) in
             switch result {

@@ -48,7 +48,7 @@ final class CardDetailViewControllerTests: XCTestCase {
     
     func testDidOffsetChangedBehavior() {
         
-        let firstIndex = viewModel.sendExpansionIndex()
+        let firstIndex = viewModel.actualIndex
         
         sut.cardDetailView.frame = UIScreen.main.bounds
         sut.cardDetailView.detailCollectionView.frame = UIScreen.main.bounds
@@ -57,7 +57,7 @@ final class CardDetailViewControllerTests: XCTestCase {
         
         sut.didOffsetChanged(offset: offset, toPrevious: false)
         
-        let finalIndex = viewModel.sendExpansionIndex()
+        let finalIndex = viewModel.actualIndex
         
         XCTAssertNotEqual(firstIndex, finalIndex)
     }

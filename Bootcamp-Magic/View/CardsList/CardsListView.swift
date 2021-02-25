@@ -60,6 +60,7 @@ final class CardsListView: UIView {
         collectionView.register(CardsListHeaderView.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: CardsListHeaderView.identifier)
+        collectionView.keyboardDismissMode = .onDrag
         return collectionView
     }()
     
