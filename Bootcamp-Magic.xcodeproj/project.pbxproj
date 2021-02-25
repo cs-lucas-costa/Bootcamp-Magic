@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9902430925E7CE010063D602 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902430825E7CE010063D602 /* UIImage+Extensions.swift */; };
 		994ECBBD25DD364F00F0257F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBBC25DD364F00F0257F /* Constants.swift */; };
 		994ECBCA25DD367700F0257F /* ExpansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC625DD367700F0257F /* ExpansionViewController.swift */; };
 		994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */; };
@@ -136,6 +137,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9902430825E7CE010063D602 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		994ECBBC25DD364F00F0257F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		994ECBC625DD367700F0257F /* ExpansionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewController.swift; sourceTree = "<group>"; };
 		994ECBC725DD367700F0257F /* ExpansionViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionViewControllerDataSource.swift; sourceTree = "<group>"; };
@@ -275,6 +277,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9902430725E7CDE40063D602 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
 		994ECBC425DD367700F0257F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +358,7 @@
 				E6AEA74825DD635900375F4E /* UIView+Identifiable.swift */,
 				E6BC835125E013E9002F83F4 /* UIImageView+DownloadImage.swift */,
 				E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */,
+				9902430825E7CE010063D602 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -521,6 +531,7 @@
 		BD80ADA825DAB8970016B1BE /* Bootcamp-Magic */ = {
 			isa = PBXGroup;
 			children = (
+				9902430725E7CDE40063D602 /* ImageCache */,
 				E65AE32025E68496003F938E /* Storage */,
 				BD9CDD7625DE9FEA0010AE2C /* View */,
 				994ECC0D25DD579B00F0257F /* Extensions */,
@@ -1192,6 +1203,7 @@
 				BDEE377925DB0547003B2F5A /* URLSession + Extension.swift in Sources */,
 				994ECBCB25DD367700F0257F /* ExpansionViewControllerDataSource.swift in Sources */,
 				BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */,
+				9902430925E7CE010063D602 /* UIImage+Extensions.swift in Sources */,
 				E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E6BC835225E013E9002F83F4 /* UIImageView+DownloadImage.swift in Sources */,
