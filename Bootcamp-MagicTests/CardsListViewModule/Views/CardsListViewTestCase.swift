@@ -26,7 +26,6 @@ class CardsListViewTestCase: XCTestCase {
         sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
                             state: .all(expansion: .init(expansion: .fixture())))
         dataSource = .fixture(networkManager: networkManager, databaseManager: CoreDataDB(container: CoreDataContainerFake()))
-//        isRecording = true
     }
     
     override func tearDown() {
@@ -37,12 +36,10 @@ class CardsListViewTestCase: XCTestCase {
         super.tearDown()
     }
     
-    // TODO
-    
-//    func testCardsListWithCards() {
-//        sut.title = "Khans of Tarkir"
-//        sut.collectionView.dataSource = dataSource
-//        assertSnapshot(matching: sut, as: .image)
-//    }
+    func testCardsListWithCards() {
+        sut.title = "Khans of Tarkir"
+        sut.collectionView.dataSource = dataSource
+        assertSnapshot(matching: sut, as: .image)
+    }
     
 }
