@@ -57,4 +57,23 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
         setupDelegates()
         fetchCards()
     }
+    
+    @objc func retryLoadData() {
+        fetchCards()
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.view = self?.cardsListView
+        }
+    }
+}
+
+extension AllCardsListViewController {
+    func errorDidOccur(error: String) {
+        DispatchQueue.main.async { [weak self] in
+            let errorHandlingView = ErrorHandlingView(error: error)
+            
+            errorHandlingView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
+            self?.view = errorHandlingView
+        }
+    }
 }

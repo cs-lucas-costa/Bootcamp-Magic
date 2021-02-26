@@ -9,7 +9,8 @@ import UIKit
 
 protocol CardsListViewControllerProtocol: UIViewController,
                                           CardsListSearchViewDelegate,
-                                          CardsListViewDelegate {
+                                          CardsListViewDelegate,
+                                          ErrorDidOccurDelegate {
     
     var cardsListView: CardsListView { get }
     var coordinator: CardsListCoordinatorProtocol? { get set }
@@ -59,6 +60,7 @@ extension CardsListViewControllerProtocol {
         cardsListView.collectionView.delegate = cardListDelegate
         cardsListView.searchView.delegate = searchViewDelegate ?? self
         cardsListView.delegate = self
+        viewModel.delegate = self
     }
         
     func setupClosures() {
