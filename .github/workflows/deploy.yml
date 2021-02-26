@@ -4,14 +4,16 @@ on:
   pull_request:
     branches: [ master ]
   
-  jobs:
-    upload_to_testflight:
-      name: Test Flight
-      runs-on: macos-latest
-      
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+jobs:
 
-      - name: Upload to TestFlight
-        run: fastlane beta
+  upload_to_testflight:
+
+    name: Test Flight
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Upload to TestFlight
+      run: fastlane beta
