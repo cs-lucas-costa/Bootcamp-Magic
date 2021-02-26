@@ -134,6 +134,7 @@
 		E6C269AF25E81A1B006347BE /* CardDetailCoordinatorDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C269AE25E81A1B006347BE /* CardDetailCoordinatorDelegateSpy.swift */; };
 		E6C269B525E82055006347BE /* FavoriteCardsCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C269B425E82055006347BE /* FavoriteCardsCoordinatorTestCase.swift */; };
 		E6C269BA25E827B4006347BE /* UINavigation+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C269B925E827B4006347BE /* UINavigation+Dummy.swift */; };
+		E6C269CA25E92440006347BE /* ViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C269C925E92440006347BE /* ViewLoadable.swift */; };
 		E6FAE41B25E57F120080E559 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */; };
 /* End PBXBuildFile section */
 
@@ -276,6 +277,7 @@
 		E6C269AE25E81A1B006347BE /* CardDetailCoordinatorDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCoordinatorDelegateSpy.swift; sourceTree = "<group>"; };
 		E6C269B425E82055006347BE /* FavoriteCardsCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCardsCoordinatorTestCase.swift; sourceTree = "<group>"; };
 		E6C269B925E827B4006347BE /* UINavigation+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+Dummy.swift"; sourceTree = "<group>"; };
+		E6C269C925E92440006347BE /* ViewLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadable.swift; sourceTree = "<group>"; };
 		E6FAE41A25E57F110080E559 /* UIStackView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -378,6 +380,7 @@
 			children = (
 				994ECBF725DD376E00F0257F /* ViewCodable.swift */,
 				994ECBF825DD376E00F0257F /* Coordinatable.swift */,
+				E6C269C925E92440006347BE /* ViewLoadable.swift */,
 			);
 			name = Protocols;
 			path = "Bootcamp-Magic/Protocols";
@@ -1297,6 +1300,7 @@
 				994ECC0F25DD57A800F0257F /* String+Extensions.swift in Sources */,
 				BD9CDD9B25DEB5540010AE2C /* CardDetailViewModelDelegate.swift in Sources */,
 				BD9CDD8025DEA0AF0010AE2C /* CardDetailCollectionViewDelegate.swift in Sources */,
+				E6C269CA25E92440006347BE /* ViewLoadable.swift in Sources */,
 				994ECBF925DD376E00F0257F /* ViewCodable.swift in Sources */,
 				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
 				E6BC833525DFE97E002F83F4 /* main.swift in Sources */,

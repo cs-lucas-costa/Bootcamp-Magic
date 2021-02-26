@@ -31,10 +31,11 @@ final class CardDetailCollectionViewDataSource: NSObject, UICollectionViewDataSo
         
         currentImage.fetchCards { image in
             DispatchQueue.main.async {
-                cell.imageView.image = image
+                cell.image = image
             }
         }
         
+        cell.activityIndicatorStyle = .large
         cell.setupView()
 
         return cell
