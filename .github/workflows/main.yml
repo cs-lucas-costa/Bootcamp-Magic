@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches: [ master, develop ]
+    branches: [ develop ]
 
 jobs:
 
@@ -88,19 +88,4 @@ jobs:
         file: ./Coverage/cobertura.xml
         fail_ci_if_error: true    
 
-name: Deploy
-
-on:
-  pull_request:
-    branches: [ master ]
-  
-  jobs:
-    upload_to_testflight:
-      name: Test Flight
-      runs-on: macos-latest
-      needs: test
-
-    steps:
-      - name: Upload to TestFlight
-        run: fastlane beta
 
