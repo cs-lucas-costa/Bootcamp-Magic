@@ -62,7 +62,7 @@ extension CardsListDataSource: UICollectionViewDataSource {
         
         card.fetchCards { image in
             DispatchQueue.main.async {
-                cell.imageView.image = image
+                cell.image = image
             }
         }
         
