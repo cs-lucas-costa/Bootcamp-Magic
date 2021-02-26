@@ -13,6 +13,7 @@ final class CardListViewModelLocal: CardListViewModel {
     let networkManager: NetworkManager
     let dataBaseManager: DatabaseProtocol
     var dictCards: [Dict<String, [CardViewModel]>] = []
+    weak var delegate: ErrorDidOccurDelegate?
     
     // MARK: - Init
     init(networkManager: NetworkManager, dataBaseManager: DatabaseProtocol) {
@@ -30,6 +31,7 @@ final class CardListViewModelLocal: CardListViewModel {
                 self?.separateCardsWithType(list: cardList)
                 completion(nil)
             case .failure(let error):
+                self?.delegate?.errorDidOccur(error: error.localizedDescription)
                 completion(error)
             }
         }

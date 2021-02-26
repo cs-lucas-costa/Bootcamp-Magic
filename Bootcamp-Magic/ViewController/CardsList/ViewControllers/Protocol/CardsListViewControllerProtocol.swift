@@ -9,7 +9,8 @@ import UIKit
 
 protocol CardsListViewControllerProtocol: UIViewController,
                                           CardsListSearchViewDelegate,
-                                          CardsListViewDelegate {
+                                          CardsListViewDelegate,
+                                          ErrorDidOccurDelegate {
     
     var cardsListView: CardsListView { get }
     var coordinator: CardsListCoordinatorProtocol? { get set }
@@ -37,7 +38,8 @@ extension CardsListViewControllerProtocol {
             
             DispatchQueue.main.async {
                 if let error = error {
-                    print("Error to fetch cards - \(error)")
+                    self.cardsListView.failableView.errorString = error.localizedDescription
+                    self.cardsListView.addFailableView()
                 } else {
                     self.setupDataSources()
                     self.setupClosures()
@@ -59,6 +61,7 @@ extension CardsListViewControllerProtocol {
         cardsListView.collectionView.delegate = cardListDelegate
         cardsListView.searchView.delegate = searchViewDelegate ?? self
         cardsListView.delegate = self
+        viewModel.delegate = self
     }
         
     func setupClosures() {

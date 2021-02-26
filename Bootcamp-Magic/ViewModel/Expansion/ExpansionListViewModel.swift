@@ -11,6 +11,8 @@ final class ExpansionListViewModel {
 
     private let networkManager: NetworkManager
     private(set) var dictExpansions: [Dict<String, [ExpansionViewModel]>] = []
+    
+    weak var delegate: ErrorDidOccurDelegate?
 
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
@@ -25,6 +27,7 @@ final class ExpansionListViewModel {
                 self?.createDictExpansions(from: list)
                 completion(nil)
             case .failure(let error):
+                self?.delegate?.errorDidOccur(error: error.localizedDescription)
                 completion(error)
             }
         }

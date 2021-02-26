@@ -34,6 +34,7 @@ final class ExpansionViewController: UIViewController {
     setupTableView()
     setupNavigationTitle()
     fetchExpansions()
+    viewModel.delegate = self
   }
 
   // MARK: - Methods
@@ -80,4 +81,25 @@ final class ExpansionViewController: UIViewController {
     screen.tableView.delegate = dataSource
     screen.tableView.dataSource = dataSource
   }
+    
+    @objc func retryLoadData() {
+        fetchExpansions()
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.view = self?.screen
+            self?.screen.removeFailableView()
+        }
+    }
+}
+
+extension ExpansionViewController: ErrorDidOccurDelegate {
+    func errorDidOccur(error: String) {
+        DispatchQueue.main.async { [weak self] in
+            
+            self?.screen.failableView.errorString = error
+            self?.screen.addFailableView()
+            
+            self?.screen.failableView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
+        }
+    }
 }

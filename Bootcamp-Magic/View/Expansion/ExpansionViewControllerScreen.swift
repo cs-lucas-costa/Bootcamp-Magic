@@ -23,6 +23,8 @@ final class ExpansionViewControllerScreen: UIView {
       change(to: state)
     }
   }
+    
+    lazy var failableView: ErrorHandlingView = ErrorHandlingView()
   
   // MARK: - Init
   override init(frame: CGRect) {
@@ -92,4 +94,10 @@ extension ExpansionViewControllerScreen: ViewCodable {
     activityIndicator.style = .large
     bringSubviewToFront(activityIndicator)
   }
+}
+
+extension ExpansionViewControllerScreen: ViewFailable {
+    var viewWithError: UIView {
+        self
+    }
 }

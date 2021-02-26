@@ -59,4 +59,21 @@ final class FavoriteCardsListViewController: UIViewController, CardsListViewCont
     func setupNavigationTitle() {
         cardsListView.title = Constants.String.TabBar.favorites
     }
+    
+    @objc func retryLoadData() {
+        fetchCards()
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.view = self?.cardsListView
+            self?.cardsListView.removeFailableView()
+        }
+    }
+}
+
+extension FavoriteCardsListViewController {
+    func errorDidOccur(error: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.cardsListView.failableView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
+        }
+    }
 }
