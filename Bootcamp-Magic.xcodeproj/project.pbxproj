@@ -47,6 +47,7 @@
 		BD49DC2D25E9444A0093F60C /* ErrorHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DC2C25E9444A0093F60C /* ErrorHandlingView.swift */; };
 		BD49DC3125E947810093F60C /* ErrorHandlingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DC3025E947810093F60C /* ErrorHandlingButton.swift */; };
 		BD49DC3A25E94E130093F60C /* ErrorDidOccurDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DC3925E94E130093F60C /* ErrorDidOccurDelegate.swift */; };
+		BD49DC4A25E963170093F60C /* ViewFailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DC4925E963170093F60C /* ViewFailable.swift */; };
 		BD71EDA325E0314000E6FAB9 /* CardDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */; };
 		BD71EDB125E0554200E6FAB9 /* DidDisplayCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDB025E0554200E6FAB9 /* DidDisplayCellDelegate.swift */; };
 		BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */; };
@@ -192,6 +193,7 @@
 		BD49DC2C25E9444A0093F60C /* ErrorHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingView.swift; sourceTree = "<group>"; };
 		BD49DC3025E947810093F60C /* ErrorHandlingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingButton.swift; sourceTree = "<group>"; };
 		BD49DC3925E94E130093F60C /* ErrorDidOccurDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDidOccurDelegate.swift; sourceTree = "<group>"; };
+		BD49DC4925E963170093F60C /* ViewFailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFailable.swift; sourceTree = "<group>"; };
 		BD71ED9F25E0314000E6FAB9 /* CardDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		BD71EDB025E0554200E6FAB9 /* DidDisplayCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidDisplayCellDelegate.swift; sourceTree = "<group>"; };
 		BD71EDE425E3F36000E6FAB9 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				994ECBF825DD376E00F0257F /* Coordinatable.swift */,
 				E6C269C925E92440006347BE /* ViewLoadable.swift */,
 				BD49DC3925E94E130093F60C /* ErrorDidOccurDelegate.swift */,
+				BD49DC4925E963170093F60C /* ViewFailable.swift */,
 			);
 			name = Protocols;
 			path = "Bootcamp-Magic/Protocols";
@@ -1289,6 +1292,7 @@
 				BD71EDE525E3F36000E6FAB9 /* CardDetailView.swift in Sources */,
 				9902430925E7CE010063D602 /* UIImage+Extensions.swift in Sources */,
 				E6AEA76625DD861200375F4E /* CardsListView.swift in Sources */,
+				BD49DC4A25E963170093F60C /* ViewFailable.swift in Sources */,
 				E6537A1625DAC14D00ECD9D9 /* Expansion.swift in Sources */,
 				E65AE32825E68502003F938E /* CoreDataContainer.swift in Sources */,
 				E6537A8D25DAF08400ECD9D9 /* ExpansionListViewModel.swift in Sources */,

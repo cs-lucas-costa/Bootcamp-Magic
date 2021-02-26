@@ -63,6 +63,7 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
         
         DispatchQueue.main.async { [weak self] in
             self?.view = self?.cardsListView
+            self?.cardsListView.removeFailableView()
         }
     }
 }
@@ -70,10 +71,7 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
 extension AllCardsListViewController {
     func errorDidOccur(error: String) {
         DispatchQueue.main.async { [weak self] in
-            let errorHandlingView = ErrorHandlingView(error: error)
-            
-            errorHandlingView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
-            self?.view = errorHandlingView
+            self?.cardsListView.failableView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
         }
     }
 }

@@ -87,6 +87,7 @@ final class ExpansionViewController: UIViewController {
         
         DispatchQueue.main.async { [weak self] in
             self?.view = self?.screen
+            self?.screen.removeFailableView()
         }
     }
 }
@@ -94,10 +95,11 @@ final class ExpansionViewController: UIViewController {
 extension ExpansionViewController: ErrorDidOccurDelegate {
     func errorDidOccur(error: String) {
         DispatchQueue.main.async { [weak self] in
-            let errorHandlingView = ErrorHandlingView(error: error)
             
-            errorHandlingView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
-            self?.view = errorHandlingView
+            self?.screen.failableView.errorString = error
+            self?.screen.addFailableView()
+            
+            self?.screen.failableView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
         }
     }
 }

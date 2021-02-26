@@ -37,6 +37,8 @@ final class CardsListView: UIView {
         }
     }
     
+    lazy var failableView: ErrorHandlingView = ErrorHandlingView()
+    
     init(frame: CGRect = .zero, numberOfCardsPerRow: Int, state: CardsListViewState) {
         self.numberOfCardsPerRow = numberOfCardsPerRow
         self.state = state
@@ -189,6 +191,12 @@ private extension CardsListView {
 // MARK: ViewLoadable
 extension CardsListView: ViewLoadable {
     var parentView: UIView {
+        self
+    }
+}
+
+extension CardsListView: ViewFailable {
+    var viewWithError: UIView {
         self
     }
 }

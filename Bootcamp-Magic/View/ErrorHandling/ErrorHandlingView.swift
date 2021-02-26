@@ -18,11 +18,18 @@ final class ErrorHandlingView: UIView {
 
     var retryButton = ErrorHandlingButton()
     
+    var errorString: String = "" {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.errorDidOccurLabel.text = self?.errorString
+            }
+        }
+    }
+    
     // MARK: - Inits
-    init(frame: CGRect = .zero, error: String) {
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
-        self.errorDidOccurLabel.text = error
     }
     
     @available(*, unavailable)
@@ -77,5 +84,4 @@ extension ErrorHandlingView: ViewCodable {
         setupBackgroundImage()
         setupExpansionNameLabel()
     }
-    
 }
