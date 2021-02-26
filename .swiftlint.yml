@@ -7,15 +7,12 @@ disabled_rules: # rule identifiers turned on by default to exclude from running
   - weak_delegate
 opt_in_rules: # some rules are turned off by default, so you need to opt-in
   - empty_count # Find all the available rules by running: `swiftlint rules`
-
 # Alternatively, specify all rules explicitly by uncommenting this option:
 # only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
 #   - empty_parameters
 #   - vertical_whitespace
-
 analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
   - explicit_self
-
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
 force_cast: warning # implicitly

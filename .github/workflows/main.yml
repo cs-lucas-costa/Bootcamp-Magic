@@ -5,13 +5,17 @@ on:
     branches: [ master, develop ]
 
 jobs:
+
   build:
+
     name: Build Project
     runs-on: macos-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout repositor
+      uses: actions/checkout@v2 
+      with: 
+        fetch-depth: 0
 
     - name: Set Gems
       run: |
@@ -26,10 +30,12 @@ jobs:
     - name: Build app
       run: |
         set -o pipefail
-        xcodebuild clean build-for-testing \
+        slather setup
+        xcodebuild build-for-testing \
         -project 'Bootcamp-Magic.xcodeproj' \
         -scheme 'Bootcamp-Magic' \
         -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max' \
+        -derivedDataPath build \
         | xcpretty 
 
     - name: Archive derived data artifacts
@@ -37,12 +43,10 @@ jobs:
       with:
         name: build
         path: build
-
-
   test:
     name: Test Project
+    runs-on: macOS-latest
     needs: build
-    uses: actions/checkout@v1
 
     steps:
     - name: Checkout repository
@@ -66,12 +70,20 @@ jobs:
     - name: Run tests
       run: |
         set -o pipefail
-        xcodebuild clean test-without-building \
-        -project "Bootcamp-Magic.xcodeproj" \
-        -scheme "Bootcamp-Magic" \
-        -destination "platform=iOS Simulator,name=iPhone 11 Pro Max" \
+        xcodebuild test-without-building \
+        -project 'Bootcamp-Magic.xcodeproj' \
+        -scheme 'Bootcamp-Magic' \
+        -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max' \
+        -derivedDataPath build \
+        -enableCodeCoverage YES \
         | xcpretty
-
-
-        
     
+    - name: Coverage report
+      run: slather coverage -x --binary-basename 'Bootcamp-Magic'
+      
+    - name: Post coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./Coverage/cobertura.xml
+        fail_ci_if_error: true    

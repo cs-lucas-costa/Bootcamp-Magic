@@ -1,0 +1,8 @@
+coverage_service: cobertura_xml
+xcodeproj: Bootcamp-Magic.xcodeproj
+input_format: profdata
+output_directory: Coverage/
+build_directory: build/Build/
+scheme: 'Bootcamp-Magic'
+ignore:
+  - Bootcamp-MagicTests/*
