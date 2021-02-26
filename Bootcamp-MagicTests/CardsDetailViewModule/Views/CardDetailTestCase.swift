@@ -25,7 +25,6 @@ class CardDetailTestCase: XCTestCase {
         service = NetworkServiceStub(bundle: bundle)
         networkManager = NetworkManager(service: service)
         dataSource = .fixture(networkManager: networkManager, databaseManager: CoreDataDB(container: CoreDataContainerFake()))
-//        isRecording = true
     }
 
     override func tearDown() {

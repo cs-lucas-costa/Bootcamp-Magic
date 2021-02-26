@@ -11,6 +11,7 @@ protocol CardListViewModel: AnyObject {
     var dictCards: [Dict<String, [CardViewModel]>] { get set }
     var networkManager: NetworkManager { get }
     var dataBaseManager: DatabaseProtocol { get }
+    var delegate: ErrorDidOccurDelegate? { get set }
     func fetchCards(setCode: String, completion: @escaping (Error?) -> Void)
 }
 

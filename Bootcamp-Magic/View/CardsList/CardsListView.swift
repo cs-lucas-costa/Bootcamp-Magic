@@ -37,6 +37,8 @@ final class CardsListView: UIView {
         }
     }
     
+    lazy var failableView: ErrorHandlingView = ErrorHandlingView()
+    
     init(frame: CGRect = .zero, numberOfCardsPerRow: Int, state: CardsListViewState) {
         self.numberOfCardsPerRow = numberOfCardsPerRow
         self.state = state
@@ -115,7 +117,7 @@ final class CardsListView: UIView {
         return imageView
     }()
     
-    private lazy var activityIndicator: UIActivityIndicatorView = {
+    private(set) lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.color = .white
@@ -186,22 +188,15 @@ private extension CardsListView {
     
 }
 
-// MARK: Loading
-private extension CardsListView {
-    
-    func addLoadingView() {
-        addSubview(activityIndicator)
-        
-        activityIndicator.snp.makeConstraints { (make) in
-            make.centerX.centerY.equalToSuperview()
-        }
-        
-        activityIndicator.startAnimating()
+// MARK: ViewLoadable
+extension CardsListView: ViewLoadable {
+    var parentView: UIView {
+        self
     }
-    
-    func removeLoadingView() {
-        activityIndicator.stopAnimating()
-        activityIndicator.removeFromSuperview()
-    }
+}
 
+extension CardsListView: ViewFailable {
+    var viewWithError: UIView {
+        self
+    }
 }
