@@ -12,7 +12,7 @@ final class ExpansionListViewModel {
     private let networkManager: NetworkManager
     private(set) var dictExpansions: [Dict<String, [ExpansionViewModel]>] = []
     
-    weak var delegate: ErrorDidOccurOnExpansionDelegate?
+    weak var delegate: ErrorDidOccurDelegate?
 
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager

@@ -91,7 +91,7 @@ final class ExpansionViewController: UIViewController {
     }
 }
 
-extension ExpansionViewController: ErrorDidOccurOnExpansionDelegate {
+extension ExpansionViewController: ErrorDidOccurDelegate {
     func errorDidOccur(error: String) {
         DispatchQueue.main.async { [weak self] in
             let errorHandlingView = ErrorHandlingView(error: error)
