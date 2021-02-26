@@ -1,5 +1,7 @@
 # Bootcamp Magic
 
+![](./images/app.gif)
+
 O Bootcamp Magic é um aplicativo baseado no jogo [Magic: The Gathering](https://magic.wizards.com/), que permite o usuário visualizar cartas de variados *sets*, bem como favoritar as cartas que desejar. Este aplicativo consome uma [REST API](https://docs.magicthegathering.io/#documentationgetting_started) para mostar as cartas no aplicativo, assim, sendo necessário acceso a Internet para utilizá-lo.
 
 ## Arquitetura
