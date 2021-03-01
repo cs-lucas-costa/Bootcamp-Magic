@@ -16,7 +16,7 @@ class ErrorHandlingViewTestCase: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = ErrorHandlingView()
+        sut = ErrorHandlingView(frame: UIScreen.main.bounds)
     }
     
     override func tearDown() {
