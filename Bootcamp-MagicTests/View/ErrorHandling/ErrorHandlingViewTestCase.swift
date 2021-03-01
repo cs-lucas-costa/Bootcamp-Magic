@@ -17,6 +17,7 @@ class ErrorHandlingViewTestCase: XCTestCase {
     override func setUp() {
         super.setUp()
         sut = ErrorHandlingView(frame: UIScreen.main.bounds)
+        sut.errorString = "Testando tela de error"
     }
     
     override func tearDown() {
@@ -25,7 +26,6 @@ class ErrorHandlingViewTestCase: XCTestCase {
     }
     
     func testErrorHandling() {
-        sut.errorString = "Testando tela de error"
         assertSnapshot(matching: sut, as: .image)
     }
 }
