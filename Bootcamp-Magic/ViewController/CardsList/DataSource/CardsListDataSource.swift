@@ -11,7 +11,7 @@ class CardsListDataSource: NSObject {
     
     typealias Filter = (isFiltering: Bool, word: String)
     
-    private let dictCards: [Dict<String, [CardViewModel]>]
+    private var dictCards: [Dict<String, [CardViewModel]>] = []
     private(set) var filteredCards: [Dict<String, [CardViewModel]>] = []
     
     var filter: Filter = (false, "") {
@@ -22,7 +22,7 @@ class CardsListDataSource: NSObject {
         }
     }
     
-    init(dictCards: [Dict<String, [CardViewModel]>]) {
+    func updateData(dictCards: [Dict<String, [CardViewModel]>]) {
         self.dictCards = dictCards
     }
     
@@ -60,12 +60,13 @@ extension CardsListDataSource: UICollectionViewDataSource {
             dictCards[indexPath.section].value[indexPath.item] :
             filteredCards[indexPath.section].value[indexPath.item]
         
-        card.fetchCards { image in
+        card.fetchImage { image in
             DispatchQueue.main.async {
-                cell.image = image
+                cell.setup(image: image)
             }
         }
         
+        cell.setupLoadingStyle(.medium)
         cell.setupView()
         return cell
     }
