@@ -7,13 +7,15 @@ on:
 jobs:
 
   upload_to_testflight:
-
     name: Test Flight
     runs-on: macos-latest
     
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        repository: cs-lucas-costa/Certificados
+        ssh-key: ${{ secrets.MATCH_PRIVATE_KEY }}
 
     - name: Upload to TestFlight
       run: fastlane beta
