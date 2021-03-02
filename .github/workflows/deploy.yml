@@ -17,5 +17,10 @@ jobs:
         repository: cs-lucas-costa/Certificados
         token: ${{ secrets.FAKE_REPO_TOKEN }}
 
+    - name: Set Gems
+      run: |
+        gem install bundler
+        bundle install
+
     - name: Upload to TestFlight
       run: fastlane beta
