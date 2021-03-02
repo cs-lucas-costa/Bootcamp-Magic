@@ -12,7 +12,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@2
       with:
         repository: cs-lucas-costa/Certificados
         ssh-key: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
