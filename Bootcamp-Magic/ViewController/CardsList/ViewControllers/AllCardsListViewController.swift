@@ -7,43 +7,14 @@
 
 import UIKit
 
-final class AllCardsListViewController: UIViewController, CardsListViewControllerProtocol {
+final class AllCardsListViewController: BaseCardsListViewController {
     
-    // MARK: Properties
-    private let expansionViewModel: ExpansionViewModel
-    let cardsListView: CardsListView
-    let viewModel: CardListViewModel
-    
-    // MARK: Delegates and DataSources
-    var dataSource: CardsListDataSource?
-    var cardListDelegate: CardsListDelegate?
-    var searchViewDelegate: CardsListSearchViewDelegate?
-    weak var coordinator: CardsListCoordinatorProtocol?
-    
-    var setCode: String {
-        expansionViewModel.code
-    }
-    
-    init(numberOfCardsPerRow: Int,
-         viewModel: CardListViewModel,
-         with expansionViewModel: ExpansionViewModel) {
+    let expansionViewModel: ExpansionViewModel
         
-        self.cardsListView = CardsListView(numberOfCardsPerRow: 3,
-                                           state: .all(expansion: expansionViewModel))
-        self.viewModel = viewModel
+    init(numberOfCardsPerRow: Int, viewModel: CardListViewModel, with expansionViewModel: ExpansionViewModel, dataSource: CardsListDataSource) {
         self.expansionViewModel = expansionViewModel
-        
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func loadView() {
-        super.loadView()
-        view = cardsListView
+        super.init(numberOfCardsPerRow: numberOfCardsPerRow, viewModel: viewModel, dataSource: dataSource)
+        self.cardsListView = CardsListView(numberOfCardsPerRow: 3, state: .all(expansion: expansionViewModel))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,24 +25,9 @@ final class AllCardsListViewController: UIViewController, CardsListViewControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         cardsListView.title = expansionViewModel.name
+        setupExpansionCode(expansionViewModel.code)
         setupDelegates()
         fetchCards()
     }
     
-    @objc func retryLoadData() {
-        fetchCards()
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.view = self?.cardsListView
-            self?.cardsListView.removeFailableView()
-        }
-    }
-}
-
-extension AllCardsListViewController {
-    func errorDidOccur(error: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.cardsListView.failableView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
-        }
-    }
 }
