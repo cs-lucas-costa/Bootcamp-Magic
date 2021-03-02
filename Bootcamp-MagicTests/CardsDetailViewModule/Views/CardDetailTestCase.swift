@@ -25,6 +25,7 @@ class CardDetailTestCase: XCTestCase {
         service = NetworkServiceStub(bundle: bundle)
         networkManager = NetworkManager(service: service)
         dataSource = .fixture(networkManager: networkManager, databaseManager: CoreDataDB(container: CoreDataContainerFake()))
+        sut.expansionNameLabel.text = "Khans of Tarkir"
     }
 
     override func tearDown() {
@@ -36,7 +37,6 @@ class CardDetailTestCase: XCTestCase {
     }
 
     func testCardsListWithCards() {
-        sut.expansionNameLabel.text = "Khans of Tarkir"
         sut.detailCollectionView.dataSource = dataSource
         assertSnapshot(matching: sut, as: .image)
     }

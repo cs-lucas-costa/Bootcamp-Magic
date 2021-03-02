@@ -28,7 +28,7 @@ final class FavoriteCardsCoordinator: Coordinatable {
     // MARK: - Methods
     func start() {
         let viewController = FavoriteCardsListViewController(numberOfCardsPerRow: 3,
-                                                             viewModel: CardListViewModelLocal(networkManager: networkManager, dataBaseManager: dataBaseManager))
+                                                             viewModel: CardListViewModelLocal(networkManager: networkManager, dataBaseManager: dataBaseManager), dataSource: CardsListDataSource())
         viewController.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
         currentViewController = viewController

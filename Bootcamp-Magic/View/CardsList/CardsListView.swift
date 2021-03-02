@@ -15,8 +15,8 @@ protocol CardsListViewDelegate: AnyObject {
 final class CardsListView: UIView {
     
     private let numberOfCardsPerRow: Int
-    private let state: CardsListViewState
     weak var delegate: CardsListViewDelegate?
+    private var state: CardsListViewState
     
     var isLoading: Bool? {
         didSet {
@@ -36,10 +36,8 @@ final class CardsListView: UIView {
             titleView.text = title?.capitalized
         }
     }
-    
-    lazy var failableView: ErrorHandlingView = ErrorHandlingView()
-    
-    init(frame: CGRect = .zero, numberOfCardsPerRow: Int, state: CardsListViewState) {
+        
+    init(frame: CGRect = .zero, numberOfCardsPerRow: Int, state: CardsListViewState = .favourites) {
         self.numberOfCardsPerRow = numberOfCardsPerRow
         self.state = state
         super.init(frame: frame)
@@ -52,6 +50,8 @@ final class CardsListView: UIView {
     }
     
     // MARK: Components
+    lazy var failableView: ErrorHandlingView = ErrorHandlingView()
+
     private(set) lazy var collectionView: UICollectionView = {
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -83,8 +83,10 @@ final class CardsListView: UIView {
     }()
     
     private(set) lazy var searchView: CardsListSearchView = {
-        let placeholder = state == .favourites ? Texts.searchForFavorites.text : Texts.searchForCards.text
-        let searchView = CardsListSearchView(placeholder: placeholder)
+        let searchView = CardsListSearchView()
+        let placeholder = state == .favourites ?
+            Texts.searchForFavorites.text : Texts.searchForCards.text
+        searchView.placeholder = placeholder
         searchView.translatesAutoresizingMaskIntoConstraints = false
         return searchView
     }()

@@ -49,7 +49,7 @@ extension ExpansionCoordinator {
             let viewController = AllCardsListViewController(numberOfCardsPerRow: 3,
                                                             viewModel: CardListViewModelRemote(
                                                               networkManager: networkManager, dataBaseManager: databaseManager),
-                                                            with: expansion)
+                                                            with: expansion, dataSource: CardsListDataSource())
             viewController.coordinator = self
             return viewController
         }

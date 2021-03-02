@@ -115,7 +115,7 @@
 		E691C65725DED51E004D41CF /* CardsListSearchViewDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C65625DED51E004D41CF /* CardsListSearchViewDelegateSpy.swift */; };
 		E691C66925DEE8DC004D41CF /* CardsListView+Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C66825DEE8DC004D41CF /* CardsListView+Texts.swift */; };
 		E691C66E25DEEA96004D41CF /* CardsListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C66D25DEEA96004D41CF /* CardsListViewState.swift */; };
-		E691C67425DEEB91004D41CF /* CardsListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C67325DEEB91004D41CF /* CardsListViewControllerProtocol.swift */; };
+		E691C67425DEEB91004D41CF /* BaseCardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C67325DEEB91004D41CF /* BaseCardsListViewController.swift */; };
 		E691C67B25DEF10D004D41CF /* FavoriteCardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691C67A25DEF10D004D41CF /* FavoriteCardsListViewController.swift */; };
 		E6A02D9E25ED0CF200155C8F /* ErrorHandlingViewTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A02D9D25ED0CF200155C8F /* ErrorHandlingViewTestCase.swift */; };
 		E6AEA71A25DD51EB00375F4E /* CardsListSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */; };
@@ -263,7 +263,7 @@
 		E691C65625DED51E004D41CF /* CardsListSearchViewDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListSearchViewDelegateSpy.swift; sourceTree = "<group>"; };
 		E691C66825DEE8DC004D41CF /* CardsListView+Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsListView+Texts.swift"; sourceTree = "<group>"; };
 		E691C66D25DEEA96004D41CF /* CardsListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewState.swift; sourceTree = "<group>"; };
-		E691C67325DEEB91004D41CF /* CardsListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		E691C67325DEEB91004D41CF /* BaseCardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardsListViewController.swift; sourceTree = "<group>"; };
 		E691C67A25DEF10D004D41CF /* FavoriteCardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCardsListViewController.swift; sourceTree = "<group>"; };
 		E6A02D9D25ED0CF200155C8F /* ErrorHandlingViewTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewTestCase.swift; sourceTree = "<group>"; };
 		E6AEA71925DD51EB00375F4E /* CardsListSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListSearchView.swift; sourceTree = "<group>"; };
@@ -964,14 +964,6 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		E691C67925DEF0F0004D41CF /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				E691C67325DEEB91004D41CF /* CardsListViewControllerProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		E691C68025DEF791004D41CF /* CardsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1024,7 +1016,7 @@
 		E6AEA73A25DD621B00375F4E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E691C67925DEF0F0004D41CF /* Protocol */,
+				E691C67325DEEB91004D41CF /* BaseCardsListViewController.swift */,
 				E6AEA75F25DD854800375F4E /* AllCardsListViewController.swift */,
 			);
 			path = ViewControllers;
@@ -1340,7 +1332,7 @@
 				994ECBF125DD376100F0257F /* MainCoordinator.swift in Sources */,
 				E6BC833525DFE97E002F83F4 /* main.swift in Sources */,
 				E6AEA74925DD635900375F4E /* UIView+Identifiable.swift in Sources */,
-				E691C67425DEEB91004D41CF /* CardsListViewControllerProtocol.swift in Sources */,
+				E691C67425DEEB91004D41CF /* BaseCardsListViewController.swift in Sources */,
 				E6FAE41B25E57F120080E559 /* UIStackView+Border.swift in Sources */,
 				E679579825DBE97900EAC7E8 /* CardViewModel.swift in Sources */,
 			);

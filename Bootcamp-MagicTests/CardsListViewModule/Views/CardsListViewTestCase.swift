@@ -23,8 +23,10 @@ class CardsListViewTestCase: XCTestCase {
         let bundle = Bundle(for: type(of: self))
         service = NetworkServiceStub(bundle: bundle)
         networkManager = NetworkManager(service: service)
-        sut = CardsListView(frame: UIScreen.main.bounds, numberOfCardsPerRow: 3,
+        sut = CardsListView(frame: UIScreen.main.bounds,
+                            numberOfCardsPerRow: 3,
                             state: .all(expansion: .init(expansion: .fixture())))
+        
         dataSource = .fixture(networkManager: networkManager, databaseManager: CoreDataDB(container: CoreDataContainerFake()))
     }
     

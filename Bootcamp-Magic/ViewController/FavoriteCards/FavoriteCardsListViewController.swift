@@ -7,45 +7,12 @@
 
 import UIKit
 
-final class FavoriteCardsListViewController: UIViewController, CardsListViewControllerProtocol {
-    
-    // MARK: Properties
-    let cardsListView: CardsListView
-    let viewModel: CardListViewModel
-    
-    // MARK: Delegates and DataSources
-    var dataSource: CardsListDataSource?
-    var cardListDelegate: CardsListDelegate?
-    var searchViewDelegate: CardsListSearchViewDelegate?
-    weak var coordinator: CardsListCoordinatorProtocol?
-    let setCode: String = ""
-    
-    init(numberOfCardsPerRow: Int,
-         viewModel: CardListViewModel) {
-        
-        self.cardsListView = CardsListView(numberOfCardsPerRow: 3,
-                                           state: .favourites)
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - LoadView
-    override func loadView() {
-        super.loadView()
-        view = cardsListView
-        view.backgroundColor = .green
-    }
+final class FavoriteCardsListViewController: BaseCardsListViewController {
     
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
-        super.viewDidLoad()
         setupNavigationTitle()
-        setupDelegates()
+        super.viewDidLoad()
     }
     
     // MARK: - ViewWillAppear
@@ -58,22 +25,5 @@ final class FavoriteCardsListViewController: UIViewController, CardsListViewCont
     // MARK: - Methods
     func setupNavigationTitle() {
         cardsListView.title = Constants.String.TabBar.favorites
-    }
-    
-    @objc func retryLoadData() {
-        fetchCards()
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.view = self?.cardsListView
-            self?.cardsListView.removeFailableView()
-        }
-    }
-}
-
-extension FavoriteCardsListViewController {
-    func errorDidOccur(error: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.cardsListView.failableView.retryButton.addTarget(self, action: #selector(self?.retryLoadData), for: .touchUpInside)
-        }
     }
 }
