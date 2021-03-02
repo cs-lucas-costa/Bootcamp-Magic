@@ -18,7 +18,7 @@ class CardsListSearchViewTestCase: XCTestCase {
         super.setUp()
         let frame = CGRect(origin: .zero,
                            size: CGSize(width: UIScreen.main.bounds.width, height: 40))
-        sut = CardsListSearchView(frame: frame, placeholder: "Search")
+        sut = CardsListSearchView(frame: frame)
     }
     
     override func tearDown() {
@@ -27,6 +27,7 @@ class CardsListSearchViewTestCase: XCTestCase {
     }
 
     func testSearchViewDefaultState() {
+        sut.placeholder = "Search"
         assertSnapshot(matching: sut, as: .image)
     }
     
