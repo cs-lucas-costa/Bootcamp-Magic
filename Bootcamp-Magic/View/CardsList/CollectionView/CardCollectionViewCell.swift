@@ -9,10 +9,8 @@ import UIKit
 import SnapKit
 
 final class CardCollectionViewCell: UICollectionViewCell {
-    
-    var activityIndicatorStyle: UIActivityIndicatorView.Style = .medium
-    
-    var image: UIImage? {
+        
+    private var image: UIImage? {
         didSet {
             imageView.image = image
             removeLoadingView()
@@ -28,7 +26,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
     }()
     
     private(set) lazy var activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: activityIndicatorStyle)
+        let activityIndicator = UIActivityIndicatorView()
         activityIndicator.color = .white
         return activityIndicator
     }()
@@ -42,6 +40,23 @@ final class CardCollectionViewCell: UICollectionViewCell {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         addLoadingView()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    func setupLoadingStyle(_ style: UIActivityIndicatorView.Style) {
+        activityIndicator.style = style
+    }
+    
+    func setup(image: UIImage?) {
+        self.image = image
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 

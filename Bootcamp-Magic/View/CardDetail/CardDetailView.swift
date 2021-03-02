@@ -119,6 +119,15 @@ extension CardDetailView: ViewCodable {
         setupDetailCollectionView()
     }
     
+    func getCollectionViewCellFrame(at index: Int) -> CGRect {
+        let indexPath = IndexPath(item: index, section: 0)
+        guard let cell = detailCollectionView.cellForItem(at: indexPath) else {
+            return .init(x: 0, y: 0, width: 0, height: 0)
+        }
+        
+        return cell.frame
+    }
+    
 }
 
 // MARK: Actions

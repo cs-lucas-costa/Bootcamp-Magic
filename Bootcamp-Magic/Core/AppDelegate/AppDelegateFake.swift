@@ -13,7 +13,7 @@ class AppDelegateFake: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        //Não remova utilizado em testes
+        // Não remova utilizado em testes
         window = UIWindow()
         
         return true

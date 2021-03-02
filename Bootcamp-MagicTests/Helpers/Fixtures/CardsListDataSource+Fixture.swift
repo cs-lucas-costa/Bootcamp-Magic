@@ -32,6 +32,9 @@ extension CardsListDataSource {
         let dictCards = [Dict(key: type1, value: [viewModel1]),
                          Dict(key: type2, value: [viewModel2])]
         
-        return CardsListDataSource(dictCards: dictCards)
+        let datasource = CardsListDataSource()
+        datasource.updateData(dictCards: dictCards)
+        
+        return datasource
     }
 }

@@ -16,16 +16,21 @@ protocol CardsListSearchViewDelegate: AnyObject {
 final class CardsListSearchView: UIView {
     
     weak var delegate: CardsListSearchViewDelegate?
-    private let placeholder: String
-
+    
+    var placeholder: String? {
+        didSet {
+            textField.placeholder = placeholder
+            textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "Search",
+                                                                 attributes: [.foregroundColor: UIColor.white,
+                                                                              .font: Fonts.robotoBold(size: 14).font])
+        }
+    }
+    
     private(set) lazy var textField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = placeholder
         textField.textColor = .white
-        textField.attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                             attributes: [.foregroundColor: UIColor.white,
-                                                                          .font: Fonts.robotoBold(size: 14).font])
         textField.autocapitalizationType = .none
         textField.addTarget(self, action: #selector(searchCards(_:)), for: .editingChanged)
         textField.font = Fonts.robotoBold(size: 14).font
@@ -74,8 +79,7 @@ final class CardsListSearchView: UIView {
         return stackView
     }()
     
-    init(frame: CGRect = .zero, placeholder: String) {
-        self.placeholder = placeholder
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
     }
