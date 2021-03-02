@@ -53,7 +53,7 @@ final class CardDetailViewControllerTests: XCTestCase {
         sut.cardDetailView.frame = UIScreen.main.bounds
         sut.cardDetailView.detailCollectionView.frame = UIScreen.main.bounds
         
-        let offset = CGFloat(100)
+        let offset = CGFloat(1000)
         
         sut.didOffsetChanged(offset: offset, toPrevious: false)
         

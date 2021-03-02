@@ -76,12 +76,14 @@ extension CardDetailViewControllerProtocol {
 
 extension CardDetailViewControllerProtocol {
     func didOffsetChanged(offset: CGFloat, toPrevious: Bool) {
-
-        let previousOffset: CGFloat = toPrevious ? self.cardDetailView.detailCollectionView.frame.size.width * 0.7 : 0
-        let contentIndex = Int(ceil((offset - previousOffset) / self.cardDetailView.detailCollectionView.frame.size.width))
+        
+        let minimumScrollValue = (self.cardDetailView.detailCollectionView.frame.size.width * 0.7)
+        
+        let previousOffset: CGFloat = toPrevious ? minimumScrollValue : 0
+        let contentIndex = Int(round((offset - previousOffset) / minimumScrollValue))
         let cardsCount: Int = viewModel.sendCards().count
 
-        let index = contentIndex < cardsCount ? contentIndex : cardsCount - 1
+        let index = abs(contentIndex < cardsCount ? contentIndex : cardsCount - 1)
 
         self.cardDetailView.detailCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
         viewModel.setExpansionIndex(index: index)
