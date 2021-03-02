@@ -35,7 +35,7 @@ final class CardViewModel {
     
     private var cardImage: UIImage?
     
-    func fetchCards(completion: @escaping (UIImage?) -> Void) {
+    func fetchImage(completion: @escaping (UIImage?) -> Void) {
         
         guard cardImage == nil else {
             completion(cardImage)
