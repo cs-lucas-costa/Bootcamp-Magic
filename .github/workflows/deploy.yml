@@ -11,18 +11,18 @@ jobs:
     runs-on: macos-latest
     
     steps:
-
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        path: 'main'
         
-    - name: Checkout
+    - name: Checkout - Certificados
       uses: actions/checkout@v2
       with:
         repository: cs-lucas-costa/Certificados
         token: ${{ secrets.FAKE_REPO_TOKEN }}
         path: 'certificados'
+
+    - name: Checkout - Project
+      uses: actions/checkout@v2
+      with:
+        path: 'main'
 
     - name: Set Gems
       run: |
