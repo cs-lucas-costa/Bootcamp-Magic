@@ -24,10 +24,10 @@ jobs:
       with:
         path: 'main'
 
-    - name: Install Fastlane
+    - name: Set Gems
       run: |
-        brew update
-        brew install fastlane
+        gem install bundler
+        bundle install
 
     - name: Upload to TestFlight
       run: fastlane beta
