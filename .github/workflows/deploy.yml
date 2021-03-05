@@ -13,7 +13,7 @@ jobs:
     steps:
         
     - name: Checkout - Certificados
-      uses: actions/checkout@v2
+    - uses: oleksiyrudenko/gha-git-credentials@v2.1
       with:
         global: true
         name: "my-deploy-github"
