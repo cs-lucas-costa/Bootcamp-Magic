@@ -9,6 +9,6 @@ xcode_scheme: Bootcamp-Magic
 
 jobs:
   include:
-    - stage: "Upload to test flight"
-      script: fastlane beta
-      
+      if: branch = master
+      - stage: "Upload to test flight"
+        script: fastlane beta
