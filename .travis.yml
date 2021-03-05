@@ -1,0 +1,14 @@
+before_install:
+- gem install fastlane
+
+osx_image: xcode12.4
+language: swift
+os: osx
+xcode_project: Bootcamp-Magic.xcodeproj
+xcode_scheme: Bootcamp-Magic
+
+jobs:
+  include:
+      if: branch = master
+      - stage: "Upload to test flight"
+        script: fastlane beta
