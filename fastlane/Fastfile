@@ -20,9 +20,8 @@ platform :ios do
   lane :beta do
     
     match(app_identifier: "com.bootcamp.magic", 
-          git_private_key: ENV["MATCH_GIT_PRIVATE_KEY"],
-          keychain_password: ENV["MATCH_PASSWORD"],
-          type: "appstore")
+          type: "appstore",
+          readonly: "true")
 
     scan(scheme: "Bootcamp-MagicTests", devices: ["iPhone 11 Pro Max"])
 
