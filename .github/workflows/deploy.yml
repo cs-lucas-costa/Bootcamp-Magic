@@ -14,6 +14,8 @@ jobs:
         
     - name: Checkout - Certificados
       uses: actions/checkout@v2
+    - run: git config --global user.email "deploy.github@gmail.com"
+    - run: git config --global user.name "my-deploy-github"
       with:
         repository: cs-lucas-costa/Certificados
         token: ${{ secrets.FAKE_REPO_TOKEN }}
