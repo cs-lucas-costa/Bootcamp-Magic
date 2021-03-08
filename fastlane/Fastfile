@@ -22,9 +22,9 @@ platform :ios do
       scheme: "Bootcamp-Magic",
       export_method: "app-store")
 
-    upload_to_testflight(
+    pilot(
       skip_waiting_for_build_processing: true,
-      apple_id: "lucashpc91@gmail.com"
+      apple_id: ENV["APP_ID"]
     )
     
   end
