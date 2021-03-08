@@ -23,7 +23,7 @@ platform :ios do
       export_method: "app-store")
 
     upload_to_testflight(
-      skip_waiting_for_build_processing: true
+      skip_waiting_for_build_processing: true,
       apple_id: "lucashpc91@gmail.com"
     )
     
